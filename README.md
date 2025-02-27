@@ -1,6 +1,9 @@
 
-## Scripts and Notebooks to reproduce figures in the following paper:
+
 ## Unique patterns of mutations in childhood cancer highlight chemotherapy’s disease-defining role at relapse
+
+#### Scripts and Notebooks to reproduce figures in the above paper.
+
 ### v 0.1
 
 
@@ -52,6 +55,6 @@ When using this library, please cite
 
 ### Contributions
 
-This library is still a work in progress and we are striving to improve it. 
+This library is still a work in progress. 
 
 Contributions are always welcome.
