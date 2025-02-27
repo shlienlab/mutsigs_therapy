@@ -1,16 +1,10 @@
 
-<<<<<<< HEAD
-
 ## Unique patterns of mutations in childhood cancer highlight chemotherapy’s disease-defining role at relapse
 
 #### Scripts and Notebooks to reproduce figures in the above paper.
 
-=======
-## Scripts and Notebooks to reproduce figures in the following paper:
-## Unique patterns of mutations in childhood cancer highlight chemotherapy’s disease-defining role at relapse
->>>>>>> 8ebd04c (First commit)
-### v 0.1
 
+### v 0.1
 
 This repository includes
 
@@ -60,10 +54,5 @@ When using this library, please cite
 
 ### Contributions
 
-<<<<<<< HEAD
-This library is still a work in progress. 
-=======
-This library is still a work in progress and we are striving to improve it. 
->>>>>>> 8ebd04c (First commit)
-
+This library is still a work in progress.
 Contributions are always welcome.
