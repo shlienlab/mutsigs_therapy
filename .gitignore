@@ -1,3 +1,9 @@
 # Mac stuff
 .DS_Store
 **/.DS_Store
+
+# Python
+__pycache__/
+
+# Jupyter Notebook
+.ipynb_checkpoints
