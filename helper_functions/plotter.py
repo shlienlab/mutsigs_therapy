@@ -1,23 +1,66 @@
 import pandas as pd
 import numpy as np
 import math
+
 import matplotlib.pyplot as plt
+import matplotlib.colors as mc
 import matplotlib.patches as patches
 import matplotlib.patches as mpatches
 import matplotlib.axis as axis
+import seaborn as sns
+
 from collections import OrderedDict
 
 import networkx as nx
 
 from scipy import stats
-from scipy.stats import mannwhitneyu
 
 GENOME_SIZE = 2897.310462
 
 A_col = "#3288BD"
 B_col = "#D53E4F"
 
+
+
 def get_mut_dict(mat_df):
+    """
+    Converts a mutation frequency matrix into a nested dictionary categorized by mutation types.
+
+    Parameters:
+    -----------
+    mat_df : pd.DataFrame
+        A dataframe where:
+        - Rows represent samples.
+        - Columns represent mutation contexts (e.g., 'A[C>A]T').
+        - Values represent mutation counts or frequencies.
+
+    Returns:
+    --------
+    mutations : dict
+        A nested dictionary structured as:
+        ```
+        {
+            sample1: {
+                'C>A': {mutation_context1: count, mutation_context2: count, ...},
+                'C>G': {...},
+                'C>T': {...},
+                'T>A': {...},
+                'T>C': {...},
+                'T>G': {...}
+            },
+            sample2: { ... }
+        }
+        ```
+        - The first level keys are sample names.
+        - The second level keys are mutation types (`C>A`, `C>G`, etc.).
+        - The values are ordered dictionaries mapping mutation contexts to their respective counts.
+
+    Notes:
+    ------
+    - Mutation types are extracted from the 3rd to 5th character of each column name (`col[2:5]`).
+    - The function assumes percentage-based mutation counts (`float` values), but can be adjusted for integer counts.
+    - The mutation data for each sample is organized into an `OrderedDict` to maintain the order of mutations.
+    """
     mutations = dict()
     percentage = True
 
@@ -36,10 +79,75 @@ def get_mut_dict(mat_df):
 
     return mutations
 
-## plotTMB_generic_v4 --> plotTMB_therapy
+
+
+## Adapted from https://github.com/AlexandrovLab/SigProfilerPlotting
 def plotTMB_therapy(inputDF, pv, scale, color_dict, order=[], Yrange = "adapt", cutoff = 0, output = "TMB_plot.png",
             redbar = "median", xaxis = "Samples (n)", yaxis = "Somatic Mutations per Megabase",
             ascend = True, leftm = 1, rightm = 0.3, topm = 1.4, bottomm = 1):
+    """
+    Generates a Tumor Mutational Burden (TMB) bar plot stratified by therapy type.
+
+    Parameters:
+    -----------
+    inputDF : pd.DataFrame
+        A dataframe containing mutation burden data with the following structure:
+        - A column indicating therapy types.
+        - A column containing mutation burden values.
+    pv : float or None
+        The p-value for statistical significance annotations.
+        If None, a permutation-based t-test is performed.
+    scale : str or int
+        The scaling method for mutation burden normalization:
+        - `"exome"`: Uses a default value of 55.
+        - `"genome"`: Uses `GENOME_SIZE` (must be predefined).
+        - `int`: A custom numerical scaling factor.
+    color_dict : dict
+        A dictionary mapping therapy types to colors for bar plot visualization.
+    order : list, optional (default=[])
+        A predefined ordering of therapy types for plot arrangement.
+    Yrange : str or list, optional (default="adapt")
+        Determines the y-axis range:
+        - `"adapt"`: Automatically adapts based on data.
+        - `"cancer"`: Sets y-axis limits to `10^-3` to `10^3`.
+        - `list`: A custom range [min, max] where values are powers of 10.
+    cutoff : float, optional (default=0)
+        Minimum mutation burden threshold for samples to be included in the plot.
+    output : str, optional (default="TMB_plot.png")
+        Filename for saving the generated plot.
+    redbar : str, optional (default="median")
+        Determines the summary statistic for red reference bars:
+        - `"mean"`: Uses the mean mutation burden per group.
+        - `"median"`: Uses the median mutation burden per group.
+    xaxis : str, optional (default="Samples (n)")
+        Label for the x-axis.
+    yaxis : str, optional (default="Somatic Mutations per Megabase")
+        Label for the y-axis.
+    ascend : bool, optional (default=True)
+        If True, therapy types are sorted in ascending order based on mutation burden.
+    leftm, rightm, topm, bottomm : float, optional
+        Margins for adjusting plot spacing.
+
+    Returns:
+    --------
+    None
+        The function generates and displays a bar plot with statistical annotations.
+
+    Notes:
+    ------
+    - The function normalizes mutation burden by the specified `scale`.
+    - If `pv` is not provided, a permutation-based t-test is performed to compare therapy groups.
+    - Therapy groups are plotted as colored bars, with dots representing individual samples.
+    - A significance annotation is displayed if `pv < 0.05`:
+        - `"*"` for `0.01 ≤ pv < 0.05`
+        - `"**"` for `0.001 ≤ pv < 0.01`
+        - `"***"` for `pv < 0.001`
+    - The final plot includes:
+        - Therapy groups on the x-axis.
+        - Tumor Mutational Burden on the y-axis (log10 scale).
+        - A red reference bar indicating the mean or median TMB per group.
+        - Individual sample data points overlaid on the bars.
+    """
     if type(scale) == int:
         scale = scale
     elif scale == "genome":
@@ -111,40 +219,28 @@ def plotTMB_therapy(inputDF, pv, scale, color_dict, order=[], Yrange = "adapt", 
         leftm = leftm + 0.09 * (len(names[0]) - 13)
         topm = topm + 0.080 * (len(names[0]) - 13)
     fig_width = leftm + rightm + 0.4 * ngroups
-    #fig_length = topm + bottomm + (ymax - ymin) * 0.7
-    #print("{} -- {}".format(fig_width, fig_length))
-    #fig_width = 4
     fig_length = 4
     fig, ax = plt.subplots(figsize=(fig_width/2, 4))
     if cutoff < 0:
         print("ERROR: cutoff value is less than 0")
         return
     plt.xlim(0,2*ngroups)
-    #print(len(names[0]))
     plt.ylim(ymin,ymax)
     yticks_loc = range(ymin,ymax+1,1)
     plt.yticks(yticks_loc,list(map((lambda x: 10**x), list(yticks_loc)))) 
-    #list1 = [f"n={x}" for x in list1]
     plt.xticks(np.arange(1, 2*ngroups+1, step = 2), list1, fontsize=14) 
     plt.tick_params(axis = 'both', which = 'both', length = 0)
     plt.hlines(yticks_loc,0,2*ngroups,colors = 'black',linestyles = "dashed",linewidth = 0.5,zorder = 1)
-    '''for i in range(0,ngroups,2):
-        greystart = [(i)*2,ymin]
-        rectangle = mpatches.Rectangle(greystart, 2, ymax-ymin, color = "lightgrey",zorder = 0)
-        ax.add_patch(rectangle)'''
-    
+
     bar_y = ymax-1
     if pv < 0.001:
         plt.plot([3,3,5,5], [bar_y, bar_y+.1, bar_y+.1, bar_y], lw=1.5, c='k')
-        #plt.text(4, 1.2, f"p = {pv:.2}", ha='center', va='bottom', color='k')
         plt.text(4, bar_y+.2, "***", ha='center', va='bottom', color='k')
     elif pv < 0.01:
         plt.plot([3,3,5,5], [bar_y, bar_y+.1, bar_y+.1, bar_y], lw=1.5, c='k')
-        #plt.text(4, 1.2, f"p = {pv:.2}", ha='center', va='bottom', color='k')
         plt.text(4, bar_y+.2, "**", ha='center', va='bottom', color='k')
     elif pv < 0.05:
         plt.plot([3,3,5,5], [bar_y, bar_y+.1, bar_y+.1, bar_y], lw=1.5, c='k')
-        #plt.text(4, 1.2, f"p = {pv:.2}", ha='center', va='bottom', color='k')
         plt.text(4, bar_y+.2, "*", ha='center', va='bottom', color='k')
     
     for i in range(len(names)):
@@ -155,29 +251,54 @@ def plotTMB_therapy(inputDF, pv, scale, color_dict, order=[], Yrange = "adapt", 
     for i in range(0,ngroups,1):
         X_start = i*2+0.2
         X_end = i*2+2-0.2
-        #rg = 1.8
         y_values = groups.get_group(names[i])["log10BURDENpMB"].sort_values(ascending = True).values.tolist()
         x_values = list(np.linspace(start = X_start, stop = X_end, num = counts[i]))
         plt.scatter(x_values,y_values,color = "darkgrey",s=1.5)
         plt.hlines(redbars[i], X_start, X_end, colors='darkred', zorder=2)
-        #plt.text(ngroups*2+1, redbars[i], ("%.3f" % 10**redbars[i]), color='red')
         plt.text(X_start, redbars[i]+0.1, ("%.3f" % 10**redbars[i]), color='darkred', fontsize=12)
         
-        #plt.text((leftm + 0.2 + i * 0.4) / fig_width , 0.85 / fig_length , "___",  horizontalalignment='center',transform=plt.gcf().transFigure)
     plt.ylabel(yaxis, fontsize=14)
     plt.xlabel(xaxis, fontsize=14)
     axes2 = ax.twiny()
-    #plt.text((leftm - 0.3) / fig_width, 0.2 / fig_length, "*Showing samples with counts more than %d" % cutoff, transform=plt.gcf().transFigure) 
     plt.tick_params(axis = 'both', which = 'both',length = 0)
     plt.xticks(np.arange(1, 2*ngroups+1, step = 2),names,rotation = -90,ha = 'right', fontsize=14)
-    #fig.subplots_adjust(top = ((ymax - ymin) * 0.7 + bottomm) / fig_length, bottom = bottomm / fig_length, left = leftm / fig_width, right=1 - rightm / fig_width)
-    #plt.savefig(output)
-    #plt.close()
 
-## TMB_plotter.plotTMB_generic --> plotTMB_type
+
+
+
+## Adapted from https://github.com/AlexandrovLab/SigProfilerPlotting
 def plotTMB_type(inputDF, pval_dict, scale, order=[], Yrange = "adapt", cutoff = 0, output = "TMB_plot.png",
             redbar = "median", yaxis = "Somatic Mutations per Megabase",
             ascend = True, leftm = 1, rightm = 0.3, topm = 1.4, bottomm = 1):
+    """
+    This function generates a plot for Tumor Mutation Burden (TMB) based on input data. It visualizes the mutation burden
+    for different mutation types, and allows customization of various plot parameters such as scale, cutoff, axis labels, 
+    and statistical bars.
+
+    Parameters:
+    - inputDF (pandas.DataFrame): A DataFrame containing the mutation types and their corresponding mutation burden values.
+    - pval_dict (dict): A dictionary containing p-values for each mutation type, which will be displayed on the plot.
+    - scale (str or int): A scale value to normalize mutation burden. Options: 'genome', 'exome', or a numeric value.
+    - order (list): An optional list specifying the order of the mutation types.
+    - Yrange (str or list): Range for the Y-axis. Options: "adapt", "cancer", or a list of two numbers defining a custom range.
+    - cutoff (int): A threshold to filter out mutation burden values below this threshold.
+    - output (str): File name for saving the generated plot (default is "TMB_plot.png").
+    - redbar (str): The type of statistical bar to display ('mean' or 'median').
+    - yaxis (str): Label for the Y-axis (default is "Somatic Mutations per Megabase").
+    - ascend (bool): Whether to sort mutation types in ascending order (default is True).
+    - leftm (float): Left margin for the plot (default is 1).
+    - rightm (float): Right margin for the plot (default is 0.3).
+    - topm (float): Top margin for the plot (default is 1.4).
+    - bottomm (float): Bottom margin for the plot (default is 1).
+
+    Returns:
+    - Saves a TMB plot as an image file (default is "TMB_plot.png").
+
+    The function groups mutations by their type, calculates log-transformed mutation burden values, and plots a scatter plot
+    with vertical red lines indicating the mean or median value of the mutation burden for each mutation type. It also 
+    includes annotations for p-values and adjusts plot appearance based on the number of mutation types and the desired range 
+    for the Y-axis.
+    """
     pret_color = 'lightsteelblue'
     post_color = 'lightcoral'
     if type(scale) == int:
@@ -223,7 +344,6 @@ def plotTMB_type(inputDF, pval_dict, scale, order=[], Yrange = "adapt", cutoff =
     result[::2] = list3
     result[1::2] = list4
     tick_labels = result
-    #new_labels = [ ''.join(x) for x in zip(tick_labels[0::2], tick_labels[1::2]) ]
     new_labels = list3
     if Yrange == "adapt":
         ymax = math.ceil(df['log10BURDENpMB'].max())
@@ -251,7 +371,6 @@ def plotTMB_type(inputDF, pval_dict, scale, order=[], Yrange = "adapt", cutoff =
         print("ERROR: cutoff value is less than 0")
         return
     plt.xlim(0,2*ngroups)
-    #print(len(names[0]))
     plt.ylim(ymin,ymax)
     yticks_loc = range(ymin,ymax+1,1)
     plt.yticks(yticks_loc,list(map((lambda x: 10**x), list(yticks_loc)))) 
@@ -269,33 +388,16 @@ def plotTMB_type(inputDF, pval_dict, scale, order=[], Yrange = "adapt", cutoff =
     for i in range(0,ngroups,1):
         X_start = i*2+0.2
         X_end = i*2+2-0.2
-        #rg = 1.8
         y_values = groups.get_group(names[i])["log10BURDENpMB"].sort_values(ascending = True).values.tolist()
         x_values = list(np.linspace(start = X_start, stop = X_end, num = counts[i]))
         plt.scatter(x_values,y_values,color = "black",s=1.5)
         plt.hlines(redbars[i], X_start, X_end, colors='red', zorder=2)
-        #plt.text((leftm + 0.2 + i * 0.4) / fig_width , 0.85 / fig_length , "___",  horizontalalignment='center',transform=plt.gcf().transFigure)
     for i in range(1,ngroups,2):
         x_line = i*2+2
         plt.axvline(x_line, color='darkgray')
     plt.ylabel(yaxis)
-    #axes2 = ax.twiny()
-    #plt.text((leftm - 0.3) / fig_width, 0.2 / fig_length, "*Showing samples with counts more than %d" % cutoff, transform=plt.gcf().transFigure) 
     plt.tick_params(axis = 'both', which = 'both',length = 0)
-    #plt.xticks(np.arange(1, 2*ngroups+1, step = 2),names,rotation = -35,ha = 'right')
-
-    #new_names = list(set([x.split('::')[0] for x in names]))
     new_names = list(dict.fromkeys([x.split('::')[0] for x in names]))
-    #axes2.set_xticks(np.arange(0.5,23.5), new_names, ha = 'center')
-    '''myticks = [2, 6, 9.7, 13.5, 17.5, 21.5, 25.2, 29, 33, 37,
-               40.5, 44.5, 48.5,
-               52.5, 55.5, 59.5,
-               64, 67.5, 70, 74, 78, 82, 86]'''
-    #axes2.set_xticks(myticks, list(set(new_names)), ha = 'center')
-    #axes2.set_xticks(list(np.arange(2, ax.get_xlim()[1]-2, step = 4))+[86], list(set(new_names)), ha = 'center')
-    #axes2.set_xticks(np.arange(2, ax.get_xlim()[1], step = 4), list(set(new_names)), ha = 'center')
-    #print(np.arange(2, ax.get_xlim()[1], step = 4)-np.arange(0, 1, step = 0.045))
-    #print(np.arange(2, ax.get_xlim()[1], step = 4))
 
     for i, j in enumerate(np.arange(2, ax.get_xlim()[1], step = 4)):
         ax.text(j, 2.1, new_names[i], horizontalalignment='center')
@@ -303,26 +405,48 @@ def plotTMB_type(inputDF, pval_dict, scale, order=[], Yrange = "adapt", cutoff =
     for i, n in enumerate(new_names):
         x1 = i*4 + 1
         x2 = i*4 + 3
-        '''
-        rvs1 = inputDF[inputDF.Types==f"{n}::Naive"].Mut_burden.tolist()
-        rvs2 = inputDF[inputDF.Types==f"{n}::Treated"].Mut_burden.tolist()
-
-        _, pv = mannwhitneyu(rvs1, rvs2, method="asymptotic")'''
         pv = pval_dict[n]
         if pv < 0.05:
-            #plt.plot([x1,x1,x2,x2], [1, 1.1, 1.1, 1], lw=1.5, c='k')
             plt.text(x1+1, 1.2, f"p={pv:.2}", ha='center', va='bottom', color='k')
             print(n)
         
 
     fig.subplots_adjust(top = ((ymax - ymin) * 0.7 + bottomm) / fig_length, bottom = bottomm / fig_length, left = leftm / fig_width, right=1 - rightm / fig_width)
-    #plt.savefig(output)
-    #plt.close()
 
-## TMB_plotter.plotTMB_generic_v2 --> plotTMB_generic
-def plotTMB_generic(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0, output = "TMB_plot.png",
+
+## Adapted from https://github.com/AlexandrovLab/SigProfilerPlotting
+def plotTMB_generic(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0,
             redbar = "median", yaxis = "Somatic Mutations per Megabase",
             ascend = True, leftm = 1, rightm = 0.3, topm = 1.4, bottomm = 1):
+    """
+    Plots a graph of Tumor Mutational Burden (TMB) for a given dataset. The plot visualizes the distribution 
+    of somatic mutations per megabase across different mutation types, with an optional red bar indicating 
+    either the mean or median value for each mutation type.
+
+    Parameters:
+    - inputDF (DataFrame): A pandas DataFrame containing mutation type ('Types') and corresponding mutation burden ('Mut_burden').
+    - scale (int, str): The scaling factor for mutational burden. Can be a numeric value or one of the strings:
+      "genome" (2897.310462) or "exome" (55).
+    - order (list, optional): A list specifying the order of mutation types to display in the plot.
+    - Yrange (str, list, optional): Defines the y-axis range. Options are "adapt", "cancer", or a list with two power of 10 values.
+    - cutoff (int, optional): A threshold below which mutation burden values will be excluded from the plot. Default is 0.
+    - output (str, optional): Filename for saving the plot. Default is "TMB_plot.png".
+    - redbar (str, optional): Determines whether the red bar represents the "mean" or "median" value for each mutation type.
+    - yaxis (str, optional): Label for the y-axis. Default is "Somatic Mutations per Megabase".
+    - ascend (bool, optional): If True, the mutation types are ordered in ascending order of mutational burden. Default is True.
+    - leftm (float, optional): Left margin for the plot. Default is 1.
+    - rightm (float, optional): Right margin for the plot. Default is 0.3.
+    - topm (float, optional): Top margin for the plot. Default is 1.4.
+    - bottomm (float, optional): Bottom margin for the plot. Default is 1.
+
+    Returns:
+    - None
+
+    Notes:
+    - If `scale` is a string, it must be either "genome" or "exome", which correspond to predefined scaling values.
+    - If `Yrange` is a list, it should contain two values representing the lower and upper limits for the y-axis range.
+    - The function will display the p-value for each mutation type if the corresponding p-value is less than 0.05.
+    """
     if type(scale) == int:
         scale = scale
     elif scale == "genome":
@@ -388,16 +512,12 @@ def plotTMB_generic(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0, outp
         leftm = leftm + 0.09 * (len(names[0]) - 13)
         topm = topm + 0.080 * (len(names[0]) - 13)
     fig_width = leftm + rightm + 0.4 * ngroups
-    #fig_length = topm + bottomm + (ymax - ymin) * 0.7
-    #print("{} -- {}".format(fig_width, fig_length))
-    #fig_width = 4
     fig_length = 6
     fig, ax = plt.subplots(figsize=(fig_width, fig_length))
     if cutoff < 0:
         print("ERROR: cutoff value is less than 0")
         return
     plt.xlim(0,2*ngroups)
-    #print(len(names[0]))
     plt.ylim(ymin,ymax)
     yticks_loc = range(ymin,ymax+1,1)
     plt.yticks(yticks_loc,list(map((lambda x: 10**x), list(yticks_loc)))) 
@@ -411,7 +531,6 @@ def plotTMB_generic(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0, outp
     for i in range(0,ngroups,1):
         X_start = i*2+0.2
         X_end = i*2+2-0.2
-        #rg = 1.8
         y_values = groups.get_group(names[i])["log10BURDENpMB"].sort_values(ascending = True).values.tolist()
         x_values = list(np.linspace(start = X_start, stop = X_end, num = counts[i]))
         plt.scatter(x_values,y_values,color = "black",s=1.5)
@@ -419,22 +538,59 @@ def plotTMB_generic(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0, outp
         plt.text((leftm + 0.2 + i * 0.4) / fig_width , 0.85 / fig_length , "___",  horizontalalignment='center',transform=plt.gcf().transFigure)
     plt.ylabel(yaxis)
     axes2 = ax.twiny()
-    #plt.text((leftm - 0.3) / fig_width, 0.2 / fig_length, "*Showing samples with counts more than %d" % cutoff, transform=plt.gcf().transFigure) 
     plt.tick_params(axis = 'both', which = 'both',length = 0)
     plt.xticks(np.arange(1, 2*ngroups+1, step = 2),names,rotation = -90,ha = 'right')
     fig.subplots_adjust(top = ((ymax - ymin) * 0.7 + bottomm) / fig_length, bottom = bottomm / fig_length, left = leftm / fig_width, right=1 - rightm / fig_width)
-    #plt.savefig(output)
-    #plt.close()
+
+
+
 
 def prepend(list, str): 
     str += '{0}'
     list = [str.format(i) for i in list] 
     return(list)
 
-## plotTMB_generic_v2 --> plotTMB_SBS
-def plotTMB_SBS(inputDF, kzm611_sbs_rel, scale, order=[], Yrange = "adapt", cutoff = 0, output = "TMB_plot.png",
+
+## Adapted from https://github.com/AlexandrovLab/SigProfilerPlotting
+def plotTMB_SBS(inputDF, kzm611_sbs_rel, scale, order=[], Yrange = "adapt", cutoff = 0,
             redbar = "median", yaxis = "Somatic Mutations per Megabase",
             ascend = True, leftm = 1, rightm = 0.3, topm = 1.4, bottomm = 1):
+    """
+    Plots a graph of Tumor Mutational Burden (TMB) and the SBS (Single Base Substitution) relative frequencies 
+    for a given dataset. The plot displays the distribution of somatic mutations per megabase across different 
+    mutation types, with an optional red bar representing either the mean or median mutational burden for each 
+    mutation type. Additionally, it overlays a bar plot showing the relative frequencies of different mutation 
+    types from the SBS dataset.
+
+    Parameters:
+    - inputDF (DataFrame): A pandas DataFrame containing mutation type ('Types') and corresponding mutation burden ('Mut_burden').
+    - kzm611_sbs_rel (DataFrame): A pandas DataFrame containing the SBS relative frequencies.
+    - scale (int, str): The scaling factor for mutational burden. Can be a numeric value or one of the strings:
+      "genome" (2897.310462) or "exome" (55).
+    - order (list, optional): A list specifying the order of mutation types to display in the plot.
+    - Yrange (str, list, optional): Defines the y-axis range. Options are "adapt", "cancer", or a list with two power of 10 values.
+    - cutoff (int, optional): A threshold below which mutation burden values will be excluded from the plot. Default is 0.
+    - redbar (str, optional): Determines whether the red bar represents the "mean" or "median" value for each mutation type.
+    - yaxis (str, optional): Label for the y-axis. Default is "Somatic Mutations per Megabase".
+    - ascend (bool, optional): If True, the mutation types are ordered in ascending order of mutational burden. Default is True.
+    - leftm (float, optional): Left margin for the plot. Default is 1.
+    - rightm (float, optional): Right margin for the plot. Default is 0.3.
+    - topm (float, optional): Top margin for the plot. Default is 1.4.
+    - bottomm (float, optional): Bottom margin for the plot. Default is 1.
+
+    Returns:
+    - None
+
+    Notes:
+    - If `scale` is a string, it must be either "genome" or "exome", which correspond to predefined scaling values.
+    - If `Yrange` is a list, it should contain two values representing the lower and upper limits for the y-axis range.
+    - The function saves the plot as an image in the format defined by the `output` parameter, defaulting to "TMB_plot.png".
+    - The second axis (`ax2`) visualizes the mutational burden, while the first axis (`ax1`) shows the SBS relative frequencies.
+    - The function also overlays annotations and horizontal lines for visual clarity on the SBS plot.
+
+    Example usage:
+    plotTMB_SBS(inputDF, kzm611_sbs_rel, scale="genome", redbar="median", cutoff=0, Yrange="adapt")
+    """
     if type(scale) == int:
         scale = scale
     elif scale == "genome":
@@ -500,13 +656,9 @@ def plotTMB_SBS(inputDF, kzm611_sbs_rel, scale, order=[], Yrange = "adapt", cuto
         leftm = leftm + 0.09 * (len(names[0]) - 13)
         topm = topm + 0.080 * (len(names[0]) - 13)
     fig_width = leftm + rightm + 0.4 * ngroups
-    #fig_length = topm + bottomm + (ymax - ymin) * 0.7
-    #print("{} -- {}".format(fig_width, fig_length))
-    #fig_width = 4
     fig_length = 6
     fig, (ax0, ax2) = plt.subplots(2,1, figsize=(fig_width, fig_length), gridspec_kw={'height_ratios': [1, 2]}, facecolor="#f4f0eb")
 
-    
     ax1 = kzm611_sbs_rel.plot(kind="bar", stacked=True, width=0.95, color=[A_col, B_col], ax=ax0)
     ax1.set_xlabel('')
     ax1.set_yticks([])
@@ -520,7 +672,6 @@ def plotTMB_SBS(inputDF, kzm611_sbs_rel, scale, order=[], Yrange = "adapt", cuto
     plt.setp([tick.label2 for tick in ax1.xaxis.get_major_ticks()], rotation=90,
             ha="left", va="center",rotation_mode="anchor")
     ax1.legend(loc='upper right', bbox_to_anchor=(1,2.7), ncol=15, fontsize=12, facecolor="#f4f0eb")
-
 
     ax1.set_facecolor('#f4f0eb')
 
@@ -567,21 +718,15 @@ def plotTMB_SBS(inputDF, kzm611_sbs_rel, scale, order=[], Yrange = "adapt", cuto
     ax1.plot([9.6, 19.4],[2.5,2.5], color="red", transform=trans, clip_on=False)
     ax1.plot([9.6, 9.6],[1,2.5], color="red", transform=trans, clip_on=False)
     ax1.plot([19.4, 19.4],[1,2.5], color="red", transform=trans, clip_on=False)
-
     ax1.text(12.4, 2.7, 'Therapy Signatures', color="red", fontsize=12)
 
     ax2.set_xlim(0,2*ngroups)
-    #print(len(names[0]))
     ax2.set_ylim(ymin,ymax)
     yticks_loc = range(ymin,ymax+1,1)
     ax2.set_yticks(yticks_loc,list(map((lambda x: 10**x), list(yticks_loc))))
     ax2.set_xticks(np.arange(1, 2*ngroups+1, step = 2), new_labels) 
     ax2.tick_params(axis = 'both', which = 'both',length = 0)
     ax2.hlines(yticks_loc,0,2*ngroups,colors = 'black',linestyles = "dashed",linewidth = 0.5,zorder = 1)
-    '''for i in range(0,ngroups,2):
-        greystart = [(i)*2,ymin]
-        rectangle = mpatches.Rectangle(greystart, 2, ymax-ymin, color = "lightgrey",zorder = 0)
-        ax2.add_patch(rectangle)'''
 
     for i in range(0,ngroups):
         if ((i+1) % 2) == 0:
@@ -594,26 +739,23 @@ def plotTMB_SBS(inputDF, kzm611_sbs_rel, scale, order=[], Yrange = "adapt", cuto
     for i in range(0,ngroups,1):
         X_start = i*2+0.2
         X_end = i*2+2-0.2
-        #rg = 1.8
         y_values = groups.get_group(names[i])["log10BURDENpMB"].sort_values(ascending = True).values.tolist()
         x_values = list(np.linspace(start = X_start, stop = X_end, num = counts[i]))
         ax2.scatter(x_values,y_values,color = "black",s=1.5)
         ax2.hlines(redbars[i], X_start, X_end, colors='red', zorder=2)
         ax2.text((leftm + 0.2 + i * 0.4) / fig_width , 0.85 / fig_length , "___",  horizontalalignment='center',transform=plt.gcf().transFigure)
     ax2.set_ylabel(yaxis)
-    #axes2 = ax.twiny()
-    #plt.text((leftm - 0.3) / fig_width, 0.2 / fig_length, "*Showing samples with counts more than %d" % cutoff, transform=plt.gcf().transFigure) 
-    #plt.tick_params(axis = 'both', which = 'both',length = 0)
-    #plt.xticks(np.arange(1, 2*ngroups+1, step = 2),names,rotation = -90,ha = 'right')
     fig.subplots_adjust(top = ((ymax - ymin) * 0.7 + bottomm) / fig_length, bottom = bottomm / fig_length, left = leftm / fig_width, right=1 - rightm / fig_width)
-    #plt.tight_layout()
-    #plt.savefig(output)
-    #plt.close()
 
-## plotDBS_generic_v2 --> plotTMB_DBS
-def plotTMB_DBS(inputDF, kzm611_sbs_rel, scale, order=[], Yrange = "adapt", cutoff = 0, output = "TMB_plot.png",
+
+
+## Adapted from https://github.com/AlexandrovLab/SigProfilerPlotting
+def plotTMB_DBS(inputDF, kzm611_sbs_rel, scale, order=[], Yrange = "adapt", cutoff = 0,
             redbar = "median", yaxis = "Somatic Mutations per Megabase",
             ascend = True, leftm = 1, rightm = 0.3, topm = 1.4, bottomm = 1):
+    """
+    Same as plotTMB_SBS
+    """
     if type(scale) == int:
         scale = scale
     elif scale == "genome":
@@ -658,7 +800,6 @@ def plotTMB_DBS(inputDF, kzm611_sbs_rel, scale, order=[], Yrange = "adapt", cuto
     result[1::2] = list4
     tick_labels = result
     new_labels = [ ''.join(x) for x in zip(tick_labels[0::2], tick_labels[1::2]) ]
-    #new_labels = list3
     if Yrange == "adapt":
         ymax = math.ceil(df['log10BURDENpMB'].max())
         ymin = math.floor(df['log10BURDENpMB'].min())
@@ -679,12 +820,8 @@ def plotTMB_DBS(inputDF, kzm611_sbs_rel, scale, order=[], Yrange = "adapt", cuto
         leftm = leftm + 0.09 * (len(names[0]) - 13)
         topm = topm + 0.080 * (len(names[0]) - 13)
     fig_width = leftm + rightm + 0.4 * ngroups
-    #fig_length = topm + bottomm + (ymax - ymin) * 0.7
-    #print("{} -- {}".format(fig_width, fig_length))
-    #fig_width = 4
     fig_length = 6
     fig, (ax0, ax2) = plt.subplots(2,1, figsize=(fig_width, fig_length), gridspec_kw={'height_ratios': [1, 2]}, facecolor="#f4f0eb")
-
     
     ax1 = kzm611_sbs_rel.plot(kind="bar", stacked=True, width=0.95, color=[A_col, B_col], ax=ax0)
     ax1.set_xlabel('')
@@ -730,10 +867,6 @@ def plotTMB_DBS(inputDF, kzm611_sbs_rel, scale, order=[], Yrange = "adapt", cuto
     ax2.set_xticks(np.arange(1, 2*ngroups+1, step = 2), new_labels) 
     ax2.tick_params(axis = 'both', which = 'both',length = 0)
     ax2.hlines(yticks_loc,0,2*ngroups,colors = 'black',linestyles = "dashed",linewidth = 0.5,zorder = 1)
-    '''for i in range(0,ngroups,2):
-        greystart = [(i)*2,ymin]
-        rectangle = mpatches.Rectangle(greystart, 2, ymax-ymin, color = "lightgrey",zorder = 0)
-        ax2.add_patch(rectangle)'''
     for i in range(0,ngroups):
         if ((i+1) % 2) == 0:
             rectangle = mpatches.Rectangle([(i)*2, ymin], 2, ymax-ymin, color="#f4f0eb", zorder = 0)
@@ -744,26 +877,24 @@ def plotTMB_DBS(inputDF, kzm611_sbs_rel, scale, order=[], Yrange = "adapt", cuto
     for i in range(0,ngroups,1):
         X_start = i*2+0.2
         X_end = i*2+2-0.2
-        #rg = 1.8
         y_values = groups.get_group(names[i])["log10BURDENpMB"].sort_values(ascending = True).values.tolist()
         x_values = list(np.linspace(start = X_start, stop = X_end, num = counts[i]))
         ax2.scatter(x_values,y_values,color = "black",s=1.5)
         ax2.hlines(redbars[i], X_start, X_end, colors='red', zorder=2)
         ax2.text((leftm + 0.2 + i * 0.4) / fig_width , 0.85 / fig_length , "___",  horizontalalignment='center',transform=plt.gcf().transFigure)
     ax2.set_ylabel(yaxis)
-    #axes2 = ax.twiny()
-    #plt.text((leftm - 0.3) / fig_width, 0.2 / fig_length, "*Showing samples with counts more than %d" % cutoff, transform=plt.gcf().transFigure) 
-    #plt.tick_params(axis = 'both', which = 'both',length = 0)
-    #plt.xticks(np.arange(1, 2*ngroups+1, step = 2),names,rotation = -90,ha = 'right')
     fig.subplots_adjust(top = ((ymax - ymin) * 0.7 + bottomm) / fig_length, bottom = bottomm / fig_length, left = leftm / fig_width, right=1 - rightm / fig_width)
-    #plt.tight_layout()
-    #plt.savefig(output)
-    #plt.close()
 
-## plotID_generic_v2 --> plotTMB_ID
-def plotTMB_ID(inputDF, kzm611_sigs_rel, scale, order=[], Yrange = "adapt", cutoff = 0, output = "TMB_plot.png",
+
+
+
+## Adapted from https://github.com/AlexandrovLab/SigProfilerPlotting
+def plotTMB_ID(inputDF, kzm611_sigs_rel, scale, order=[], Yrange = "adapt", cutoff = 0,
             redbar = "median", yaxis = "Somatic Mutations per Megabase",
             ascend = True, leftm = 1, rightm = 0.3, topm = 1.4, bottomm = 1):
+    """
+    Same as plotTMB_SBS
+    """
     if type(scale) == int:
         scale = scale
     elif scale == "genome":
@@ -808,7 +939,6 @@ def plotTMB_ID(inputDF, kzm611_sigs_rel, scale, order=[], Yrange = "adapt", cuto
     result[1::2] = list4
     tick_labels = result
     new_labels = [ ''.join(x) for x in zip(tick_labels[0::2], tick_labels[1::2]) ]
-    #new_labels = list3
     if Yrange == "adapt":
         ymax = math.ceil(df['log10BURDENpMB'].max())
         ymin = math.floor(df['log10BURDENpMB'].min())
@@ -829,12 +959,8 @@ def plotTMB_ID(inputDF, kzm611_sigs_rel, scale, order=[], Yrange = "adapt", cuto
         leftm = leftm + 0.09 * (len(names[0]) - 13)
         topm = topm + 0.080 * (len(names[0]) - 13)
     fig_width = leftm + rightm + 0.4 * ngroups
-    #fig_length = topm + bottomm + (ymax - ymin) * 0.7
-    #print("{} -- {}".format(fig_width, fig_length))
-    #fig_width = 4
     fig_length = 6
     fig, (ax0, ax2) = plt.subplots(2,1, figsize=(fig_width, fig_length), gridspec_kw={'height_ratios': [1, 2]}, facecolor="#f4f0eb")
-
     
     ax1 = kzm611_sigs_rel.plot(kind="bar", stacked=True, width=0.95, color=[A_col, B_col], ax=ax0)
     ax1.set_xlabel('')
@@ -873,17 +999,13 @@ def plotTMB_ID(inputDF, kzm611_sigs_rel, scale, order=[], Yrange = "adapt", cuto
         print("ERROR: cutoff value is less than 0")
         return
     ax2.set_xlim(0,2*ngroups)
-    #print(len(names[0]))
     ax2.set_ylim(ymin,ymax)
     yticks_loc = range(ymin,ymax+1,1)
     ax2.set_yticks(yticks_loc,list(map((lambda x: 10**x), list(yticks_loc))))
     ax2.set_xticks(np.arange(1, 2*ngroups+1, step = 2), new_labels) 
     ax2.tick_params(axis = 'both', which = 'both',length = 0)
     ax2.hlines(yticks_loc,0,2*ngroups,colors = 'black',linestyles = "dashed",linewidth = 0.5,zorder = 1)
-    '''for i in range(0,ngroups,2):
-        greystart = [(i)*2,ymin]
-        rectangle = mpatches.Rectangle(greystart, 2, ymax-ymin, color = "lightgrey",zorder = 0)
-        ax2.add_patch(rectangle)'''
+
     for i in range(0,ngroups):
         if ((i+1) % 2) == 0:
             rectangle = mpatches.Rectangle([(i)*2, ymin], 2, ymax-ymin, color="#f4f0eb", zorder = 0)
@@ -894,27 +1016,24 @@ def plotTMB_ID(inputDF, kzm611_sigs_rel, scale, order=[], Yrange = "adapt", cuto
     for i in range(0,ngroups,1):
         X_start = i*2+0.2
         X_end = i*2+2-0.2
-        #rg = 1.8
         y_values = groups.get_group(names[i])["log10BURDENpMB"].sort_values(ascending = True).values.tolist()
         x_values = list(np.linspace(start = X_start, stop = X_end, num = counts[i]))
         ax2.scatter(x_values,y_values,color = "black",s=1.5)
         ax2.hlines(redbars[i], X_start, X_end, colors='red', zorder=2)
         ax2.text((leftm + 0.2 + i * 0.4) / fig_width , 0.85 / fig_length , "___",  horizontalalignment='center',transform=plt.gcf().transFigure)
     ax2.set_ylabel(yaxis)
-    #axes2 = ax.twiny()
-    #plt.text((leftm - 0.3) / fig_width, 0.2 / fig_length, "*Showing samples with counts more than %d" % cutoff, transform=plt.gcf().transFigure) 
-    #plt.tick_params(axis = 'both', which = 'both',length = 0)
-    #plt.xticks(np.arange(1, 2*ngroups+1, step = 2),names,rotation = -90,ha = 'right')
     fig.subplots_adjust(top = ((ymax - ymin) * 0.7 + bottomm) / fig_length, bottom = bottomm / fig_length, left = leftm / fig_width, right=1 - rightm / fig_width)
-    #plt.tight_layout()
-    #plt.savefig(output)
-    #plt.close()
 
 
-## plotID_generic_v2 --> plotTMB_ID
-def plotTMB_CN(inputDF, kzm611_sigs_rel, scale, order=[], Yrange = "adapt", cutoff = 0, output = "TMB_plot.png",
+
+
+## Adapted from https://github.com/AlexandrovLab/SigProfilerPlotting
+def plotTMB_CN(inputDF, kzm611_sigs_rel, scale, order=[], Yrange = "adapt", cutoff = 0,
             redbar = "median", yaxis = "Somatic Mutations per Megabase",
             ascend = True, leftm = 1, rightm = 0.3, topm = 1.4, bottomm = 1):
+    """
+    Same as plotTMB_SBS
+    """
     if type(scale) == int:
         scale = scale
     elif scale == "genome":
@@ -959,7 +1078,6 @@ def plotTMB_CN(inputDF, kzm611_sigs_rel, scale, order=[], Yrange = "adapt", cuto
     result[1::2] = list4
     tick_labels = result
     new_labels = [ ''.join(x) for x in zip(tick_labels[0::2], tick_labels[1::2]) ]
-    #new_labels = list3
     if Yrange == "adapt":
         ymax = math.ceil(df['log10BURDENpMB'].max())
         ymin = math.floor(df['log10BURDENpMB'].min())
@@ -980,9 +1098,6 @@ def plotTMB_CN(inputDF, kzm611_sigs_rel, scale, order=[], Yrange = "adapt", cuto
         leftm = leftm + 0.09 * (len(names[0]) - 13)
         topm = topm + 0.080 * (len(names[0]) - 13)
     fig_width = leftm + rightm + 0.4 * ngroups
-    #fig_length = topm + bottomm + (ymax - ymin) * 0.7
-    #print("{} -- {}".format(fig_width, fig_length))
-    #fig_width = 4
     fig_length = 6
     fig, (ax0, ax2) = plt.subplots(2,1, figsize=(fig_width, fig_length), gridspec_kw={'height_ratios': [1, 2]})
 
@@ -999,7 +1114,6 @@ def plotTMB_CN(inputDF, kzm611_sigs_rel, scale, order=[], Yrange = "adapt", cuto
     # Rotate and align top ticklabels
     plt.setp([tick.label2 for tick in ax1.xaxis.get_major_ticks()], rotation=90,
             ha="left", va="center",rotation_mode="anchor")
-    #ax1.legend(loc='upper right', bbox_to_anchor=(1,2.75), ncol=15, fontsize=12, facecolor="#f4f0eb")
     ax1.get_legend().remove()
 
     ann_y = 1.85
@@ -1032,10 +1146,7 @@ def plotTMB_CN(inputDF, kzm611_sigs_rel, scale, order=[], Yrange = "adapt", cuto
     ax2.set_xticks(np.arange(1, 2*ngroups+1, step = 2), new_labels) 
     ax2.tick_params(axis = 'both', which = 'both',length = 0)
     ax2.hlines(yticks_loc,0,2*ngroups,colors = 'black',linestyles = "dashed",linewidth = 0.5,zorder = 1)
-    '''for i in range(0,ngroups,2):
-        greystart = [(i)*2,ymin]
-        rectangle = mpatches.Rectangle(greystart, 2, ymax-ymin, color = "lightgrey",zorder = 0)
-        ax2.add_patch(rectangle)'''
+
     for i in range(0,ngroups):
         if ((i+1) % 2) == 0:
             rectangle = mpatches.Rectangle([(i)*2, ymin], 2, ymax-ymin, color="white", zorder = 0)
@@ -1053,19 +1164,18 @@ def plotTMB_CN(inputDF, kzm611_sigs_rel, scale, order=[], Yrange = "adapt", cuto
         ax2.hlines(redbars[i], X_start, X_end, colors='red', zorder=2)
         ax2.text((leftm + 0.2 + i * 0.4) / fig_width , 0.85 / fig_length , "___",  horizontalalignment='center',transform=plt.gcf().transFigure)
     ax2.set_ylabel(yaxis)
-    #axes2 = ax.twiny()
-    #plt.text((leftm - 0.3) / fig_width, 0.2 / fig_length, "*Showing samples with counts more than %d" % cutoff, transform=plt.gcf().transFigure) 
-    #plt.tick_params(axis = 'both', which = 'both',length = 0)
-    #plt.xticks(np.arange(1, 2*ngroups+1, step = 2),names,rotation = -90,ha = 'right')
     fig.subplots_adjust(top = ((ymax - ymin) * 0.7 + bottomm) / fig_length, bottom = bottomm / fig_length, left = leftm / fig_width, right=1 - rightm / fig_width)
-    #plt.tight_layout()
-    #plt.savefig(output)
-    #plt.close()
 
-## plotID_generic_v2 --> plotTMB_ID
-def plotTMB_SV(inputDF, kzm611_sigs_rel, scale, order=[], Yrange = "adapt", cutoff = 0, output = "TMB_plot.png",
+
+
+
+## Adapted from https://github.com/AlexandrovLab/SigProfilerPlotting
+def plotTMB_SV(inputDF, kzm611_sigs_rel, scale, order=[], Yrange = "adapt", cutoff = 0,
             redbar = "median", yaxis = "Somatic Mutations per Megabase",
             ascend = True, leftm = 1, rightm = 0.3, topm = 1.4, bottomm = 1):
+    """
+    Same as plotTMB_SBS
+    """
     if type(scale) == int:
         scale = scale
     elif scale == "genome":
@@ -1110,7 +1220,6 @@ def plotTMB_SV(inputDF, kzm611_sigs_rel, scale, order=[], Yrange = "adapt", cuto
     result[1::2] = list4
     tick_labels = result
     new_labels = [ ''.join(x) for x in zip(tick_labels[0::2], tick_labels[1::2]) ]
-    #new_labels = list3
     if Yrange == "adapt":
         ymax = math.ceil(df['log10BURDENpMB'].max())
         ymin = math.floor(df['log10BURDENpMB'].min())
@@ -1131,9 +1240,6 @@ def plotTMB_SV(inputDF, kzm611_sigs_rel, scale, order=[], Yrange = "adapt", cuto
         leftm = leftm + 0.09 * (len(names[0]) - 13)
         topm = topm + 0.080 * (len(names[0]) - 13)
     fig_width = leftm + rightm + 0.4 * ngroups
-    #fig_length = topm + bottomm + (ymax - ymin) * 0.7
-    #print("{} -- {}".format(fig_width, fig_length))
-    #fig_width = 4
     fig_length = 6
     fig, (ax0, ax2) = plt.subplots(2,1, figsize=(fig_width, fig_length), gridspec_kw={'height_ratios': [1, 2]})
 
@@ -1150,7 +1256,6 @@ def plotTMB_SV(inputDF, kzm611_sigs_rel, scale, order=[], Yrange = "adapt", cuto
     # Rotate and align top ticklabels
     plt.setp([tick.label2 for tick in ax1.xaxis.get_major_ticks()], rotation=90,
             ha="left", va="center",rotation_mode="anchor")
-    #ax1.legend(loc='upper right', bbox_to_anchor=(1,2.75), ncol=15, fontsize=12, facecolor="#f4f0eb")
     ax1.get_legend().remove()
 
     ann_y = 1.85
@@ -1175,10 +1280,7 @@ def plotTMB_SV(inputDF, kzm611_sigs_rel, scale, order=[], Yrange = "adapt", cuto
     ax2.set_xticks(np.arange(1, 2*ngroups+1, step = 2), new_labels) 
     ax2.tick_params(axis = 'both', which = 'both',length = 0)
     ax2.hlines(yticks_loc,0,2*ngroups,colors = 'black',linestyles = "dashed",linewidth = 0.5,zorder = 1)
-    '''for i in range(0,ngroups,2):
-        greystart = [(i)*2,ymin]
-        rectangle = mpatches.Rectangle(greystart, 2, ymax-ymin, color = "lightgrey",zorder = 0)
-        ax2.add_patch(rectangle)'''
+
     for i in range(0,ngroups):
         if ((i+1) % 2) == 0:
             rectangle = mpatches.Rectangle([(i)*2, ymin], 2, ymax-ymin, color="white", zorder = 0)
@@ -1196,18 +1298,36 @@ def plotTMB_SV(inputDF, kzm611_sigs_rel, scale, order=[], Yrange = "adapt", cuto
         ax2.hlines(redbars[i], X_start, X_end, colors='red', zorder=2)
         ax2.text((leftm + 0.2 + i * 0.4) / fig_width , 0.85 / fig_length , "___",  horizontalalignment='center',transform=plt.gcf().transFigure)
     ax2.set_ylabel(yaxis)
-    #axes2 = ax.twiny()
-    #plt.text((leftm - 0.3) / fig_width, 0.2 / fig_length, "*Showing samples with counts more than %d" % cutoff, transform=plt.gcf().transFigure) 
-    #plt.tick_params(axis = 'both', which = 'both',length = 0)
-    #plt.xticks(np.arange(1, 2*ngroups+1, step = 2),names,rotation = -90,ha = 'right')
     fig.subplots_adjust(top = ((ymax - ymin) * 0.7 + bottomm) / fig_length, bottom = bottomm / fig_length, left = leftm / fig_width, right=1 - rightm / fig_width)
-    #plt.tight_layout()
-    #plt.savefig(output)
-    #plt.close()
+
 
 
 
 def get_diff_dict(mat_df, labels):
+    """
+    Computes the differential mutation values between two specified labels in a mutation matrix.
+
+    This function compares the mutation burden (or other values) between two specified sample labels 
+    from a mutation matrix (`mat_df`) and returns a dictionary that represents the differences for each 
+    mutation type (e.g., 'C>A', 'C>G', etc.) between the two labels. The result is a dictionary with the 
+    mutation types as keys and the mutation burdens for each column as values, distinguishing whether 
+    the value increased or decreased between the two labels.
+
+    Parameters:
+    - mat_df (DataFrame): A pandas DataFrame containing mutation data where the rows are sample names 
+      and columns represent mutations, formatted as 'reference>mutation'.
+    - labels (list): A list of two strings, where each string corresponds to a sample label in `mat_df`. 
+      These are the labels to compare, and the function computes the difference between them.
+
+    Returns:
+    - dict: A dictionary where keys are sample labels (`labels[0]`, `labels[1]`), and the values are 
+      dictionaries of mutation types ('C>A', 'C>G', etc.) mapped to their respective mutation burdens. 
+      The mutation burdens represent the difference between the two labels, where a positive value 
+      indicates an increase in the second label (`labels[1]`), and a negative value indicates a decrease.
+
+    Example:
+    mutations = get_diff_dict(mat_df, ['Sample1', 'Sample2'])
+    """
     mutations = dict()
 
     for sample in mat_df.index:
@@ -1229,14 +1349,39 @@ def get_diff_dict(mat_df, labels):
 
     return mutations
 
+
+
+
+## Adapted from https://github.com/AlexandrovLab/SigProfilerPlotting
 def plot_profile_diff(sample1, sample2, name1, name2, ymax):
+    """
+    Plots the mutation profiles for two samples with differences in mutation counts displayed side by side.
+
+    This function generates a bar plot displaying the mutation profiles of two samples (`sample1` and `sample2`). 
+    It visualizes the mutation counts of different mutation types (e.g., 'C>A', 'C>G', etc.) for each sample, 
+    along with labeled axes and color-coded mutation types. The function uses a specified maximum y-value (`ymax`) 
+    for the y-axis to control the plot’s scale.
+
+    Parameters:
+    - sample1 (dict): A dictionary where the keys are mutation types, and the values are dictionaries with sequences as keys 
+      and their corresponding mutation counts as values for the first sample.
+    - sample2 (dict): A dictionary similar to `sample1` for the second sample to be compared.
+    - name1 (str): The label/name to display for the first sample.
+    - name2 (str): The label/name to display for the second sample.
+    - ymax (float): The maximum value for the y-axis to set the scale for the plot.
+
+    Returns:
+    - None: This function generates and displays a plot with mutation profiles for the two samples.
+
+    Example:
+    plot_profile_diff(sample1, sample2, 'Sample A', 'Sample B', ymax=100)
+    """
     plt.rcParams['axes.linewidth'] = 2
     plot1 = plt.figure(figsize=(43.93,12))
     plt.rc('axes', edgecolor='lightgray')
     panel1 = plot1.add_axes([0.04, 0.491, 0.95, 0.4])
     xlabels = []
     x = 0.4
-    #ymax = 0
     colors = [[3/256,189/256,239/256], [1/256,1/256,1/256],[228/256,41/256,38/256], [203/256,202/256,202/256], [162/256,207/256,99/256], [236/256,199/256,197/256]]
     i = 0
 
@@ -1244,8 +1389,6 @@ def plot_profile_diff(sample1, sample2, name1, name2, ymax):
         for seq in sample1[key]:
             xlabels.append(seq[0]+seq[2]+seq[6])
             panel1.bar(x, sample1[key][seq],width=0.4,color=colors[i],align='center', zorder=1000)
-            '''if sample1[key][seq] > ymax:
-                    ymax = sample1[key][seq]'''
             x += 1
         i += 1
         
@@ -1275,7 +1418,6 @@ def plot_profile_diff(sample1, sample2, name1, name2, ymax):
 
     panel1.set_xlim([0, 96])
     panel1.set_ylim([0, y])
-    #panel1.set_xticks(labs)
     panel1.set_yticks(ylabs)
     count = 0
     m = 0
@@ -1292,10 +1434,7 @@ def plot_profile_diff(sample1, sample2, name1, name2, ymax):
     panel1.set_yticklabels(ylabels, fontsize=30)
     panel1.yaxis.grid(True)
     panel1.grid(which='major', axis='y', color=[0.93,0.93,0.93], zorder=1)
-    #panel1.set_xlabel('')
     panel1.set_ylabel('')
-
-    #plt.ylabel("Mutation Counts", fontsize=35, fontname="Times New Roman", weight = 'bold')
 
     panel1.tick_params(axis='both',which='both',\
                     bottom=False, labelbottom=False,\
@@ -1311,7 +1450,6 @@ def plot_profile_diff(sample1, sample2, name1, name2, ymax):
     panel2 = plot1.add_axes([0.04, 0, 0.95, 0.4])
     xlabels = []
     x = 0.4
-    #ymax = 0
     i = 0
 
     for key in sample2:
@@ -1334,9 +1472,7 @@ def plot_profile_diff(sample1, sample2, name1, name2, ymax):
     panel2.grid(which='major', axis='y', color=[0.93,0.93,0.93], zorder=1)
     panel2.set_xlabel('')
     panel2.set_ylabel('')
-    #plt.gca().invert_yaxis()
 
-    
     panel2.text(0.05, 0.32, name2, fontsize=60, weight="bold", color="black", fontname="Arial", transform=plt.gcf().transFigure)
 
     panel2.tick_params(axis='both',which='both',\
@@ -1347,10 +1483,64 @@ def plot_profile_diff(sample1, sample2, name1, name2, ymax):
                     direction='in', length=25, colors='lightgray', width=2)
 
     [i.set_color("black") for i in panel2.get_yticklabels()]
-
     plt.show()
 
+
+
+## Adapted from https://github.com/AlexandrovLab/SigProfilerPlotting
 def plot_3samples_SBS96(sample1, sample2, sample3, name1, name2, name3, ymax):
+    """
+    Plots three SBS96 mutation profiles for three samples in a single figure with 
+    three vertical bar plots. The mutation counts are represented as bars with different colors 
+    for each mutation type. Each subplot represents one sample, with customizable axes, labels, 
+    and horizontal lines indicating specific mutation frequency thresholds.
+
+    Parameters:
+    -----------
+    sample1 : dict
+        A dictionary containing the mutation counts for sample 1. The keys represent mutation types 
+        (e.g., 'C>A', 'C>T') and the values are dictionaries of sequence positions and their respective counts.
+        
+    sample2 : dict
+        A dictionary containing the mutation counts for sample 2, structured similarly to `sample1`.
+        
+    sample3 : dict
+        A dictionary containing the mutation counts for sample 3, structured similarly to `sample1`.
+        
+    name1 : str
+        The name or label for sample 1 to be displayed above its corresponding plot.
+        
+    name2 : str
+        The name or label for sample 2 to be displayed above its corresponding plot.
+        
+    name3 : str
+        The name or label for sample 3 to be displayed above its corresponding plot.
+        
+    ymax : float
+        The maximum value for the Y-axis, representing the highest mutation frequency across all samples. 
+        This value is used to scale the Y-axis uniformly across all plots.
+
+    Returns:
+    --------
+    None
+        This function does not return any value. It generates a plot with three subplots displayed on the screen.
+    
+    Notes:
+    ------
+    - Each plot will display mutation types (e.g., 'C>A', 'C>T', etc.) with different colors for easy distinction.
+    - Horizontal lines representing 2% and 5% mutation frequency thresholds are added to each plot.
+    - The X-axis represents sequence positions (with 96 categories), and the Y-axis represents mutation counts 
+      as percentages of the total mutation count in each sample.
+    - The plot is rendered using Matplotlib and does not save to a file by default.
+
+    Example Usage:
+    --------------
+    sample1 = {"C>A": {"AAG": 10, "CGA": 15}, "C>T": {"CAG": 5}}
+    sample2 = {"T>G": {"TAA": 20}, "C>A": {"CGA": 7}}
+    sample3 = {"T>C": {"TAC": 3}, "C>G": {"CGA": 10}}
+
+    plot_3samples_SBS96(sample1, sample2, sample3, "Sample 1", "Sample 2", "Sample 3", 30)
+    """
     plt.rcParams['axes.linewidth'] = 2
     plot1 = plt.figure(figsize=(43.93,18))
     plt.rc('axes', edgecolor='lightgray')
@@ -1401,7 +1591,6 @@ def plot_3samples_SBS96(sample1, sample2, sample3, name1, name2, name3, ymax):
     count = 0
     m = 0
 
-
     panel1.set_yticklabels(ylabels, fontsize=30)
     panel1.yaxis.grid(True)
     panel1.grid(which='major', axis='y', color=[0.93,0.93,0.93], zorder=1)
@@ -1416,7 +1605,6 @@ def plot_3samples_SBS96(sample1, sample2, sample3, name1, name2, name3, ymax):
                     right=True, labelright=False,\
                     top=False, labeltop=False,\
                     direction='in', length=25, colors='lightgray', width=2)
-
 
     [i.set_color("black") for i in panel1.get_yticklabels()]
 
@@ -1434,7 +1622,6 @@ def plot_3samples_SBS96(sample1, sample2, sample3, name1, name2, name3, ymax):
             x += 1
         i += 1
 
-
     ylabs = [0, ytick_offest, ytick_offest*2, ytick_offest*3, ytick_offest*4]
     ylabels = [f"{round(x*100, 1)}%" for x in [0, ytick_offest, ytick_offest*2, ytick_offest*3, ytick_offest*4]]
 
@@ -1447,8 +1634,6 @@ def plot_3samples_SBS96(sample1, sample2, sample3, name1, name2, name3, ymax):
     panel2.grid(which='major', axis='y', color=[0.93,0.93,0.93], zorder=1)
     panel2.set_xlabel('')
     panel2.set_ylabel('')
-    #plt.gca().invert_yaxis()
-
     
     panel2.text(0.05, 0.56, name2, fontsize=40, weight="bold", color="black", fontname="Arial", transform=plt.gcf().transFigure)
 
@@ -1466,7 +1651,6 @@ def plot_3samples_SBS96(sample1, sample2, sample3, name1, name2, name3, ymax):
 
     xlabels = []
     x = 0.4
-    #ymax = 0
     i = 0
 
     for key in sample3:
@@ -1475,7 +1659,6 @@ def plot_3samples_SBS96(sample1, sample2, sample3, name1, name2, name3, ymax):
             panel3.bar(x, sample3[key][seq], width=0.4, color=colors[i], align='center', zorder=1000)
             x += 1
         i += 1
-
 
     ylabs = [0, ytick_offest, ytick_offest*2, ytick_offest*3, ytick_offest*4]
     ylabels = [f"{round(x*100, 1)}%" for x in [0, ytick_offest, ytick_offest*2, ytick_offest*3, ytick_offest*4]]
@@ -1489,8 +1672,6 @@ def plot_3samples_SBS96(sample1, sample2, sample3, name1, name2, name3, ymax):
     panel3.grid(which='major', axis='y', color=[0.93,0.93,0.93], zorder=1)
     panel3.set_xlabel('')
     panel3.set_ylabel('')
-    #plt.gca().invert_yaxis()
-
     
     panel3.text(0.05, 0.27, name3, fontsize=40, weight="bold", color="black", fontname="Arial", transform=plt.gcf().transFigure)
 
@@ -1502,7 +1683,6 @@ def plot_3samples_SBS96(sample1, sample2, sample3, name1, name2, name3, ymax):
                     direction='in', length=25, colors='lightgray', width=2)
 
     [i.set_color("black") for i in panel3.get_yticklabels()]
-
 
     for i in range (0, 96, 1):
         panel3.text(i/101 + .0415, 0, xlabels[i][0], fontsize=30, color='gray', rotation='vertical', verticalalignment='center', fontname='Courier New', transform=plt.gcf().transFigure)
@@ -1530,10 +1710,95 @@ def plot_3samples_SBS96(sample1, sample2, sample3, name1, name2, name3, ymax):
 
     plt.show()
 
-## plotTMB_generic_v2 --> plotTMB_clustered
-def plotTMB_clustered(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0, output = "TMB_plot.png",
+
+
+
+## Adapted from https://github.com/AlexandrovLab/SigProfilerPlotting
+def plotTMB_clustered(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0,
             redbar = "median", yaxis = "Somatic Mutations per Megabase",
             ascend = True, leftm = 1, rightm = 0.3, topm = 1.4, bottomm = 1):
+    """
+    Plots a clustered bar plot for Tumor Mutational Burden (TMB) using data from a dataframe containing 
+    mutation counts for different mutation types. The plot visualizes TMB as log-transformed values 
+    with custom scales, grouping, and thresholds. It also provides customization options for plot appearance.
+
+    Parameters:
+    -----------
+    inputDF : pandas.DataFrame
+        A DataFrame with two columns:
+        - 'Types': Mutation types (e.g., SBS1, SBS2).
+        - 'Mut_burden': The mutation burden (mutation count) for each mutation type.
+        
+    scale : int, str
+        Defines the scale for normalizing mutation burden. Can be:
+        - "genome" for genome scale (2897.310462).
+        - "exome" for exome scale (55).
+        - An integer representing a custom scale value.
+        
+    order : list, optional, default: []
+        A list specifying the order of mutation types for plotting. If empty, mutations are ordered by 
+        the median log-transformed mutation burden.
+        
+    Yrange : str or list, optional, default: "adapt"
+        Defines the Y-axis range:
+        - "adapt": Automatically adjusts based on the data.
+        - "cancer": Fixed Y-axis range for cancer mutation burden (-3 to 3).
+        - A list containing two numbers specifying the lower and upper bounds of the Y-axis in log scale.
+        
+    cutoff : float, optional, default: 0
+        A minimum threshold for the mutation burden. Any mutation type with a burden below this cutoff 
+        is excluded from the plot.
+        
+    output : str, optional, default: "TMB_plot.png"
+        The file name for saving the generated plot. If not specified, the plot is saved with this default name.
+        
+    redbar : str, optional, default: "median"
+        Determines whether the red reference line represents the 'mean' or 'median' of mutation burdens 
+        for each mutation type.
+        
+    yaxis : str, optional, default: "Somatic Mutations per Megabase"
+        Label for the Y-axis.
+        
+    ascend : bool, optional, default: True
+        If True, sorts the mutation types in ascending order based on the mean/median log-transformed mutation burden.
+        If False, sorts in descending order.
+        
+    leftm : float, optional, default: 1
+        Left margin of the plot, used for adjusting layout.
+        
+    rightm : float, optional, default: 0.3
+        Right margin of the plot, used for adjusting layout.
+        
+    topm : float, optional, default: 1.4
+        Top margin of the plot, used for adjusting layout.
+        
+    bottomm : float, optional, default: 1
+        Bottom margin of the plot, used for adjusting layout.
+
+    Returns:
+    --------
+    None
+        This function does not return any value. It generates a plot.
+    
+    Notes:
+    ------
+    - The plot includes scatter points for each mutation type's log-transformed mutation burden.
+    - A horizontal red bar is drawn for each mutation type to indicate its mean or median mutation burden.
+    - The plot includes color-coded rectangles for certain mutation types (SBS1, SBS2, etc.).
+    - Customizable margins and axis range options are provided to adjust the plot's appearance.
+
+    Example Usage:
+    --------------
+    import pandas as pd
+
+    # Example data
+    data = {'Types': ['SBS1', 'SBS2', 'SBS5', 'SBS13', 'SBS31'],
+            'Mut_burden': [200, 150, 500, 600, 300]}
+    df = pd.DataFrame(data)
+
+    # Plotting TMB
+    plotTMB_clustered(df, scale="genome", Yrange="adapt", cutoff=50, output="TMB_plot_example.png")
+    """
     if type(scale) == int:
         scale = scale
     elif scale == "genome":
@@ -1578,7 +1843,6 @@ def plotTMB_clustered(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0, ou
     result[1::2] = list4
     tick_labels = result
     new_labels = [ ''.join(x) for x in zip(tick_labels[0::2], tick_labels[1::2]) ]
-    #new_labels = list3
     if Yrange == "adapt":
         ymax = math.ceil(df['log10BURDENpMB'].max())
         ymin = math.floor(df['log10BURDENpMB'].min())
@@ -1599,16 +1863,12 @@ def plotTMB_clustered(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0, ou
         leftm = leftm + 0.09 * (len(names[0]) - 13)
         topm = topm + 0.080 * (len(names[0]) - 13)
     fig_width = leftm + rightm + 0.4 * ngroups
-    #fig_length = topm + bottomm + (ymax - ymin) * 0.7
-    #print("{} -- {}".format(fig_width, fig_length))
-    #fig_width = 4
     fig_length = 6
     fig, ax = plt.subplots(figsize=(fig_width, fig_length))
     if cutoff < 0:
         print("ERROR: cutoff value is less than 0")
         return
     plt.xlim(0,2*ngroups)
-    #print(len(names[0]))
     plt.ylim(ymin,ymax)
     yticks_loc = range(ymin,ymax+1,1)
     plt.yticks(yticks_loc,list(map((lambda x: 10**x), list(yticks_loc)))) 
@@ -1634,14 +1894,9 @@ def plotTMB_clustered(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0, ou
         else:
             greybar = 0
 
-    '''for i in range(0,ngroups,2):
-        greystart = [(i)*2,ymin]
-        rectangle = mpatches.Rectangle(greystart, 2, ymax-ymin, color = "lightgrey",zorder = 0)
-        ax.add_patch(rectangle)'''
     for i in range(0,ngroups,1):
         X_start = i*2+0.2
         X_end = i*2+2-0.2
-        #rg = 1.8
         y_values = groups.get_group(names[i])["log10BURDENpMB"].sort_values(ascending = True).values.tolist()
         x_values = list(np.linspace(start = X_start, stop = X_end, num = counts[i]))
         plt.scatter(x_values,y_values,color = "black",s=1.5)
@@ -1649,12 +1904,12 @@ def plotTMB_clustered(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0, ou
         plt.text((leftm + 0.2 + i * 0.4) / fig_width , 0.85 / fig_length , "___",  horizontalalignment='center',transform=plt.gcf().transFigure)
     plt.ylabel(yaxis)
     axes2 = ax.twiny()
-    #plt.text((leftm - 0.3) / fig_width, 0.2 / fig_length, "*Showing samples with counts more than %d" % cutoff, transform=plt.gcf().transFigure) 
     plt.tick_params(axis = 'both', which = 'both',length = 0)
     plt.xticks(np.arange(1, 2*ngroups+1, step = 2),names,rotation = -90,ha = 'right')
     fig.subplots_adjust(top = ((ymax - ymin) * 0.7 + bottomm) / fig_length, bottom = bottomm / fig_length, left = leftm / fig_width, right=1 - rightm / fig_width)
-    #plt.savefig(output)
-    #plt.close()
+
+
+
 
 ## Maybe needed
 def plot_profile_SBS96(sample1, ymax, sample_name, outname):
@@ -1742,8 +1997,65 @@ def plot_profile_SBS96(sample1, ymax, sample_name, outname):
 
 
 def coefs_scatter(coefs, fname, positive_only=True, interactions='singles_only', ylab=''):
+    """
+    Creates a scatter plot to visualize the relationship between features, outcomes, and their corresponding 
+    coefficients and AUROC scores. The plot can be customized to show only positive coefficients, specific 
+    interaction terms, and displays annotations based on AUROC scores.
 
-    #data = coefs[coefs.Condition=='agent_sigs_X_all'].copy()
+    Parameters:
+    -----------
+    coefs : pandas.DataFrame
+        A DataFrame containing the following columns:
+        - 'Outcome': The outcome variable or target.
+        - 'Features': The feature names (can include interaction terms).
+        - 'Coefficient': The coefficient value for the feature.
+        - 'AUC': The AUROC score associated with the feature (used for color mapping).
+
+    fname : str
+        The filename where the plot will be saved (including file extension).
+
+    positive_only : bool, optional, default: True
+        If True, the plot will only display features with positive coefficients and AUROC scores greater than or equal to 0.65. 
+        If False, features with any coefficient value greater than or equal to 0.65 will be displayed regardless of sign.
+
+    interactions : str, optional, default: 'singles_only'
+        Specifies which types of features to display:
+        - 'singles_only': Only includes single features (no interaction terms).
+        - 'x_only': Only includes features with interaction terms (indicated by a colon `:`).
+        - 'all': Includes both single features and interaction terms.
+
+    ylab : str, optional, default: ''
+        The label for the y-axis. If not provided, the y-axis will remain unlabeled.
+
+    Returns:
+    --------
+    None
+        This function generates and saves a scatter plot to the specified `fname`. It does not return any value.
+
+    Notes:
+    ------
+    - The size of the scatter points is scaled according to the absolute value of the coefficient.
+    - The color of the scatter points represents the AUROC score of the feature.
+    - Annotations are added for features with an AUROC score greater than 0.8, displaying the coefficient value.
+    - Grid lines are removed for a cleaner presentation, and alternate rows are highlighted with light gray.
+    - A legend is added if both positive and negative coefficients are shown.
+
+    Example Usage:
+    --------------
+    import pandas as pd
+
+    # Example data
+    data = {
+        'Outcome': ['Outcome1', 'Outcome2', 'Outcome1', 'Outcome3'],
+        'Features': ['Feature1', 'Feature2', 'Feature3', 'Feature4'],
+        'Coefficient': [0.5, -0.3, 0.7, -0.2],
+        'AUC': [0.85, 0.9, 0.65, 0.75]
+    }
+    df = pd.DataFrame(data)
+
+    # Plotting coefficients scatter plot
+    coefs_scatter(df, fname='coefs_scatter_plot.png', positive_only=True, interactions='singles_only', ylab='Feature Coefficients')
+    """
     if positive_only:
         data = coefs[(coefs.AUC>=0.65) & (coefs.Coefficient>0)]
     else:
@@ -1868,7 +2180,63 @@ def coefs_scatter(coefs, fname, positive_only=True, interactions='singles_only',
 
 
 
+
 def plot_coefs(coefs, title=None, leg=None, x_only=True):
+    """
+    Plots a horizontal bar chart of logistic regression coefficients for features and interaction terms, 
+    highlighting their significance. The plot allows customization of the title, legend, and whether to 
+    focus on interaction terms.
+
+    Parameters:
+    -----------
+    coefs : pandas.DataFrame
+        A DataFrame containing the following columns:
+        - 'Features': The feature names (including interaction terms, indicated by a colon `:`).
+        - 'Coefficient': The coefficient values for each feature.
+        - 'Outcome': The outcome variable associated with the features.
+
+    title : str, optional, default: None
+        The title for the plot. If not provided, the plot will not have a title.
+
+    leg : str, optional, default: None
+        The location for the legend. If not provided, the legend will not be shown. Valid locations are
+        'upper right', 'upper left', 'lower right', 'lower left', 'right', 'left', 'center', etc.
+
+    x_only : bool, optional, default: True
+        If True, the plot will only display interaction terms (features with a colon `:`). 
+        If False, both main effects and interaction terms will be displayed.
+
+    Returns:
+    --------
+    None
+        The function generates and displays the plot, but does not return any value.
+
+    Notes:
+    ------
+    - Features with a colon (`:`) in their names are treated as interaction terms.
+    - The colors of the bars represent the type of feature:
+        - 'steelblue' for main effects
+        - 'thistle' for interaction terms.
+    - Vertical lines at x=0 (gray) and x=±0.7 (green and red) are drawn to highlight significant coefficients.
+    - The y-axis is inverted to display features in descending order of their coefficients.
+    - The outcome groups are separated by dashed horizontal lines, with each group labeled.
+    - A dynamically positioned legend is added if `leg` is provided.
+
+    Example Usage:
+    --------------
+    import pandas as pd
+
+    # Example data
+    data = {
+        'Features': ['Feature1', 'Feature2', 'Feature3', 'Feature1:Feature2'],
+        'Coefficient': [0.5, -0.3, 0.7, -0.2],
+        'Outcome': ['Outcome1', 'Outcome1', 'Outcome2', 'Outcome2']
+    }
+    df = pd.DataFrame(data)
+
+    # Plotting coefficients
+    plot_coefs(df, title='Logistic Regression Coefficients', leg='upper right', x_only=True)
+    """
     # Plot the non-zero coefficients
     denom = 3 if len(coefs) > 7 else 2
     fig, ax = plt.subplots(figsize=(10, len(coefs)/denom))
@@ -1927,13 +2295,62 @@ def plot_coefs(coefs, title=None, leg=None, x_only=True):
             plt.Line2D([0], [0], color='thistle', lw=4, label='Interaction Terms')
         ], loc=leg)
 
-
     plt.tight_layout()
     plt.show()
 
 
-def plot_bipartite_subs(df):
 
+
+def plot_bipartite_subs(df):
+    """
+    Plots a series of bipartite network graphs, where each graph represents interactions 
+    between a central node and a set of outer nodes, based on the provided data frame.
+
+    Each row in the DataFrame represents a central node with associated outer nodes 
+    (columns). The function creates one plot per row, showing the central node in the 
+    middle with edges to the outer nodes based on nonzero weights.
+
+    Parameters:
+    -----------
+    df : pandas.DataFrame
+        A DataFrame where each row corresponds to a central node and its associated outer 
+        nodes (columns). The values in the DataFrame represent the weights of edges 
+        between the central node and the outer nodes. Nonzero values indicate the presence 
+        of edges, and the weight of the edge.
+
+    Returns:
+    --------
+    None
+        The function generates and displays a set of bipartite network plots, with each plot 
+        representing a central node and its interactions with outer nodes. The plots are arranged 
+        in a grid with a maximum of 3 columns per row.
+
+    Notes:
+    ------
+    - Each central node is represented by a pink node at the center of the plot.
+    - Outer nodes are shown in light steel blue color and are connected to the central node 
+      by edges weighted according to the values in the DataFrame.
+    - The plots are arranged in a grid format with a maximum of 3 columns per row. If there 
+      are more rows than can fit in the available columns, additional rows are created.
+    - Any extra unused subplots are hidden.
+    - The layout is adjusted for optimal display of the plots.
+
+    Example Usage:
+    --------------
+    import pandas as pd
+
+    # Example DataFrame with central nodes and outer nodes (edges)
+    data = {
+        'NodeA': [0, 2, 0],
+        'NodeB': [1, 0, 0],
+        'NodeC': [0, 0, 3],
+        'NodeD': [0, 1, 0]
+    }
+    df = pd.DataFrame(data, index=['Central1', 'Central2', 'Central3'])
+
+    # Plot bipartite networks
+    plot_bipartite_subs(df)
+    """
     # Get number of subplots
     n_rows = len(df)
     #n_cols = 2 if n_rows > 1 else 1  # Arrange in 2 columns if multiple rows
@@ -1993,6 +2410,54 @@ def plot_bipartite_subs(df):
 
 
 def plot_driver_nx(df2, figout):
+    """
+    Plots a bipartite network graph from a DataFrame, where rows and columns represent two sets 
+    of nodes, and edges represent the relationships between them based on non-null values in the 
+    DataFrame. The graph visualizes the relationships with different edge thicknesses and colors 
+    based on the values in the DataFrame.
+
+    Parameters:
+    -----------
+    df2 : pandas.DataFrame
+        A DataFrame where the rows and columns represent two distinct sets of nodes. The values in 
+        the DataFrame represent the weights of the edges between the row and column nodes. Only non-null 
+        values are considered for drawing edges, with negative values represented in red and positive values 
+        in blue.
+
+    figout : str
+        The file path where the resulting bipartite network graph image will be saved.
+
+    Returns:
+    --------
+    None
+        The function generates and saves a bipartite network graph to the specified file path.
+        The graph contains nodes for both rows and columns, with edges drawn between them based on 
+        the values in the DataFrame.
+
+    Notes:
+    ------
+    - Row nodes are positioned in an outer circle, while column nodes are positioned in an inner circle.
+    - Edge color and thickness are based on the sign and magnitude of the values in the DataFrame, 
+      respectively.
+    - Negative values result in red edges, positive values in blue edges.
+    - Node colors distinguish row nodes (skyblue) and column nodes (lightcoral).
+    - The graph is saved as an image file to the location specified by `figout`.
+
+    Example Usage:
+    --------------
+    import pandas as pd
+
+    # Example DataFrame with rows and columns as node sets and non-null values representing edge weights
+    data = {
+        'A': [0.5, -0.3, 1.2],
+        'B': [0.8, None, -0.7],
+        'C': [None, 0.4, -1.1]
+    }
+    df = pd.DataFrame(data, index=['Node1', 'Node2', 'Node3'])
+
+    # Save bipartite network plot to a file
+    plot_driver_nx(df, 'network_plot.png')
+    """
     # Create a network graph
     G = nx.Graph()
 
@@ -2051,7 +2516,101 @@ def plot_driver_nx(df2, figout):
     plt.axis("off")
     plt.savefig(figout, bbox_inches="tight")
 
+
+
+
+def build_cm(cols):
+    """
+    Creates a custom colormap from a list of RGB tuples.
+
+    This function constructs a colormap by interpolating between the colors defined in 
+    the `cols` parameter, along with a default starting color of white (RGB: (1, 1, 1)).
+
+    Parameters:
+    -----------
+    cols : list of tuples
+        A list of tuples where each tuple represents an RGB color value, with each 
+        component in the range of 0 to 255. The list should contain at least one color.
+        Example: [(255, 0, 0), (0, 255, 0), (0, 0, 255)]
+
+    Returns:
+    --------
+    matplotlib.colors.LinearSegmentedColormap
+        A LinearSegmentedColormap object, which can be used for generating color maps 
+        for visualizations in Matplotlib.
+
+    Notes:
+    ------
+    - The first color in the colormap is always white (RGB: 1, 1, 1).
+    - The colormap is discretized into 10 bins (`n_bins`), but this can be adjusted.
+    - The resulting colormap is named 'my_list'.
+    
+    Example Usage:
+    --------------
+    cols = [(255, 0, 0), (0, 255, 0), (0, 0, 255)]
+    cm = build_cm(cols)
+    plt.imshow(data, cmap=cm)
+    plt.colorbar()
+    """
+    colors = [(1, 1, 1)]
+    for tup in cols:
+        colors.append(tuple([x/256 for x in tup]))
+    n_bins = 10  # Discretizes the interpolation into bins
+    cmap_name = 'my_list'
+    return mc.LinearSegmentedColormap.from_list(cmap_name, colors, N=n_bins)
+
+
+
 def plot_sig_counts(sig_counts, outname):
+    """
+    Plots a heatmap for each column in a DataFrame representing signature counts.
+    Each heatmap shows the counts of different signatures across the rows, with the
+    values annotated on the plot. The function saves the resulting plot to the specified 
+    output file.
+
+    Parameters:
+    -----------
+    sig_counts : pandas.DataFrame
+        A DataFrame where rows represent different signatures and columns represent 
+        different conditions or groups. The values in the DataFrame are integer counts 
+        of each signature for each condition/group.
+
+    outname : str
+        The name of the output file where the plot will be saved. This file will be saved 
+        in the current working directory or the specified path.
+
+    Returns:
+    --------
+    None
+        The function generates a heatmap plot for each column in `sig_counts` and saves it 
+        to the file specified by `outname`. No value is returned.
+
+    Notes:
+    ------
+    - The function generates one heatmap per column in `sig_counts`.
+    - The color map (`mycmap`) used for the heatmaps is dynamically selected based on 
+      the number of columns in `sig_counts`. If there are fewer than 3 columns, a subset 
+      of colors is used. Otherwise, all colors from `cmaps` are applied.
+    - Annotations displaying the counts are included in the heatmap.
+    - The y-axis labels (signature names) are shown on the leftmost plot and removed 
+      for the rest of the plots.
+
+    Example Usage:
+    --------------
+    import pandas as pd
+
+    # Example DataFrame of signature counts
+    data = {'Condition1': [5, 2, 3], 'Condition2': [8, 3, 6], 'Condition3': [4, 1, 5]}
+    sig_counts = pd.DataFrame(data, index=['SignatureA', 'SignatureB', 'SignatureC'])
+
+    # Save the plot to a file
+    plot_sig_counts(sig_counts, 'signature_heatmaps.png')
+    """
+    cm_low = build_cm([(70,130,180)])
+    cm_hi = build_cm([(255,145,164)])
+    cm_mid = build_cm([(143,188,143)])
+    cmaps = [cm_low, cm_mid, cm_hi]
+
     w = cols = sig_counts.shape[1]
     h = sig_counts.shape[0]/4    
     mycmap = cmaps[0:1] + cmaps[2:3] if cols < 3 else cmaps
@@ -2066,4 +2625,4 @@ def plot_sig_counts(sig_counts, outname):
             ax.axes.get_yaxis().set_ticks([])
         ax.axes.get_xaxis().set_ticks([])
 
-    plt.savefig(os.path.join(fig_out, outname), bbox_inches="tight")
+    plt.savefig(outname, bbox_inches="tight")
