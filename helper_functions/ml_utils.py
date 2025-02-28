@@ -1,3 +1,6 @@
+import pandas as pd
+import numpy as np
+
 from sklearn.model_selection import train_test_split, cross_val_score, RepeatedStratifiedKFold
 from sklearn.ensemble import RandomForestClassifier, VotingClassifier
 from sklearn.linear_model import LogisticRegression, LogisticRegressionCV
@@ -7,21 +10,11 @@ from sklearn.metrics import recall_score, precision_score, f1_score, accuracy_sc
 from sklearn.ensemble import GradientBoostingClassifier
 from xgboost import XGBClassifier
 from catboost import CatBoostClassifier
-
-#from imblearn.over_sampling import SMOTE
-#from imblearn.under_sampling import RandomUnderSampler
-#from imblearn.pipeline import Pipeline
-
-#load libraries
 from sklearn.preprocessing import StandardScaler
-#import scikitplot as skplt
 from sklearn.preprocessing import label_binarize
-
-
 import xgboost
 import shap
-import numpy as np
-import pandas as pd
+
 
 from scipy import interp
 from statistics import stdev
@@ -35,7 +28,7 @@ warnings.filterwarnings('ignore')
 # Suppress FutureWarning messages
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
-fig_out = '/Users/mehdi/Documents/MyRepos/MS1_Figures'
+## 9 functions
 
 seq96 = ["A[C>A]A", "A[C>A]C", "A[C>A]G", "A[C>A]T", "C[C>A]A", "C[C>A]C", "C[C>A]G",  "C[C>A]T", "G[C>A]A", "G[C>A]C", "G[C>A]G", "G[C>A]T", "T[C>A]A","T[C>A]C", "T[C>A]G", "T[C>A]T",
          "A[C>G]A", "A[C>G]C", "A[C>G]G", "A[C>G]T", "C[C>G]A", "C[C>G]C", "C[C>G]G", "C[C>G]T","G[C>G]A", "G[C>G]C", "G[C>G]G", "G[C>G]T", "T[C>G]A", "T[C>G]C", "T[C>G]G", "T[C>G]T",
@@ -58,58 +51,53 @@ seq32 = ['clustered_del_1-10Kb', 'clustered_del_10-100Kb', 'clustered_del_100Kb-
          ]
 
 
-def get_report_boot(mat, naives, treats, cat='G0'):
-    #report = mu.get_logreg_topq_v2(mat, naives, treats, cv=True, extra_plots=False)
-    report = get_votingClf_v1(mat, naives, treats, cv=True, extra_plots=False)
-    
-    report = report.loc[['Sig -', 'Sig +']]
-    report = report.reset_index().rename(columns={'index':'Signature'})
-    report['Category'] = cat
-    return report
-
-
-def report_boot(mat, reps):
-    reports = pd.DataFrame()
-
-    for i in range(reps):
-        print('###\n{rep} iteration ...\n')
-        pret_random1 = random.sample(pret_samples, k=len(platPos_samples))
-        pret_random2 = random.sample(pret_samples, k=len(topr_quad_samples))
-        pret_random3 = random.sample(pret_samples, k=len(sigP_samples))
-        pret_random4 = random.sample(pret_samples, k=len(sigN_samples))
-
-        reports = pd.concat([reports, get_report_boot(mat, pret_random1, platPos_samples, cat='Platinum\nTreated')], axis=0).reset_index(drop=True)
-        reports = pd.concat([reports, get_report_boot(mat, pret_random2, topr_quad_samples, cat="TopRQ")], axis=0).reset_index(drop=True)
-        reports = pd.concat([reports, get_report_boot(mat, pret_random3, sigP_samples, cat="Sig+")], axis=0).reset_index(drop=True)
-        reports = pd.concat([reports, get_report_boot(mat, pret_random4, sigN_samples, cat="Sig-")], axis=0).reset_index(drop=True)
-    reports.columns = ['Signature', 'Precision', 'Recall', 'F1-score', 'Support', 'Positive Class (in Red)']
-    return reports
-
-
-
-
-def report_boot_burden(mat, reps):
-    reports = pd.DataFrame()
-
-    for i in range(reps):
-        pret_random1 = random.sample(pret_samples, k=len(platPos_samples))
-        pret_random2 = random.sample(nhm_naives_thresh, k=len(topr_quad_samples))
-        pret_random3 = random.sample(nhm_naives_thresh, k=len(sigP_samples))
-        pret_random4 = random.sample(nhm_naives_thresh, k=len(sigN_samples))
-
-        reports = pd.concat([reports, get_report_boot(mat, pret_random1, platPos_samples, cat='Platinum\nTreated')], axis=0).reset_index(drop=True)
-        reports = pd.concat([reports, get_report_boot(mat, pret_random2, topr_quad_samples, cat="TopRQ")], axis=0).reset_index(drop=True)
-        reports = pd.concat([reports, get_report_boot(mat, pret_random3, sigP_samples, cat="Sig+")], axis=0).reset_index(drop=True)
-        reports = pd.concat([reports, get_report_boot(mat, pret_random4, sigN_samples, cat="Sig-")], axis=0).reset_index(drop=True)
-    reports.columns = ['Signature', 'Precision', 'Recall', 'F1-score', 'Support', 'Positive Class (in Red)']
-    return reports
-
 
 def get_votingClf_v1(mat_df, neg_samples, pos_samples, cv=False, extra_plots=False, plot_title='', verbose=False):
+    """
+    Trains and evaluates a soft Voting Classifier composed of Logistic Regression, 
+    Random Forest, XGBoost, and CatBoost classifiers.
 
+    Parameters:
+    -----------
+    mat_df : pd.DataFrame
+        A dataframe containing feature values with samples as rows and features as columns.
+    neg_samples : list
+        A list of indices corresponding to negative class samples.
+    pos_samples : list
+        A list of indices corresponding to positive class samples.
+    cv : bool, optional (default=False)
+        If True, cross-validation scores will be computed.
+    extra_plots : bool, optional (default=False)
+        If True, generates additional plots including ROC, Precision-Recall Curve, and Confusion Matrix.
+    plot_title : str, optional (default='')
+        Title for the extra plots if `extra_plots=True`.
+    verbose : bool, optional (default=False)
+        If True, prints model performance metrics such as accuracy, AUC, and average precision.
+
+    Returns:
+    --------
+    report : pd.DataFrame
+        Classification report including precision, recall, f1-score, and support for each class.
+    VC_soft_score : pd.DataFrame
+        Dataframe containing cross-validation performance metrics (mean and standard deviation)
+        for recall, precision, and f1-score.
+
+    Notes:
+    ------
+    - The function extracts features from `mat_df` based on `neg_samples` and `pos_samples`.
+    - A Voting Classifier (`soft` voting) is trained with four base models:
+      1. Logistic Regression (Elastic Net regularization)
+      2. Random Forest Classifier
+      3. XGBoost Classifier
+      4. CatBoost Classifier
+    - Performance is evaluated using a holdout test set and 5-fold cross-validation.
+    - If `extra_plots=True`, the function visualizes:
+      - ROC Curve
+      - Precision-Recall Curve
+      - Confusion Matrix
+    """
     df = pd.concat([mat_df.loc[neg_samples], mat_df.loc[pos_samples]], axis=0)
     df['label'] = ([0]*len(neg_samples)) + ([1]*len(pos_samples))
-    #df['label'] = (['Sig -']*len(neg_samples)) + (['Sig +']*len(pos_samples))
 
     X, y  = df.iloc[:,0:-1], df['label']
     X_train, X_test, y_train, y_test = split_norm_Xy(X, y)
@@ -118,7 +106,6 @@ def get_votingClf_v1(mat_df, neg_samples, pos_samples, cv=False, extra_plots=Fal
     estimator = []
     estimator.append(('LogisticRegression', LogisticRegression(solver='saga', l1_ratio=0.5, random_state=42, penalty='elasticnet', max_iter = 1000)))
     estimator.append(('RandomForest', RandomForestClassifier(n_estimators=100, random_state=42, min_samples_leaf=.1)))
-    #estimator.append(('GradientBoostingClassifier', GradientBoostingClassifier(random_state=42) ))
     estimator.append(('XGB', XGBClassifier(n_estimators=100, objective='binary:logistic', random_state=42)))
     estimator.append(('CatBoost', CatBoostClassifier(logging_level='Silent', random_state=42) ))
 
@@ -139,17 +126,10 @@ def get_votingClf_v1(mat_df, neg_samples, pos_samples, cv=False, extra_plots=Fal
     VC_soft_cv_f1score = f1_score.mean()
     VC_soft_cv_stdev_f1 = stdev(f1_score)
 
-    '''print('Cross Validation Recall scores are: {}'.format(score))
-    print('Average Cross Validation Recall score: ', VC_soft_cv_score)
-    print('Cross Validation Recall standard deviation: ', VC_soft_cv_stdev)'''
-
-
     ndf = [(VC_soft_cv_recall, VC_soft_cv_stdev_recall, VC_soft_cv_prec, VC_soft_cv_stdev_prec, VC_soft_cv_f1score, VC_soft_cv_stdev_f1)]
 
     VC_soft_score = pd.DataFrame(data = ndf, columns=
                             ['Avg_CV_Recall', 'SD_CV_Recall', 'Avg_CV_Precision', 'SD_CV_Precision', 'Avg_CV_f1-score', 'SD_CV_f1-score'])
-    #VC_soft_score.insert(0, 'Voting Classifier', 'Soft Voting')
-    #print(VC_soft_score)
 
     if verbose:
         print(f"Accuracy: {accuracy_score(y_test, y_pred)}\n")
@@ -179,16 +159,39 @@ def get_votingClf_v1(mat_df, neg_samples, pos_samples, cv=False, extra_plots=Fal
         )
         fig.suptitle(plot_title, fontsize=16)
 
-    '''cvK = RepeatedStratifiedKFold(n_splits=5, n_repeats=100, random_state=42)
-    n_scoresK = cross_val_score(logreg, X, y, scoring='accuracy', cv=cvK, n_jobs=4, error_score='raise')
-    print('Accuracy KZM: %.3f (%.3f)' % (np.mean(n_scoresK), np.std(n_scoresK)))'''
-    #print(classification_report(y_test, y_pred, target_names=target_names))
-    #specificity = tn / (tn+fp)
     report = pd.DataFrame(classification_report(y_test, y_pred, target_names=target_names, output_dict=True)).transpose()    
-    #return pd.Series(rfc.feature_importances_, index=X_train.columns)
     return report, VC_soft_score
+
+
     
 def feats_2df(features, colname):
+    """
+    Converts a list of feature tuples into a formatted pandas DataFrame.
+
+    Parameters:
+    -----------
+    features : list of tuples
+        A list where each element is a tuple containing mutation type information 
+        and a corresponding feature value.
+    colname : str
+        The name of the column representing the feature values.
+
+    Returns:
+    --------
+    features_df : pd.DataFrame
+        A dataframe where:
+        - The index is formatted as `mutationType[context>substitution]annotation`.
+        - The feature values are normalized by their column sum.
+        - The rows are reordered to match the predefined `seq96` order.
+
+    Notes:
+    ------
+    - The input `features` list should contain tuples of the form:
+      (`mutationType`, additional context, `substitution`, annotation, `featureValue`).
+    - The generated DataFrame's index follows a structured format based on `mutationType`.
+    - The feature values are normalized by column-wise sum to ensure proportions sum to 1.
+    - The final DataFrame is filtered and sorted using `seq96`, which should be predefined.
+    """
     features_df = pd.DataFrame(features, columns=['mType', colname])
     features_df.index = [f"{x[0]}[{x[1]}>{x[2]}]{x[-1]}" for x in features_df.mType]
     features_df = features_df.drop(['mType'], axis=1)
@@ -196,7 +199,39 @@ def feats_2df(features, colname):
     features_df = features_df.div(features_df.sum(axis=0), axis=1)
     return features_df
 
+
+
 def SV_feats_2df(features, colname):
+    """
+    Converts a list of structural variant (SV) features into a formatted pandas DataFrame.
+
+    Parameters:
+    -----------
+    features : list of tuples
+        A list where each element is a tuple containing mutation type information (`mType`) 
+        and a corresponding feature value.
+    colname : str
+        The name of the column representing the feature values.
+
+    Returns:
+    --------
+    features_df : pd.DataFrame
+        A dataframe where:
+        - The index represents the mutation type (`mType`) with specific string replacements:
+          - `_10Mb` → `>10Mb`
+          - `:40Mb` → `:>40Mb`
+          - `:1Mb` (only if at the end) → `:>1Mb`
+        - The feature values are normalized by their column sum.
+        - If the number of rows is 32, the order is adjusted using `seq32`.
+        - If the number of rows is 48, the order is adjusted using `seq48`.
+
+    Notes:
+    ------
+    - The input `features` list should contain tuples of the form (`mType`, `featureValue`).
+    - The function ensures consistency in labeling by replacing certain substring patterns.
+    - The final DataFrame is reordered based on `seq32` or `seq48`, which should be predefined.
+    - The feature values are normalized so that each column sums to 1.
+    """
     features_df = pd.DataFrame(features, columns=['mType', colname])
     features_df.index = [x.replace('_10Mb', '_>10Mb') if '_10Mb' in x else 
                          x.replace(':40Mb', ':>40Mb') if ':40Mb' in x else
@@ -212,7 +247,39 @@ def SV_feats_2df(features, colname):
     features_df = features_df.div(features_df.sum(axis=0), axis=1)
     return features_df
 
+
+
 def get_context(fn, low_samples=None):
+    """
+    Reads a mutation context matrix from a tab-separated file and computes relative frequencies.
+
+    Parameters:
+    -----------
+    fn : str
+        The filename (path) of the tab-separated values (TSV) file containing the mutation context data.
+        Rows should represent samples, and columns should represent mutation contexts.
+    low_samples : list, optional (default=None)
+        A list of sample names considered as "low samples." If provided, the function extracts
+        their corresponding data separately.
+
+    Returns:
+    --------
+    mat_df : pd.DataFrame
+        The raw mutation context matrix (rows as samples, columns as mutation contexts).
+    mat_rel : pd.DataFrame
+        The relative mutation frequency matrix (normalized row-wise so each sample sums to 1).
+    mat_nhm : pd.DataFrame (only if `low_samples` is provided)
+        The raw mutation context matrix filtered for `low_samples`.
+    mat_nhm_rel : pd.DataFrame (only if `low_samples` is provided)
+        The relative mutation frequency matrix filtered for `low_samples`.
+
+    Notes:
+    ------
+    - The function reads the input TSV file into a pandas DataFrame and transposes it (`T`).
+    - `mat_rel` normalizes each row by dividing by the total sum per sample.
+    - If `low_samples` is provided, the function extracts and returns their raw and normalized matrices.
+    - Samples in `low_samples` that are not found in `mat_df` are ignored.
+    """
     mat_df = pd.read_csv(fn, sep='\t', index_col=0).T
     mat_rel = mat_df.div(mat_df.sum(axis=1), axis=0)
     if low_samples:
@@ -223,19 +290,51 @@ def get_context(fn, low_samples=None):
     else:
         return mat_df, mat_rel
 
-## SuppFig_15
+
+
 def load_pog_drugs(drugs_file=None):
     if drugs_file==None:
         drugs_file = '/Users/mehdi/Documents/MyRepos/POG/POG570_all_drugs_YN.tsv'
     drugs_df = pd.read_csv(drugs_file, sep='\t', index_col=0)
     return drugs_df
 
+
+
 def split_norm_Xy(X, y):
-    # Create the training and test data
+    """
+    Standardizes feature data and splits it into training and test sets.
+
+    Parameters:
+    -----------
+    X : pd.DataFrame or np.ndarray
+        Feature matrix where rows are samples and columns are features.
+    y : pd.Series or np.ndarray
+        Target labels corresponding to each sample in `X`.
+
+    Returns:
+    --------
+    X_train : np.ndarray
+        Standardized training feature matrix.
+    X_test : np.ndarray
+        Standardized test feature matrix.
+    y_train : np.ndarray
+        Training labels.
+    y_test : np.ndarray
+        Test labels.
+
+    Notes:
+    ------
+    - The feature matrix `X` is standardized using `StandardScaler` to have zero mean and unit variance.
+    - The dataset is split into training (67%) and test (33%) subsets.
+    - Stratified splitting is used to maintain class distribution in both sets.
+    - A fixed `random_state=42` ensures reproducibility.
+    """
     X = StandardScaler().fit_transform(X)
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, stratify=y, random_state = 42)
     return X_train, X_test, y_train, y_test
 
+
+## Credit: adapted from Reiichiro Nakano. (2018). reiinakano/scikit-plot: 0.3.7. Zenodo. http://doi.org/10.5281/zenodo.293191
 def plot_roc_curve(y_true, y_probas, title='ROC Curves',
                    curves=('micro', 'macro', 'each_class'),
                    ax=None, figsize=None, cmap='nipy_spectral',
@@ -382,6 +481,9 @@ def plot_roc_curve(y_true, y_probas, title='ROC Curves',
     ax.set_title(title, fontsize=26)
     return ax
 
+
+
+## Credit: adapted from Reiichiro Nakano. (2018). reiinakano/scikit-plot: 0.3.7. Zenodo. http://doi.org/10.5281/zenodo.293191
 def plot_precision_recall_curve(y_true, y_probas,
                                 title='Precision-Recall Curve',
                                 curves=('micro', 'each_class'), ax=None,
@@ -508,11 +610,47 @@ def plot_precision_recall_curve(y_true, y_probas,
     ax.legend(loc='best', fontsize="large", frameon=False)
     return ax
 
+
+
 def shap_swarm_single(mat_df, neg_samples, pos_samples):
-    # Create the training and test data
+    """
+    Trains an XGBoost model and computes SHAP values for feature importance analysis.
+
+    Parameters:
+    -----------
+    mat_df : pd.DataFrame
+        A dataframe containing feature values, where rows represent samples and columns represent features.
+    neg_samples : list
+        A list of indices corresponding to negative class samples.
+    pos_samples : list
+        A list of indices corresponding to positive class samples.
+
+    Returns:
+    --------
+    model_ind : xgboost.Booster
+        The trained XGBoost model.
+    features : list of tuples
+        A list of feature importance scores, where each tuple contains:
+        - The feature name (str)
+        - The mean absolute SHAP value (float), indicating feature importance.
+
+    Notes:
+    ------
+    - The function extracts features from `mat_df` based on `neg_samples` and `pos_samples`.
+    - It replaces specific special characters (`[`, `]`, `<`, `>`) in column names.
+    - The dataset is split into 80% training and 20% testing sets.
+    - An XGBoost model is trained with:
+      - Learning rate (`eta`) of 0.05
+      - Maximum depth of 1
+      - Logistic regression objective (`binary:logistic`)
+      - 50% subsampling (`subsample=0.5`)
+      - Log loss as evaluation metric
+      - Early stopping after 20 rounds
+    - SHAP values are computed to analyze feature importance.
+    - The function returns the trained model and a ranked list of feature importance scores.
+    """
     X = pd.concat([mat_df.loc[neg_samples], mat_df.loc[pos_samples]], axis=0)
     y = ([0]*len(neg_samples)) + ([1]*len(pos_samples))
-    #X.columns = [x[0]+x[2]+x[4]+x[6] for x in X.columns]
     X.columns = [x.replace('[', '').replace(']', '').replace('<', '').replace('>', '') for x in X.columns]
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42)
@@ -536,19 +674,54 @@ def shap_swarm_single(mat_df, neg_samples, pos_samples):
     model_ind = xgboost.train(params, d_train, 5000, evals=[(d_test, "test")], verbose_eval=0,
                               early_stopping_rounds=20, evals_result=evals_result)
 
-    #shap_values_ind = shap.TreeExplainer(model_ind).shap_values(X_train)
     explainer = shap.TreeExplainer(model_ind)
     shap_values = explainer(X)
 
-
     features = list(zip(model_ind.feature_names, shap_values.abs.mean(0).values))
-    #max_feats = sum(shap_values.abs.mean(0).values>=0.05)
-    #shap.plots.bar(shap_values.abs.mean(0), max_display=max_feats+1)
-
     return model_ind, features
 
 
+
 def get_SHAP_features(mat_df, class_df, pret_samples, n_iters):
+    """
+    Computes SHAP-based feature importance for multiple drugs using an iterative approach.
+
+    Parameters:
+    -----------
+    mat_df : pd.DataFrame
+        A dataframe where rows represent samples and columns represent feature values.
+    class_df : pd.DataFrame
+        A dataframe indicating drug response classification, where:
+        - Rows are samples.
+        - Columns are drugs.
+        - Values are 'Y' (responsive) or another value (non-responsive).
+    pret_samples : list
+        A list of sample indices to be used as the negative class (control group).
+    n_iters : int
+        The number of iterations for repeated SHAP analysis.
+
+    Returns:
+    --------
+    features_drug : pd.DataFrame
+        A dataframe where:
+        - Rows represent features.
+        - Columns represent drugs.
+        - Values represent the normalized importance of each feature for predicting drug response.
+
+    Notes:
+    ------
+    - The function filters `pret_samples` to ensure they exist in `mat_df`.
+    - For each drug in `class_df`, it:
+      1. Identifies responsive samples (`'Y'` labeled).
+      2. Ensures selected samples exist in `mat_df`.
+      3. Performs `n_iters` iterations of SHAP-based feature extraction:
+         - Matches control (`pret_samples`) to drug-positive samples.
+         - Trains an XGBoost model via `shap_swarm_single()`.
+         - Converts SHAP values into a structured DataFrame (`SV_feats_2df()`).
+      4. Computes the **sum**, **mean**, and **normalized importance** of SHAP values per feature.
+    - The final output provides feature importance rankings for each drug.
+
+    """
     pret_samples = [x for x in pret_samples if x in mat_df.index.tolist()]
 
     features_drug = pd.DataFrame()
