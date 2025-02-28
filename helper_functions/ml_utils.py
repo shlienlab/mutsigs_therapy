@@ -547,81 +547,34 @@ def shap_swarm_single(mat_df, neg_samples, pos_samples):
 
     return model_ind, features
 
-## SuppFig_12
-'''def get_logreg_ROC_topQ_KZMPOG_v2(X_kzm, X_pog, kzm_neg, kzm_pos, pog_neg, pog_pos):
 
-    fig, ax = plt.subplots(figsize=(8,8))
+def get_SHAP_features(mat_df, class_df, pret_samples, n_iters):
+    pret_samples = [x for x in pret_samples if x in mat_df.index.tolist()]
 
-    X_kzm = X_kzm.loc[kzm_neg+kzm_pos]
-    y_kzm = ([0]*len(kzm_neg)) + ([1]*len(kzm_pos))
+    features_drug = pd.DataFrame()
+    for drug in class_df.columns:
+        drug_samples = class_df[class_df[drug]=='Y'].index.tolist()
+        drug_samples = [x for x in drug_samples if x in mat_df.index.tolist()]
+        print(f'{drug}: {len(drug_samples)}')
 
-    X_pog = X_pog.loc[pog_neg+pog_pos]
-    y_pog = ([0]*len(pog_neg)) + ([1]*len(pog_pos))
+        features_df_Q = pd.DataFrame()
+        for i in range(n_iters):
+            if len(drug_samples) - len(pret_samples) <= len(drug_samples)/10:
+                pret_random = random.sample(pret_samples, k=len(drug_samples))
+            else:
+                pret_random = pret_samples
 
-    X_com = pd.concat([X_kzm, X_pog], axis=0)
-    y_com  = y_kzm + y_pog
+            model, features = shap_swarm_single(mat_df, pret_random, drug_samples)
 
+            features_df = SV_feats_2df(features, f'{i}_{drug}')
+            features_df_Q = pd.concat([features_df_Q, features_df], axis=1)
 
-    # define pipeline
-    over = SMOTE(sampling_strategy=1, random_state=42)
-    under = RandomUnderSampler(sampling_strategy=1, random_state=42)
-    steps = [('o', over), ('u', under)]
-    pipeline = Pipeline(steps=steps)
-    # transform the dataset
-    X_kzm, y_kzm = pipeline.fit_resample(X_kzm, y_kzm)
-    X_pog, y_pog = pipeline.fit_resample(X_pog, y_pog)
-    X_com, y_com = pipeline.fit_resample(X_com, y_com)
+        features_df_Q[f'sum_{drug}'] = features_df_Q[[x for x in features_df_Q.columns if x.endswith(f'{drug}')]].sum(axis=1)
 
-    X_kzm_train, X_kzm_test, y_kzm_train, y_kzm_test = train_test_split(X_kzm, y_kzm, stratify=y_kzm, random_state = 42)
-    X_pog_train, X_pog_test, y_pog_train, y_pog_test = train_test_split(X_pog, y_pog, stratify=y_pog, random_state = 42)
-    X_com_train, X_com_test, y_com_train, y_com_test = train_test_split(X_com, y_com, stratify=y_com, random_state = 42)
+        features_df_Q[f'mean_{drug}'] = features_df_Q[[x for x in features_df_Q.columns if x.endswith(f'{drug}')]].mean(axis=1)
 
-    lrK = LogisticRegression(random_state=42).fit(X_kzm_train, y_kzm_train)
-    #lrK = LogisticRegressionCV(cv=5, random_state=42).fit(X_train, y_train)
-    y_predK = lrK.predict(X_kzm_test)
-    y_probK = lrK.predict_proba(X_kzm_test)
-    y_predKP = lrK.predict(X_pog_test)
-    y_probKP = lrK.predict_proba(X_pog_test)
+        features_df_Q[drug] = features_df_Q[f'sum_{drug}'] / features_df_Q[f'sum_{drug}'].sum()
 
-    lrP = LogisticRegression(random_state=42).fit(X_pog_train, y_pog_train)
-    #lrP = LogisticRegressionCV(cv=5, random_state=42).fit(X_pog_train, y_pog_train)
-    y_predP = lrP.predict(X_pog_test)
-    y_probP = lrP.predict_proba(X_pog_test)
-    y_predPK = lrP.predict(X_kzm_test)
-    y_probPK = lrP.predict_proba(X_kzm_test)
+        features_drug = pd.concat([features_drug, features_df_Q[drug]], axis=1)
 
-    lrC = LogisticRegression(random_state=42).fit(X_com_train, y_com_train)
-    #lrP = LogisticRegressionCV(cv=5, random_state=42).fit(X_pog_train, y_pog_train)
-    y_predC = lrC.predict(X_com_test)
-    y_probC = lrC.predict_proba(X_com_test)
-    y_predCK = lrC.predict(X_kzm_test)
-    y_probCK = lrC.predict_proba(X_kzm_test)
-
-    # evaluate the models
-    cvK = RepeatedStratifiedKFold(n_splits=5, n_repeats=10, random_state=42)
-    n_scoresK = cross_val_score(lrK, X_kzm, y_kzm, scoring='accuracy', cv=cvK, n_jobs=4, error_score='raise')
-    print('Accuracy KZM: %.3f (%.3f)' % (np.mean(n_scoresK), np.std(n_scoresK)))
-
-    cvP = RepeatedStratifiedKFold(n_splits=5, n_repeats=10, random_state=42)
-    n_scoresP = cross_val_score(lrP, X_pog, y_pog, scoring='accuracy', cv=cvP, n_jobs=4, error_score='raise')
-    print('Accuracy POG: %.3f (%.3f)' % (np.mean(n_scoresP), np.std(n_scoresP)))
-
-    cvC = RepeatedStratifiedKFold(n_splits=5, n_repeats=10, random_state=42)
-    n_scoresC = cross_val_score(lrC, X_com, y_com, scoring='accuracy', cv=cvC, n_jobs=4, error_score='raise')
-    print('Accuracy POG: %.3f (%.3f)' % (np.mean(n_scoresC), np.std(n_scoresC)))
-
-    #dr_disp = RocCurveDisplay.from_estimator(rfc, X_pog, y_pog, name=dr, ax=ax)
-    dr_disp1 = RocCurveDisplay.from_estimator(lrK, X_kzm_test, y_kzm_test, ax=ax, name='Train:KZM - Test:KZM')
-
-    dr_disp1 = RocCurveDisplay.from_estimator(lrK, X_pog_test, y_pog_test, ax=ax, name='Train:KZM - Test:POG')
-
-    dr_disp2 = RocCurveDisplay.from_estimator(lrP, X_pog_test, y_pog_test, ax=ax, name='Train:POG - Test:POG')
-
-    dr_disp2 = RocCurveDisplay.from_estimator(lrP, X_kzm_test, y_kzm_test, ax=ax, name='Train:POG - Test:KZM')
-
-    dr_disp2 = RocCurveDisplay.from_estimator(lrC, X_com_test, y_com_test, ax=ax, name='Train:combined - Test:combined')
-
-    print(classification_report(y_kzm_test, y_predK))
-    print(classification_report(y_pog_test, y_predP))
-    print(classification_report(y_com_test, y_predC))'''
-
+    return features_drug
