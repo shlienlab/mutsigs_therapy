@@ -1,3 +1,23 @@
+"""
+===========================================
+MS: Unique patterns of mutations in childhood cancer highlight chemotherapy’s disease-defining role at relapse
+Author: Mehdi Layeghifard
+Email: mlayeghi@gmail.com
+Date Created: February 28, 2025
+Version: 0.1
+
+Description:
+This script contains several functions that to analyze mutational signatures in genomic data.
+
+Usage:
+These function are called from within the provided Notebooks.
+
+License:
+MIT License - You are free to use, modify, and distribute this code with appropriate attribution.
+===========================================
+"""
+
+
 import pandas as pd
 import numpy as np
 from scipy import stats
