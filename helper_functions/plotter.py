@@ -7,6 +7,8 @@ import matplotlib.patches as mpatches
 import matplotlib.axis as axis
 from collections import OrderedDict
 
+import networkx as nx
+
 from scipy import stats
 from scipy.stats import mannwhitneyu
 
@@ -1863,3 +1865,189 @@ def coefs_scatter(coefs, fname, positive_only=True, interactions='singles_only',
 
     plt.tight_layout()
     plt.savefig(fname, bbox_inches="tight")
+
+
+
+def plot_coefs(coefs, title=None, leg=None, x_only=True):
+    # Plot the non-zero coefficients
+    denom = 3 if len(coefs) > 7 else 2
+    fig, ax = plt.subplots(figsize=(10, len(coefs)/denom))
+    if x_only:
+        coefs = coefs[coefs['Features'].str.contains(':')]
+        colors = ['steelblue' if ':' in feature else 'thistle' for feature in coefs.Features]
+    else:
+        colors = ['thistle' if ':' in feature else 'steelblue' for feature in coefs.Features]
+    coefs = coefs.reset_index(drop=True)
+    
+
+    p1 = plt.barh(coefs.index, coefs.Coefficient, color=colors)
+    plt.xlabel('Logistic Regression Coefficients', fontsize=18)
+    plt.gca().invert_yaxis() # Invert y-axis for descending order
+    if title:
+        plt.title(title, fontsize=20)
+
+    ax.set_yticks(range(len(coefs.Features)))
+    new_labels = [x.replace('_', ' ') for x in coefs.Features.tolist()]
+    new_labels = [x.replace(':', '::') for x in new_labels]
+    ax.set_yticklabels(new_labels, fontsize=14)
+
+    for color, tick in zip(colors, ax.get_yticklabels()):
+        tick.set_color(color) #set the color property
+
+    plt.xticks(fontsize=14)
+
+    xmin, xmax = ax.get_xlim()
+
+    # vertical lines
+    lcount = 0
+    outc = coefs.Outcome.iloc[0]
+    ax.text(xmax, 0, f"{outc}", va='center', fontsize=14)
+    for out in coefs.Outcome:
+        if out == outc:
+            lcount += 1
+        else:
+            ax.hlines(y=lcount-0.5, xmin=xmin, xmax=xmax, colors=['tab:gray'], ls='--', lw=2)
+            ax.text(xmax, lcount, f"{out}", va='center', fontsize=14)
+            outc = out
+            lcount += 1
+
+    #ax.vline(x=0, colors=['tab:gray'], ls='-', lw=2)
+    plt.axvline(x = 0, color = 'gray', lw=2)
+    plt.axvline(x = 0.7, color = 'green', ls='--', lw=1)
+    plt.axvline(x = -0.7, color = 'red', ls='--', lw=1)
+
+    ax.spines[['top', 'right']].set_visible(False)
+
+    plt.ylim(len(coefs)-0.5, -0.5)
+
+    # Add a dynamically positioned legend
+    if leg:
+        plt.legend(handles=[
+            plt.Line2D([0], [0], color='steelblue', lw=4, label='Main Effects'),
+            plt.Line2D([0], [0], color='thistle', lw=4, label='Interaction Terms')
+        ], loc=leg)
+
+
+    plt.tight_layout()
+    plt.show()
+
+
+def plot_bipartite_subs(df):
+
+    # Get number of subplots
+    n_rows = len(df)
+    #n_cols = 2 if n_rows > 1 else 1  # Arrange in 2 columns if multiple rows
+    n_cols = 3
+    total_plots = (n_rows // n_cols) + (n_rows % n_cols)
+
+    fig, axes = plt.subplots(nrows=total_plots, ncols=n_cols, figsize=(18, 6 * total_plots))
+    axes = np.ravel(axes)  # Flatten the axes for easy iteration
+
+    # Loop through each row and create a network plot
+    for i, (central_node, row) in enumerate(df.iterrows()):
+        ax = axes[i]
+        G = nx.Graph()
+
+        # Add the central node (pink)
+        G.add_node(central_node, color='thistle')
+
+        # Add outer nodes (blue) and edges based on nonzero values
+        edges = []
+        for node, weight in row.items():
+            if weight > 0:  # Ignore zero-weight edges
+                G.add_node(node, color='lightsteelblue')
+                edges.append((central_node, node, weight))
+
+        G.add_weighted_edges_from(edges)
+
+        # Get positions
+        pos = nx.circular_layout(G, scale=1.5)
+        pos[central_node] = np.array([0, 0])  # Center the central node
+
+        # Get node colors
+        node_colors = [G.nodes[n]['color'] for n in G.nodes()]
+
+        # Draw the network
+        nx.draw_networkx_nodes(G, pos, node_color=node_colors, node_size=1000, ax=ax)
+        nx.draw_networkx_edges(G, pos, edgelist=[(u, v) for u, v, _ in edges],
+                                width=[w for _, _, w in edges], edge_color='gray', ax=ax)
+        nx.draw_networkx_labels(G, pos, font_size=14, font_color='black', ax=ax)
+
+        # Set title
+        ax.set_title(f"{central_node} Interactions", fontsize=20)
+
+        ax.axis("off")  # Hide axes
+
+    # Hide any extra unused subplots
+    for j in range(i + 1, len(axes)):  
+        axes[j].set_visible(False)
+
+    #plt.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.1, wspace=0.4, hspace=0.5)
+
+
+    # Alternative: Use constrained layout 
+    #fig.set_constrained_layout(True)
+
+    # Adjust layout
+    plt.tight_layout()
+
+
+def plot_driver_nx(df2, figout):
+    # Create a network graph
+    G = nx.Graph()
+
+    # Define the two sets of nodes
+    rows = df2.index
+    cols = df2.columns
+
+    # Add nodes: rows and columns as two sets
+    G.add_nodes_from(rows, bipartite=0)  # Add row nodes
+    G.add_nodes_from(cols, bipartite=1)  # Add column nodes
+
+    # Add edges with attributes for weights and colors
+    for row in rows:
+        for col in cols:
+            value = df2.at[row, col]
+            if pd.notnull(value):  # Only include non-null values
+                G.add_edge(row, col, weight=abs(value), color='red' if value < 0 else 'blue')
+
+    # Number of row and column nodes
+    num_rows = len(rows)
+    num_cols = len(cols)
+
+    # Position column nodes in the inner circle (radius = 1)
+    theta_cols = np.linspace(0, 2 * np.pi, num_cols, endpoint=False)
+    pos_cols = {cols[i]: (np.cos(theta_cols[i]), np.sin(theta_cols[i])) for i in range(num_cols)}
+
+    # Position row nodes in the outer circle (radius = 2)
+    theta_rows = np.linspace(0, 2 * np.pi, num_rows, endpoint=False)
+    pos_rows = {rows[i]: (2 * np.cos(theta_rows[i]), 2 * np.sin(theta_rows[i])) for i in range(num_rows)}
+
+    # Combine the positions of rows and columns
+    pos = {**pos_cols, **pos_rows}
+
+    # Extract edge attributes for drawing
+    edge_colors = nx.get_edge_attributes(G, 'color').values()
+    edge_widths = [d['weight'] for u, v, d in G.edges(data=True)]  # Scale edge thickness
+
+    # Draw the network graph
+    plt.figure(figsize=(10, 10))
+
+    # Draw nodes with different colors for rows and columns
+    nx.draw_networkx_nodes(G, pos, nodelist=rows, node_color="skyblue", node_size=1500, label="Row Nodes")
+    nx.draw_networkx_nodes(G, pos, nodelist=cols, node_color="lightcoral", node_size=1500, label="Column Nodes")
+
+    # Draw edges with thickness and color
+    nx.draw_networkx_edges(G, pos, width=edge_widths, edge_color=edge_colors)
+
+    # Add labels
+    nx.draw_networkx_labels(G, pos, font_size=12, font_color="black")
+
+    # Add legend for node groups
+    #plt.legend(loc="lower left", title="Node Groups", labels=["Row Nodes", "Column Nodes"])
+
+    # Add a title and show the graph
+    plt.title("")
+    plt.axis("off")
+    plt.savefig(figout, bbox_inches="tight")
+
