@@ -393,3 +393,29 @@ def get_enr_df(df, pv, test_type='fisher', odr=3, pval=0.05):
 
     dfpv = pd.concat([df_mlt, pv_mlt['P-value']], axis=1)
     return dfpv
+
+
+def get_sig_counts(sigs_df, sig_id):
+    sigs_subd = sigs_df[[x for x in sigs_df.columns if x.startswith(sig_id)]].copy()
+    if sig_id == 'SBS':
+        sig_counts = pd.concat([sigs_subd.loc[kzm611_md[kzm611_md.sbs_hue=='Low'].index.tolist()].astype(bool).sum(axis=0),
+                                sigs_subd.loc[kzm611_md[kzm611_md.sbs_hue=='High'].index.tolist()].astype(bool).sum(axis=0)], axis=1)
+        sig_counts.columns = ['Low', 'High']
+    elif sig_id == 'DBS':
+        sig_counts = pd.concat([sigs_subd.loc[kzm611_md[kzm611_md.dbs_hue=='Low'].index.tolist()].astype(bool).sum(axis=0),
+                                sigs_subd.loc[kzm611_md[kzm611_md.sbs_hue=='High'].index.tolist()].astype(bool).sum(axis=0)], axis=1)
+        sig_counts.columns = ['Low', 'High']
+    elif sig_id == 'ID':
+        sig_counts = pd.concat([sigs_subd.loc[kzm611_md[kzm611_md.id_hue=='Low'].index.tolist()].astype(bool).sum(axis=0),
+                                sigs_subd.loc[kzm611_md[kzm611_md.id_hue=='Mid'].index.tolist()].astype(bool).sum(axis=0),
+                                sigs_subd.loc[kzm611_md[kzm611_md.id_hue=='High'].index.tolist()].astype(bool).sum(axis=0)], axis=1)
+        sig_counts.columns = ['Low', 'Mid', 'High']
+    else:
+        print('One of SBS, DBS or ID sigs must be selected!')
+        return
+
+    sig_counts = sig_counts.fillna(0)
+    for col in sig_counts.columns:
+        sig_counts[col] = sig_counts[col].astype(int)
+    #sig_counts['Sig'] = sig_counts.index.tolist()
+    return sig_counts

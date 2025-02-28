@@ -2051,3 +2051,19 @@ def plot_driver_nx(df2, figout):
     plt.axis("off")
     plt.savefig(figout, bbox_inches="tight")
 
+def plot_sig_counts(sig_counts, outname):
+    w = cols = sig_counts.shape[1]
+    h = sig_counts.shape[0]/4    
+    mycmap = cmaps[0:1] + cmaps[2:3] if cols < 3 else cmaps
+
+    fig, axes = plt.subplots(1,cols, figsize=(w, h), constrained_layout=True)
+
+    for ax_i in range(len(axes)):
+        ax = sns.heatmap(sig_counts.iloc[:,ax_i:ax_i+1], annot=True, fmt="d", cmap=mycmap[ax_i], cbar=False, ax=axes[ax_i])
+        if ax_i == 0:
+            ax.set_yticklabels(sig_counts.index.tolist(), rotation=0, ha='right')
+        else:
+            ax.axes.get_yaxis().set_ticks([])
+        ax.axes.get_xaxis().set_ticks([])
+
+    plt.savefig(os.path.join(fig_out, outname), bbox_inches="tight")
