@@ -18,18 +18,16 @@ MIT License - You are free to use, modify, and distribute this code with appropr
 """
 
 
+## Data processing imports
 import pandas as pd
+
+## Stats imports
 import numpy as np
 from scipy import stats
 import statsmodels.stats.multitest as smm
 
-import matplotlib.pyplot as plt
-import matplotlib.patches as patches
+## Plotting imports
 import seaborn as sns
-
-import os
-import sys
-import re
 
 set2_cols = sns.color_palette("Set2")
 
@@ -491,17 +489,8 @@ def enrich_therapy_generic(sigs_df, md_df, min_val=0, pval=0.05, verbose=False, 
         sig_print = 1
 
         for t in therapies:
-            '''if t == 'Therapy':
-                kzm_Pos = sigs_md[sigs_md[t]=='Post-Therapy']
-                kzm_Neg = sigs_md[sigs_md[t]=='Pre-Therapy']
-            else:'''
             kzm_Pos = sigs_md[sigs_md[t]=='Y']
             kzm_Neg = sigs_md[sigs_md[t]=='N']
-
-            '''if s == 'SBS17b':
-                print(f"{t}: {kzm_Neg.shape[0]}, {kzm_Pos.shape[0]}")
-                print(f"{len(kzm_Pos[kzm_Pos[s]>min_val])} -- {len(kzm_Pos[kzm_Pos[s]<=min_val])}")
-                print(f"{len(kzm_Neg[kzm_Neg[s]>min_val])} -- {len(kzm_Neg[kzm_Neg[s]<=min_val])}")'''
             
             if kzm_Pos.shape[0]<10 or kzm_Neg.shape[0]<10:
                 continue
@@ -553,17 +542,8 @@ def enrich_therapy_generic_v2(sigs_df, md_df, min_val=0, pval=0.05, verbose=Fals
         sig_print = 1
 
         for t in therapies:
-            '''if t == 'Therapy':
-                kzm_Pos = sigs_md[sigs_md[t]=='Post-Therapy']
-                kzm_Neg = sigs_md[sigs_md[t]=='Pre-Therapy']
-            else:'''
             kzm_Pos = sigs_md[sigs_md[t]=='Y']
             kzm_Neg = sigs_md[sigs_md[t]=='N']
-
-            '''if s == 'SBS17b':
-                print(f"{t}: {kzm_Neg.shape[0]}, {kzm_Pos.shape[0]}")
-                print(f"{len(kzm_Pos[kzm_Pos[s]>min_val])} -- {len(kzm_Pos[kzm_Pos[s]<=min_val])}")
-                print(f"{len(kzm_Neg[kzm_Neg[s]>min_val])} -- {len(kzm_Neg[kzm_Neg[s]<=min_val])}")'''
             
             if kzm_Pos.shape[0]<10 or kzm_Neg.shape[0]<10:
                 continue

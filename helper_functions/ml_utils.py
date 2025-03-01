@@ -17,34 +17,35 @@ MIT License - You are free to use, modify, and distribute this code with appropr
 ===========================================
 """
 
-import pandas as pd
-import numpy as np
 
-from sklearn.model_selection import train_test_split, cross_val_score, RepeatedStratifiedKFold
+## Data processing imports
+import pandas as pd
+
+## ML imports
+from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.ensemble import RandomForestClassifier, VotingClassifier
-from sklearn.linear_model import LogisticRegression, LogisticRegressionCV
-from sklearn.metrics import RocCurveDisplay, classification_report, ConfusionMatrixDisplay, precision_recall_curve
-from sklearn.metrics import auc, roc_curve, roc_auc_score, average_precision_score
-from sklearn.metrics import recall_score, precision_score, f1_score, accuracy_score
-from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report, ConfusionMatrixDisplay, precision_recall_curve
+from sklearn.metrics import auc, roc_curve, roc_auc_score, average_precision_score, accuracy_score
 from xgboost import XGBClassifier
 from catboost import CatBoostClassifier
-from sklearn.preprocessing import StandardScaler
-from sklearn.preprocessing import label_binarize
+from sklearn.preprocessing import StandardScaler, label_binarize
 import xgboost
 import shap
 
-
+## Stats imports
+import numpy as np
 from scipy import interp
 from statistics import stdev
 import random
 
+## Plotting imports
 import matplotlib.pyplot as plt
 
 
+## Suppress FutureWarning messages
 import warnings
-warnings.filterwarnings('ignore')
-# Suppress FutureWarning messages
+#warnings.filterwarnings('ignore')
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
 ## 9 functions
