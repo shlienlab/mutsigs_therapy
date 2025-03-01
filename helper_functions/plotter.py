@@ -17,29 +17,29 @@ MIT License - You are free to use, modify, and distribute this code with appropr
 ===========================================
 """
 
-
+## Data processing imports
 import pandas as pd
-import numpy as np
-import math
+from collections import OrderedDict
 
+## Plotting imports
 import matplotlib.pyplot as plt
 import matplotlib.colors as mc
 import matplotlib.patches as patches
 import matplotlib.patches as mpatches
 import matplotlib.axis as axis
 import seaborn as sns
-
-from collections import OrderedDict
-
 import networkx as nx
 
+## Stats imports
+import numpy as np
+import math
 from scipy import stats
+
 
 GENOME_SIZE = 2897.310462
 
 A_col = "#3288BD"
 B_col = "#D53E4F"
-
 
 
 def get_mut_dict(mat_df):
