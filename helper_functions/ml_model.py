@@ -1,24 +1,45 @@
+"""
+===========================================
+MS: Unique patterns of mutations in childhood cancer highlight chemotherapy’s disease-defining role at relapse
+Author: Mehdi Layeghifard
+Email: mlayeghi@gmail.com
+Date Created: February 28, 2025
+Version: 0.1
+
+Description:
+This script contains the logistic regression model to find associations between drugs and signatures.
+
+Usage:
+These function are called from within the provided Notebooks.
+
+License:
+MIT License - You are free to use, modify, and distribute this code with appropriate attribution.
+===========================================
+"""
+
+
+## Data processing imports
 import pandas as pd
 import numpy as np
+
+## ML imports
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import roc_auc_score
 from sklearn.utils import shuffle
 from patsy import dmatrices
+
+## Other imports
 import time
 import os
 
 
 
-# ----------------------
-# Step 1: Data
-# ----------------------
+## Random seed
 np.random.seed(42)
-
 
 ## Provide an output directory for figures or use 'installation_folder/figures' directory
 root_dir = os.path.dirname(os.getcwd())
 fig_out = os.path.join(root_dir, 'figures')
-
 
 ##### Data import & processing
 ## Load patients metadata
@@ -115,6 +136,37 @@ drugs_agent_10p_low = drugs_agent_10p.loc[[x for x in drugs_agent_10p.index if x
 
 
 def get_sig_coefs(model, X, sig):
+    """
+    Extracts and filters logistic regression significant coefficients from a trained model.
+
+    This function retrieves the coefficients from a fitted model, removes the intercept, 
+    filters out coefficients with an absolute value below a threshold (0.7, corresponding 
+    to an approximate odds ratio of 2.01), and sorts the remaining coefficients in descending 
+    order of absolute magnitude.
+
+    Parameters:
+    -----------
+    model : sklearn-like fitted model
+        A trained model with a `coef_` attribute containing feature coefficients.
+    X : pandas.DataFrame
+        The feature matrix used for training the model, with column names corresponding to features.
+    sig : str
+        A label representing the outcome or signature associated with the extracted coefficients.
+
+    Returns:
+    --------
+    sig_coefs : pandas.DataFrame
+        A DataFrame containing the filtered and sorted significant coefficients.
+        Columns:
+        - 'Features': Feature names with significant coefficients.
+        - 'Coefficient': Corresponding coefficient values.
+        - 'Outcome': The outcome label provided in `sig`.
+
+    Example:
+    --------
+    >>> model = LogisticRegression().fit(X_train, y_train)
+    >>> get_sig_coefs(model, X_train, "Cancer Risk")
+    """
     coefficients = model.coef_[0]
     features = X.columns
 
@@ -140,6 +192,53 @@ def get_sig_coefs(model, X, sig):
 
 
 def regu_logreg(preds_df, outs_df, outcome, interactions=False, predictors=False, plot=False, verbose=False):
+    """
+    Performs regularized logistic regression with optional interaction terms and permutation testing.
+
+    This function fits a logistic regression model with L1 (Lasso) regularization on the provided 
+    predictor variables to classify the specified outcome. It also performs a permutation test to 
+    assess the statistical significance of the observed AUC.
+
+    Parameters:
+    -----------
+    preds_df : pandas.DataFrame
+        A DataFrame containing predictor variables.
+    outs_df : pandas.DataFrame
+        A DataFrame containing the outcome variable.
+    outcome : str
+        The name of the outcome variable in `outs_df`.
+    interactions : bool, optional (default=False)
+        If True, includes interaction terms in the regression formula.
+    predictors : list or bool, optional (default=False)
+        A list of predictor variable names. If False, all columns from `preds_df` are used.
+    plot : bool, optional (default=False)
+        Placeholder for potential plotting functionality (currently unused).
+    verbose : bool, optional (default=False)
+        If True, prints detailed output including model performance and coefficients.
+
+    Returns:
+    --------
+    coefs : pandas.DataFrame
+        A DataFrame containing significant coefficients, AUC, and permutation p-value.
+        Columns:
+        - 'Features': Feature names with significant coefficients.
+        - 'Coefficient': Corresponding coefficient values.
+        - 'Outcome': The outcome variable.
+        - 'AUC': The observed area under the ROC curve (AUC).
+        - 'pvalue': The p-value from the permutation test.
+
+    Notes:
+    ------
+    - Uses `patsy.dmatrices` to construct the regression formula.
+    - Applies L1 regularization (Lasso) with `liblinear` solver.
+    - Performs 5000 permutation tests to calculate the p-value.
+    - If the outcome variable has only one class or fewer than 5 occurrences of the minority class, the function returns None.
+
+    Example:
+    --------
+    >>> model_results = regu_logreg(preds_df, outs_df, "DiseaseStatus", interactions=True, verbose=True)
+    >>> print(model_results)
+    """
     if not predictors:
         predictors = preds_df.columns.tolist()
     
@@ -217,10 +316,51 @@ def regu_logreg(preds_df, outs_df, outcome, interactions=False, predictors=False
     return coefs
 
 
-# drivers_all, drivers_low, drugs_class, drugs_agent_10p, kzm_all_sigs, kzm_low_sigs
 
 def run_model(preds, outs, condition, interactions, pval=0.05):
-    ##  Predictors = Therapy class  ; Outcome = Signatures ; All samples
+    """
+    Runs a regularized logistic regression model for multiple outcomes and filters significant results.
+
+    This function iterates through the columns of `outs` (outcome variables), fits a logistic 
+    regression model for each using `regu_logreg`, and aggregates significant coefficients based 
+    on a specified p-value threshold.
+
+    Parameters:
+    -----------
+    preds : pandas.DataFrame
+        A DataFrame containing predictor variables.
+    outs : pandas.DataFrame
+        A DataFrame containing multiple outcome variables.
+    condition : str
+        A label specifying the condition under which the model is run.
+    interactions : bool
+        If True, includes interaction terms in the regression formula.
+    pval : float, optional (default=0.05)
+        The significance threshold for filtering results.
+
+    Returns:
+    --------
+    pandas.DataFrame
+        A DataFrame containing significant coefficients across all outcome variables.
+        Columns:
+        - 'Features': Feature names with significant coefficients.
+        - 'Coefficient': Corresponding coefficient values.
+        - 'Outcome': The outcome variable.
+        - 'AUC': The observed area under the ROC curve (AUC).
+        - 'pvalue': The p-value from the permutation test.
+        - 'Condition': The specified condition.
+
+    Notes:
+    ------
+    - Calls `regu_logreg` for each outcome variable in `outs`.
+    - Only includes results where the permutation test p-value is ≤ `pval`.
+    - If no significant coefficients are found, an empty DataFrame is returned.
+
+    Example:
+    --------
+    >>> significant_results = run_model(predictors_df, outcomes_df, "CancerTypeA", interactions=True, pval=0.01)
+    >>> print(significant_results)
+    """
     all_coefs = pd.DataFrame()
 
     for out in outs.columns: 
