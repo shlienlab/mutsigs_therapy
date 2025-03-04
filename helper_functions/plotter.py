@@ -35,7 +35,7 @@ import numpy as np
 import math
 from scipy import stats
 
-
+# Refernce genome size: grch37d5
 GENOME_SIZE = 2897.310462
 
 A_col = "#3288BD"
