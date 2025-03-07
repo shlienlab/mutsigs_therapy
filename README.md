@@ -14,8 +14,8 @@ This repository includes
 * 1 Notebook to reproduce Supplementary Figures
 * 1 helper script with all the plotting functions
 * 2 helper scripts with 10s of analysis functions
-* 1 helper scripts to run the logistic regression model
-* 1 source data directory containing all the data needed to reproduce the figures (data will be added after manuscript decision)
+* 1 script to run the logistic regression model
+* 1 source data directory containing all the data needed to reproduce the figures (some sensitive data will be added after manuscript decision)
 
 
 
