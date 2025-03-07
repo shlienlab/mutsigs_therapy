@@ -42,11 +42,9 @@ This repository includes
 
 ### Installation
 
-To install you can download this repository by running 
+To install you can download this repository by running (or directly download zipped folder from menu above):
  
     git clone https://github.com/shlienlab/mutsigs_therapy
-
-Or directly download the repository from the Github webpage.
 
 
 Navigate to the root directory of cloned or downloaded repository and type:
@@ -54,8 +52,7 @@ Navigate to the root directory of cloned or downloaded repository and type:
 pip install -r requirements.txt
 ```
 
-We recommended installing the required packages into a python virtual environment.
-To do so:
+#### We recommended installing the required packages into a python virtual environment.
 
 1. Create the virtual environment in the specified path of your choice
 ```sh
