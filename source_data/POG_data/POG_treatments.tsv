@@ -1,0 +1,1988 @@
+Patient_ID	Drug_name	Treatment_course_number	Class_1	Class_2	Pathway	Therapy_start_date	Therapy_end_or_biopsy_date	On_treatment_at_biopsy
+11004	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	123	1
+11004	BEVACIZUMAB	1	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	123	1
+11004	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	123	1
+11307	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	105	0
+11307	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	105	0
+11307	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	105	0
+11307	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	105	0
+11307	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	160	830	0
+11307	GOSERELIN	3	LHRH agonist	hormone therapy	Hormone	361	361	0
+11307	EXEMESTANE	4	aromatase inhibitor	hormone therapy	Hormone	867	1679	0
+11307	FULVESTRANT	5	estrogen receptor antagonist	hormone therapy	Hormone	1749	1944	0
+11307	VANDETANIB/PLACEBO	5	VEGFR inhibitor	kinase inhibitor	Receptor Kinase	1749	1944	0
+11307	CAPECITABINE	6	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1957	2238	1
+11698	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	230	0
+11698	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	230	0
+11698	DOCETAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	1182	1266	0
+11698	CISPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	1182	1266	0
+11698	CISPLATIN	3	DNA alkylating	DNA damage inducer	DNA damage	1723	1803	1
+11698	DOCETAXEL	3	taxanes	mitotic inhibitor	mitotic inhibitor	1723	1803	1
+12255	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	21	0
+12255	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	21	0
+12255	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	21	0
+12255	CISPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	53	97	0
+12255	CISPLATIN	3	DNA alkylating	DNA damage inducer	DNA damage	654	698	0
+12255	DOCETAXEL	3	taxanes	mitotic inhibitor	mitotic inhibitor	654	698	0
+13261	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	44	0
+13261	CISPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	79	92	1
+13268	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	112	0
+13268	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	112	0
+13268	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	112	0
+13268	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	112	0
+13268	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	288	462	0
+13269	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	237	0
+13269	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	237	0
+13269	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1305	1362	0
+13269	IRINOTECAN	2	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	1305	1362	0
+13269	BEVACIZUMAB	2	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	1305	1362	0
+13269	IRINOTECAN	3	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	1375	1389	0
+13269	FLUOROURACIL	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1375	1389	0
+13269	FLUOROURACIL	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1414	1554	0
+13269	OXALIPLATIN	4	DNA alkylating	DNA damage inducer	DNA damage	1414	1554	0
+13764	MITOMYCIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	23	0
+13764	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	23	0
+13904	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	223	0
+13904	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	223	0
+13904	BEVACIZUMAB	1	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	223	0
+13904	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	244	424	0
+13904	OXALIPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	244	424	0
+13947	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	536	0
+13947	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	536	0
+13947	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	573	643	0
+13947	OXALIPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	573	643	0
+13947	OXALIPLATIN	3	DNA alkylating	DNA damage inducer	DNA damage	889	987	0
+13947	FLUOROURACIL	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	889	987	0
+13947	IRINOTECAN	3	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	889	987	0
+14231	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	107	0
+14231	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	107	0
+14231	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	107	0
+14231	DOCETAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	128	128	0
+14231	LETROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	210	210	0
+14232	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	401	0
+14232	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	401	0
+14232	BEVACIZUMAB	1	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	401	0
+14232	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	416	496	0
+14232	OXALIPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	416	496	0
+14446	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	77	1
+14498	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	169	0
+14498	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	169	0
+14498	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	169	0
+14519	BEVACIZUMAB	1	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	105	0
+14519	LETROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	125	489	0
+14519	TAMOXIFEN	4	estrogen receptor antagonist	hormone therapy	Hormone	987	1023	0
+14891	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	114	0
+14891	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	114	0
+14891	PEMETREXED	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	177	224	0
+14891	ERLOTINIB	3	EGFR inhibitor (broad)	kinase inhibitor	Receptor Kinase	239	288	0
+15122	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	147	0
+15122	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	147	0
+15122	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	147	0
+15122	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	185	538	0
+15122	ANASTROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	606	1144	0
+15122	EXEMESTANE	4	aromatase inhibitor	hormone therapy	Hormone	1210	1299	0
+15122	LETROZOLE	5	aromatase inhibitor	hormone therapy	Hormone	1438	1449	0
+15148	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	95	0
+15148	ETOPOSIDE	1	topoisomerase II inhibitor	DNA synthesis inhibitor	DNA synthesis	0	95	0
+15148	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	95	0
+15148	DOCETAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	273	374	0
+15227	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	155	0
+15227	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	155	0
+15227	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	155	0
+15227	DOCETAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	200	276	0
+15227	PACLITAXEL	3	taxanes	mitotic inhibitor	mitotic inhibitor	315	371	0
+15227	GEMCITABINE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	315	371	0
+15227	CAPECITABINE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	382	480	0
+15227	GEMCITABINE	5	DNA synthesis inhibitor	antimetabolite	DNA synthesis	518	554	1
+15227	CISPLATIN	5	DNA alkylating	DNA damage inducer	DNA damage	518	554	1
+15844	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	42	0
+15844	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	42	0
+15844	DOCETAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	66	66	0
+15844	TAMOXIFEN	3	estrogen receptor antagonist	hormone therapy	Hormone	143	368	0
+15844	BUSERELIN	3	GNRHR inhibitor	hormone therapy	Hormone	143	368	0
+15844	VINORELBINE	4	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	218	332	0
+15844	LETROZOLE	5	aromatase inhibitor	hormone therapy	Hormone	392	2486	0
+15844	CAPECITABINE	6	DNA synthesis inhibitor	antimetabolite	DNA synthesis	3399	3803	1
+16385	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	43	0
+16385	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	43	0
+16385	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	43	0
+16385	IRINOTECAN	2	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	15	15	0
+16385	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	15	15	0
+16385	OXALIPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	15	15	0
+16385	GEMCITABINE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	60	312	1
+16500	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	51	0
+16500	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	51	0
+16500	REOLYSIN	2	oncolytic virus	misc	misc	77	109	0
+16500	PEMETREXED	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	77	109	0
+16500	ERLOTINIB	3	EGFR inhibitor (broad)	kinase inhibitor	Receptor Kinase	126	144	1
+16501	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	98	0
+16501	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	98	0
+16501	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	98	0
+16501	METFORMIN/PLACEBO	2	mTOR inhibition; cytotoxic effects; immunomodulation	misc	AKT-mTOR	201	368	0
+16689	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	105	0
+16689	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	105	0
+16689	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	105	0
+16689	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	105	0
+16689	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	105	0
+16689	CISPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	995	1002	0
+16689	GEMCITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	995	1002	0
+16689	GEMCITABINE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1017	1922	0
+16689	CARBOPLATIN	3	DNA alkylating	DNA damage inducer	DNA damage	1017	1922	0
+16689	CISPLATIN	3	DNA alkylating	DNA damage inducer	DNA damage	1017	1922	0
+16689	CAPECITABINE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	2499	2520	0
+16689	CARBOPLATIN	5	DNA alkylating	DNA damage inducer	DNA damage	2563	3042	1
+16689	GEMCITABINE	5	DNA synthesis inhibitor	antimetabolite	DNA synthesis	2563	3042	1
+16689	VINORELBINE	6	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	2961	3033	0
+16949	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	144	0
+16949	BICALUTAMIDE	2	anti-androgen	hormone therapy	Hormone	3516	3516	0
+16949	BICALUTAMIDE	3	anti-androgen	hormone therapy	Hormone	3599	3599	0
+16949	GOSERELIN	3	LHRH agonist	hormone therapy	Hormone	3599	3599	0
+16949	PREDNISONE	4	glucocorticoid receptor agonist	hormone therapy	Hormone	3657	3741	0
+16949	ABIRATERONE	4	anti-androgen	hormone therapy	Hormone	3657	3741	0
+16949	DOCETAXEL	5	taxanes	mitotic inhibitor	mitotic inhibitor	3759	3781	0
+16949	CISPLATIN	6	DNA alkylating	DNA damage inducer	DNA damage	3803	3917	0
+16949	ETOPOSIDE	6	topoisomerase II inhibitor	DNA synthesis inhibitor	DNA synthesis	3803	3917	0
+17284	PREDNISONE	1	glucocorticoid receptor agonist	hormone therapy	Hormone	0	4	0
+17284	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	4	0
+17284	VINCRISTINE	1	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	0	4	0
+17284	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	4	0
+17284	GEMCITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	25	33	0
+17284	CISPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	25	33	0
+17557	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	139	0
+17557	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	139	0
+17557	TEMOZOLOMIDE	2	DNA alkylating	DNA damage inducer	DNA damage	317	405	0
+17557	VELIPARIB	2	PARP inhibitor	DNA damage inducer	DNA damage	317	405	0
+17557	ANASTROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	631	729	0
+17557	CARBOPLATIN	4	DNA alkylating	DNA damage inducer	DNA damage	757	898	0
+17557	DOXORUBICIN	5	anthracyclines	DNA synthesis inhibitor	DNA synthesis	1297	1409	0
+17584	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	106	0
+17584	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	106	0
+17584	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	106	0
+17584	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	106	0
+17584	GOSERELIN	2	LHRH agonist	hormone therapy	Hormone	199	462	0
+17584	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	199	462	0
+17584	BUSERELIN	2	GNRHR inhibitor	hormone therapy	Hormone	199	462	0
+17584	TAMOXIFEN	3	estrogen receptor antagonist	hormone therapy	Hormone	686	1123	0
+17584	LETROZOLE	4	aromatase inhibitor	hormone therapy	Hormone	1264	1264	0
+17584	CAPECITABINE	5	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1274	1710	0
+17584	EXEMESTANE	6	aromatase inhibitor	hormone therapy	Hormone	1733	1733	0
+17584	CISPLATIN	7	DNA alkylating	DNA damage inducer	DNA damage	1809	1901	0
+17584	GEMCITABINE	7	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1809	1901	0
+17584	PACLITAXEL	8	taxanes	mitotic inhibitor	mitotic inhibitor	1962	1969	0
+17584	PACLITAXEL	9	taxanes	mitotic inhibitor	mitotic inhibitor	1997	2052	1
+17827	TAMOXIFEN	1	estrogen receptor antagonist	hormone therapy	Hormone	0	0	0
+17827	LETROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	54	54	0
+18153	LOMUSTINE	1	DNA alkylating	DNA damage inducer	DNA damage	0	154	0
+18153	VINCRISTINE	1	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	0	154	0
+18153	PROCARBAZINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	154	0
+18153	TEMOZOLOMIDE	2	DNA alkylating	DNA damage inducer	DNA damage	952	1169	0
+18154	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	104	0
+18154	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	104	0
+18154	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	104	0
+18154	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	104	0
+18154	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	220	1405	0
+18154	CAPECITABINE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1502	2082	0
+18154	FLUOROURACIL	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1502	2082	0
+18154	GOSERELIN	4	LHRH agonist	hormone therapy	Hormone	2086	2118	1
+18154	LETROZOLE	4	aromatase inhibitor	hormone therapy	Hormone	2086	2118	1
+18228	PEMETREXED	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	114	0
+18228	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	114	0
+18228	CRIZOTINIB	2	ALK inhibitor (broad)	kinase inhibitor	Receptor Kinase	168	343	1
+18624	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	63	0
+18624	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	63	0
+18624	DOCETAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	84	147	0
+18624	TRASTUZUMAB	2	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	84	147	0
+18624	TRASTUZUMAB	3	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	168	426	0
+18624	GEMCITABINE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	2124	2193	1
+18624	CISPLATIN	4	DNA alkylating	DNA damage inducer	DNA damage	2124	2193	1
+18625	LETROZOLE	1	aromatase inhibitor	hormone therapy	Hormone	0	920	1
+18625	DOXORUBICIN	2	anthracyclines	DNA synthesis inhibitor	DNA synthesis	504	661	0
+18625	CYCLOPHOSPHAMIDE	2	DNA alkylating	DNA damage inducer	DNA damage	504	661	0
+18625	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	504	661	0
+18625	TAMOXIFEN	3	estrogen receptor antagonist	hormone therapy	Hormone	678	759	0
+18625	CAPECITABINE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	785	869	0
+18650	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	7	1
+18650	PEMETREXED	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	7	1
+18844	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	114	0
+18844	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	114	0
+18880	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	106	0
+18880	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	106	0
+18880	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	106	0
+18880	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	141	877	0
+18880	RAMUCIRUMAB/PLACEBO	3	VEGFR inhibitor (targeted)	kinase inhibitor	Receptor Kinase	940	1269	0
+18880	DOCETAXEL	3	taxanes	mitotic inhibitor	mitotic inhibitor	940	1269	0
+18880	CAPECITABINE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1289	1568	0
+18880	LETROZOLE	5	aromatase inhibitor	hormone therapy	Hormone	1593	1593	0
+18880	EVEROLIMUS	6	mTOR inhibitor	kinase inhibitor	AKT-mTOR	1687	1873	1
+18880	EXEMESTANE	6	aromatase inhibitor	hormone therapy	Hormone	1687	1873	1
+19512	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	129	0
+19512	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	129	0
+19512	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	129	0
+19512	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	281	715	0
+19512	ANASTROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	998	2439	0
+19512	CAPECITABINE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	2468	2577	0
+19512	EXEMESTANE	5	aromatase inhibitor	hormone therapy	Hormone	2600	2915	0
+19512	VINORELBINE	6	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	2991	3150	0
+19512	METHOTREXATE	7	DNA synthesis inhibitor	antimetabolite	DNA synthesis	3161	3200	1
+19512	CYCLOPHOSPHAMIDE	7	DNA alkylating	DNA damage inducer	DNA damage	3161	3200	1
+19652	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	108	0
+19652	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	108	0
+19652	PACLITAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	136	390	1
+19652	CARBOPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	136	390	1
+19661	PEMETREXED	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	105	0
+19661	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	105	0
+19661	GANETESIP	2	HSP90 inhibitor	misc	HSP90	250	596	1
+19843	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	63	0
+19843	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	63	0
+19843	PACLITAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	112	155	0
+19843	CAPECITABINE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1061	1357	0
+19843	CYCLOPHOSPHAMIDE	4	DNA alkylating	DNA damage inducer	DNA damage	1385	1469	0
+19843	METHOTREXATE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1385	1469	0
+19843	VINORELBINE	5	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	1541	1679	0
+19843	PACLITAXEL	6	taxanes	mitotic inhibitor	mitotic inhibitor	1762	1827	0
+19843	GEMCITABINE	7	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1848	1968	0
+19843	CISPLATIN	7	DNA alkylating	DNA damage inducer	DNA damage	1848	1968	0
+20034	TAMOXIFEN	1	estrogen receptor antagonist	hormone therapy	Hormone	0	81	0
+20034	TRASTUZUMAB	2	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	98	203	0
+20034	PERTUZUMAB	2	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	98	203	0
+20034	DOCETAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	98	203	0
+20115	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	119	0
+20115	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	119	0
+20115	GOSERELIN	2	LHRH agonist	hormone therapy	Hormone	148	405	0
+20115	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	148	405	0
+20115	LETROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	545	755	0
+20115	FULVESTRANT	4	estrogen receptor antagonist	hormone therapy	Hormone	838	1350	0
+20115	EXEMESTANE	5	aromatase inhibitor	hormone therapy	Hormone	1247	2087	0
+20115	CAPECITABINE	6	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1331	1583	0
+20115	PACLITAXEL	7	taxanes	mitotic inhibitor	mitotic inhibitor	1659	1744	0
+20115	ETIRINOTECAN PEGOL	8	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	1811	1854	0
+20115	CISPLATIN	9	DNA alkylating	DNA damage inducer	DNA damage	1874	1967	0
+20115	GEMCITABINE	9	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1874	1967	0
+20115	DOXORUBICIN	10	anthracyclines	DNA synthesis inhibitor	DNA synthesis	2182	2280	0
+20600	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	126	0
+20600	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	126	0
+20600	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	381	424	0
+20600	FLUOROURACIL	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	440	620	0
+20600	GEMCITABINE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	440	620	0
+20600	GEMCITABINE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	823	843	1
+20600	CISPLATIN	4	DNA alkylating	DNA damage inducer	DNA damage	823	843	1
+20794	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	54	0
+20794	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	54	0
+20794	DOXORUBICIN	2	anthracyclines	DNA synthesis inhibitor	DNA synthesis	64	173	0
+20800	TEMOZOLOMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	102	0
+20800	TEMOZOLOMIDE	2	DNA alkylating	DNA damage inducer	DNA damage	130	214	0
+20800	TEMOZOLOMIDE	3	DNA alkylating	DNA damage inducer	DNA damage	2436	2748	0
+20801	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	41	0
+20801	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	41	0
+20801	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	41	0
+20801	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	41	0
+20801	CAPECITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1217	1322	0
+20801	CYCLOPHOSPHAMIDE	3	DNA alkylating	DNA damage inducer	DNA damage	1328	1328	0
+20801	METHOTREXATE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1328	1328	0
+21098	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	87	0
+21098	IFOSFAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	87	0
+21098	GEMCITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	2502	2583	0
+21098	DOCETAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	2502	2583	0
+21098	DOXORUBICIN	3	anthracyclines	DNA synthesis inhibitor	DNA synthesis	2952	3036	0
+21098	DACARBAZINE	4	DNA alkylating	DNA damage inducer	DNA damage	3100	3190	0
+21186	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	121	0
+21186	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	121	0
+21186	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	121	0
+21186	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	193	490	0
+21186	GEMCITABINE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	606	648	0
+21186	CISPLATIN	3	DNA alkylating	DNA damage inducer	DNA damage	606	648	0
+21186	CAPECITABINE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	660	696	1
+21188	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	122	0
+21188	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	122	0
+21188	LETROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	771	874	0
+21188	DOXORUBICIN	3	anthracyclines	DNA synthesis inhibitor	DNA synthesis	990	990	0
+21188	TRAMETINIB	4	MEK inhibitor (broad)	kinase inhibitor	MAPK pathway	1036	1514	0
+21347	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	155	0
+21347	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	155	0
+21347	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	155	0
+21347	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	236	900	0
+21347	LETROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	964	1482	0
+21392	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	140	0
+21392	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	140	0
+21392	CARBOPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	2803	3042	0
+21392	DOXORUBICIN	2	anthracyclines	DNA synthesis inhibitor	DNA synthesis	2803	3042	0
+21392	LETROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	3083	3128	0
+21404	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	6	1
+21404	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	6	1
+21516	DACARBAZINE	1	DNA alkylating	DNA damage inducer	DNA damage	0	0	0
+21516	PACLITAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	415	415	0
+21516	CARBOPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	415	415	0
+21720	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	99	0
+21720	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	99	0
+21720	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	99	0
+21720	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	99	441	0
+21720	ANASTROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	554	554	0
+21720	EXEMESTANE	4	aromatase inhibitor	hormone therapy	Hormone	638	638	0
+21720	LETROZOLE	5	aromatase inhibitor	hormone therapy	Hormone	1338	1572	0
+21720	METFORMIN	6	mTOR inhibition; cytotoxic effects; immunomodulation	misc	AKT-mTOR	1866	2144	0
+21720	EVEROLIMUS	7	mTOR inhibitor	kinase inhibitor	AKT-mTOR	2458	2864	1
+21720	EXEMESTANE	7	aromatase inhibitor	hormone therapy	Hormone	2458	2864	1
+21774	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	97	0
+21774	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	97	0
+21774	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	97	0
+21774	ANASTROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	152	376	0
+21774	GEMCITABINE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	473	613	0
+21774	CISPLATIN	3	DNA alkylating	DNA damage inducer	DNA damage	473	613	0
+21774	ENZALUTAMIDE	4	anti-androgen	hormone therapy	Hormone	645	645	0
+21932	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	68	0
+21932	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	68	0
+21932	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	109	258	0
+21932	ANASTROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	383	1851	0
+21932	OXALIPLATIN	4	DNA alkylating	DNA damage inducer	DNA damage	3988	4074	1
+21932	FLUOROURACIL	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	3988	4074	1
+21932	IRINOTECAN	4	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	3988	4074	1
+21933	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	63	0
+21933	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	63	0
+21933	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	63	0
+21933	DOCETAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	2525	2633	0
+21933	EXEMESTANE	4	aromatase inhibitor	hormone therapy	Hormone	2665	4809	0
+21933	VINORELBINE	4	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	2665	4809	0
+21933	CAPECITABINE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	2665	4809	0
+21933	GEMCITABINE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	2665	4809	0
+21933	LETROZOLE	5	aromatase inhibitor	hormone therapy	Hormone	4844	4936	0
+21933	ERIBULIN	6	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	5083	5166	0
+21933	DOXORUBICIN	7	anthracyclines	DNA synthesis inhibitor	DNA synthesis	5277	5404	0
+21933	CISPLATIN	8	DNA alkylating	DNA damage inducer	DNA damage	5412	5524	0
+21933	GEMCITABINE	8	DNA synthesis inhibitor	antimetabolite	DNA synthesis	5412	5524	0
+21933	PACLITAXEL	9	taxanes	mitotic inhibitor	mitotic inhibitor	5546	5565	1
+22186	VINORELBINE	1	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	0	70	0
+22186	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	70	0
+22186	CISPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	634	678	0
+22186	ETOPOSIDE	2	topoisomerase II inhibitor	DNA synthesis inhibitor	DNA synthesis	634	678	0
+22186	ERLOTINIB	3	EGFR inhibitor (broad)	kinase inhibitor	Receptor Kinase	1181	1783	0
+22186	AFATINIB	6	EGFR inhibitor (broad)	kinase inhibitor	Receptor Kinase	1811	1834	1
+22244	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	290	0
+22244	ETOPOSIDE	1	topoisomerase II inhibitor	DNA synthesis inhibitor	DNA synthesis	0	290	0
+22244	VINCRISTINE	1	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	0	290	0
+22244	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	290	0
+22244	IFOSFAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	290	0
+22244	CYCLOPHOSPHAMIDE	2	DNA alkylating	DNA damage inducer	DNA damage	1763	1970	0
+22244	TOPOTECAN	2	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	1763	1970	0
+22244	VINCRISTINE	2	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	1763	1970	0
+22244	MELPHALAN	3	DNA alkylating	DNA damage inducer	DNA damage	2027	2031	0
+22244	BUSULFAN	3	DNA alkylating	DNA damage inducer	DNA damage	2027	2031	0
+22254	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	105	0
+22254	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	105	0
+22254	CISPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	435	545	0
+22254	CAPECITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	435	545	0
+22254	EPIRUBICIN	2	anthracyclines	DNA synthesis inhibitor	DNA synthesis	435	545	0
+22254	IRINOTECAN	3	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	803	1155	0
+22254	FLUOROURACIL	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	803	1155	0
+22256	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	107	0
+22256	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	107	0
+22256	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	107	0
+22256	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	107	0
+22256	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	185	667	0
+22256	METFORMIN/PLACEBO	3	mTOR inhibition; cytotoxic effects; immunomodulation	misc	AKT-mTOR	273	435	0
+22256	LETROZOLE	4	aromatase inhibitor	hormone therapy	Hormone	668	1071	0
+22256	LEUPROLIDE	4	LHRH agonist	hormone therapy	Hormone	668	1071	0
+22256	EXEMESTANE	5	aromatase inhibitor	hormone therapy	Hormone	1045	1071	0
+22256	EXEMESTANE	6	aromatase inhibitor	hormone therapy	Hormone	1108	1108	0
+22256	EVEROLIMUS	6	mTOR inhibitor	kinase inhibitor	AKT-mTOR	1108	1108	0
+22256	CAPECITABINE	7	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1137	1333	0
+22256	CISPLATIN	8	DNA alkylating	DNA damage inducer	DNA damage	1366	1408	0
+22256	GEMCITABINE	8	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1366	1408	0
+22415	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	411	0
+22415	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	411	0
+22415	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	411	0
+22415	VINORELBINE	1	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	0	411	0
+22415	EXEMESTANE	2	aromatase inhibitor	hormone therapy	Hormone	126	397	0
+22415	EXEMESTANE	3	aromatase inhibitor	hormone therapy	Hormone	437	1721	0
+22415	CAPECITABINE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	437	1721	0
+22415	DOCETAXEL	4	taxanes	mitotic inhibitor	mitotic inhibitor	1721	2051	0
+22415	TAMOXIFEN	4	estrogen receptor antagonist	hormone therapy	Hormone	1721	2051	0
+22415	TAMOXIFEN	5	estrogen receptor antagonist	hormone therapy	Hormone	2308	2477	0
+22415	GEMCITABINE	5	DNA synthesis inhibitor	antimetabolite	DNA synthesis	2308	2477	0
+22415	CYCLOPHOSPHAMIDE	6	DNA alkylating	DNA damage inducer	DNA damage	2517	2517	0
+22415	METHOTREXATE	6	DNA synthesis inhibitor	antimetabolite	DNA synthesis	2517	2517	0
+22415	PACLITAXEL	7	taxanes	mitotic inhibitor	mitotic inhibitor	2567	2749	0
+22499	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	106	0
+22499	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	106	0
+22499	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	106	0
+22499	ANASTROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	105	352	0
+22499	EVEROLIMUS	3	mTOR inhibitor	kinase inhibitor	AKT-mTOR	371	492	1
+22499	EXEMESTANE	3	aromatase inhibitor	hormone therapy	Hormone	371	492	1
+22499	CAPECITABINE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	432	432	0
+22592	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	113	0
+22592	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	113	0
+22592	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	113	0
+22592	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	113	0
+22592	GEMCITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	228	263	0
+22592	VINORELBINE	3	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	284	340	0
+22592	CAPECITABINE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	351	372	0
+22592	CARBOPLATIN	5	DNA alkylating	DNA damage inducer	DNA damage	417	466	0
+22592	PACLITAXEL	5	taxanes	mitotic inhibitor	mitotic inhibitor	417	466	0
+22592	METHOTREXATE	6	DNA synthesis inhibitor	antimetabolite	DNA synthesis	500	557	0
+22592	CYCLOPHOSPHAMIDE	6	DNA alkylating	DNA damage inducer	DNA damage	500	557	0
+22593	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	59	0
+22593	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	59	0
+22595	LETROZOLE	1	aromatase inhibitor	hormone therapy	Hormone	0	490	0
+22595	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	532	952	0
+22595	EXEMESTANE	3	aromatase inhibitor	hormone therapy	Hormone	1036	1303	1
+22595	EVEROLIMUS	3	mTOR inhibitor	kinase inhibitor	AKT-mTOR	1036	1303	1
+22597	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	333	0
+22597	TRASTUZUMAB	1	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	333	0
+22597	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	333	0
+22597	DOCETAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	2574	2576	1
+22597	TRASTUZUMAB	2	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	2574	2576	1
+22597	PERTUZUMAB	2	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	2574	2576	1
+23162	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	107	0
+23162	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	107	0
+23189	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	207	0
+23189	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	207	0
+23189	METHOTREXATE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	207	0
+23189	IFOSFAMIDE	2	DNA alkylating	DNA damage inducer	DNA damage	731	849	0
+23189	ETOPOSIDE	2	topoisomerase II inhibitor	DNA synthesis inhibitor	DNA synthesis	731	849	0
+23205	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	160	0
+23205	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	160	0
+23205	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	160	0
+23205	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	160	1031	0
+23205	EXEMESTANE	3	aromatase inhibitor	hormone therapy	Hormone	1382	2012	0
+23237	PEMETREXED	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	105	0
+23237	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	105	0
+23238	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	99	0
+23238	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	99	0
+23238	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	99	0
+23238	PACLITAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	3104	3257	0
+23238	BEVACIZUMAB	2	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	3104	3257	0
+23238	CARBOPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	3104	3257	0
+23238	LETROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	3353	3453	0
+23238	CARBOPLATIN	4	DNA alkylating	DNA damage inducer	DNA damage	3530	3581	0
+23238	GEMCITABINE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	3530	3581	0
+23238	NIRAPARIB	5	PARP inhibitor (broad)	DNA damage inducer	DNA damage	3650	3920	1
+23239	DACARBAZINE	1	DNA alkylating	DNA damage inducer	DNA damage	0	0	0
+23239	IPILIMUMAB	2	CTLA4 inhibitor (targeted)	immunotherapy	Immune system	415	478	0
+23315	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	169	0
+23315	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	169	0
+23315	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	428	632	1
+23315	BEVACIZUMAB	2	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	428	632	1
+23315	IRINOTECAN	2	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	428	632	1
+23344	MEGESTROL	1	progesterone agonist	hormone therapy	Hormone	0	53	0
+23344	CARBOPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	88	260	0
+23344	PACLITAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	88	260	0
+23344	EXEMESTANE	3	aromatase inhibitor	hormone therapy	Hormone	1125	1184	0
+23411	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	114	0
+23411	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	114	0
+23411	DOXORUBICIN	2	anthracyclines	DNA synthesis inhibitor	DNA synthesis	203	344	0
+23453	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	31	1
+23453	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	31	1
+23453	BEVACIZUMAB	1	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	31	1
+23454	LETROZOLE	1	aromatase inhibitor	hormone therapy	Hormone	0	0	0
+23454	DOXORUBICIN	2	anthracyclines	DNA synthesis inhibitor	DNA synthesis	141	234	0
+23454	CYCLOPHOSPHAMIDE	2	DNA alkylating	DNA damage inducer	DNA damage	141	234	0
+23454	CAPECITABINE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	259	791	0
+23454	PACLITAXEL	4	taxanes	mitotic inhibitor	mitotic inhibitor	828	870	1
+23674	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	149	0
+23674	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	149	0
+23674	CAPECITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	977	1010	0
+23675	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	108	0
+23675	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	108	0
+23675	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	108	0
+23675	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	176	994	0
+23675	LETROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	1100	1172	1
+23676	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	142	0
+23676	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	749	1308	0
+23676	IRINOTECAN	3	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	819	1383	1
+23676	BEVACIZUMAB	3	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	819	1383	1
+23676	FLUOROURACIL	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	819	1383	1
+23701	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	101	0
+23701	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	101	0
+23701	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	101	0
+23701	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	246	785	0
+23701	CAPECITABINE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	802	826	0
+23701	GEMCITABINE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	880	1086	0
+23701	CISPLATIN	4	DNA alkylating	DNA damage inducer	DNA damage	880	1086	0
+23701	ERIBULIN	5	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	1136	1262	0
+23706	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	66	0
+23706	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	66	0
+23706	LETROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	2054	2841	0
+23706	LETROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	4700	5072	0
+23706	BUPARLISIB/PLACEBO	4	PI3K inhibitor	kinase inhibitor	AKT-mTOR	5117	5145	0
+23706	FULVESTRANT	4	estrogen receptor antagonist	hormone therapy	Hormone	5117	5145	0
+23706	EVEROLIMUS	5	mTOR inhibitor	kinase inhibitor	AKT-mTOR	5177	5297	0
+23706	EXEMESTANE	5	aromatase inhibitor	hormone therapy	Hormone	5177	5297	0
+23706	CAPECITABINE	6	DNA synthesis inhibitor	antimetabolite	DNA synthesis	5333	5347	1
+23736	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	66	0
+23736	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	66	0
+23736	GEMCITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1147	1210	1
+23736	CISPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	1147	1210	1
+23737	LETROZOLE	1	aromatase inhibitor	hormone therapy	Hormone	0	14	1
+23739	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	397	0
+23739	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	397	0
+23739	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	397	0
+23739	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	397	0
+23764	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	22	0
+23764	DOXORUBICIN	2	anthracyclines	DNA synthesis inhibitor	DNA synthesis	61	198	0
+23802	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	21	0
+23808	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	0	0
+23808	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	0	0
+23808	GEMCITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	649	714	0
+23808	CARBOPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	649	714	0
+23808	PEMETREXED	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1617	1687	0
+23940	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	141	0
+23940	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	141	0
+23940	BEVACIZUMAB	1	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	141	0
+24045	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	111	0
+24045	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	111	0
+24045	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	111	0
+24045	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	111	0
+24045	ANASTROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	147	1291	0
+24045	EVEROLIMUS	3	mTOR inhibitor	kinase inhibitor	AKT-mTOR	1344	1426	0
+24045	EXEMESTANE	3	aromatase inhibitor	hormone therapy	Hormone	1344	1426	0
+24045	CAPECITABINE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1448	1473	1
+24176	OCTREOTIDE	1	somatostatin analogue	growth hormone inhibitor	Receptor Kinase	0	1896	1
+24176	TEMOZOLOMIDE	2	DNA alkylating	DNA damage inducer	DNA damage	1801	1896	1
+24176	CAPECITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1801	1896	1
+24177	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	70	0
+24177	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	70	0
+24229	EVEROLIMUS	1	mTOR inhibitor	kinase inhibitor	AKT-mTOR	0	114	1
+24243	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	6	1
+24243	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	6	1
+24243	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	6	1
+24294	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	28	0
+24294	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	28	0
+24295	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	81	0
+24295	PEMETREXED	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	81	0
+24358	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	42	0
+24358	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	42	0
+24358	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	42	0
+24363	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	161	0
+24363	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	161	0
+24363	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	161	0
+24363	CAPECITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	316	345	0
+24363	GEMCITABINE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	408	419	1
+24363	PACLITAXEL	3	taxanes	mitotic inhibitor	mitotic inhibitor	408	419	1
+24423	VINORELBINE	1	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	0	72	0
+24423	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	72	0
+24424	BEVACIZUMAB	1	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	112	0
+24424	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	112	0
+24424	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	112	0
+24424	IRINOTECAN	2	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	125	216	0
+24424	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	125	216	0
+24424	BEVACIZUMAB	2	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	125	216	0
+24424	BEVACIZUMAB	3	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	258	259	0
+24424	CAPECITABINE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	258	259	0
+24550	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	156	0
+24550	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	156	0
+24550	TRASTUZUMAB	1	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	156	0
+24550	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	156	0
+24550	TRASTUZUMAB	2	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	178	430	0
+24838	TAMOXIFEN	1	estrogen receptor antagonist	hormone therapy	Hormone	0	608	0
+24838	LETROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	839	1777	0
+24838	CAPECITABINE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	2906	2913	1
+25027	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	86	0
+25027	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	86	0
+25027	ETOPOSIDE	1	topoisomerase II inhibitor	DNA synthesis inhibitor	DNA synthesis	0	86	0
+25315	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	78	0
+25315	DOXORUBICIN	2	anthracyclines	DNA synthesis inhibitor	DNA synthesis	85	132	0
+25315	CYCLOPHOSPHAMIDE	2	DNA alkylating	DNA damage inducer	DNA damage	85	132	0
+25317	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	135	0
+25317	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	135	0
+25352	FLUTAMIDE	1	anti-androgen	hormone therapy	Hormone	0	98	0
+25352	GOSERELIN	1	LHRH agonist	hormone therapy	Hormone	0	98	0
+25356	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	62	0
+25356	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	62	0
+25356	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	59	1773	0
+25356	DOCETAXEL	3	taxanes	mitotic inhibitor	mitotic inhibitor	2601	2708	0
+25356	CARBOPLATIN	3	DNA alkylating	DNA damage inducer	DNA damage	2601	2708	0
+25356	TRASTUZUMAB	3	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	2601	2708	0
+25356	TRASTUZUMAB	4	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	2729	2941	0
+25356	LETROZOLE	5	aromatase inhibitor	hormone therapy	Hormone	2898	4696	0
+25358	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	65	0
+25358	TRASTUZUMAB	1	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	65	0
+25358	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	65	0
+25358	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	65	0
+25358	CISPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	98	126	0
+25358	PERTUZUMAB	3	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	154	210	0
+25358	TRASTUZUMAB	3	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	154	210	0
+25358	DOCETAXEL	3	taxanes	mitotic inhibitor	mitotic inhibitor	154	210	0
+25424	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	827	0
+25424	BEVACIZUMAB	1	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	827	0
+25424	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	827	0
+25435	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	33	0
+25435	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	33	0
+25435	ETOPOSIDE	1	topoisomerase II inhibitor	DNA synthesis inhibitor	DNA synthesis	0	33	0
+25436	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	390	1
+25436	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	390	1
+25436	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	390	1
+25437	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	30	0
+25437	VINCRISTINE	1	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	0	30	0
+25437	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	30	0
+25438	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	5	1
+25439	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	32	0
+25439	OXALIPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	151	249	0
+25439	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	151	249	0
+25439	FLUOROURACIL	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	594	641	1
+25439	IRINOTECAN	3	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	594	641	1
+25439	BEVACIZUMAB	3	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	594	641	1
+25440	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	156	0
+25440	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	156	0
+25440	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	648	1068	0
+25440	IRINOTECAN	2	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	648	1068	0
+25440	BEVACIZUMAB	2	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	648	1068	0
+25483	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	106	0
+25483	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	106	0
+25483	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	106	0
+25483	CISPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	2138	2208	0
+25483	GEMCITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	2138	2208	0
+25496	SUNITINIB	1	RET inhibitor (broad)	kinase inhibitor	Receptor Kinase	0	455	0
+25496	EVEROLIMUS	2	mTOR inhibitor	kinase inhibitor	AKT-mTOR	146	146	0
+25496	TEMOZOLOMIDE	3	DNA alkylating	DNA damage inducer	DNA damage	533	630	1
+25496	CAPECITABINE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	533	630	1
+25497	BEVACIZUMAB	1	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	77	0
+25497	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	77	0
+25497	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	77	0
+25497	IRINOTECAN	2	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	92	787	0
+25497	BEVACIZUMAB	2	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	92	787	0
+25497	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	92	787	0
+25498	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	326	0
+25498	BEVACIZUMAB	1	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	326	0
+25498	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	326	0
+25498	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	340	412	1
+25498	OXALIPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	340	412	1
+25500	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	7	0
+25500	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	7	0
+25500	CISPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	21	70	1
+25500	CAPECITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	21	70	1
+25500	EPIRUBICIN	2	anthracyclines	DNA synthesis inhibitor	DNA synthesis	21	70	1
+25501	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	114	0
+25501	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	114	0
+25535	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	133	0
+25535	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	133	0
+25559	ETOPOSIDE	1	topoisomerase II inhibitor	DNA synthesis inhibitor	DNA synthesis	0	85	0
+25559	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	85	0
+25572	ETOPOSIDE	1	topoisomerase II inhibitor	DNA synthesis inhibitor	DNA synthesis	0	49	1
+25572	IFOSFAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	49	1
+25572	DOXORUBICIN	2	anthracyclines	DNA synthesis inhibitor	DNA synthesis	22	49	1
+25572	VINCRISTINE	2	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	22	49	1
+25572	CYCLOPHOSPHAMIDE	2	DNA alkylating	DNA damage inducer	DNA damage	22	49	1
+25582	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	9	1
+25582	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	9	1
+25589	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	47	0
+25589	MITOMYCIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	47	0
+25590	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	159	0
+25590	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	159	0
+25590	OXALIPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	350	423	0
+25590	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	350	423	0
+25590	CAPECITABINE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	788	1230	1
+25590	FLUOROURACIL	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	788	1230	1
+25590	IRINOTECAN	3	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	788	1230	1
+25590	BEVACIZUMAB	3	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	788	1230	1
+25593	CRIZOTINIB	1	ALK inhibitor (broad)	kinase inhibitor	Receptor Kinase	0	301	0
+25593	CERITINIB	2	ALK inhibitor (targeted)	kinase inhibitor	Receptor Kinase	305	573	1
+25604	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	6	0
+25604	BLEOMYCIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	6	0
+25604	ETOPOSIDE	1	topoisomerase II inhibitor	DNA synthesis inhibitor	DNA synthesis	0	6	0
+25657	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	109	0
+25657	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	109	0
+25662	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	64	0
+25662	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	64	0
+25662	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	64	0
+25662	PACLITAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	78	120	0
+25662	TRASTUZUMAB	2	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	78	120	0
+25662	TAMOXIFEN	3	estrogen receptor antagonist	hormone therapy	Hormone	182	2083	0
+25662	CAPECITABINE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	2114	2114	0
+25719	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	187	1
+25719	BEVACIZUMAB	1	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	187	1
+25719	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	187	1
+25720	DEGARELIX	1	GNRHR inhibitor	hormone therapy	Hormone	0	16	1
+25721	FLUTAMIDE	1	anti-androgen	hormone therapy	Hormone	0	289	0
+25721	GOSERELIN	1	LHRH agonist	hormone therapy	Hormone	0	289	0
+25721	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1617	1723	0
+25721	EPIRUBICIN	2	anthracyclines	DNA synthesis inhibitor	DNA synthesis	1617	1723	0
+25721	CYCLOPHOSPHAMIDE	2	DNA alkylating	DNA damage inducer	DNA damage	1617	1723	0
+25721	TAMOXIFEN	3	estrogen receptor antagonist	hormone therapy	Hormone	1752	2832	0
+25721	ANASTROZOLE	4	aromatase inhibitor	hormone therapy	Hormone	2914	3566	0
+25721	FULVESTRANT	5	estrogen receptor antagonist	hormone therapy	Hormone	3795	3851	0
+25721	BUPARLISIB/PLACEBO	5	PI3K inhibitor	kinase inhibitor	AKT-mTOR	3795	3851	0
+25721	CAPECITABINE	6	DNA synthesis inhibitor	antimetabolite	DNA synthesis	3922	4139	0
+25721	PACLITAXEL	7	taxanes	mitotic inhibitor	mitotic inhibitor	4179	4181	1
+25722	IMATINIB	1	ABL kinase inhibitor (broad)	kinase inhibitor	Receptor Kinase	0	335	0
+25744	ETOPOSIDE	1	topoisomerase II inhibitor	DNA synthesis inhibitor	DNA synthesis	0	107	0
+25744	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	107	0
+25751	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	72	0
+25751	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	72	0
+25752	LETROZOLE	1	aromatase inhibitor	hormone therapy	Hormone	0	546	0
+25752	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	686	763	1
+25753	BEVACIZUMAB	1	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	408	1
+25753	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	408	1
+25753	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	408	1
+25755	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	169	0
+25755	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	169	0
+25755	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	169	0
+25755	LETROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	274	2200	0
+25766	SORAFENIB	1	BRAF inhibitor (broad)	kinase inhibitor	MAPK pathway	0	27	0
+25767	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	253	0
+25767	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	253	0
+25767	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	253	0
+25777	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	48	0
+25777	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	48	0
+25777	PACLITAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	69	146	0
+25816	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	98	0
+25816	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	98	0
+25816	BEVACIZUMAB	2	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	821	1206	1
+25816	RALTITREXED	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	821	1206	1
+25816	IRINOTECAN	2	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	821	1206	1
+25890	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	133	0
+25890	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	133	0
+25890	CISPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	91	133	0
+25890	CRIZOTINIB	3	ALK inhibitor (broad)	kinase inhibitor	Receptor Kinase	5956	5958	1
+25901	GEFITINIB	1	EGFR inhibitor (broad)	kinase inhibitor	Receptor Kinase	0	598	1
+25902	TAMOXIFEN	1	estrogen receptor antagonist	hormone therapy	Hormone	0	5741	0
+25902	ANASTROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	3992	5087	0
+25902	TAMOXIFEN	3	estrogen receptor antagonist	hormone therapy	Hormone	5896	6244	0
+25902	LETROZOLE	4	aromatase inhibitor	hormone therapy	Hormone	6362	6362	0
+25923	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	28	0
+25958	TAMOXIFEN	1	estrogen receptor antagonist	hormone therapy	Hormone	0	936	0
+25958	LETROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	972	1673	0
+25960	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	743	1
+25960	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	743	1
+25960	BEVACIZUMAB	1	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	743	1
+25961	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	45	0
+25961	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	45	0
+25962	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	120	0
+25962	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	120	0
+25962	ANASTROZOLE	1	aromatase inhibitor	hormone therapy	Hormone	0	120	0
+25962	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	120	0
+25962	ANASTROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	85	120	0
+25962	EXEMESTANE	3	aromatase inhibitor	hormone therapy	Hormone	204	234	0
+25962	LETROZOLE	4	aromatase inhibitor	hormone therapy	Hormone	632	996	0
+25962	CYCLOPHOSPHAMIDE	5	DNA alkylating	DNA damage inducer	DNA damage	690	791	0
+25962	DOXORUBICIN	5	anthracyclines	DNA synthesis inhibitor	DNA synthesis	690	791	0
+25962	LETROZOLE	6	aromatase inhibitor	hormone therapy	Hormone	830	857	0
+25962	FULVESTRANT	7	estrogen receptor antagonist	hormone therapy	Hormone	1054	1471	0
+25962	BUPARLISIB/PLACEBO	7	PI3K inhibitor	kinase inhibitor	AKT-mTOR	1054	1471	0
+25962	CAPECITABINE	8	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1513	1513	0
+25965	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	45	0
+25965	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	45	0
+25966	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	105	0
+25966	PEMETREXED	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	105	0
+25976	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	115	0
+25976	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	115	0
+25980	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	112	0
+25980	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	112	0
+25980	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	112	0
+25980	LETROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	256	1697	0
+25980	CISPLATIN	3	DNA alkylating	DNA damage inducer	DNA damage	1778	1894	0
+25980	GEMCITABINE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1778	1894	0
+25981	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	0	0
+25981	OXALIPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	49	186	0
+25981	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	49	186	0
+25981	FLUOROURACIL	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	686	843	1
+25981	IRINOTECAN	3	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	686	843	1
+25981	BEVACIZUMAB	3	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	686	843	1
+25982	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	99	0
+25982	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	99	0
+25982	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	99	0
+25982	ANASTROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	242	270	0
+25982	CAPECITABINE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	380	388	1
+25984	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	152	0
+25984	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	152	0
+25984	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	152	0
+25984	LETROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	291	291	0
+25984	TAMOXIFEN	3	estrogen receptor antagonist	hormone therapy	Hormone	447	724	0
+25984	CAPECITABINE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1420	1566	0
+25988	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	138	0
+25988	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	138	0
+25988	LETROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	867	867	0
+25988	EXEMESTANE	3	aromatase inhibitor	hormone therapy	Hormone	1035	1035	0
+25989	BEVACIZUMAB	1	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	63	0
+25989	LETROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	721	722	0
+25989	MEGESTROL	3	progesterone agonist	hormone therapy	Hormone	979	979	0
+25989	GOSERELIN	4	LHRH agonist	hormone therapy	Hormone	1069	1069	0
+25990	TRASTUZUMAB	1	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	252	0
+25990	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	36	2128	0
+25990	EXEMESTANE	3	aromatase inhibitor	hormone therapy	Hormone	786	786	0
+25990	TRASTUZUMAB	4	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	1347	1515	0
+25990	CAPECITABINE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1347	1515	0
+25990	LETROZOLE	5	aromatase inhibitor	hormone therapy	Hormone	2089	2089	0
+25991	TEMOZOLOMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	322	0
+26017	SUNITINIB	1	RET inhibitor (broad)	kinase inhibitor	Receptor Kinase	0	670	0
+26017	YTTRIUM-90	2	radiation therapy	radiation therapy	radiation	776	776	0
+26017	TEMSIROLIMUS	3	mTOR inhibitor	kinase inhibitor	AKT-mTOR	909	1035	0
+26051	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	46	0
+26051	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	46	0
+26052	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	162	0
+26052	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	162	0
+26052	CARBOPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	183	183	0
+26052	PACLITAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	183	183	0
+26052	DOXORUBICIN	3	anthracyclines	DNA synthesis inhibitor	DNA synthesis	217	399	0
+26052	ETOPOSIDE	4	topoisomerase II inhibitor	DNA synthesis inhibitor	DNA synthesis	435	458	1
+26054	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	156	0
+26054	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	156	0
+26054	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	156	0
+26054	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	156	0
+26054	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	156	0
+26054	LETROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	276	2023	0
+26054	LETROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	3020	3362	0
+26054	TAMOXIFEN	4	estrogen receptor antagonist	hormone therapy	Hormone	3409	3409	0
+26066	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	382	1
+26066	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	382	1
+26123	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	76	0
+26123	ETOPOSIDE	1	topoisomerase II inhibitor	DNA synthesis inhibitor	DNA synthesis	0	76	0
+26123	CISPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	1394	1464	0
+26123	GEMCITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1394	1464	0
+26124	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	161	0
+26124	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	161	0
+26125	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	135	0
+26125	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	135	0
+26125	RAMUCIRUMAB	2	VEGFR inhibitor (targeted)	kinase inhibitor	Receptor Kinase	209	300	0
+26125	PACLITAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	209	300	0
+26239	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	240	0
+26239	BEVACIZUMAB	1	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	240	0
+26239	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	240	0
+26239	CAPECITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	622	622	0
+26239	BEVACIZUMAB	3	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	653	1638	1
+26239	IRINOTECAN	3	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	653	1638	1
+26239	FLUOROURACIL	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	653	1638	1
+26266	TAMOXIFEN	1	estrogen receptor antagonist	hormone therapy	Hormone	0	76	0
+26266	LETROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	98	155	0
+26266	CAPECITABINE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	197	1497	0
+26266	TAMOXIFEN	4	estrogen receptor antagonist	hormone therapy	Hormone	905	905	0
+26266	EVEROLIMUS	5	mTOR inhibitor	kinase inhibitor	AKT-mTOR	1525	1757	1
+26266	EXEMESTANE	5	aromatase inhibitor	hormone therapy	Hormone	1525	1757	1
+26376	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	74	0
+26376	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	74	0
+26376	DOCETAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	4953	5016	0
+26376	TAMOXIFEN	3	estrogen receptor antagonist	hormone therapy	Hormone	5043	5124	0
+26409	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	58	0
+26409	TEMOZOLOMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	58	0
+26416	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	49	0
+26465	IPILIMUMAB	1	CTLA4 inhibitor (targeted)	immunotherapy	Immune system	0	63	0
+26465	NIVOLUMAB	2	PD-L1 inhibitor (targeted)	immunotherapy	Immune system	147	161	1
+26825	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	92	0
+26825	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	92	0
+26825	LETROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	637	694	1
+26850	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	100	0
+26850	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	100	0
+26850	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	100	0
+26850	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	172	1228	0
+26850	LETROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	1263	1291	1
+26851	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	161	0
+26851	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	161	0
+26851	OXALIPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	926	996	0
+26851	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	926	996	0
+26851	BEVACIZUMAB	2	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	926	996	0
+26851	FLUOROURACIL	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1135	1205	0
+26851	OXALIPLATIN	3	DNA alkylating	DNA damage inducer	DNA damage	1135	1205	0
+26851	FLUOROURACIL	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1550	1992	1
+26851	IRINOTECAN	4	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	1550	1992	1
+26851	BEVACIZUMAB	4	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	1550	1992	1
+27025	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	106	0
+27025	IFOSFAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	106	0
+27026	ANASTROZOLE	1	aromatase inhibitor	hormone therapy	Hormone	0	70	0
+27028	LEUPROLIDE	1	LHRH agonist	hormone therapy	Hormone	0	86	0
+27028	FLUTAMIDE	1	anti-androgen	hormone therapy	Hormone	0	86	0
+27028	CISPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	2386	2442	0
+27028	DOXORUBICIN	2	anthracyclines	DNA synthesis inhibitor	DNA synthesis	2386	2442	0
+27034	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	66	0
+27034	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	66	0
+27034	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	127	1667	0
+27034	LETROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	1744	1747	1
+27036	TEMOZOLOMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	251	0
+27037	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	172	0
+27037	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	172	0
+27037	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	172	0
+27078	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	160	0
+27078	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	160	0
+27090	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	113	0
+27090	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	113	0
+27090	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	113	0
+27090	CISPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	586	1420	1
+27090	GEMCITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	586	1420	1
+27177	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	56	1
+27177	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	56	1
+27178	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	27	1
+27178	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	27	1
+27216	SAPITINIB/PLACEBO	1	EGFR inhibitor (broad)	kinase inhibitor	Receptor Kinase	0	534	0
+27216	ANASTROZOLE	1	aromatase inhibitor	hormone therapy	Hormone	0	534	0
+27216	EXEMESTANE	2	aromatase inhibitor	hormone therapy	Hormone	597	1179	0
+27217	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	385	1
+27217	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	385	1
+27217	BEVACIZUMAB	1	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	385	1
+27219	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	70	0
+27219	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	70	0
+27219	ANASTROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	95	711	0
+27219	LETROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	3304	3543	0
+27327	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	155	0
+27327	TRASTUZUMAB	1	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	155	0
+27327	TRASTUZUMAB	2	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	182	1556	0
+27327	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	182	1556	0
+27327	LETROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	1114	1384	0
+27327	EXEMESTANE	4	aromatase inhibitor	hormone therapy	Hormone	1514	1542	0
+27327	TRASTUZUMAB	5	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	1580	1682	0
+27328	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	43	0
+27328	GEMCITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	67	94	1
+27328	CISPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	67	94	1
+27329	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	151	0
+27329	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	151	0
+27329	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	151	0
+27329	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	255	2655	0
+27329	TRASTUZUMAB	3	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	2677	3081	0
+27329	DOCETAXEL	3	taxanes	mitotic inhibitor	mitotic inhibitor	2677	3081	0
+27329	PERTUZUMAB	3	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	2677	3081	0
+27329	LETROZOLE	4	aromatase inhibitor	hormone therapy	Hormone	2829	3025	0
+27329	TRASTUZUMAB	5	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	3102	3123	0
+27338	IMATINIB	1	ABL kinase inhibitor (broad)	kinase inhibitor	Receptor Kinase	0	89	0
+27338	ERLOTINIB	2	EGFR inhibitor (broad)	kinase inhibitor	Receptor Kinase	125	371	0
+27339	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	73	0
+27339	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	73	0
+27339	BEVACIZUMAB	2	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	148	170	0
+27339	CAPECITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	148	170	0
+27339	IRINOTECAN	2	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	148	170	0
+27339	IRINOTECAN	3	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	192	210	1
+27339	BEVACIZUMAB	3	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	192	210	1
+27339	RALTITREXED	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	192	210	1
+27388	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	114	0
+27388	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	114	0
+27388	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	114	0
+27502	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	174	0
+27502	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	174	0
+27502	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	174	0
+27502	LETROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	214	512	0
+27503	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	106	0
+27503	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	106	0
+27503	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	106	0
+27503	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	106	0
+27503	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	172	1132	0
+27503	GOSERELIN	3	LHRH agonist	hormone therapy	Hormone	1204	1215	1
+27503	LETROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	1204	1215	1
+27519	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	1	1
+27519	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	1	1
+27519	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	1	1
+27545	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	45	0
+27563	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	168	0
+27563	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	168	0
+27563	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	168	0
+27563	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	4347	4389	0
+27563	OXALIPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	4347	4389	0
+27563	GEMCITABINE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	4446	4516	0
+27647	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	876	1
+27647	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	876	1
+27697	EVEROLIMUS	1	mTOR inhibitor	kinase inhibitor	AKT-mTOR	0	51	1
+27706	MITOTANE	1	adrenocortical suppressant	misc	misc	0	95	0
+27706	DOXORUBICIN	2	anthracyclines	DNA synthesis inhibitor	DNA synthesis	101	187	0
+27706	CISPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	101	187	0
+27706	ETOPOSIDE	2	topoisomerase II inhibitor	DNA synthesis inhibitor	DNA synthesis	101	187	0
+27706	ETOPOSIDE	3	topoisomerase II inhibitor	DNA synthesis inhibitor	DNA synthesis	182	412	0
+27706	CISPLATIN	3	DNA alkylating	DNA damage inducer	DNA damage	182	412	0
+27706	MITOTANE	3	adrenocortical suppressant	misc	misc	182	412	0
+27706	DOXORUBICIN	3	anthracyclines	DNA synthesis inhibitor	DNA synthesis	182	412	0
+27706	STREPTOZOCIN	4	DNA alkylating	DNA damage inducer	DNA damage	441	494	1
+27707	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	105	0
+27707	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	105	0
+27721	BEVACIZUMAB	1	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	177	0
+27721	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	177	0
+27721	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	177	0
+27721	OXALIPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	217	217	0
+27721	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	217	217	0
+27722	SUNITINIB	1	RET inhibitor (broad)	kinase inhibitor	Receptor Kinase	0	123	0
+27722	TEMOZOLOMIDE	2	DNA alkylating	DNA damage inducer	DNA damage	263	1593	1
+27722	BEVACIZUMAB	2	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	263	1593	1
+27765	LETROZOLE	1	aromatase inhibitor	hormone therapy	Hormone	0	1736	1
+27765	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	1236	1236	0
+27765	CAPECITABINE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1461	1667	0
+27784	TEMOZOLOMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	215	0
+27784	TEMOZOLOMIDE	2	DNA alkylating	DNA damage inducer	DNA damage	281	307	0
+27792	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	135	0
+27792	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	135	0
+27792	LETROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	1120	1156	0
+27795	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	28	0
+27795	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	28	0
+27795	EPIRUBICIN	2	anthracyclines	DNA synthesis inhibitor	DNA synthesis	129	303	1
+27795	CAPECITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	129	303	1
+27795	CISPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	129	303	1
+27981	VINCRISTINE	1	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	0	290	0
+27981	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	290	0
+27981	DACTINOMYCIN	1	transcription inhibitor	antimetabolite	DNA synthesis	0	290	0
+28012	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	126	0
+28012	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	126	0
+28124	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	132	0
+28124	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	132	0
+28124	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	622	623	1
+28124	BEVACIZUMAB	2	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	622	623	1
+28124	IRINOTECAN	2	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	622	623	1
+28125	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	30	1
+28125	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	30	1
+28125	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	30	1
+28126	LETROZOLE	1	aromatase inhibitor	hormone therapy	Hormone	0	224	0
+28126	BUPARLISIB/PLACEBO	2	PI3K inhibitor	kinase inhibitor	AKT-mTOR	277	393	0
+28126	FULVESTRANT	2	estrogen receptor antagonist	hormone therapy	Hormone	277	393	0
+28126	EXEMESTANE	3	aromatase inhibitor	hormone therapy	Hormone	435	792	0
+28126	EVEROLIMUS	3	mTOR inhibitor	kinase inhibitor	AKT-mTOR	435	792	0
+28130	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	77	0
+28130	TEMOZOLOMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	77	0
+28130	YTTRIUM-90	2	radiation therapy	radiation therapy	radiation	141	192	0
+28131	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	80	1
+28132	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	117	0
+28132	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	117	0
+28170	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	21	0
+28170	CISPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	387	520	0
+28170	VINORELBINE	2	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	387	520	0
+28178	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	98	0
+28178	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	98	0
+28178	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	98	0
+28178	CISPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	364	387	1
+28178	GEMCITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	364	387	1
+28212	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	297	0
+28212	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	297	0
+28212	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	297	0
+28225	ANASTROZOLE/PLACEBO	1	aromatase inhibitor	hormone therapy	Hormone	0	393	0
+28225	FULVESTRANT/PLACEBO	1	estrogen receptor antagonist	hormone therapy	Hormone	0	393	0
+28225	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	421	421	0
+28225	LETROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	456	890	1
+28226	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	21	1
+28226	BEVACIZUMAB	1	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	21	1
+28278	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	84	0
+28278	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	84	0
+28312	LETROZOLE	1	aromatase inhibitor	hormone therapy	Hormone	0	398	1
+28312	TRASTUZUMAB	2	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	34	118	0
+28312	DOXORUBICIN	3	anthracyclines	DNA synthesis inhibitor	DNA synthesis	152	266	0
+28324	VEMURAFENIB	1	BRAF inhibitor (broad)	kinase inhibitor	MAPK pathway	0	147	0
+28324	DABRAFENIB	2	BRAF inhibitor (broad)	kinase inhibitor	MAPK pathway	182	423	0
+28325	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	99	0
+28325	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	99	0
+28325	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	99	0
+28325	ANASTROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	1345	1970	0
+28325	EXEMESTANE	3	aromatase inhibitor	hormone therapy	Hormone	2297	2982	0
+28325	EVEROLIMUS	3	mTOR inhibitor	kinase inhibitor	AKT-mTOR	2297	2982	0
+28325	CAPECITABINE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	3112	3473	0
+28325	PACLITAXEL	5	taxanes	mitotic inhibitor	mitotic inhibitor	3160	3350	0
+28325	TAMOXIFEN	6	estrogen receptor antagonist	hormone therapy	Hormone	3350	3411	0
+28380	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	70	0
+28380	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	70	0
+28382	LETROZOLE	1	aromatase inhibitor	hormone therapy	Hormone	0	1120	0
+28382	EVEROLIMUS	2	mTOR inhibitor	kinase inhibitor	AKT-mTOR	664	1227	1
+28382	EXEMESTANE	2	aromatase inhibitor	hormone therapy	Hormone	664	1227	1
+28382	CAPECITABINE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	721	1163	0
+28384	TEMOZOLOMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	140	0
+28391	LETROZOLE	1	aromatase inhibitor	hormone therapy	Hormone	0	18	0
+28391	TASELISIB/PLACEBO	2	PI3K inhibitor (broad)	kinase inhibitor	AKT-mTOR	129	151	1
+28391	FULVESTRANT	2	estrogen receptor antagonist	hormone therapy	Hormone	129	151	1
+28422	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	171	0
+28422	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	171	0
+28422	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	171	0
+28422	TRASTUZUMAB	1	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	171	0
+28422	TRASTUZUMAB	2	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	194	398	0
+28422	TAMOXIFEN	3	estrogen receptor antagonist	hormone therapy	Hormone	314	375	0
+28422	GEMCITABINE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	430	514	0
+28422	CISPLATIN	4	DNA alkylating	DNA damage inducer	DNA damage	430	514	0
+28422	CAPECITABINE	5	DNA synthesis inhibitor	antimetabolite	DNA synthesis	592	602	1
+28494	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	388	1
+28494	BEVACIZUMAB	1	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	388	1
+28494	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	388	1
+28495	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	196	0
+28495	PEMETREXED	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	196	0
+28496	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	181	0
+28496	BEVACIZUMAB	1	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	181	0
+28496	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	181	0
+28496	IRINOTECAN	2	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	183	374	0
+28496	BEVACIZUMAB	2	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	183	374	0
+28496	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	183	374	0
+28590	IBRUTINIB	1	BTK kinase inhibitor (broad)	kinase inhibitor	Receptor Kinase	0	37	1
+28665	LETROZOLE	1	aromatase inhibitor	hormone therapy	Hormone	0	233	1
+28665	EXEMESTANE	2	aromatase inhibitor	hormone therapy	Hormone	199	233	1
+28666	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	20	1
+28666	BEVACIZUMAB	1	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	20	1
+28666	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	20	1
+28667	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	125	0
+28667	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	125	0
+28668	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	50	0
+28668	VINORELBINE	1	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	0	50	0
+28668	PEMETREXED	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1342	1431	0
+28668	CARBOPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	1342	1431	0
+28668	NIVOLUMAB	3	PD-L1 inhibitor (targeted)	immunotherapy	Immune system	1478	1479	1
+29146	MITOMYCIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	38	0
+29146	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	38	0
+29146	CAPECITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	647	648	0
+29146	CISPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	647	648	0
+29148	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	30	1
+29148	IFOSFAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	30	1
+29149	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	78	0
+29149	CYCLOPHOSPHAMIDE	2	DNA alkylating	DNA damage inducer	DNA damage	90	105	0
+29149	DOXORUBICIN	2	anthracyclines	DNA synthesis inhibitor	DNA synthesis	90	105	0
+29149	CISPLATIN	3	DNA alkylating	DNA damage inducer	DNA damage	118	167	0
+29149	GEMCITABINE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	118	167	0
+29759	EXEMESTANE	1	aromatase inhibitor	hormone therapy	Hormone	0	0	0
+29759	ANASTROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	45	45	0
+29759	TAMOXIFEN	3	estrogen receptor antagonist	hormone therapy	Hormone	1620	1702	0
+29759	EXEMESTANE	4	aromatase inhibitor	hormone therapy	Hormone	1731	1731	0
+29759	PACLITAXEL	5	taxanes	mitotic inhibitor	mitotic inhibitor	2611	2613	1
+29761	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	36	1
+29761	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	36	1
+29766	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	57	0
+29766	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	57	0
+29999	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	98	0
+29999	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	98	0
+30000	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	2	1
+30000	ETOPOSIDE	1	topoisomerase II inhibitor	DNA synthesis inhibitor	DNA synthesis	0	2	1
+30000	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	2	1
+30009	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	67	0
+30009	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	67	0
+30009	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	67	0
+30032	GOSERELIN	1	LHRH agonist	hormone therapy	Hormone	0	40	1
+30032	BICALUTAMIDE	1	anti-androgen	hormone therapy	Hormone	0	40	1
+30078	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	28	0
+30078	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	28	0
+30080	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	500	0
+30080	CAPECITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	846	867	1
+30080	BEVACIZUMAB	2	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	846	867	1
+30080	OXALIPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	846	867	1
+30081	ETOPOSIDE	1	topoisomerase II inhibitor	DNA synthesis inhibitor	DNA synthesis	0	63	0
+30081	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	63	0
+30082	VINORELBINE	1	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	0	28	0
+30159	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	70	0
+30159	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	70	0
+30159	BEVACIZUMAB	1	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	70	0
+30159	BEVACIZUMAB	2	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	84	386	1
+30159	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	84	386	1
+30159	OXALIPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	84	386	1
+30220	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	113	0
+30220	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	113	0
+30221	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	101	0
+30221	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	101	0
+30221	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	101	0
+30221	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	116	1393	0
+30221	PEMBROLIZUMAB	3	PD-1 inhibitor (targeted)	immunotherapy	Immune system	1587	1692	0
+30221	GEMCITABINE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1701	1728	1
+30221	CISPLATIN	4	DNA alkylating	DNA damage inducer	DNA damage	1701	1728	1
+30222	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	75	1
+30222	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	75	1
+30222	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	75	1
+30248	ANASTROZOLE	1	aromatase inhibitor	hormone therapy	Hormone	0	0	0
+30250	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	105	0
+30250	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	105	0
+30251	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	129	0
+30251	BEVACIZUMAB	1	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	129	0
+30251	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	129	0
+30251	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	155	269	0
+30251	OXALIPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	155	269	0
+30252	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	113	0
+30252	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	113	0
+30252	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	154	154	0
+30252	LETROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	532	2184	0
+30252	CAPECITABINE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	2288	2590	1
+30254	ETOPOSIDE	1	topoisomerase II inhibitor	DNA synthesis inhibitor	DNA synthesis	0	28	0
+30254	ETOPOSIDE	2	topoisomerase II inhibitor	DNA synthesis inhibitor	DNA synthesis	98	126	0
+30254	CARBOPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	98	126	0
+30265	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	128	0
+30309	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	13	0
+30309	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	13	0
+30309	CAPECITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	26	333	1
+30310	MITOTANE	1	adrenocortical suppressant	misc	misc	0	547	0
+30313	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	70	0
+30313	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	70	0
+30313	CYCLOPHOSPHAMIDE	2	DNA alkylating	DNA damage inducer	DNA damage	1984	2047	0
+30313	DOCETAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	1984	2047	0
+30321	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	39	0
+30321	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	129	276	0
+30321	IRINOTECAN	2	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	129	276	0
+30321	BEVACIZUMAB	3	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	306	628	0
+30321	IRINOTECAN	3	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	306	628	0
+30321	FLUOROURACIL	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	306	628	0
+30425	LETROZOLE	1	aromatase inhibitor	hormone therapy	Hormone	0	818	0
+30425	ANASTROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	1316	1558	0
+30425	EVEROLIMUS	3	mTOR inhibitor	kinase inhibitor	AKT-mTOR	1561	1797	0
+30425	EXEMESTANE	3	aromatase inhibitor	hormone therapy	Hormone	1561	1797	0
+30425	CAPECITABINE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1820	2108	0
+30426	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	110	0
+30426	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	110	0
+30431	DACARBAZINE	1	DNA alkylating	DNA damage inducer	DNA damage	0	238	0
+30431	VINCRISTINE	1	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	0	238	0
+30431	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	238	0
+30431	SUNITINIB	2	RET inhibitor (broad)	kinase inhibitor	Receptor Kinase	442	979	1
+30487	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	81	0
+30487	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	81	0
+30487	PACLITAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	102	409	0
+30487	TRASTUZUMAB	2	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	102	409	0
+30487	TAMOXIFEN	3	estrogen receptor antagonist	hormone therapy	Hormone	387	387	0
+30487	CAPECITABINE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	435	473	0
+30487	GEMCITABINE	5	DNA synthesis inhibitor	antimetabolite	DNA synthesis	511	521	1
+30487	CARBOPLATIN	5	DNA alkylating	DNA damage inducer	DNA damage	511	521	1
+30487	CISPLATIN	5	DNA alkylating	DNA damage inducer	DNA damage	511	521	1
+30488	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	125	0
+30488	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	125	0
+30488	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	125	0
+30488	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	152	830	0
+30488	LETROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	2727	4121	0
+30488	TAMOXIFEN	4	estrogen receptor antagonist	hormone therapy	Hormone	4210	4409	0
+30488	EXEMESTANE	5	aromatase inhibitor	hormone therapy	Hormone	4443	4574	1
+30488	EVEROLIMUS	5	mTOR inhibitor	kinase inhibitor	AKT-mTOR	4443	4574	1
+30489	DACARBAZINE/PLACEBO	1	DNA alkylating	DNA damage inducer	DNA damage	0	112	0
+30489	NIVOLUMAB/PLACEBO	1	PD-L1 inhibitor (targeted)	immunotherapy	Immune system	0	112	0
+30489	IPILIMUMAB	2	CTLA4 inhibitor (targeted)	immunotherapy	Immune system	140	161	0
+30489	PEMBROLIZUMAB	3	PD-1 inhibitor (targeted)	immunotherapy	Immune system	246	837	0
+30491	VINORELBINE	1	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	0	76	0
+30491	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	76	0
+30492	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	827	1
+30492	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	827	1
+30492	BEVACIZUMAB	1	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	827	1
+30497	BICALUTAMIDE	1	anti-androgen	hormone therapy	Hormone	0	0	0
+30497	IRINOTECAN	2	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	1754	2022	1
+30497	BEVACIZUMAB	2	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	1754	2022	1
+30497	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1754	2022	1
+30498	LANREOTIDE	1	somatostatin analogue	growth hormone inhibitor	Receptor Kinase	0	41	1
+30500	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	875	1
+30500	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	875	1
+30504	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	40	0
+30504	OXALIPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	111	181	0
+30504	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	111	181	0
+30519	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	104	0
+30519	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	104	0
+30519	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	104	0
+30519	ANASTROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	124	850	0
+30606	LETROZOLE	1	aromatase inhibitor	hormone therapy	Hormone	0	197	0
+30606	EVEROLIMUS	2	mTOR inhibitor	kinase inhibitor	AKT-mTOR	498	554	0
+30606	EXEMESTANE	2	aromatase inhibitor	hormone therapy	Hormone	498	554	0
+30606	CAPECITABINE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	584	648	1
+30607	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	117	0
+30607	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	117	0
+30607	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	117	0
+30607	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	206	2008	0
+30607	ANASTROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	2058	2141	0
+30607	GOSERELIN	5	LHRH agonist	hormone therapy	Hormone	2191	2257	0
+30607	CAPECITABINE	6	DNA synthesis inhibitor	antimetabolite	DNA synthesis	2337	2352	1
+30609	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	0	0
+30609	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	0	0
+30609	IRINOTECAN	2	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	14	834	1
+30609	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	14	834	1
+30609	BEVACIZUMAB	2	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	14	834	1
+30616	LEUPROLIDE	1	LHRH agonist	hormone therapy	Hormone	0	385	0
+30616	CARBOPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	414	530	0
+30616	VINORELBINE	2	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	414	530	0
+30616	CISPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	414	530	0
+30635	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	35	0
+30635	CAPECITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	137	207	0
+30635	OXALIPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	137	207	0
+30635	FLUOROURACIL	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	368	788	1
+30635	BEVACIZUMAB	3	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	368	788	1
+30635	IRINOTECAN	3	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	368	788	1
+30784	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	120	0
+30784	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	120	0
+30807	VINORELBINE	1	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	0	71	0
+30807	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	71	0
+30807	CISPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	175	213	0
+30807	ETOPOSIDE	2	topoisomerase II inhibitor	DNA synthesis inhibitor	DNA synthesis	175	213	0
+30807	ERLOTINIB	3	EGFR inhibitor (broad)	kinase inhibitor	Receptor Kinase	413	533	0
+30807	NIVOLUMAB	4	PD-L1 inhibitor (targeted)	immunotherapy	Immune system	927	927	0
+30809	CHLORAMBUCIL	1	DNA alkylating	DNA damage inducer	DNA damage	0	1085	0
+30809	RITUXIMAB	2	CD20 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	1733	1816	0
+30809	FLUDARABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1733	1816	0
+30809	FLUDARABINE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1788	1844	0
+30809	BENDAMUSTINE	4	DNA alkylating	DNA damage inducer	DNA damage	2432	2543	0
+30809	NIVOLUMAB	5	PD-L1 inhibitor (targeted)	immunotherapy	Immune system	3769	3900	1
+30810	IMATINIB	1	ABL kinase inhibitor (broad)	kinase inhibitor	Receptor Kinase	0	2162	1
+30811	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	155	0
+30811	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	155	0
+30811	IRINOTECAN	2	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	639	639	0
+30811	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	639	639	0
+30811	BEVACIZUMAB	2	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	639	639	0
+30811	CAPECITABINE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	659	834	0
+30811	BEVACIZUMAB	4	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	869	1052	0
+30811	FLUOROURACIL	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	869	1052	0
+30821	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	57	0
+30821	TEMOZOLOMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	57	0
+30895	IMATINIB	1	ABL kinase inhibitor (broad)	kinase inhibitor	Receptor Kinase	0	478	0
+30896	LETROZOLE	1	aromatase inhibitor	hormone therapy	Hormone	0	343	0
+30897	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	86	0
+30897	ETOPOSIDE	1	topoisomerase II inhibitor	DNA synthesis inhibitor	DNA synthesis	0	86	0
+30902	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	44	0
+30902	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	44	0
+30902	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	44	0
+30902	DOCETAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	65	109	0
+30902	TAMOXIFEN	3	estrogen receptor antagonist	hormone therapy	Hormone	182	247	0
+30902	GOSERELIN	4	LHRH agonist	hormone therapy	Hormone	435	1471	0
+30902	GOSERELIN	5	LHRH agonist	hormone therapy	Hormone	1534	1582	1
+30902	RIBOCICLIB/PLACEBO	5	CDK4/6 inhibitor (broad)	kinase inhibitor	Cell cycle	1534	1582	1
+30902	LETROZOLE	5	aromatase inhibitor	hormone therapy	Hormone	1534	1582	1
+31030	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	174	0
+31030	VINCRISTINE	1	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	0	174	0
+31030	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	174	0
+31030	IFOSFAMIDE	2	DNA alkylating	DNA damage inducer	DNA damage	13	192	0
+31030	ETOPOSIDE	2	topoisomerase II inhibitor	DNA synthesis inhibitor	DNA synthesis	13	192	0
+31030	CYCLOPHOSPHAMIDE	3	DNA alkylating	DNA damage inducer	DNA damage	28	28	0
+31030	VINCRISTINE	4	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	459	608	0
+31030	IRINOTECAN	4	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	459	608	0
+31031	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	0	0
+31031	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	0	0
+31031	PERTUZUMAB	2	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	23	258	0
+31031	DOCETAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	23	258	0
+31031	TRASTUZUMAB	2	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	23	258	0
+31031	TRASTUZUMAB	3	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	283	397	0
+31034	PEMETREXED	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	21	0
+31034	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	21	0
+31037	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	204	0
+31037	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	204	0
+31037	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	204	0
+31042	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	60	0
+31042	PACLITAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	1164	1283	0
+31042	CARBOPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	1164	1283	0
+31043	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	151	0
+31043	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	151	0
+31043	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	151	0
+31043	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	225	924	0
+31043	LETROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	1106	2368	0
+31043	LETROZOLE	4	aromatase inhibitor	hormone therapy	Hormone	2736	2736	0
+31043	EVEROLIMUS	5	mTOR inhibitor	kinase inhibitor	AKT-mTOR	2822	3185	0
+31043	EXEMESTANE	5	aromatase inhibitor	hormone therapy	Hormone	2822	3185	0
+31043	CAPECITABINE	6	DNA synthesis inhibitor	antimetabolite	DNA synthesis	3422	3563	0
+31043	METHOTREXATE	7	DNA synthesis inhibitor	antimetabolite	DNA synthesis	3617	3681	1
+31043	CYCLOPHOSPHAMIDE	7	DNA alkylating	DNA damage inducer	DNA damage	3617	3681	1
+31183	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	149	0
+31184	IPILIMUMAB	1	CTLA4 inhibitor (targeted)	immunotherapy	Immune system	0	64	0
+31184	PEMBROLIZUMAB	2	PD-1 inhibitor (targeted)	immunotherapy	Immune system	102	265	0
+31184	PACLITAXEL	3	taxanes	mitotic inhibitor	mitotic inhibitor	330	351	0
+31184	CARBOPLATIN	3	DNA alkylating	DNA damage inducer	DNA damage	330	351	0
+31185	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	149	0
+31185	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	149	0
+31185	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	149	0
+31185	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	224	1971	0
+31185	TRASTUZUMAB	3	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	4158	4159	0
+31185	DOCETAXEL	3	taxanes	mitotic inhibitor	mitotic inhibitor	4158	4159	0
+31185	PERTUZUMAB	3	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	4158	4159	0
+31185	PERTUZUMAB	4	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	4187	4231	1
+31185	TRASTUZUMAB	4	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	4187	4231	1
+31185	VINORELBINE	4	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	4187	4231	1
+31190	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	72	0
+31190	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	72	0
+31190	TRASTUZUMAB	2	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	93	155	0
+31190	DOCETAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	93	155	0
+31190	TRASTUZUMAB	3	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	175	448	0
+31190	TAMOXIFEN	4	estrogen receptor antagonist	hormone therapy	Hormone	282	1932	0
+31190	EXEMESTANE	5	aromatase inhibitor	hormone therapy	Hormone	1347	1382	0
+31190	LETROZOLE	6	aromatase inhibitor	hormone therapy	Hormone	2054	2912	0
+31190	PACLITAXEL	7	taxanes	mitotic inhibitor	mitotic inhibitor	2942	2965	1
+31190	ATEZOLIZUMAB/PLACEBO	7	PD-L1 inhibitor (targeted)	immunotherapy	Immune system	2942	2965	1
+31194	IMATINIB	1	ABL kinase inhibitor (broad)	kinase inhibitor	Receptor Kinase	0	4361	0
+31194	SUNITINIB	2	RET inhibitor (broad)	kinase inhibitor	Receptor Kinase	4504	4535	0
+31369	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	106	0
+31369	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	106	0
+31369	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	106	0
+31369	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	158	721	0
+31369	EXEMESTANE	3	aromatase inhibitor	hormone therapy	Hormone	873	1846	0
+31369	LETROZOLE	4	aromatase inhibitor	hormone therapy	Hormone	3381	3381	0
+31369	RIBOCICLIB/PLACEBO	5	CDK4/6 inhibitor (broad)	kinase inhibitor	Cell cycle	3491	3519	0
+31369	FULVESTRANT	5	estrogen receptor antagonist	hormone therapy	Hormone	3491	3519	0
+31369	CAPECITABINE	6	DNA synthesis inhibitor	antimetabolite	DNA synthesis	3547	3605	1
+31370	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	44	0
+31370	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	44	0
+31370	PACLITAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	65	121	0
+31370	LETROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	258	845	0
+31509	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	105	0
+31509	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	105	0
+31509	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	105	0
+31509	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	105	0
+31509	LETROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	140	201	0
+31509	LETROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	3429	3780	0
+31509	PALBOCICLIB	4	CDK4/6 inhibitor (broad)	kinase inhibitor	Cell cycle	3847	3898	1
+31509	FULVESTRANT	4	estrogen receptor antagonist	hormone therapy	Hormone	3847	3898	1
+31518	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	58	0
+31518	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	58	0
+31869	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	27	0
+31869	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	27	0
+31870	OCTREOTIDE	1	somatostatin analogue	growth hormone inhibitor	Receptor Kinase	0	861	0
+31911	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	168	0
+31911	IRINOTECAN	2	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	503	1109	1
+31911	OXALIPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	503	1109	1
+31911	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	503	1109	1
+31923	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	97	0
+31923	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	97	0
+31923	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	97	0
+31923	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	251	809	0
+31978	TAMOXIFEN	1	estrogen receptor antagonist	hormone therapy	Hormone	0	478	0
+31978	DOXORUBICIN	2	anthracyclines	DNA synthesis inhibitor	DNA synthesis	1	156	0
+31978	LETROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	510	510	0
+31978	PALBOCICLIB	4	CDK4/6 inhibitor (broad)	kinase inhibitor	Cell cycle	510	538	0
+31978	PACLITAXEL	5	taxanes	mitotic inhibitor	mitotic inhibitor	560	574	1
+31979	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	114	0
+31979	VINCRISTINE	1	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	0	114	0
+31979	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	114	0
+31979	RITUXIMAB	1	CD20 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	114	0
+31979	PREDNISONE	1	glucocorticoid receptor agonist	hormone therapy	Hormone	0	114	0
+31979	RITUXIMAB	2	CD20 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	191	241	0
+31979	CISPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	191	241	0
+31979	GEMCITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	191	241	0
+31979	RITUXIMAB	3	CD20 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	296	359	0
+31979	BENDAMUSTINE	3	DNA alkylating	DNA damage inducer	DNA damage	296	359	0
+31979	AGS67E	4	CD37 inhibitor (targeted)	targeted inhibitor	Receptor Kinase	407	428	1
+31982	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	140	0
+31982	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	140	0
+32015	LETROZOLE	1	aromatase inhibitor	hormone therapy	Hormone	0	0	0
+32015	LETROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	2211	2286	0
+32033	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	216	0
+32033	BEVACIZUMAB	1	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	216	0
+32033	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	216	0
+32033	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	726	832	0
+32033	IRINOTECAN	2	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	726	832	0
+32033	OXALIPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	726	832	0
+32034	TAMOXIFEN	1	estrogen receptor antagonist	hormone therapy	Hormone	0	179	0
+32034	LETROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	237	368	0
+32034	EVEROLIMUS	3	mTOR inhibitor	kinase inhibitor	AKT-mTOR	1104	1211	0
+32034	EXEMESTANE	3	aromatase inhibitor	hormone therapy	Hormone	1104	1211	0
+32034	TAMOXIFEN	4	estrogen receptor antagonist	hormone therapy	Hormone	1225	1225	0
+32274	TRASTUZUMAB	1	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	273	0
+32274	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	273	0
+32274	PERTUZUMAB	1	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	273	0
+32274	TRASTUZUMAB	2	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	319	553	1
+32337	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	162	0
+32337	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	162	0
+32337	CARBOPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	437	591	0
+32337	PACLITAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	437	591	0
+32350	TAMOXIFEN	1	estrogen receptor antagonist	hormone therapy	Hormone	0	0	0
+32350	LETROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	252	642	0
+32350	PACLITAXEL	3	taxanes	mitotic inhibitor	mitotic inhibitor	1104	1265	0
+32350	CARBOPLATIN	3	DNA alkylating	DNA damage inducer	DNA damage	1104	1265	0
+32354	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	161	0
+32354	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	161	0
+32354	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	834	950	1
+32354	BEVACIZUMAB	2	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	834	950	1
+32354	IRINOTECAN	2	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	834	950	1
+32394	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	111	0
+32394	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	111	0
+32394	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	111	0
+32394	VINCRISTINE	1	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	0	111	0
+32394	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	111	0
+32394	PREDNISONE	1	glucocorticoid receptor agonist	hormone therapy	Hormone	0	111	0
+32394	GEMCITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	451	605	0
+32394	AGS67E	3	CD37 inhibitor (targeted)	targeted inhibitor	Receptor Kinase	980	1057	0
+32397	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	99	0
+32397	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	99	0
+32397	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	99	0
+32397	LETROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	157	157	0
+32397	TAMOXIFEN	3	estrogen receptor antagonist	hormone therapy	Hormone	246	440	0
+32397	FULVESTRANT	4	estrogen receptor antagonist	hormone therapy	Hormone	560	686	0
+32397	RIBOCICLIB/PLACEBO	4	CDK4/6 inhibitor (broad)	kinase inhibitor	Cell cycle	560	686	0
+32398	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	148	0
+32398	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	148	0
+32398	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	148	0
+32557	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	628	1
+32557	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	628	1
+32557	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	628	1
+32558	PEMETREXED	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	10	1
+32558	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	10	1
+32558	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	10	1
+32559	IFOSFAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	107	0
+32559	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	107	0
+32559	PAZOPANIB	2	KIT/FGFR/PDGFR/VEGFR inhibitor (broad)	kinase inhibitor	Receptor Kinase	570	675	0
+32571	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	98	0
+32571	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	98	0
+32571	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	98	0
+32571	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	290	726	0
+32571	CISPLATIN	3	DNA alkylating	DNA damage inducer	DNA damage	886	923	1
+32571	GEMCITABINE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	886	923	1
+32572	IMIQUIMOD	1	immune modulator (via TLR7)	Basal cell cancer treatment	Immune system	0	137	0
+32573	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	182	0
+32654	MITOMYCIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	50	0
+32654	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	50	0
+32654	CAPECITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	894	942	0
+32654	CISPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	894	942	0
+32656	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	156	0
+32656	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	156	0
+32656	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	156	0
+32667	PEMBROLIZUMAB	1	PD-1 inhibitor (targeted)	immunotherapy	Immune system	0	1	1
+32897	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	209	0
+32897	IFOSFAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	209	0
+32897	VINCRISTINE	1	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	0	209	0
+32897	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	209	0
+32897	ETOPOSIDE	1	topoisomerase II inhibitor	DNA synthesis inhibitor	DNA synthesis	0	209	0
+32959	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	28	0
+32959	OXALIPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	161	161	0
+32972	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	176	1
+32972	BEVACIZUMAB	1	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	176	1
+32972	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	176	1
+32973	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	84	0
+32973	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	84	0
+32973	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	84	0
+32973	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	84	0
+32973	ANASTROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	187	1105	0
+32973	TAMOXIFEN	3	estrogen receptor antagonist	hormone therapy	Hormone	1216	2196	0
+32973	LETROZOLE	4	aromatase inhibitor	hormone therapy	Hormone	2524	2554	1
+33033	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	66	0
+33033	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	66	0
+33083	NIVOLUMAB	1	PD-L1 inhibitor (targeted)	immunotherapy	Immune system	0	156	0
+33127	RITUXIMAB	1	CD20 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	21	0
+33127	RITUXIMAB	2	CD20 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	273	379	0
+33127	DOXORUBICIN	2	anthracyclines	DNA synthesis inhibitor	DNA synthesis	273	379	0
+33127	VINCRISTINE	2	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	273	379	0
+33127	CYCLOPHOSPHAMIDE	2	DNA alkylating	DNA damage inducer	DNA damage	273	379	0
+33127	PREDNISONE	2	glucocorticoid receptor agonist	hormone therapy	Hormone	273	379	0
+33154	TAMOXIFEN	1	estrogen receptor antagonist	hormone therapy	Hormone	0	488	0
+33154	LETROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	599	1807	0
+33154	FULVESTRANT	3	estrogen receptor antagonist	hormone therapy	Hormone	1860	1889	0
+33154	TASELISIB/PLACEBO	3	PI3K inhibitor (broad)	kinase inhibitor	AKT-mTOR	1860	1889	0
+33154	EVEROLIMUS	4	mTOR inhibitor	kinase inhibitor	AKT-mTOR	1917	2143	0
+33154	EXEMESTANE	4	aromatase inhibitor	hormone therapy	Hormone	1917	2143	0
+33154	CAPECITABINE	5	DNA synthesis inhibitor	antimetabolite	DNA synthesis	2161	2231	0
+33154	PACLITAXEL	6	taxanes	mitotic inhibitor	mitotic inhibitor	2258	2293	1
+33155	SORAFENIB	1	BRAF inhibitor (broad)	kinase inhibitor	MAPK pathway	0	26	0
+33155	LENVATINIB	2	VEGFR inhibitor (broad)	kinase inhibitor	Receptor Kinase	1069	1095	1
+33373	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	29	0
+33373	PACLITAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	1106	1212	0
+33373	CARBOPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	1106	1212	0
+33373	CARBOPLATIN	3	DNA alkylating	DNA damage inducer	DNA damage	1899	2011	0
+33373	PACLITAXEL	3	taxanes	mitotic inhibitor	mitotic inhibitor	1899	2011	0
+33373	ATEZOLIZUMAB	4	PD-L1 inhibitor (targeted)	immunotherapy	Immune system	2645	2985	0
+33374	IMATINIB	1	ABL kinase inhibitor (broad)	kinase inhibitor	Receptor Kinase	0	2657	1
+33375	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	203	0
+33375	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	203	0
+33387	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	7	1
+33387	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	7	1
+33388	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	32	0
+33388	ETOPOSIDE	1	topoisomerase II inhibitor	DNA synthesis inhibitor	DNA synthesis	0	32	0
+33388	CISPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	114	143	0
+33388	VINORELBINE	2	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	114	143	0
+33388	ERLOTINIB	3	EGFR inhibitor (broad)	kinase inhibitor	Receptor Kinase	1656	2157	0
+33532	ANASTROZOLE	1	aromatase inhibitor	hormone therapy	Hormone	0	1697	0
+33532	CYCLOPHOSPHAMIDE	2	DNA alkylating	DNA damage inducer	DNA damage	272	335	0
+33532	DOCETAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	272	335	0
+33532	CYCLOPHOSPHAMIDE	3	DNA alkylating	DNA damage inducer	DNA damage	888	951	0
+33532	DOXORUBICIN	3	anthracyclines	DNA synthesis inhibitor	DNA synthesis	888	951	0
+33532	METHOTREXATE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1755	1924	0
+33532	CYCLOPHOSPHAMIDE	4	DNA alkylating	DNA damage inducer	DNA damage	1755	1924	0
+33532	FLUOROURACIL	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1755	1924	0
+33532	CAPECITABINE	5	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1971	2113	1
+33546	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	124	0
+33546	VINCRISTINE	1	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	0	124	0
+33546	RITUXIMAB	1	CD20 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	124	0
+33546	ETOPOSIDE	1	topoisomerase II inhibitor	DNA synthesis inhibitor	DNA synthesis	0	124	0
+33546	METHOTREXATE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	124	0
+33546	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	124	0
+33546	CARBOPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	208	231	0
+33546	ETOPOSIDE	2	topoisomerase II inhibitor	DNA synthesis inhibitor	DNA synthesis	208	231	0
+33546	IFOSFAMIDE	2	DNA alkylating	DNA damage inducer	DNA damage	208	231	0
+33546	CYTARABINE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	257	300	1
+33546	CISPLATIN	3	DNA alkylating	DNA damage inducer	DNA damage	257	300	1
+33546	METHOTREXATE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	257	300	1
+33740	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	140	0
+33740	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	140	0
+33740	IRINOTECAN	2	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	181	196	1
+33764	GEFITINIB	1	EGFR inhibitor (broad)	kinase inhibitor	Receptor Kinase	0	258	1
+33987	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	586	1
+33987	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	586	1
+33988	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	141	0
+33988	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	141	0
+33988	IFOSFAMIDE	2	DNA alkylating	DNA damage inducer	DNA damage	558	569	1
+33988	ETOPOSIDE	2	topoisomerase II inhibitor	DNA synthesis inhibitor	DNA synthesis	558	569	1
+34115	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	885	0
+34115	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	885	0
+34115	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	885	0
+34115	GEMCITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	898	927	1
+34118	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	0	0
+34118	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	0	0
+34118	PACLITAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	14	39	1
+34120	TAMOXIFEN	1	estrogen receptor antagonist	hormone therapy	Hormone	0	1389	0
+34120	LETROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	2045	3662	0
+34120	EVEROLIMUS	3	mTOR inhibitor	kinase inhibitor	AKT-mTOR	3737	3902	0
+34120	EXEMESTANE	3	aromatase inhibitor	hormone therapy	Hormone	3737	3902	0
+34120	CAPECITABINE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	4028	4032	1
+34121	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	168	0
+34121	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	168	0
+34121	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	168	0
+34121	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	251	1969	0
+34121	LETROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	2151	3663	0
+34121	LETROZOLE	4	aromatase inhibitor	hormone therapy	Hormone	5479	5920	0
+34121	CAPECITABINE	5	DNA synthesis inhibitor	antimetabolite	DNA synthesis	5949	6488	0
+34122	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	355	0
+34122	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	355	0
+34122	BEVACIZUMAB	1	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	355	0
+34159	PAZOPANIB	1	KIT/FGFR/PDGFR/VEGFR inhibitor (broad)	kinase inhibitor	Receptor Kinase	0	48	1
+34161	VINORELBINE	1	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	0	28	0
+34161	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	28	0
+34161	CARBOPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	65	149	0
+34161	PEMETREXED	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	65	149	0
+34162	TEMOZOLOMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	112	0
+34211	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	139	0
+34211	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	139	0
+34211	PACLITAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	4102	4186	0
+34211	CARBOPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	4102	4186	0
+34211	PACLITAXEL	3	taxanes	mitotic inhibitor	mitotic inhibitor	4186	4186	0
+34211	CISPLATIN	3	DNA alkylating	DNA damage inducer	DNA damage	4186	4186	0
+34215	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	147	0
+34215	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	147	0
+34252	OLARATUMAB/PLACEBO	1	PDGFRA inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	244	1
+34252	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	244	1
+34288	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	160	0
+34288	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	160	0
+34288	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	160	0
+34332	SUNITINIB	1	RET inhibitor (broad)	kinase inhibitor	Receptor Kinase	0	296	0
+34708	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	150	0
+34708	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	150	0
+34708	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	150	0
+34708	ANASTROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	198	2095	0
+34708	LETROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	3552	3996	0
+35234	TAMOXIFEN	1	estrogen receptor antagonist	hormone therapy	Hormone	0	1337	0
+35234	LETROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	1385	2878	0
+35234	EXEMESTANE	3	aromatase inhibitor	hormone therapy	Hormone	4959	6792	0
+35258	PEMETREXED	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	258	1
+35258	SELUMETINIB	1	BRAF inhibitor (broad)	kinase inhibitor	MAPK pathway	0	258	1
+35258	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	258	1
+35260	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	140	0
+35260	IFOSFAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	140	0
+35289	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	61	1
+35289	BEVACIZUMAB	1	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	61	1
+35289	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	61	1
+35290	PEMBROLIZUMAB	1	PD-1 inhibitor (targeted)	immunotherapy	Immune system	0	13	1
+36037	TAMOXIFEN	1	estrogen receptor antagonist	hormone therapy	Hormone	0	337	0
+36037	LETROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	4363	5246	0
+36037	TAMOXIFEN	3	estrogen receptor antagonist	hormone therapy	Hormone	5302	5302	0
+36062	ETOPOSIDE	1	topoisomerase II inhibitor	DNA synthesis inhibitor	DNA synthesis	0	0	0
+36062	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	0	0
+36062	CISPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	4	181	1
+36062	CAPECITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	4	181	1
+36065	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	420	0
+36065	PERTUZUMAB	1	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	420	0
+36065	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	420	0
+36065	TRASTUZUMAB	1	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	420	0
+36065	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	210	824	0
+36067	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	0	0
+36067	CISPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	24	710	0
+36069	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	114	0
+36069	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	114	0
+36069	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	114	0
+36069	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	138	2245	0
+36069	GEMCITABINE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	6830	6999	0
+36509	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	42	0
+36509	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	42	0
+36621	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	63	0
+36621	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	63	0
+36621	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	100	2463	0
+36621	LETROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	2527	2535	1
+36621	GOSERELIN	3	LHRH agonist	hormone therapy	Hormone	2527	2535	1
+36621	PALBOCICLIB	4	CDK4/6 inhibitor (broad)	kinase inhibitor	Cell cycle	2527	2535	1
+36622	ETOPOSIDE	1	topoisomerase II inhibitor	DNA synthesis inhibitor	DNA synthesis	0	78	0
+36622	BLEOMYCIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	78	0
+36622	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	78	0
+36622	DOXORUBICIN	2	anthracyclines	DNA synthesis inhibitor	DNA synthesis	1144	1212	0
+36622	VINCRISTINE	2	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	1144	1212	0
+36622	ETOPOSIDE	2	topoisomerase II inhibitor	DNA synthesis inhibitor	DNA synthesis	1144	1212	0
+36622	IFOSFAMIDE	2	DNA alkylating	DNA damage inducer	DNA damage	1144	1212	0
+36622	CYCLOPHOSPHAMIDE	2	DNA alkylating	DNA damage inducer	DNA damage	1144	1212	0
+36684	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	147	0
+36684	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	147	0
+36684	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	147	0
+36684	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	265	1117	0
+36684	LETROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	2154	3918	0
+36684	DOXORUBICIN	4	anthracyclines	DNA synthesis inhibitor	DNA synthesis	3953	4009	0
+36684	CARBOPLATIN	4	DNA alkylating	DNA damage inducer	DNA damage	3953	4009	0
+36684	CARBOPLATIN	5	DNA alkylating	DNA damage inducer	DNA damage	4221	4380	0
+36684	PACLITAXEL	5	taxanes	mitotic inhibitor	mitotic inhibitor	4221	4380	0
+36686	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	478	1
+36686	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	478	1
+36700	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	116	0
+36700	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	116	0
+36700	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	116	0
+36700	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	199	315	0
+36700	GEMCITABINE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	357	448	0
+36700	CISPLATIN	3	DNA alkylating	DNA damage inducer	DNA damage	357	448	0
+36700	ERIBULIN	4	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	462	532	0
+36700	CAPECITABINE	5	DNA synthesis inhibitor	antimetabolite	DNA synthesis	542	561	0
+36717	OCTREOTIDE	1	somatostatin analogue	growth hormone inhibitor	Receptor Kinase	0	384	1
+36717	ETOPOSIDE	2	topoisomerase II inhibitor	DNA synthesis inhibitor	DNA synthesis	111	198	0
+36717	CISPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	111	198	0
+36718	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	60	0
+36718	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	60	0
+36718	BEVACIZUMAB	2	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	1148	1977	1
+36718	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1148	1977	1
+36718	IRINOTECAN	2	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	1148	1977	1
+36749	PEMBROLIZUMAB	1	PD-1 inhibitor (targeted)	immunotherapy	Immune system	0	122	1
+36962	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	42	0
+36962	PEMETREXED	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	42	0
+37013	TAMOXIFEN	1	estrogen receptor antagonist	hormone therapy	Hormone	0	209	0
+37013	RIBOCICLIB/PLACEBO	2	CDK4/6 inhibitor (broad)	kinase inhibitor	Cell cycle	294	580	0
+37013	FULVESTRANT	2	estrogen receptor antagonist	hormone therapy	Hormone	294	580	0
+37013	LETROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	608	608	0
+37025	DURVALUMAB	1	PD-L1 inhibitor (targeted)	immunotherapy	Immune system	0	54	1
+37025	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	54	1
+37025	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	54	1
+37025	TREMELIMUMAB	1	CTLA4 inhibitor (targeted)	immunotherapy	Immune system	0	54	1
+37026	GEFITINIB	1	EGFR inhibitor (broad)	kinase inhibitor	Receptor Kinase	0	603	0
+37076	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	121	0
+37076	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	121	0
+37076	TRASTUZUMAB	1	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	121	0
+37076	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	121	0
+37076	TRASTUZUMAB	2	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	140	394	0
+37076	TAMOXIFEN	3	estrogen receptor antagonist	hormone therapy	Hormone	141	451	0
+37076	TRASTUZUMAB	4	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	512	1058	1
+37077	LETROZOLE	1	aromatase inhibitor	hormone therapy	Hormone	0	492	0
+37077	TASELISIB/PLACEBO	2	PI3K inhibitor (broad)	kinase inhibitor	AKT-mTOR	582	611	0
+37077	FULVESTRANT	2	estrogen receptor antagonist	hormone therapy	Hormone	582	611	0
+37077	EVEROLIMUS	3	mTOR inhibitor	kinase inhibitor	AKT-mTOR	639	854	0
+37077	EXEMESTANE	3	aromatase inhibitor	hormone therapy	Hormone	639	854	0
+37077	CAPECITABINE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	851	928	0
+37077	TAMOXIFEN	5	estrogen receptor antagonist	hormone therapy	Hormone	953	995	1
+37077	PACLITAXEL	5	taxanes	mitotic inhibitor	mitotic inhibitor	953	995	1
+37078	BUSERELIN	1	GNRHR inhibitor	hormone therapy	Hormone	0	35	1
+37080	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	14	0
+37080	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	14	0
+37080	BEVACIZUMAB	1	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	14	0
+37080	BEVACIZUMAB	2	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	28	141	0
+37080	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	28	141	0
+37080	IRINOTECAN	2	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	28	141	0
+37080	IRINOTECAN	3	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	288	499	0
+37080	BEVACIZUMAB	3	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	288	499	0
+37080	CAPECITABINE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	288	499	0
+37095	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	72	0
+37095	ETOPOSIDE	1	topoisomerase II inhibitor	DNA synthesis inhibitor	DNA synthesis	0	72	0
+37097	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	244	1
+37097	ANASTROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	224	224	0
+37097	GOSERELIN	2	LHRH agonist	hormone therapy	Hormone	224	224	0
+37145	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	352	0
+37145	PEMETREXED	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	352	0
+37145	ERLOTINIB	2	EGFR inhibitor (broad)	kinase inhibitor	Receptor Kinase	372	381	1
+37146	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	362	1
+37146	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	362	1
+37146	ATEZOLIZUMAB	2	PD-L1 inhibitor (targeted)	immunotherapy	Immune system	292	315	0
+37146	MOXR0916	2	OX40 agonist	immunotherapy	Immune system	292	315	0
+37155	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	70	0
+37155	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	70	0
+37249	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	238	0
+37249	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	238	0
+37249	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	238	0
+37297	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	7	1
+37297	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	7	1
+37297	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	7	1
+37311	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	39	0
+37311	CAPECITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	235	1273	0
+37311	CAPECITABINE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1070	1071	0
+37311	OXALIPLATIN	3	DNA alkylating	DNA damage inducer	DNA damage	1070	1071	0
+37311	IRINOTECAN	4	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	1915	2057	1
+37311	CAPECITABINE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1915	2057	1
+37311	BEVACIZUMAB	4	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	1915	2057	1
+37312	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	64	0
+37312	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	64	0
+37312	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	64	0
+37312	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	64	0
+37312	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	155	3195	0
+37312	EXEMESTANE	3	aromatase inhibitor	hormone therapy	Hormone	891	954	0
+37312	CAPECITABINE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	3248	3285	1
+37365	PERTUZUMAB	1	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	126	0
+37365	TRASTUZUMAB	1	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	126	0
+37365	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	126	0
+37365	CAPECITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	175	217	0
+37365	TRASTUZUMAB	2	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	175	217	0
+37619	LETROZOLE	1	aromatase inhibitor	hormone therapy	Hormone	0	179	0
+37619	GEMCITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	368	399	1
+37619	CARBOPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	368	399	1
+37620	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	148	0
+37620	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	148	0
+37620	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	148	0
+37620	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	183	1455	0
+37620	LETROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	5525	5525	0
+37620	EXEMESTANE	4	aromatase inhibitor	hormone therapy	Hormone	5545	5546	1
+37716	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	179	0
+37716	BEVACIZUMAB	1	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	179	0
+37716	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	179	0
+37717	GEFITINIB	1	EGFR inhibitor (broad)	kinase inhibitor	Receptor Kinase	0	211	0
+37718	DEMCIZUMAB/PLACEBO	1	DLL4 inhibitor (targeted)	NOTCH pathway inhibitor	NOTCH pathway	0	42	0
+37718	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	42	0
+37718	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	42	0
+37718	GEMCITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	63	238	0
+37718	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	63	238	0
+37718	PACLITAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	63	238	0
+37719	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	27	1
+37720	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	579	0
+37720	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	579	0
+37720	BEVACIZUMAB	1	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	579	0
+37720	OXALIPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	633	670	1
+37720	CAPECITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	633	670	1
+37828	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	56	0
+37828	GEMCITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	56	0
+37828	GEMCITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	80	115	1
+37828	OXALIPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	80	115	1
+37840	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	0	0
+37840	PREDNISONE	1	glucocorticoid receptor agonist	hormone therapy	Hormone	0	0	0
+37840	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	0	0
+37840	VINCRISTINE	1	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	0	0	0
+37840	CISPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	21	58	1
+37840	GEMCITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	21	58	1
+37842	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	140	0
+37842	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	140	0
+37842	LETROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	1101	1793	0
+37842	TAMOXIFEN	3	estrogen receptor antagonist	hormone therapy	Hormone	2068	2521	0
+37844	TAMOXIFEN	1	estrogen receptor antagonist	hormone therapy	Hormone	0	667	0
+37844	LETROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	699	2059	0
+37844	EXEMESTANE	3	aromatase inhibitor	hormone therapy	Hormone	2122	2444	0
+37844	EVEROLIMUS	3	mTOR inhibitor	kinase inhibitor	AKT-mTOR	2122	2444	0
+37844	CAPECITABINE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	2472	2515	0
+37844	METHOTREXATE	5	DNA synthesis inhibitor	antimetabolite	DNA synthesis	2532	2639	0
+37844	CYCLOPHOSPHAMIDE	5	DNA alkylating	DNA damage inducer	DNA damage	2532	2639	0
+37844	PACLITAXEL	6	taxanes	mitotic inhibitor	mitotic inhibitor	2673	2764	0
+37844	FULVESTRANT	7	estrogen receptor antagonist	hormone therapy	Hormone	2807	3031	0
+37844	PALBOCICLIB	7	CDK4/6 inhibitor (broad)	kinase inhibitor	Cell cycle	2807	3031	0
+37844	ANASTROZOLE	8	aromatase inhibitor	hormone therapy	Hormone	3017	3017	0
+37844	CAPECITABINE	9	DNA synthesis inhibitor	antimetabolite	DNA synthesis	3059	3115	1
+37862	CRIZOTINIB	1	ALK inhibitor (broad)	kinase inhibitor	Receptor Kinase	0	4	1
+37916	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	105	0
+37916	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	105	0
+37916	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	105	0
+37916	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	105	0
+37916	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	160	160	0
+37916	LETROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	2398	2437	1
+37916	PALBOCICLIB	4	CDK4/6 inhibitor (broad)	kinase inhibitor	Cell cycle	2436	2437	1
+37917	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	130	0
+37917	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	130	0
+37917	LETROZOLE	2	aromatase inhibitor	hormone therapy	Hormone	386	409	0
+37917	CARBOPLATIN	3	DNA alkylating	DNA damage inducer	DNA damage	1064	1064	0
+37917	AVELUMAB	4	PD-L1 inhibitor (targeted)	immunotherapy	Immune system	1345	1513	0
+37918	TRASTUZUMAB	1	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	148	0
+37918	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	148	0
+37918	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	148	0
+37918	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	148	0
+37918	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	165	273	0
+37918	TRASTUZUMAB	3	HER2 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	168	295	0
+37918	CAPECITABINE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	336	361	1
+37918	LAPATINIB	4	EGFR/HER2 inhibitor (broad)	kinase inhibitor	Receptor Kinase	336	361	1
+37919	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	106	0
+37919	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	106	0
+37919	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	106	0
+37919	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	106	0
+37919	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	148	1316	0
+37919	LETROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	1344	1524	0
+37919	ANASTROZOLE	4	aromatase inhibitor	hormone therapy	Hormone	1602	2077	0
+37967	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	163	0
+37967	PREDNISONE	1	glucocorticoid receptor agonist	hormone therapy	Hormone	0	163	0
+37967	CYTARABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	163	0
+37967	VINCRISTINE	1	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	0	163	0
+37967	CARMUSTINE	1	DNA alkylating	DNA damage inducer	DNA damage	0	163	0
+37967	MELPHALAN	1	DNA alkylating	DNA damage inducer	DNA damage	0	163	0
+37967	RITUXIMAB	1	CD20 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	163	0
+37967	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	163	0
+37967	ETOPOSIDE	1	topoisomerase II inhibitor	DNA synthesis inhibitor	DNA synthesis	0	163	0
+37967	RITUXIMAB	2	CD20 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	246	379	0
+37970	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	63	0
+37970	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	63	0
+38013	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	14	0
+38013	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	14	0
+38013	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	14	0
+38013	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	111	534	0
+38013	IRINOTECAN	2	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	111	534	0
+38060	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	105	0
+38060	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	105	0
+38060	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	105	0
+38060	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	105	0
+38060	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	168	1772	0
+38060	LETROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	2088	3166	1
+38063	CRIZOTINIB	1	ALK inhibitor (broad)	kinase inhibitor	Receptor Kinase	0	16	1
+38077	VINCRISTINE	1	mitotic inhibitor	mitotic inhibitor	mitotic inhibitor	0	107	0
+38077	RITUXIMAB	1	CD20 inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	107	0
+38077	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	107	0
+38077	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	107	0
+38077	PREDNISONE	1	glucocorticoid receptor agonist	hormone therapy	Hormone	0	107	0
+38077	AGS67E	2	CD37 inhibitor (targeted)	targeted inhibitor	Receptor Kinase	188	239	0
+38119	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	115	0
+38119	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	115	0
+38119	MEGESTROL	2	progesterone agonist	hormone therapy	Hormone	145	145	0
+38119	PACLITAXEL	3	taxanes	mitotic inhibitor	mitotic inhibitor	1247	1289	0
+38119	CARBOPLATIN	3	DNA alkylating	DNA damage inducer	DNA damage	1247	1289	0
+38119	CISPLATIN	4	DNA alkylating	DNA damage inducer	DNA damage	1310	1675	1
+38120	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	230	0
+38120	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	230	0
+38228	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	42	0
+38231	ALEMTUZUMAB	1	CD52 inhibitor (targeted)	targeted inhibitor	Cell adhesion	0	67	0
+38231	FLUDARABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	79	79	0
+38231	CYCLOPHOSPHAMIDE	3	DNA alkylating	DNA damage inducer	DNA damage	109	256	1
+38250	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	108	0
+38250	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	108	0
+38250	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	108	0
+38250	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	451	1207	0
+38250	LETROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	1393	2981	0
+38250	CISPLATIN	4	DNA alkylating	DNA damage inducer	DNA damage	3000	3070	0
+38250	GEMCITABINE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	3000	3070	0
+38261	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	77	1
+38261	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	77	1
+38453	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	140	0
+38453	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	140	0
+38453	CARBOPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	3123	3271	0
+38453	DOXORUBICIN	2	anthracyclines	DNA synthesis inhibitor	DNA synthesis	3123	3271	0
+38453	CARBOPLATIN	3	DNA alkylating	DNA damage inducer	DNA damage	3619	3689	0
+38453	GEMCITABINE	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	3619	3689	0
+38501	DOCETAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	105	0
+38501	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	105	0
+38501	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	105	0
+38501	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	105	0
+38501	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	264	627	0
+38501	GOSERELIN	3	LHRH agonist	hormone therapy	Hormone	713	1161	0
+38501	LETROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	713	1161	0
+38501	CAPECITABINE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1203	1237	1
+38505	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	87	1
+38505	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	87	1
+38505	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	87	1
+38506	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	166	1
+38507	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	112	0
+38507	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	112	0
+38507	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	112	0
+38569	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	63	0
+38569	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	63	0
+38569	CARBOPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	1392	1406	1
+38569	PACLITAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	1392	1406	1
+38574	LETROZOLE	1	aromatase inhibitor	hormone therapy	Hormone	0	432	1
+38575	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	98	0
+38575	OLARATUMAB/PLACEBO	1	PDGFRA inhibitor (targeted)	kinase inhibitor	Receptor Kinase	0	98	0
+38601	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	38	0
+38601	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	164	1592	1
+38601	OXALIPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	164	1592	1
+38601	FLUOROURACIL	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1293	1378	0
+38601	BEVACIZUMAB	3	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	1293	1378	0
+38601	IRINOTECAN	3	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	1293	1378	0
+38601	FLUOROURACIL	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1564	1592	1
+38675	CAPECITABINE	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	38	0
+38675	OXALIPLATIN	2	DNA alkylating	DNA damage inducer	DNA damage	591	854	0
+38675	FLUOROURACIL	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	591	854	0
+38675	FLUOROURACIL	3	DNA synthesis inhibitor	antimetabolite	DNA synthesis	1295	1298	1
+38675	IRINOTECAN	3	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	1295	1298	1
+38675	BEVACIZUMAB	3	VEGF inhibitor (targeted)	kinase inhibitor	Receptor Kinase	1295	1298	1
+38705	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	99	0
+38705	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	99	0
+38705	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	99	0
+38706	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	42	0
+38706	GEMCITABINE	2	DNA synthesis inhibitor	antimetabolite	DNA synthesis	163	476	1
+38706	DOCETAXEL	2	taxanes	mitotic inhibitor	mitotic inhibitor	163	476	1
+38725	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	98	0
+38725	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	98	0
+38725	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	98	0
+38725	GOSERELIN	1	LHRH agonist	hormone therapy	Hormone	0	98	0
+38725	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	171	648	0
+38725	LETROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	896	1338	0
+38725	LETROZOLE	4	aromatase inhibitor	hormone therapy	Hormone	1974	1989	1
+38725	PALBOCICLIB	5	CDK4/6 inhibitor (broad)	kinase inhibitor	Cell cycle	1974	1989	1
+38726	CRIZOTINIB	1	ALK inhibitor (broad)	kinase inhibitor	Receptor Kinase	0	8	1
+38727	OCTREOTIDE	1	somatostatin analogue	growth hormone inhibitor	Receptor Kinase	0	362	1
+38744	PEMBROLIZUMAB	1	PD-1 inhibitor (targeted)	immunotherapy	Immune system	0	326	0
+38744	DACARBAZINE	2	DNA alkylating	DNA damage inducer	DNA damage	359	386	1
+38759	OXALIPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	1462	0
+38759	IRINOTECAN	1	topoisomerase I inhibitor	DNA synthesis inhibitor	DNA synthesis	0	1462	0
+38759	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	1462	0
+38792	LETROZOLE	1	aromatase inhibitor	hormone therapy	Hormone	0	1659	0
+38792	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	1665	2243	0
+38792	EVEROLIMUS	3	mTOR inhibitor	kinase inhibitor	AKT-mTOR	2362	2490	1
+38792	EXEMESTANE	3	aromatase inhibitor	hormone therapy	Hormone	2362	2490	1
+38850	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	107	0
+38850	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	107	0
+38850	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	107	0
+38887	DOXORUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	122	0
+38887	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	122	0
+38887	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	122	0
+38887	LEUPROLIDE	2	LHRH agonist	hormone therapy	Hormone	153	541	0
+38887	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	153	541	0
+38887	LEUPROLIDE	3	LHRH agonist	hormone therapy	Hormone	603	818	0
+38887	LETROZOLE	3	aromatase inhibitor	hormone therapy	Hormone	603	818	0
+38887	CAPECITABINE	4	DNA synthesis inhibitor	antimetabolite	DNA synthesis	832	1589	1
+38905	CISPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	239	1
+38905	ETOPOSIDE	1	topoisomerase II inhibitor	DNA synthesis inhibitor	DNA synthesis	0	239	1
+38905	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	239	1
+38947	PEMBROLIZUMAB	1	PD-1 inhibitor (targeted)	immunotherapy	Immune system	0	241	1
+39044	EPIRUBICIN	1	anthracyclines	DNA synthesis inhibitor	DNA synthesis	0	158	0
+39044	CYCLOPHOSPHAMIDE	1	DNA alkylating	DNA damage inducer	DNA damage	0	158	0
+39044	FLUOROURACIL	1	DNA synthesis inhibitor	antimetabolite	DNA synthesis	0	158	0
+39044	TAMOXIFEN	2	estrogen receptor antagonist	hormone therapy	Hormone	143	1323	0
+39044	EXEMESTANE	3	aromatase inhibitor	hormone therapy	Hormone	998	998	0
+39044	TAMOXIFEN	4	estrogen receptor antagonist	hormone therapy	Hormone	1536	1873	0
+39044	LETROZOLE	5	aromatase inhibitor	hormone therapy	Hormone	2145	2145	0
+39280	CARBOPLATIN	1	DNA alkylating	DNA damage inducer	DNA damage	0	111	0
+39280	PACLITAXEL	1	taxanes	mitotic inhibitor	mitotic inhibitor	0	111	0
+39280	PEMBROLIZUMAB	2	PD-1 inhibitor (targeted)	immunotherapy	Immune system	307	334	1

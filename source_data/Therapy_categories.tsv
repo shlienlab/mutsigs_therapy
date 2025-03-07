@@ -1,0 +1,95 @@
+Drug	Class	Subclass	Anita	Extra1	Extra2
+Methotrexate	Antimetabolite	Antimetabolite	Antimetabolite	Folic acid antagonist	Immunosuppressant
+Thioguanine	Antimetabolite	Antimetabolite	Antimetabolite	Purine antagonist	
+Mercaptopurine	Antimetabolite	Antimetabolite	Antimetabolite	Purine antagonist	
+Fludarabine	Antimetabolite	Antimetabolite	Antimetabolite	Adenosine deaminase inhibitor	
+5-Fluorouracil	Antimetabolite	Antimetabolite	Antimetabolite	Pyrimidine antagonist	
+Fluorouracil	Antimetabolite	Antimetabolite	Antimetabolite	Pyrimidine antagonist	
+Cytarabine	Antimetabolite	Antimetabolite	Antimetabolite	Pyrimidine antagonist	
+Gemcitabine	Antimetabolite	Antimetabolite	Antimetabolite	Pyrimidine antagonist	
+Hydroxyurea	Antimetabolite	Antimetabolite	Antimetabolite	Antimetabolite	
+Decitabine	Antimetabolite	Antimetabolite	Antimetabolite	DNA demethylating agent	
+Azacitidine	Antimetabolite	Antimetabolite	Antimetabolite	DNA demethylating agent	
+Pemetrexed	Antimetabolite	Antimetabolite		Folate antimetabolites	treatment of pleural mesothelioma and non-small cell lung cancer (NSCLC)
+Ifosfamide	Alkylating agent	Mustard gas derivative	Nitrogen mustards	Mustard gas derivative	
+Cyclophosphamide	Alkylating agent	Mustard gas derivative	Nitrogen mustards	Mustard gas derivative	
+Melphalan	Alkylating agent	Mustard gas derivative	Nitrogen mustards	Mustard gas derivative	
+Busulfan	Alkylating agent	"Alkylating agent, Other"	Nitrogen mustards	Alkylsulfonates	
+Lomustine	Alkylating agent	"Alkylating agent, Other"	Nitrosoureas	Nitrosureas	
+Thiotepa	Alkylating agent	"Alkylating agent, Other"	Other alkylating agents	Ethylenimines	
+Temozolomide	Alkylating agent	Hydrazines and Triazines	Other alkylating agents	Hydrazines and Triazines	
+Procarbazine	Alkylating agent	Hydrazines and Triazines	Other alkylating agents	Hydrazines and Triazines	
+Dacarbazine	Alkylating agent	Hydrazines and Triazines	Other alkylating agents	Hydrazines and Triazines	
+Cisplatin	Alkylating agent	Platinums	Platinums	Platinums	
+Carboplatin	Alkylating agent	Platinums	Platinums	Platinums	
+Oxaliplatin	Alkylating agent	Platinums	Platinums	Platinums	
+Rituximab	Monoclonal antibody	Monoclonal antibody	Monoclonal antibody	Monoclonal antibody	
+Inotuzumab	Monoclonal antibody	Monoclonal antibody	Monoclonal antibody	Anti-CD22	
+Daratumumab	Monoclonal antibody	Monoclonal antibody	Monoclonal antibody	Anti-CD38	
+Moxetumomab	Monoclonal antibody	Monoclonal antibody	Monoclonal antibody	Anti-CD22	
+Bevacizumab	Monoclonal antibody	Monoclonal antibody	Monoclonal antibody	Anti-angiogenesis	
+Cetuximab	Monoclonal antibody	Monoclonal antibody	Monoclonal antibody	EGFR inhibitor	
+Dinutuximab	Monoclonal antibody	Monoclonal antibody	Monoclonal antibody	Monoclonal antibody	
+Brentuximab	Monoclonal antibody	Monoclonal antibody	Monoclonal antibody	Monoclonal antibody	
+Nivolumab	Monoclonal antibody	Monoclonal antibody	Monoclonal antibody	immune checkpoint blockade	
+Ipilimumab	Monoclonal antibody	Monoclonal antibody	Monoclonal antibody		
+Bortezomib	Targeted therapy	Targeted therapy	Targeted agent	Proteasome inhibitor	
+Afatinib	Targeted therapy	Targeted therapy	Targeted agent	Tyrosine Kinase inhibitor	EGFR inhibitor
+Tazematostat	Targeted therapy	Targeted therapy	Targeted agent	EZH2 inhibitor	Histone methyltransferase inhibitor
+Dabrafenib	Targeted therapy	Targeted therapy	Targeted agent	BRAF kinase inhibitor	
+Lorlatinib	Targeted therapy	Targeted therapy	Targeted agent	Tyrosine kinase inhibitor	ALK inhibitor
+Imatinib	Targeted therapy	Targeted therapy	Targeted agent	Signal transduction inhibitor	Protein-tyrosine kinase inhibitor
+Temsirolimus	Targeted therapy	Targeted therapy	Targeted agent	mTOR inhibitor	
+Vorinostat	Targeted therapy	Targeted therapy	Targeted agent	Histone deacetylase inhibitor	
+Dasatinib	Targeted therapy	Targeted therapy	Targeted agent	Tyrosine kinase inhibitor	
+Lapatinib	Targeted therapy	Targeted therapy	Targeted agent	Tyrosine Kinase inhibitor	EGFR inhibitor
+Pazopanib	Targeted therapy	Targeted therapy	Targeted agent	Tyrosine Kinase inhibitor	VEGF inhibitor
+Sorafenib	Targeted therapy	Targeted therapy	Targeted agent	Tyrosine Kinase inhibitor	VEGF inhibitor
+Vismodegib	Targeted therapy	Targeted therapy	Targeted agent	"Vismodegib inhibits the SMO protein, preventing Hedgehog signal transduction from a mutated overactive SMO or mutated inactive PTCH1"	
+Trametinib	Targeted therapy	Targeted therapy	Targeted agent	It inhibits MEK1 and MEK2.	
+Regorafenib	Targeted therapy	Targeted therapy	Targeted agent	dual targeted VEGFR2-TIE2 tyrosine kinase inhibition	
+Venetoclax	Targeted therapy	Targeted therapy	Targeted agent	small-molecule B-cell lymphoma (BCL)-2 inhibitor 	
+Sirolimus	Targeted therapy	Targeted therapy	Targeted agent		
+Everolimus	Targeted therapy	Targeted therapy	Targeted agent		
+Vincristine	Plant alkaloid	Vinca alkaloids	Vinca alkaloids	Vinca alkaloids	Antimicrotubule agents
+Vinblastine	Plant alkaloid	Vinca alkaloids	Vinca alkaloids	Vinca alkaloids	Antimicrotubule agents
+Vinorelbine	Plant alkaloid	Vinca alkaloids	Vinca alkaloids	Vinca alkaloids	Antimicrotubule agents
+Paclitaxel	Plant alkaloid	Taxanes	Taxanes	Taxanes	Antimicrotubule agents
+Docetaxel	Plant alkaloid	Taxanes	Taxanes	Taxanes	Antimicrotubule agents
+Etoposide	Plant alkaloid	Podophyllotoxins	Epipodophyllotoxin	Podophyllotoxins	Topoisomerase inhibitors
+Irinotecan	Plant alkaloid	Camptothecin analogs	Topoisomerase I inhibitor	Camptothecin analogs	Topoisomerase inhibitors
+Topotecan	Plant alkaloid	Camptothecin analogs	Topoisomerase I inhibitor	Camptothecin analogs	Topoisomerase inhibitors
+Dactinomycin	Antitumor antibiotic	Chromomycins	Other topoisomerase II inhibitor	Chromomycins	
+Daunorubicin	Antitumor antibiotic	Anthracyclines	Anthracyclines	Anthracyclines	
+Doxorubicin	Antitumor antibiotic	Anthracyclines	Anthracyclines	Anthracyclines	
+Idarubicin	Antitumor antibiotic	Anthracyclines			
+Mitoxantrone	Antitumor antibiotic	Anthracyclines	Anthracyclines	Anthracyclines	
+Bleomycin	Antitumor antibiotic	Antitumor antibiotic	Other topoisomerase II inhibitor	Misc	
+Amsacrine	Antitumor antibiotic	Antitumor antibiotic		Topoisomerase II inhibitor	
+ABT-751	Other	Other	Other	Other	
+MIBG	Other	Other	Other	Other	
+Lenalidomide	Other	Other	Other	Immunomodulatory agent	
+Mifamurtide	Other	Other	Other	Other	
+Ch14.31	Other	Other	Other	Other	
+Pegaspargase	Other	Other	Other	Enzyme	
+Isotretinoin	Other	Other	Other	Retinoid	
+Methylprednisolone	Other	Other	Other	Corticosteroid	
+Asparaginase	Other	Other	Other	Enzyme	
+Cyclosporin	Other	Other	Other		
+Mitotane	Other	Other	Other		
+Amifostine	Other	Other	Other	Amifostine is used therapeutically to reduce the incidence of neutropenia-related fever and infection induced by DNA-binding chemotherapeutic agents including alkylating agents (e.g. cyclophosphamide) and platinum-containing agents (e.g. cisplatin).	
+Investigational_agent	Other	Other	Other		
+GMCSF	Other	Other	Other		
+Il-1	Other	Other	Other		
+Il-2	Other	Other	Other		
+Iodine-131	Other	Other	Other		
+Ecoli-im	Other	Other	Other		
+Killer_cells	Other	Other	Other		
+Hydrocortisone	Other	Other	Other		
+Leucovorin	Other	Other	Other		
+Thymoglobulin	Other	Other	Other		
+Dexrazoxane	Other	Other	Other		
+Dexamethasone	Other	Other	Other		
+Levofloxacin	Other	Other	Other		
+Radiation	Radiation	Radiation	Radiation	Radiation	Radiation
+Other	Other	Other	Other		
