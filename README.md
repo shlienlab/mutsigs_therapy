@@ -48,6 +48,7 @@ To install you can download this repository by running
 
 Or directly download the repository from the Github webpage.
 
+
 Navigate to the root directory of cloned or downloaded repository and type:
 ```sh
 pip install -r requirements.txt
@@ -56,20 +57,21 @@ pip install -r requirements.txt
 We recommended installing the required packages into a python virtual environment.
 To do so:
 
-## Create the virtual environment in the specified path of your choice
+1. Create the virtual environment in the specified path of your choice
 ```sh
 python3 -m venv /your_path/your_env_name
 ```
 
-## Activate the virtual environment
+2. Activate the virtual environment
 ```sh
 source/your_path/your_env_name
 ```
 
-## Install requirements
+3. Install requirements
 ```sh
 pip install -r requirements.txt
 ```
+
 
 ### Usage
 
