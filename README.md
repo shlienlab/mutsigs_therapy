@@ -4,6 +4,7 @@
 #### Scripts and Notebooks to reproduce figures in the above paper.
 
 
+
 ### v 0.1
 
 This repository includes
@@ -13,7 +14,9 @@ This repository includes
 * 1 Notebook to reproduce Supplementary Figures
 * 1 helper script with all the plotting functions
 * 2 helper scripts with 10s of analysis functions
+* 1 helper scripts to run the logistic regression model
 * 1 source data directory containing all the data needed to reproduce the figures (data will be added after manuscript decision)
+
 
 
 ### Dependencies
@@ -40,17 +43,15 @@ This repository includes
 ```
 
 
-### Installation
+### Download
 
-To install you can download this repository by running (or directly download zipped folder from menu above):
+To install, you can directly download zipped folder from menu above or run this command:
  
     git clone https://github.com/shlienlab/mutsigs_therapy
 
 
-Navigate to the root directory of cloned or downloaded repository and type:
-```sh
-pip install -r requirements.txt
-```
+
+### Installation
 
 #### We recommended installing the required packages into a python virtual environment.
 
@@ -64,7 +65,12 @@ python3 -m venv /your_path/your_env_name
 source/your_path/your_env_name
 ```
 
-3. Install requirements
+3. Install requirements (from inside the root directory of the repository)
+```sh
+pip install -r requirements.txt
+```
+
+Otherwise, skip the virtual environment steps, navigate to the root directory and type the following:
 ```sh
 pip install -r requirements.txt
 ```
@@ -72,8 +78,9 @@ pip install -r requirements.txt
 
 ### Usage
 
-After installation, you can open the notebooks in the software of your choice (e.g., VS Code).
-Make sure you select the created virtual environment as your kernel.
+After installation, you can open and run the Jupyter notebooks in any compatible (e.g., VS Code).
+If you created a virtual environment, make sure to select it as your kernel.
+
 
 
 ### Citation
@@ -81,6 +88,7 @@ Make sure you select the created virtual environment as your kernel.
 When using this library, please cite
 
 > Layeghifard M., ..., and Shlien A., "Unique patterns of mutations in childhood cancer highlight chemotherapy’s disease-defining role at relapse" (under review).
+
 
 
 ### Contributions
