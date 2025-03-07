@@ -1,0 +1,612 @@
+	Days_from	Therapy_agents_string
+KiCS0002_321321	858.0	Etoposide_-_6;;Cisplatin _-_5;;Bleomycin_-_4;;Carboplatin_-_2;;Paclitaxel_-_1;;Ifosfamide_-_1
+KiCS0003_285201	0.0	
+KiCS0003_285202	0.0	
+KiCS0003_20_15220_A_02_00	0.0	
+KiCS0005_300238	0.0	
+KiCS0005_4677	0.0	
+KiCS0006_274243	1198.0	Other_-_16;;Cyclophosphamide_-_4;;Topotecan_-_2;;Cisplatin _-_2;;Etoposide_-_2;;Doxorubicin_-_2;;Vincristine_-_2;;Busulfan_-_1;;Melphalan_-_1
+KiCS0007_302948	15.0	Doxorubicin_-_1;;Cyclophosphamide_-_1
+KiCS0008_289185	762.0	5-fluorouracil_-_22;;Oxaliplatin_-_16;;Irinotecan_-_14;;Other_-_14
+KiCS0010_270645	3.0	Doxorubicin_-_1;;Cisplatin _-_1
+KiCS0010_270646	75.0	Doxorubicin_-_2;;Cisplatin _-_2;;Methotrexate_-_2
+KiCS0010_270647	293.0	Doxorubicin_-_6;;Methotrexate_-_6;;Cisplatin _-_3
+KiCS0011_19_24259_A_02_00	0.0	
+KiCS0011_270648	0.0	
+KiCS0013_319375	3639.0	Thioguanine_-_8;;Procarbazine_-_8;;Lomustine / CCNU_-_8;;Vincristine_-_8
+KiCS0014_328066	0.0	
+KiCS0015_18_7567	1128.0	Vincristine_-_14;;Cyclophosphamide_-_10;;Irinotecan_-_7;;Dactinomycin_-_6;;Ifosfamide_-_6;;Doxorubicin_-_5;;Vinorelbine_-_3
+KiCS0015_283113	-10.0	
+KiCS0015_288017	311.0	Vincristine_-_14;;Cyclophosphamide_-_7;;Irinotecan_-_7;;Dactinomycin_-_6
+KiCS0015_316119	771.0	Vincristine_-_14;;Cyclophosphamide_-_10;;Irinotecan_-_7;;Dactinomycin_-_6;;Ifosfamide_-_6;;Doxorubicin_-_5;;Vinorelbine_-_3
+KiCS0016_270650	335.0	Vincristine_-_8;;Cyclophosphamide_-_8;;Cisplatin _-_4;;Etoposide_-_4;;Temozolomide_-_1
+KiCS0017_270651	-19.0	
+KiCS0017_271603	203.0	Cyclophosphamide_-_6;;Etoposide_-_3;;Doxorubicin_-_3;;Topotecan_-_2;;Cisplatin _-_2;;Vincristine_-_2
+KiCS0018_270652	42.0	Doxorubicin_-_2;;Ifosfamide_-_2
+KiCS0024_272790	0.0	
+KiCS0025_272791	846.0	Vinorelbine_-_27;;Cyclophosphamide_-_27;;Other_-_13
+KiCS0025_307284	1326.0	Vinorelbine_-_27;;Cyclophosphamide_-_27;;Other_-_15;;Ifosfamide_-_4;;Etoposide_-_4;;Topotecan_-_2;;Melphalan_-_1
+KiCS0029_274194	0.0	
+KiCS0030_273368	155.0	Other_-_5
+KiCS0031_283112	0.0	
+KiCS0032_273811	3534.0	Temozolomide_-_9;;Irinotecan_-_9;;Vincristine_-_4;;Cyclophosphamide_-_4;;Doxorubicin_-_4;;Etoposide_-_3;;Cisplatin _-_2;;Carboplatin_-_1;;Melphalan_-_1
+KiCS0032_276054	160.0	Vincristine_-_4;;Cyclophosphamide_-_4;;Doxorubicin_-_4;;Etoposide_-_2;;Cisplatin _-_2
+KiCS0033_319631	0.0	
+KiCS0035_270452	-2.0	
+KiCS0035_270453	82.0	Hyroxyurea_-_1
+KiCS0035_270454	128.0	Hyroxyurea_-_1;;Vincristine_-_1;;Daunorubicin_-_1;;Dexamethasone_-_1;;Cytarabine_-_1;;Asparaginase_-_1;;Methotrexate_-_1
+KiCS0035_18_2434_A_03_00	1573.0	Hyroxyurea_-_1;;Vincristine_-_1;;Daunorubicin_-_1;;Dexamethasone_-_1;;Cytarabine_-_1;;Asparaginase_-_1;;Methotrexate_-_1
+KiCS0036_275797	0.0	
+KiCS0036_275798	0.0	
+KiCS0037_283114	0.0	
+KiCS0038_287533	125.0	Cisplatin _-_2;;Doxorubicin_-_2;;Carboplatin_-_1
+KiCS0038_305256	493.0	Irinotecan_-_6;;Vincristine_-_5;;Cisplatin _-_2;;Doxorubicin_-_2;;Carboplatin_-_1
+KiCS0038_310410	719.0	Irinotecan_-_6;;Vincristine_-_5;;Cisplatin _-_4;;Doxorubicin_-_2;;Ifosfamide_-_2;;Etoposide_-_2;;Carboplatin_-_1
+KiCS0039_297368	221.0	Vincristine_-_9;;Irinotecan_-_5;;Cyclophosphamide_-_4;;Dactinomycin_-_3;;Doxorubicin_-_1
+KiCS0040_286739	0.0	
+KiCS0041_317510	505.0	Ifosfamide_-_5;;Doxorubicin_-_5
+KiCS0041_317512	505.0	Ifosfamide_-_5;;Doxorubicin_-_5
+KiCS0042_284388	0.0	
+KiCS0043_290134	0.0	
+KiCS0044_285046	0.0	
+KiCS0045_288555	2.0	Cytarabine_-_1
+KiCS0046_292280	0.0	
+KiCS0048_18_753	3632.0	Cyclophosphamide_-_29;;Topotecan_-_26;;cis-Retinoic acid_-_13;;Temozolomide_-_10;;Irinotecan_-_10;;Etoposide_-_3;;Cisplatin _-_2;;Doxorubicin_-_2;;Vincristine_-_2;;MIBG_-_2;;Thiotepa_-_1;;Carboplatin_-_1;;Melphalan_-_1
+KiCS0048_290132	2909.0	Cyclophosphamide_-_29;;Topotecan_-_26;;cis-Retinoic acid_-_7;;Etoposide_-_3;;Cisplatin _-_2;;Doxorubicin_-_2;;Vincristine_-_2;;MIBG_-_2;;Thiotepa_-_1;;Carboplatin_-_1;;Melphalan_-_1
+KiCS0049_289183	0.0	
+KiCS0049_289187	0.0	
+KiCS0050_290492	1978.0	Vincristine_-_3;;Cisplatin _-_3;;Cyclophosphamide_-_3
+KiCS0051_289184	0.0	
+KiCS0052_289182	0.0	
+KiCS0055_318143	1905.0	Vincristine_-_6;;Cisplatin _-_3;;Etoposide_-_3;;Cyclophosphamide_-_3;;Lomustine / CCNU_-_3;;Temozolomide_-_3;;Carboplatin_-_2;;Thiotepa_-_2
+KiCS0059_291150	0.0	
+KiCS0060_291967	0.0	
+KiCS0061_290886	0.0	
+KiCS0062_291776	0.0	
+KiCS0064_293844	2586.0	cis-Retinoic acid_-_6;;Cyclophosphamide_-_4;;Etoposide_-_3;;Topotecan_-_2;;Cisplatin _-_2;;Doxorubicin_-_2;;Vincristine_-_2;;Carboplatin_-_1;;Melphalan_-_1
+KiCS0066_301446	0.0	
+KiCS0067_294232	775.0	cis-Retinoic acid_-_11;;Cyclophosphamide_-_8;;Etoposide_-_6;;Topotecan_-_4;;Cisplatin _-_4;;Doxorubicin_-_4;;Vincristine_-_4;;Carboplatin_-_2
+KiCS0068_294906	0.0	
+KiCS0069_295533	0.0	
+KiCS0069_298700	0.0	
+KiCS0070_296084	0.0	
+KiCS0074_296401	0.0	
+KiCS0074_302458	0.0	
+KiCS0074_20_10579_A_02_00	0.0	
+KiCS0076_299020	597.0	Cyclophosphamide_-_1;;Etoposide_-_1
+KiCS0076_303115	729.0	Cyclophosphamide_-_4;;Etoposide_-_4;;Topotecan_-_2;;Cisplatin _-_2;;Carboplatin_-_1;;Doxorubicin_-_1
+KiCS0078_297044	0.0	
+KiCS0079_19_7192	1755.0	Vincristine_-_4;;Doxorubicin_-_2;;Cyclophosphamide_-_2;;Ifosfamide_-_2;;Etoposide_-_2;;Temozolomide_-_2;;Irinotecan_-_2
+KiCS0083_298314	0.0	
+KiCS0084_300714	0.0	
+KiCS0085_299826	0.0	
+KiCS0086_298838	0.0	
+KiCS0087_297229	1468.0	Ifosfamide_-_4;;Doxorubicin_-_4;;Vincristine_-_4;;Cyclophosphamide_-_4;;Topotecan_-_4;;Etoposide_-_2
+KiCS0087_299908	127.0	Ifosfamide_-_2;;Doxorubicin_-_2
+KiCS0088_298840	0.0	
+KiCS0090_299554	802.0	Methotrexate_-_19;;Vincristine_-_11;;Dexamethasone_-_8;;Mercaptopurine_-_7;;Asparaginase_-_2;;Cytarabine_-_2;;Doxorubicin_-_1;;Cyclophosphamide_-_1;;Thioguanine_-_1
+KiCS0091_301892	144.0	Cyclophosphamide_-_4;;Topotecan_-_2;;Cisplatin _-_2;;Etoposide_-_2;;Doxorubicin_-_2;;Vincristine_-_2
+KiCS0091_18_14899_A_02_00	908.0	Cyclophosphamide_-_4;;Topotecan_-_2;;Cisplatin _-_2;;Etoposide_-_2;;Doxorubicin_-_2;;Vincristine_-_2
+KiCS0092_19_18518_A_02_00	0.0	
+KiCS0092_298842	0.0	
+KiCS0092_319682	0.0	
+KiCS0092_329766	0.0	
+KiCS0093_305080	0.0	
+KiCS0093_314662	0.0	
+KiCS0095_300240	0.0	
+KiCS0096_302713	0.0	
+KiCS0098_301161	0.0	
+KiCS0098_301163	0.0	
+KiCS0099_301444	119.0	Cyclophosphamide_-_3;;Topotecan_-_2;;Cisplatin _-_2;;Etoposide_-_2;;Doxorubicin_-_1;;Vincristine_-_1
+KiCS0100_301918	0.0	
+KiCS0101_303761	0.0	
+KiCS0103_304770	254.0	Doxorubicin_-_12;;Methotrexate_-_12;;Cisplatin _-_8
+KiCS0104_303117	-7.0	
+KiCS0104_312594	145.0	Cytarabine_-_7;;Etoposide_-_2;;Vincristine_-_1;;Doxorubicin_-_1;;Cyclophosphamide_-_1;;Daunorubicin_-_1;;Mitoxantrone_-_1;;Asparaginase_-_1
+KiCS0106_302802	3009.0	Other_-_5;;Carboplatin_-_4;;Etoposide_-_3;;Azacitidine_-_3;;Vincristine_-_2;;Cyclophosphamide_-_1
+KiCS0107_307283	0.0	
+KiCS0109_304552	99.0	Cyclophosphamide_-_3;;Topotecan_-_2;;Cisplatin _-_1;;Etoposide_-_1;;Doxorubicin_-_1;;Vincristine_-_1
+KiCS0110_304269	0.0	
+KiCS0111_313467	0.0	
+KiCS0112_306734	0.0	
+KiCS0114_304772	1009.0	Vincristine_-_4;;Cisplatin _-_4;;Cyclophosphamide_-_4
+KiCS0115_313555	204.0	Vinblastine_-_2;;Methotrexate_-_2
+KiCS0116_307117	0.0	
+KiCS0118_312902	146.0	Carboplatin_-_4;;Etoposide_-_4;;Cyclophosphamide_-_4;;Doxorubicin_-_3
+KiCS0119_307642	0.0	
+KiCS0120_308112	0.0	
+KiCS0120_308114	0.0	
+KiCS0120_308939	0.0	
+KiCS0121_311881	0.0	
+KiCS0123_308934	0.0	
+KiCS0125_309277	0.0	
+KiCS0126_328068	0.0	
+KiCS0128_310151	0.0	
+KiCS0136_312904	125.0	Cyclophosphamide_-_3;;Topotecan_-_2;;Cisplatin _-_2;;Etoposide_-_2;;Doxorubicin_-_1;;Vincristine_-_1
+KiCS0140_313704	0.0	
+KiCS0141_314896	0.0	
+KiCS0143_316365	0.0	
+KiCS0145_314010	0.0	
+KiCS0148_319486	0.0	
+KiCS0149_316368	0.0	
+KiCS0150_315216	0.0	
+KiCS0152_316245	166.0	Cyclophosphamide_-_4;;Topotecan_-_2;;Cisplatin _-_2;;Etoposide_-_2;;Doxorubicin_-_2;;Vincristine_-_2
+KiCS0154_18_752	308.0	Vincristine_-_2;;Dactinomycin_-_2;;Doxorubicin_-_2;;Ifosfamide_-_1;;Carboplatin_-_1;;Etoposide_-_1;;Cyclophosphamide_-_1;;Other_-_1
+KiCS0154_316299	36.0	Vincristine_-_1;;Dactinomycin_-_1
+KiCS0154_326256	258.0	Vincristine_-_2;;Dactinomycin_-_2;;Doxorubicin_-_2;;Ifosfamide_-_1;;Carboplatin_-_1;;Etoposide_-_1;;Cyclophosphamide_-_1;;Other_-_1
+KiCS0155_18_9678	128.0	Methotrexate_-_5;;Hydrocortisone_-_4;;Cytarabine_-_4;;Prednisone/Prednisolone_-_3;;Cyclophosphamide_-_3;;Doxorubicin_-_2;;Vincristine_-_2
+KiCS0155_314807	589.0	Methotrexate_-_11;;Cytarabine_-_8;;Hydrocortisone_-_7;;Prednisone/Prednisolone_-_4;;Cyclophosphamide_-_4;;Vincristine_-_4;;Other_-_4;;Doxorubicin_-_3;;Etoposide_-_3
+KiCS0155_314825	593.0	Methotrexate_-_11;;Cytarabine_-_8;;Hydrocortisone_-_7;;Prednisone/Prednisolone_-_4;;Cyclophosphamide_-_4;;Vincristine_-_4;;Other_-_4;;Doxorubicin_-_3;;Etoposide_-_3
+KiCS0156_315663	2164.0	Oxaliplatin_-_2;;5-fluorouracil_-_2;;Gemcitabine_-_2
+KiCS0158_316457	0.0	
+KiCS0161_319069	0.0	
+KiCS0162_317276	374.0	Other_-_6;;Cyclophosphamide_-_3;;Topotecan_-_2;;Cisplatin _-_2;;Etoposide_-_2;;Doxorubicin_-_1;;Vincristine_-_1;;Busulfan_-_1;;Melphalan_-_1
+KiCS0164_317770	0.0	
+KiCS0165_317832	480.0	Melphalan_-_1;;Busulfan_-_1
+KiCS0167_318530	1208.0	Cytarabine_-_8;;Vincristine_-_4;;Methotrexate_-_4;;Prednisone/Prednisolone_-_2;;Doxorubicin_-_2;;Cyclophosphamide_-_2;;Mercaptopurine_-_2
+KiCS0168_319321	-166.0	
+KiCS0169_319629	0.0	
+KiCS0170_320432	279.0	Cytarabine_-_7;;Etoposide_-_2;;Daunorubicin_-_1;;Mitoxantrone_-_1;;Asparaginase_-_1
+KiCS0171_19_17562_A_02_00	1205.0	Methotrexate_-_21;;Vincristine_-_12;;Mercaptopurine_-_10;;Prednisone/Prednisolone_-_8;;Other_-_4;;Cytarabine_-_3;;Dexamethasone_-_2;;Cyclophosphamide_-_2;;Daunorubicin_-_1;;Doxorubicin_-_1;;Thioguanine_-_1
+KiCS0171_319910	1.0	Cytarabine_-_1
+KiCS0172_321979	0.0	
+KiCS0179_322516	0.0	
+KiCS0182_331429	2639.0	Vincristine_-_47;;Methotrexate_-_36;;Other_-_34;;Prednisone/Prednisolone_-_31;;Cytarabine_-_30;;Methylprednisolone_-_24;;Hydrocortisone_-_23;;Asparaginase_-_12;;Mercaptopurine_-_8;;Cyclophosphamide_-_8;;Fludarabine_-_8;;Dexamethasone_-_6;;Doxorubicin_-_4;;Vinblastine_-_2;;Etoposide_-_2;;Melphalan_-_2
+KiCS0184_324069	659.0	Cisplatin _-_4;;Doxorubicin_-_3;;Methotrexate_-_3
+KiCS0188_334057	85.0	Vincristine_-_1;;Dactinomycin_-_1;;Cyclophosphamide_-_1
+KiCS0190_327483	0.0	
+KiCS0192_330523	407.0	Methotrexate_-_11;;Cytarabine_-_9;;Other_-_8;;Dexamethasone_-_6;;Asparaginase_-_6;;Vincristine_-_5;;Cyclophosphamide_-_3;;Mercaptopurine_-_3;;Hydrocortisone_-_3;;Doxorubicin_-_2;;Daunorubicin_-_1;;Ifosfamide_-_1;;Etoposide_-_1;;Thioguanine_-_1
+KiCS0193_328018	854.0	Vincristine_-_2;;Dactinomycin_-_2;;Cyclophosphamide_-_2;;Irinotecan_-_2
+KiCS0193_328020	-7.0	
+KiCS0194_328185	646.0	Cisplatin _-_4;;Doxorubicin_-_3;;Methotrexate_-_3
+KiCS0195_327479	470.0	Methotrexate_-_11;;Vincristine_-_7;;Dexamethasone_-_4;;Asparaginase_-_3;;Cytarabine_-_2;;Mercaptopurine_-_2;;Doxorubicin_-_1;;Thioguanine_-_1;;Mitoxantrone_-_1
+KiCS0195_328069	412.0	Methotrexate_-_10;;Vincristine_-_6;;Dexamethasone_-_3;;Cytarabine_-_2;;Asparaginase_-_2;;Mercaptopurine_-_2;;Doxorubicin_-_1;;Thioguanine_-_1
+KiCS0197_326711	87.0	Cyclophosphamide_-_2;;Topotecan_-_1;;Doxorubicin_-_1;;Vincristine_-_1;;Cisplatin _-_1;;Etoposide_-_1
+KiCS0197_20_1402_A_02_00	1186.0	Cyclophosphamide_-_2;;Topotecan_-_1;;Doxorubicin_-_1;;Vincristine_-_1;;Cisplatin _-_1;;Etoposide_-_1
+KiCS0197_20_15931_A_02_00	1430.0	Cyclophosphamide_-_2;;Topotecan_-_1;;Doxorubicin_-_1;;Vincristine_-_1;;Cisplatin _-_1;;Etoposide_-_1
+KiCS0198_327862	0.0	
+KiCS0200_332386	0.0	
+KiCS0204_19_13898_A_02_00	818.0	Cisplatin _-_4;;Doxorubicin_-_3;;Methotrexate_-_3
+KiCS0209_18_1512	102.0	Cyclophosphamide_-_6;;Topotecan_-_6
+KiCS0212_333928	0.0	
+KiCS0214_18_2567	0.0	
+KiCS0218_18_1530	431.0	Vincristine_-_10;;Dactinomycin_-_8;;Doxorubicin_-_6;;Cyclophosphamide_-_6;;Etoposide_-_6
+KiCS0218_18_751	431.0	Vincristine_-_10;;Dactinomycin_-_8;;Doxorubicin_-_6;;Cyclophosphamide_-_6;;Etoposide_-_6
+KiCS0218_20_11154_A_02_00	963.0	Vincristine_-_16;;Cyclophosphamide_-_15;;Etoposide_-_13;;Doxorubicin_-_10;;Dactinomycin_-_8;;Carboplatin_-_5;;Ifosfamide_-_2;;Irinotecan_-_2
+KiCS0219_18_1752	0.0	
+KiCS0220_18_3730	0.0	
+KiCS0220_18_748	0.0	
+KiCS0220_18_8816_A_02_00	0.0	
+KiCS0221_18_2564	1336.0	Vincristine_-_2;;Dactinomycin_-_1;;Cyclophosphamide_-_1;;Temozolomide_-_1;;Irinotecan_-_1
+KiCS0222_18_7573	0.0	
+KiCS0224_18_1655	0.0	
+KiCS0225_18_2571	4896.0	Vincristine_-_1;;Cyclophosphamide_-_1;;Ifosfamide_-_1;;Etoposide_-_1;;Doxorubicin_-_1
+KiCS0226_18_2569	0.0	
+KiCS0227_18_2559	0.0	
+KiCS0228_18_7577	184.0	Carboplatin_-_4;;Other_-_1;;Paclitaxel_-_1
+KiCS0228_18_7579	-27.0	
+KiCS0231_18_5970	0.0	
+KiCS0235_18_4828	0.0	
+KiCS0238_18_5640	71.0	Dactinomycin_-_6;;Cyclophosphamide_-_6;;Vincristine_-_6
+KiCS0239_18_7570	0.0	
+KiCS0240_18_8811	384.0	Vincristine_-_3;;Dactinomycin_-_3;;Cyclophosphamide_-_3;;Irinotecan_-_3
+KiCS0241_19_7197	0.0	
+KiCS0245_18_12071	0.0	
+KiCS0246_18_11279	0.0	
+KiCS0249_19_18443	0.0	
+KiCS0249_20_423_A_02_00	0.0	
+KiCS0249_20_7122_A_02_00	0.0	
+KiCS0252_18_9296	0.0	
+KiCS0259_18_12197	-17.0	
+KiCS0261_19_18923_A_02_00	280.0	VinCristine_-_3;;Dactinomycin _-_3;;Cyclophosphamide _-_3;;Vincristine_-_2;;Irinotecan_-_1;;Dactinomycin_-_1;;Cyclophosphamide_-_1
+KiCS0263_18_15764_A_03_01	2103.0	Melphalan_-_1;;Etoposide_-_1;;Carboplatin_-_1;;MIBG_-_1
+KiCS0266_19_13897_A_02_00	0.0	
+KiCS0269_18_13380	126.0	Cyclophosphamide_-_3;;Topotecan_-_2;;Cisplatin _-_2;;Etoposide_-_2;;Doxorubicin_-_1;;Vincristine_-_1
+KiCS0270_19_13895_A_02_00	1133.0	Vincristine_-_2;;Carboplatin_-_2;;Cyclophosphamide_-_1;;Etoposide_-_1
+KiCS0271_19_13900_A_02_00	0.0	
+KiCS0272_20_18312_A_02_00	0.0	
+KiCS0274_19_4026_A_02_00	0.0	
+KiCS0276_19_5404_A_02_00	1058.0	Doxorubicin_-_6;;Methotrexate_-_6;;Cisplatin_-_4
+KiCS0277_19_13896_A_02_00	419.0	cyclophosphamide_-_3;;topotecan_-_2;;cisplatin_-_2;;etoposide_-_2;;doxorubicin_-_1;;vincristine_-_1
+KiCS0277_19_4280_A_02_00	1228.0	cyclophosphamide_-_3;;topotecan_-_2;;cisplatin_-_2;;etoposide_-_2;;doxorubicin_-_1;;vincristine_-_1
+KiCS0279_19_2126_A_02_00	0.0	
+KiCS0281_19_23340_A_02_00	0.0	
+KiCS0282_19_8768_A_02_00	504.0	Cyclophosphamide_-_4;;Topotecan_-_2;;Cisplatin _-_2;;Etoposide_-_2;;Doxorubicin_-_2;;Vincristine_-_1
+KiCS0282_20_18314_A_02_00	117.0	Cyclophosphamide_-_3;;Topotecan_-_2;;Cisplatin _-_2;;Etoposide_-_2;;Doxorubicin_-_1
+KiCS0283_19_15299_A_02_00	1080.0	Vincristine_-_11;;Dactinomycin_-_6;;Cyclophosphamide_-_6;;Irinotecan_-_5
+KiCS0284_20_18306_A_02_00	0.0	
+KiCS0285_19_15633_A_02_00	0.0	
+KiCS0288_20_11147_A_02_00	0.0	
+KiCS0289_19_15639_A_02_00	77.0	Doxorubicin_-_2;;Cisplatin _-_2;;Methotrexate_-_2;;Other_-_2
+KiCS0292_19_15636_A_02_00	87.0	Bleomycin_-_3;;Etoposide_-_3;;Cisplatin _-_3
+KiCS0293_19_15645_A_02_00	0.0	
+KiCS0295_19_3667_A_02_00	0.0	
+KiCS0295_20_6217_A_02_00	0.0	
+KiCS0296_19_6855	0.0	
+KiCS0298_19_3826	249.0	Temozolomide_-_4;;Irinotecan_-_4;;Cyclophosphamide_-_3;;Topotecan_-_2;;Cisplatin _-_2;;Etoposide_-_2;;Doxorubicin_-_1;;Vincristine_-_1
+KiCS0298_20_11148_A_02_00	-1.0	
+KiCS0299_19_3794	0.0	
+KiCS0302_19_15647_A_02_00	505.0	Vincristine_-_9;;Dactinomycin_-_5;;Doxorubicin_-_4
+KiCS0306_19_19567_A_02_00	483.0	Temozolomide_-_7;;Lomustine / CCNU_-_6
+KiCS0310_19_15653_A_02_00	0.0	
+KiCS0312_19_15651_A_02_00	0.0	
+KiCS0314_19_11045_A_02_00	0.0	
+KiCS0319_19_11213_A_02_00	0.0	
+KiCS0319_19_19753_A_02_00	213.0	Cytarabine_-_8;;Methotrexate_-_4;;Hydrocortisone_-_4;;Other_-_3;;Daunorubicin_-_2;;Etoposide_-_1;;Amsacrine_-_1;;Mitoxantrone_-_1
+KiCS0320_20_18316_A_02_00	0.0	
+KiCS0323_19_26722_A_02_00	0.0	
+KiCS0324_19_15655_A_02_00	90.0	Thiotepa_-_1;;Cyclophosphamide_-_1;;Melphalan_-_1;;Etoposide_-_1;;Carboplatin_-_1
+KiCS0326_19_21779_A_02_00	428.0	VinCristine_-_8;;Temozolomide_-_5;;Irinotecan_-_5;;Dactinomycin_-_3;;Cyclophosphamide_-_3
+KiCS0327_20_75_A_02_00	468.0	Other_-_7;;cis-Retinoic acid_-_5;;Cyclophosphamide_-_3;;Topotecan_-_2;;Cisplatin _-_2;;Etoposide_-_2;;Doxorubicin_-_1
+KiCS0329_19_12113_A_02_00	0.0	
+KiCS0332_19_12115_A_02_00	1599.0	Vincristine_-_3;;Cyclophosphamide_-_3;;Prednisone/Prednisolone_-_3;;Doxorubicin_-_3
+KiCS0333_19_16938_A_02_00	-52.0	
+KiCS0333_19_16940_A_02_00	288.0	Temozolomide_-_7;;Lomustine / CCNU_-_5
+KiCS0334_19_16943_A_02_00	139.0	Methotrexate_-_4;;Other_-_3;;Vincristine_-_3;;Daunorubicin_-_1;;Prednisone/Prednisolone_-_1;;Cyclophosphamide_-_1;;Mercaptopurine_-_1;;Cytarabine_-_1
+KiCS0336_20_76_A_02_00	0.0	
+KiCS0337_19_12649_A_02_00	0.0	
+KiCS0339_20_1400_A_02_00	3822.0	Vincristine_-_1;;Ifosfamide_-_1;;Doxorubicin_-_1;;Etoposide_-_1;;other_-_1;;Cyclophosphamide_-_1;;Melphalan_-_1
+KiCS0341_19_17403_A_02_00	0.0	
+KiCS0343_19_13225_A_06_00	0.0	
+KiCS0345_20_1395_A_02_00	45.0	Mitotane_-_2;;Cisplatin _-_2;;Etoposide_-_2;;Doxorubicin_-_2
+KiCS0345_20_11162_A_02_00	460.0	Mitotane_-_2;;Cisplatin _-_2;;Etoposide_-_2;;Doxorubicin_-_2
+KiCS0347_19_17408_A_02_00	0.0	
+KiCS0349_19_17411_A_02_00	960.0	Cyclophosphamide_-_8;;Etoposide_-_7;;Other_-_7;;Carboplatin_-_5;;Doxorubicin_-_5;;cis-Retinoic acid_-_4;;Topotecan_-_2;;Cisplatin _-_2;;Vincristine_-_1;;Temozolomide_-_1;;Irinotecan_-_1
+KiCS0350_20_1787_A_02_00	-22.0	
+KiCS0350_19_25243_A_02_00	140.0	Temozolomide_-_6;;Lomustine / CCNU_-_1
+KiCS0352_19_17420_A_02_00	0.0	
+KiCS0354_19_19173_A_02_00	0.0	
+KiCS0356_19_17417_A_02_00	0.0	
+KiCS0358_19_19175_A_02_00	0.0	
+KiCS0359_19_18908_A_02_00	0.0	
+KiCS0361_19_18661_A_02_00	0.0	
+KiCS0362_19_19176_A_02_00	0.0	
+KiCS0363_19_21783_A_02_00	281.0	Other_-_12;;Doxorubicin_-_6;;Methotrexate_-_5;;Cisplatin _-_4
+KiCS0363_19_21794_A_02_00	-89.0	
+KiCS0365_19_19570_A_02_00	3968.0	Cyclophosphamide_-_24;;Topotecan_-_22;;Irinotecan_-_7;;Temozolomide_-_7;;Isotretinoin_-_3;;Cisplatin _-_2;;Etoposide_-_2;;Doxorubicin_-_2;;Vincristine_-_2
+KiCS0366_19_20056_A_02_00	-11.0	
+KiCS0366_20_11333_A_02_00	1212.0	Vincristine_-_11;;Cyclophosphamide_-_7;;Ifosfamide_-_6;;Etoposide_-_6;;Temozolomide_-_5;;Irinotecan_-_5;;Doxorubicin_-_4;;Topotecan_-_1
+KiCS0368_20_6000_A_02_00	0.0	
+KiCS0370_19_21815_A_02_00	0.0	
+KiCS0371_19_22172_A_02_00	68.0	Cisplatin _-_2;;Carboplatin_-_2;;Dexrazoxane_-_2;;Doxorubicin_-_2
+KiCS0374_20_3760_A_02_00		
+KiCS0374_20_3759_A_02_00		
+KiCS0375_20_484_A_02_00	6748.0	Carboplatin_-_1;;Vincristine_-_1
+KiCS0376_19_23808_A_02_00	3934.0	Vincristine_-_1;;Ifosfamide_-_1;;Doxorubicin_-_1;;Etoposide_-_1;;Actinomycin_-_1;;Cyclophosphamide_-_1;;Melphalan_-_1
+KiCS0377_20_18334_A_02_00	0.0	
+KiCS0378_19_25245_A_02_00	0.0	
+KiCS0379_20_18013_A_02_00	24.0	Vincristine_-_2;;Dactinomycin_-_1;;Ifosfamide_-_1;;Doxorubicin_-_1;;Etoposide_-_1
+KiCS0380_19_25917_A_02_00	0.0	
+KiCS0383_19_25931_A_02_00	84.0	Dactinomycin_-_2;;Vincristine_-_2;;Doxorubicin_-_2
+KiCS0385_20_6460_A_02_00	0.0	
+KiCS0386_20_425_A_02_00	0.0	
+KiCS0388_20_8809_A_02_00	0.0	
+KiCS0391_20_11161_A_02_00	0.0	
+KiCS0400_20_1851_A_02_00	0.0	
+KiCS0487_20_20203_A_02_00	0.0	
+zcc1	0.0	
+zcc2	0.0	
+zcc3	489.0	Carboplatin_-_1;;Etoposide_-_1;;vincristine_-_1;;Cisplatin _-_1;;Cyclophosphamide_-_1;;Topotecan_-_1;;Vincristine_-_1;;Doxorubicin_-_1;;Irinotecan_-_1;;temozolamide_-_1;;Busulfan_-_1;;melphalan_-_1;;Isotretinoin_-_1;;ch14.18_-_1;;IL-2_-_1
+zcc4	0.0	
+zcc5	0.0	
+zcc6	0.0	
+zcc7	0.0	
+zcc8	0.0	
+zcc9	817.0	Sorafenib_-_1;;Cisplatin _-_1;;Doxorubicin_-_1
+zcc10	432.0	Carboplatin_-_2;;vincristine_-_1;;Methotrexate_-_1;;Etoposide_-_1;;Cisplatin _-_1;;Vincristine_-_1;;Thiotepa_-_1
+zcc11	0.0	
+zcc12	0.0	
+zcc13	0.0	
+zcc14	0.0	
+zcc15	0.0	
+zcc16	0.0	
+zcc17	0.0	
+zcc18	0.0	
+zcc19	0.0	
+zcc20	0.0	
+zcc21	0.0	
+zcc22	0.0	
+zcc23	0.0	
+zcc24	0.0	
+zcc25	0.0	
+zcc26	0.0	
+zcc27	0.0	
+zcc28	25.0	Doxorubicin_-_1;;Ifosfamide_-_1;;carboplatin_-_1;;etoposide_-_1;;cyclophosphamide_-_1;;Dactinomycin_-_1;;vincristine_-_1
+zcc29	269.0	Carboplatin_-_1;;vincristine_-_1;;Vinblastine_-_1
+zcc30	0.0	
+zcc31	0.0	
+zcc32	823.0	Cisplatin _-_1;;Cyclophosphamide_-_1;;Doxorubicin_-_1;;Etoposide_-_1;;Topotecan_-_1;;vincristine_-_1;;Irinotecan_-_1;;temozolamide_-_1
+zcc33	0.0	
+zcc34	0.0	
+zcc35	821.0	Actinomycin_-_1;;Vincristine_-_1;;Ifosfamide_-_1;;Etoposide_-_1;;Carboplatin_-_1;;Doxorubicin_-_1;;Cyclophosphamide_-_1
+zcc36	0.0	
+zcc37	0.0	
+zcc38	0.0	
+zcc39	0.0	
+zcc40	0.0	
+zcc41	0.0	
+zcc42	0.0	
+zcc43	0.0	
+zcc44	0.0	
+zcc45	0.0	
+zcc46	259.0	carboplatin_-_1;;vinblastine_-_1
+zcc47	0.0	
+zcc48	0.0	
+zcc49	0.0	
+zcc50	0.0	
+zcc51	347.0	Cyclophosphamide_-_1;;Topotecan_-_1;;cisplatin_-_1;;etoposide_-_1;;doxorubicin_-_1;;vincristine_-_1;;Irinotecan_-_1;;temozolamide_-_1;;Isotretinoin_-_1;;Lorlatinib_-_1
+zcc52	445.0	etoposide_-_1;;cyclophosphamide_-_1;;vincristine_-_1;;carboplatin_-_1;;Temozolomide_-_1;;irinotecan_-_1
+zcc53	0.0	
+zcc54	0.0	
+zcc55	380.0	methotrexate_-_1;;vincristine_-_1;;Cisplatin _-_1;;Cyclophosphamide_-_1
+zcc56	0.0	
+zcc57	294.0	Cisplatin _-_1;;Doxorubicin_-_1;;carboplatin_-_1
+zcc58	0.0	
+zcc59	0.0	
+zcc60	0.0	
+zcc61	0.0	
+zcc62	0.0	
+zcc63	281.0	Amifostine_-_1;;Vincristine_-_1;;Cyclophosphamide_-_1;;Cisplatin _-_1;;Pemetrexed_-_1;;Gemcitabine_-_1
+zcc64	0.0	
+zcc65	0.0	
+zcc66	0.0	
+zcc67	0.0	
+zcc68	0.0	
+zcc69	0.0	
+zcc70	0.0	
+zcc71	0.0	
+zcc72	0.0	
+zcc73	0.0	
+zcc74	0.0	
+zcc75	0.0	
+zcc76	0.0	
+zcc77	0.0	
+zcc78	0.0	
+zcc79	169.0	Amifostine_-_1;;Vincristine_-_1;;Cyclophosphamide_-_1;;Cisplatin _-_1;;Pemetrexed_-_1;;Gemcitabine_-_1
+zcc80	0.0	
+zcc81	0.0	
+zcc82	0.0	
+zcc83	0.0	
+zcc84	613.0	Mitotane_-_1;;Cisplatin_-_1;;Etoposide_-_1;;Doxorubicin_-_1
+zcc85	0.0	
+zcc86	540.0	carboplatin_-_1;;vincristine_-_1
+zcc87	0.0	
+zcc88	0.0	
+zcc89	0.0	
+zcc90	0.0	
+zcc91	0.0	
+zcc92	0.0	
+zcc93	0.0	
+zcc94	0.0	
+zcc95	0.0	
+zcc96	0.0	
+zcc97	2093.0	Cisplatin _-_1;;Methotrexate_-_1;;Doxorubicin_-_1;;Ifosfamide_-_1;;Etoposide_-_1
+zcc98	0.0	
+zcc279	5594.0	Vincrisitne_-_1;;Carboplatin_-_1;;Etoposide_-_1;;Cyclophosphamide_-_1;;Idarubicin_-_1;;Cyclosporin_-_1
+zcc99	0.0	
+zcc100	0.0	
+zcc101	0.0	
+zcc102	0.0	
+zcc103	0.0	
+zcc104	0.0	
+zcc105	0.0	
+zcc106	658.0	carboplatin_-_1;;vincristine_-_1;;trametinib_-_1;;dabrafenib_-_1
+zcc107	0.0	
+zcc108	0.0	
+zcc109	750.0	Amifostine_-_1;;Vincristine_-_1;;Cyclophosphamide_-_1;;Cisplatin _-_1;;Pemetrexed_-_1;;Gemcitabine_-_1
+zcc110	0.0	
+zcc111	0.0	
+zcc112	0.0	
+zcc113	0.0	
+zcc114	0.0	
+zcc115	0.0	
+zcc116	0.0	
+zcc117	0.0	
+zcc118	0.0	
+zcc119	610.0	Vincristine_-_1;;dactinomycin_-_1;;Cyclophosphamide_-_1;;Cisplatin _-_1;;Doxorubicin_-_1;;imidazole carboximide_-_1;;temozolamide_-_1
+zcc120	0.0	
+zcc121	0.0	
+zcc122	0.0	
+zcc123	411.0	Doxorubicin_-_1;;Bleomycin_-_1;;Vinblastine_-_1;;Dacarbazine_-_1;;ifosfamide_-_1;;carboplatin_-_1;;etoposide_-_1;;brentuximab_-_1
+zcc124	0.0	
+zcc125	0.0	
+zcc126	69.0	Cisplatin _-_1;;Cyclophosphamide_-_1;;Doxorubicin_-_1;;Etoposide_-_1;;Topotecan_-_1;;vincristine_-_1;;MIBG_-_1;;busulfan_-_1;;melphalan_-_1
+zcc127	0.0	
+zcc128	0.0	
+zcc129	0.0	
+zcc292	327.0	Mitotane_-_1;;Cisplatin_-_1;;Etoposide_-_1;;Doxorubicin_-_1
+zcc130	1712.0	Cisplatin _-_1;;Cyclophosphamide_-_1;;Doxorubicin_-_1;;Etoposide_-_1;;Topotecan_-_1;;vincristine_-_1;;Isotretinoin_-_1;;ch14.18_-_1;;IL-2_-_1
+zcc131	0.0	
+zcc132	0.0	
+zcc133	0.0	
+zcc134	0.0	
+zcc135	0.0	
+zcc136	0.0	
+zcc137	0.0	
+zcc138	1534.0	Carboplatin_-_1;;Etoposide_-_1;;vincristine_-_1;;Cisplatin _-_1;;Cyclophosphamide_-_1;;Topotecan_-_1;;Vincristine_-_1;;Doxorubicin_-_1;;busulfan_-_1;;melphalan_-_1
+zcc139	0.0	
+zcc140	0.0	
+zcc141	0.0	
+zcc142	0.0	
+zcc143	0.0	
+zcc144	0.0	
+zcc145	0.0	
+zcc146	0.0	
+zcc147	1231.0	Cisplatin _-_1;;Methotrexate_-_1;;Doxorubicin_-_1;;Ifosfamide_-_1;;Etoposide_-_1
+zcc148	0.0	
+zcc149	0.0	
+zcc150	0.0	
+zcc151	0.0	
+zcc152	0.0	
+zcc153	0.0	
+zcc154	109.0	Carboplatin_-_1;;Etoposide_-_1;;vincristine_-_1;;Cisplatin _-_1;;Cyclophosphamide_-_1;;Topotecan_-_1;;Vincristine_-_1;;Doxorubicin_-_1;;Isotretinoin_-_1;;ch14.18_-_1;;IL-2_-_1
+zcc155	0.0	
+zcc156	0.0	
+zcc157	0.0	
+zcc158	1450.0	Methotrexate_-_1;;Etoposide_-_1;;Cyclophosphamide_-_1;;Carboplatin_-_1;;Vincristine_-_1
+zcc159	0.0	
+zcc160	823.0	methotrexate_-_1;;vincristine_-_1;;Cisplatin _-_1;;Cyclophosphamide_-_1
+zcc161	0.0	
+zcc162	0.0	
+zcc163	0.0	
+zcc164	0.0	
+zcc165	0.0	
+zcc166	0.0	
+zcc167	0.0	
+zcc168	0.0	
+zcc169	975.0	Carboplatin_-_1;;Thiotepa_-_1
+zcc170	0.0	
+zcc171	2083.0	Carboplatin_-_1;;Cyclophosphamide_-_1;;Etoposide_-_1;;Vincristine_-_1
+zcc172	633.0	vincristine_-_1;;Etoposide_-_1;;Cyclophosphamide_-_1;;Cisplatin _-_1;;carboplatin_-_1
+zcc173	0.0	
+zcc174	0.0	
+zcc175	0.0	
+zcc176	0.0	
+zcc177	0.0	
+zcc178	0.0	
+zcc331	104.0	Cyclophosphamide_-_2;;Cisplatin _-_1;;Doxorubicin_-_1;;Etoposide_-_1;;Topotecan_-_1;;vincristine_-_1;;Thiotepa_-_1;;Isotretinoin_-_1;;ch14.18_-_1;;IL-2_-_1
+zcc179	0.0	
+zcc180	0.0	
+zcc181	0.0	
+zcc182	0.0	
+zcc183	0.0	
+zcc184	2731.0	Cyclophosphamide_-_1;;Topotecan_-_1;;cisplatin_-_1;;etoposide_-_1;;doxorubicin_-_1;;vincristine_-_1;;busulfan_-_1;;melphalan_-_1
+zcc185	562.0	Vincristine_-_1;;dactinomycin_-_1;;Cyclophosphamide_-_1;;Cisplatin _-_1;;Doxorubicin_-_1;;imidazole carboxamide_-_1;;temozolamide_-_1
+zcc186	562.0	Vincristine_-_1;;dactinomycin_-_1;;Cyclophosphamide_-_1;;Cisplatin _-_1;;Doxorubicin_-_1;;imidazole carboxamide_-_1;;temozolamide_-_1
+zcc187	0.0	
+zcc188	0.0	
+zcc189	0.0	
+zcc337	105.0	Cisplatin _-_1;;Cyclophosphamide_-_1;;Doxorubicin_-_1;;Etoposide_-_1;;Topotecan_-_1;;vincristine_-_1
+zcc190	713.0	Cisplatin _-_1;;Cyclophosphamide_-_1;;vincristine_-_1
+zcc191	231.0	Cisplatin _-_1;;Methotrexate_-_1;;Doxorubicin_-_1;;Ifosfamide_-_1;;Etoposide_-_1
+zcc192	0.0	
+zcc193	0.0	
+zcc194	0.0	
+zcc344	329.0	Mitotane_-_1;;Cisplatin_-_1;;Etoposide_-_1;;Doxorubicin_-_1
+zcc195	0.0	
+zcc196	0.0	
+zcc197	0.0	
+zcc355	294.0	Cyclophosphamide_-_2;;Topotecan_-_2;;Isotretinoin_-_1;;ch14.18_-_1;;IL-2_-_1;;Cisplatin _-_1;;Doxorubicin_-_1;;Etoposide_-_1;;vincristine_-_1;;Busulfan_-_1;;melphalan_-_1
+zcc198	0.0	
+zcc199	413.0	Carboplatin_-_1;;Etoposide_-_1;;vincristine_-_1;;Cisplatin _-_1;;Cyclophosphamide_-_1;;Topotecan_-_1;;Vincristine_-_1;;Doxorubicin_-_1;;Busulfan_-_1;;melphalan_-_1;;Isotretinoin_-_1;;ch14.18_-_1;;IL-2_-_1
+zcc200	0.0	
+zcc365	1257.0	methotrexate_-_1;;vincristine_-_1;;Cisplatin _-_1;;Cyclophosphamide_-_1;;Topotecan_-_1;;Etoposide_-_1
+zcc201	0.0	
+zcc202	0.0	
+zcc203	0.0	
+zcc377	0.0	
+zcc204	0.0	
+zcc380	561.0	Vincristine_-_1;;Cyclophosphamide_-_1;;Cisplatin _-_1;;Pemetrexed_-_1;;Gemcitabine_-_1
+zcc205	0.0	
+zcc401	238.0	Carboplatin_-_1;;vincristine_-_1;;Vinblastine_-_1
+zcc403	358.0	Cisplatin _-_1;;Methotrexate_-_1;;Doxorubicin_-_1;;Ifosfamide_-_1;;Etoposide_-_1
+zcc425	395.0	Amifostine_-_1;;Vincristine_-_1;;Cyclophosphamide_-_1;;Cisplatin _-_1;;Pemetrexed_-_1;;Gemcitabine_-_1
+zcc206	0.0	
+zcc207	0.0	
+zcc208	0.0	
+zcc209	0.0	
+zcc210	0.0	
+zcc211	0.0	
+zcc212	0.0	
+zcc213	439.0	Carboplatin_-_1;;Etoposide_-_1;;vincristine_-_1;;Cisplatin _-_1;;Cyclophosphamide_-_1;;Topotecan_-_1;;Vincristine_-_1;;Doxorubicin_-_1;;Busulfan_-_1;;melphalan_-_1;;Isotretinoin_-_1;;ch14.18_-_1;;IL-2_-_1
+zcc214	0.0	
+zcc215	0.0	
+zcc216	727.0	Cyclophosphamide_-_1;;Topotecan_-_1;;cisplatin_-_1;;etoposide_-_1;;doxorubicin_-_1;;vincristine_-_1;;Isotretinoin_-_1;;ch14.18_-_1;;IL-2_-_1;;busulfan_-_1;;melphalan_-_1
+zcc217	0.0	
+zcc218	0.0	
+zcc219	0.0	
+zcc220	0.0	
+zcc221	0.0	
+zcc222	0.0	
+zcc223	1226.0	Carboplatin_-_1;;Etoposide_-_1;;vincristine_-_1;;Cisplatin _-_1;;Cyclophosphamide_-_1;;Topotecan_-_1;;Vincristine_-_1;;Doxorubicin_-_1;;Busulfan_-_1;;melphalan_-_1;;Isotretinoin_-_1;;ch14.18_-_1;;IL-2_-_1
+zcc224	0.0	
+zcc225	586.0	Cisplatin _-_1;;Methotrexate_-_1;;Doxorubicin_-_1;;Ifosfamide_-_1;;Etoposide_-_1
+zcc226	0.0	
+zcc227	0.0	
+zcc228	0.0	
+zcc229	750.0	Cisplatin _-_1;;Cyclophosphamide_-_1;;vincristine_-_1
+zcc230	0.0	
+zcc231	0.0	
+zcc232	71.0	Cisplatin _-_1;;Cyclophosphamide_-_1;;vincristine_-_1;;etoposide_-_1;;vismodegib_-_1
+zcc233	99.0	Carboplatin_-_1;;Etoposide_-_1;;vincristine_-_1;;Cisplatin _-_1;;Cyclophosphamide_-_1;;Topotecan_-_1;;Vincristine_-_1;;Doxorubicin_-_1
+zcc234	0.0	
+zcc235	0.0	
+zcc236	0.0	
+zcc237	0.0	
+zcc238	0.0	
+zcc239	0.0	
+zcc240	0.0	
+zcc241	0.0	
+zcc242	164.0	Carboplatin_-_1;;Etoposide_-_1;;vincristine_-_1;;Cisplatin _-_1;;Cyclophosphamide_-_1
+zcc243	0.0	
+zcc244	323.0	Amifostine_-_1;;Vincristine_-_1;;Cyclophosphamide_-_1;;Cisplatin _-_1;;Pemetrexed_-_1;;Gemcitabine_-_1
+zcc245	0.0	
+zcc246	0.0	
+zcc247	0.0	
+zcc248	0.0	
+zcc249	0.0	
+zcc250	0.0	
+zcc251	0.0	
+zcc252	0.0	
+I-H-133672-T1-2-D1-1	0.0	Ifosfamide_-_2;;Doxorubicin_-_1;;Etoposide_-_1
+I-H-134756-T1-1-D1-1	0.0	
+I-H-135065-T1-1-D1-1	0.0	Doxorubicin_-_1;;Etoposide_-_1;;Cyclophosphamide_-_1;;Vincristine_-_1;;Irinotecan_-_1;;Ifosfamide_-_1;;Dactinomycin_-_1
+I-H-135076-T1-1-D1-1	0.0	Cisplatin_-_1;;Doxorubicin_-_1;;Methotrexate_-_1;;Etoposide_-_1;;Ifosfamide_-_1
+I-H-135088-T1-2-D1-1	0.0	Cyclophosphamide_-_1;;Doxorubicin_-_1;;Cisplatin_-_1;;Etoposide_-_1;;Vincristine_-_1;;Topotecan_-_1;;Lorlatinib_-_1
+I-H-135420-T1-2-D1-1	0.0	Vincristine_-_1;;Doxorubicin_-_1;;Cyclophosphamide_-_1;;Ifosfamide_-_1;;Etoposide_-_1;;Irinotecan_-_1;;Temozolomide_-_1
+I-H-135462-T1-2-D1-1	0.0	Other_-_1
+I-H-135463-T1-2-D1-1	0.0	Other_-_4;;Irinotecan_-_1;;Temozolomide_-_1
+I-H-135467-T1-2-D1-1	27.0	Carboplatin_-_1;;Etoposide_-_1
+I-H-135973-T1-2-D1-1	26.0	Other_-_3;;Cisplatin_-_1;;Cyclophosphamide_-_1;;Doxorubicin_-_1;;Etoposide_-_1;;Vincristine_-_1
+I-H-136062-T1-1-D1-1	0.0	Cyclophosphamide_-_1;;Doxorubicin_-_1;;Etoposide_-_1;;Ifosfamide_-_1;;Vincristine_-_1
+I-H-136083-T1-2-D1-1	86.0	Etoposide_-_3;;Cyclophosphamide_-_2;;Carboplatin_-_2;;Cisplatin_-_1;;Doxorubicin_-_1;;Vincristine_-_1;;Topotecan_-_1;;Ifosfamide_-_1;;Other_-_1
+I-H-136424-T1-1-D1-1	75.0	Doxorubicin_-_3;;Dactinomycin_-_2;;Vincristine_-_2;;Cyclophosphamide_-_2;;Etoposide_-_2;;Carboplatin_-_1
+I-H-108298-T1-1-D1-1	1908.0	Other_-_2;;Cisplatin_-_1;;Doxorubicin_-_1;;Methotrexate_-_1
+I-H-108317-T1-1-D1-1	4523.0	Cyclophosphamide_-_1;;Daunorubicin_-_1;;Cytarabine_-_1;;Dexamethasone_-_1;;Mercaptopurine_-_1;;Methotrexate_-_1;;Other_-_1;;Prednisone_-_1;;Thioguanine_-_1;;Vincristine_-_1
+I-H-108319-T1-1-D1-1	80.0	Other_-_9;;Etoposide_-_5;;Irinotecan_-_5;;Cyclophosphamide_-_4;;Temozolomide_-_3;;Topotecan_-_3;;Carboplatin_-_3;;Ifosfamide_-_2;;Vincristine_-_2;;Cisplatin_-_1;;Hydrocortisone_-_1
+I-H-108333-T2-2-D1-1	3810.0	Ifosfamide_-_2;;Doxorubicin_-_1;;Etoposide_-_1;;Autologous Activated Natural Killer Cells_-_1
+I-H-121266-T1-2-D1-1	108.0	Other_-_2;;Investigational Agent_-_1;;Cyclophosphamide_-_1;;Doxorubicin_-_1;;Etoposide_-_1;;Ifosfamide_-_1;;Irinotecan_-_1;;Temozolomide_-_1;;Vincristine_-_1
+I-H-133671-T1-2-D1-1	549.0	Topotecan_-_3;;Etoposide_-_2;;Cyclophosphamide_-_2;;Cisplatin_-_1;;Carboplatin_-_1;;Thiotepa_-_1;;Other_-_1;;Irinotecan_-_1;;Temozolomide_-_1;;Vincristine_-_1;;Melphalan_-_1
+I-H-133673-T2-1-D1-1	0.0	Other_-_1;;Doxorubicin_-_1;;Dactinomycin_-_1;;Vincristine_-_1
+I-H-133674-T1-2-D1-1	0.0	Vincristine_-_1;;Doxorubicin_-_1;;Ifosfamide_-_1;;Etoposide_-_1;;Carboplatin_-_1;;Cisplatin_-_1
+I-H-133675-T1-2-D1-1	547.0	Cisplatin_-_2;;Doxorubicin_-_2;;Cyclophosphamide_-_2;;Etoposide_-_1;;Topotecan_-_1;;Vincristine_-_1;;Irinotecan_-_1;;Temozolomide_-_1
+I-H-134733-T3-2-D1-1	401.0	Cisplatin_-_1;;Doxorubicin_-_1;;Methotrexate_-_1;;Other_-_1
+I-H-134753-T1-1-D1-1	0.0	Cyclophosphamide_-_1;;Doxorubicin_-_1;;Etoposide_-_1;;Ifosfamide_-_1;;Vincristine_-_1
+I-H-134754-T1-1-D1-1	0.0	Cyclophosphamide_-_1;;Doxorubicin_-_1;;Etoposide_-_1;;Ifosfamide_-_1;;Vincristine_-_1
+I-H-134757-T1-1-D1-1	0.0	Cisplatin_-_1;;Doxorubicin_-_1;;Methotrexate_-_1;;Docetaxel_-_1;;Gemcitabine_-_1;;Etoposide_-_1;;Ifosfamide_-_1;;Irinotecan_-_1;;Temozolomide_-_1
+I-H-134768-T1-1-D1-2	648.0	Carboplatin_-_1;;Cyclophosphamide_-_1;;Doxorubicin_-_1;;Etoposide_-_1;;Ifosfamide_-_1;;Irinotecan_-_1;;Vincristine_-_1;;Other_-_1;;Vinorelbine_-_1
+IID_H134768_T02_01_WG01	1060.0	Carboplatin_-_1;;Cyclophosphamide_-_1;;Doxorubicin_-_1;;Etoposide_-_1;;Ifosfamide_-_1;;Irinotecan_-_1;;Vincristine_-_1;;Other_-_1;;Vinorelbine_-_1
+I-H-135062-T1-1-D1-1	0.0	Cyclophosphamide_-_1;;Dactinomycin_-_1;;Vincristine_-_1
+IID_H135068_T05_01_WG01	0.0	Leucovorin_-_1;;Fluorouracil_-_1;;Oxaliplatin_-_1
+I-H-135074-T1-2-D1-1	522.0	Cyclophosphamide_-_1;;Dactinomycin_-_1;;Vincristine_-_1;;Other_-_1;;Vinorelbine_-_1
+I-H-135387-T1-1-D1-1	0.0	Cisplatin_-_1;;Doxorubicin_-_1;;Methotrexate_-_1
+I-H-135392-T1-1-D1-1	86.0	Cisplatin_-_1;;Doxorubicin_-_1;;Methotrexate_-_1;;Etoposide_-_1;;Ifosfamide_-_1
+I-H-135393-T1-1-D1-1	0.0	Cyclophosphamide_-_1;;Doxorubicin_-_1;;Etoposide_-_1;;Ifosfamide_-_1;;Irinotecan_-_1;;Temozolomide_-_1;;Vincristine_-_1
+I-H-135459-T1-2-D1-1	0.0	
+I-H-135963-T1-1-D1-1	0.0	
+I-H-135963-T2-2-D1-1	0.0	
+I-H-135965-T1-1-D1-1	77.0	Cisplatin_-_1;;Doxorubicin_-_1;;Methotrexate_-_1
+I-H-135967-T1-2-D1-1	0.0	Cisplatin_-_1;;Doxorubicin_-_1;;Methotrexate_-_1;;Etoposide_-_1;;Ifosfamide_-_1;;Gemcitabine_-_1;;Docetaxel_-_1;;Sorafenib_-_1;;Everolimus_-_1
+I-H-135988-T1-2-D1-1	53.0	Etoposide_-_2;;Cyclophosphamide_-_1;;Topotecan_-_1;;Carboplatin_-_1;;Ifosfamide_-_1
+I-H-136086-T1-1-D1-1	85.0	Investigational Agent_-_3;;Ifosfamide_-_1;;Irinotecan_-_1;;Temozolomide_-_1;;Vincristine_-_1
+I-H-136134-T1-1-D1-1	0.0	
+I-H-136375-T1-1-D1-1	464.0	Cisplatin_-_1;;Doxorubicin_-_1;;Ifosfamide_-_1;;Methotrexate_-_1;;Other_-_1
+I-H-136428-T1-1-D1-1	76.0	Cisplatin_-_1;;Doxorubicin_-_1;;Ifosfamide_-_1;;Methotrexate_-_1
+IID_H136433_T07_01_WG01	1988.0	Cisplatin_-_1;;Doxorubicin_-_1;;Methotrexate_-_1;;Etoposide_-_1;;Ifosfamide_-_1;;Other_-_1
+IID_H136640_T01_01_WG01	0.0	Cyclophosphamide_-_1;;Doxorubicin_-_1;;Etoposide_-_1;;Ifosfamide_-_1;;Vincristine_-_1
+IID_H136641_T01_01_WG01	0.0	Cisplatin_-_1;;Doxorubicin_-_1;;Methotrexate_-_1
+IID_H136648_T01_01_WG01	137.0	Cyclophosphamide_-_2;;Etoposide_-_2;;Vincristine_-_2;;Cisplatin_-_1;;Doxorubicin_-_1;;Irinotecan_-_1;;Investigational Agent_-_1;;Temozolomide_-_1;;Carboplatin_-_1;;Ifosfamide_-_1;;Topotecan_-_1
+IID_H136649_T01_01_WG01	692.0	Other_-_4;;Cyclophosphamide_-_2;;Topotecan_-_2;;Doxorubicin_-_1;;Vincristine_-_1;;Irinotecan_-_1;;Temozolomide_-_1;;Carboplatin_-_1;;Etoposide_-_1;;Ifosfamide_-_1
+IID_H156407_T01_01_WG01	360.0	Dactinomycin_-_1;;Cyclophosphamide_-_1;;Vincristine_-_1;;Vinorelbine_-_1;;Etoposide_-_1;;Ifosfamide_-_1;;Irinotecan_-_1;;Other_-_1
+IID_H156409_T01_01_WG01	0.0	Other_-_1;;Cisplatin_-_1;;Doxorubicin_-_1;;Methotrexate_-_1
+IID_H156416_T01_01_WG01	171.0	Other_-_2
+IID_H156418_T01_01_WG01	0.0	Carboplatin_-_2;;Cyclophosphamide_-_2;;Doxorubicin_-_2
+IID_H158181_T01_01_WG01	0.0	
+IID_H158182_T01_01_WG01	0.0	Cyclophosphamide_-_3;;Topotecan_-_2;;Doxorubicin_-_1;;Vincristine_-_1
+IID_H158183_T01_01_WG01	88.0	Cyclophosphamide_-_3;;Cisplatin_-_2;;Etoposide_-_2;;Topotecan_-_2;;Irinotecan_-_1;;Temozolomide_-_1;;Other_-_1;;Doxorubicin_-_1;;Vincristine_-_1
+IID_H158184_T01_01_WG01	0.0	Carboplatin_-_1;;Ifosfamide_-_1;;Etoposide_-_1;;Other_-_1
+IID_H158186_T01_01_WG01	1647.0	Other_-_2;;Cyclophosphamide_-_2;;Vincristine_-_2;;Cisplatin_-_1;;Etoposide_-_1;;Irinotecan_-_1;;Temozolomide_-_1;;Topotecan_-_1
+IID_H158186_T02_01_WG01	952.0	Other_-_2;;Cyclophosphamide_-_2;;Vincristine_-_2;;Cisplatin_-_1;;Etoposide_-_1;;Irinotecan_-_1;;Temozolomide_-_1;;Topotecan_-_1
+IID_H158223_T01_01_WG01	1855.0	Cisplatin_-_1;;Doxorubicin_-_1;;Methotrexate_-_1;;Other_-_1;;Docetaxel_-_1;;Gemcitabine_-_1;;Etoposide_-_1;;Ifosfamide_-_1
+IID_H158271_T01_01_WG01	0.0	
+IID_H158493_T01_01_WG01	0.0	Cisplatin_-_1;;Doxorubicin_-_1;;Methotrexate_-_1
