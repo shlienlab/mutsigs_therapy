@@ -62,7 +62,7 @@ python3 -m venv /your_path/your_env_name
 
 2. Activate the virtual environment
 ```sh
-source/your_path/your_env_name
+source /your_path/your_env_name/bin/activate
 ```
 
 3. Install requirements (from inside the root directory of the repository)
