@@ -26,7 +26,7 @@ This repository includes
 - shap==0.46.0
 - ipykernel==6.25.2
 - ipython==8.15.0
-- pandas==2.1.0
+- pandas>2.1.0
 - numpy==1.24.4
 - scipy==1.11.2
 - matplotlib==3.7.3
