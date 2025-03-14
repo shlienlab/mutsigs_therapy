@@ -81,7 +81,7 @@ pip install -r requirements.txt
 After installation, you can open and run the Jupyter notebooks in any compatible (e.g., VS Code).
 If you created a virtual environment, make sure to select it as your kernel.
 
-'\*' Some source files might be missing due to GitHub's file size limit. These will be uploaded somewhere else soon. 
+\* Some source files might be missing due to GitHub's file size limit. These will be uploaded somewhere else soon. 
 
 ### Citation
 
