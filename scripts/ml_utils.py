@@ -702,7 +702,7 @@ def shap_swarm_single(mat_df, neg_samples, pos_samples):
 
 
 
-def get_SHAP_features(mat_df, class_df, pret_samples, n_iters):
+def get_SHAP_features(mat_df, class_df, pret_samples, var_class, n_iters):
     """
     Computes SHAP-based feature importance for multiple drugs using an iterative approach.
 
@@ -758,8 +758,10 @@ def get_SHAP_features(mat_df, class_df, pret_samples, n_iters):
                 pret_random = pret_samples
 
             model, features = shap_swarm_single(mat_df, pret_random, drug_samples)
-
-            features_df = SV_feats_2df(features, f'{i}_{drug}')
+            if var_class == 'SV':
+                features_df = SV_feats_2df(features, f'{i}_{drug}')
+            else:
+                features_df = feats_2df(features, f'{i}_{drug}')
             features_df_Q = pd.concat([features_df_Q, features_df], axis=1)
 
         features_df_Q[f'sum_{drug}'] = features_df_Q[[x for x in features_df_Q.columns if x.endswith(f'{drug}')]].sum(axis=1)

@@ -401,11 +401,11 @@ def get_drivers_type_state(dri_df, md_df, burden=None):
     print(rel_df)
     print(abs_df)
     """
-    dri_df['Type'] = [md_df.loc[x, 'Type'] for x in dri_df.Tumor_Sample_Barcode]
+    dri_df['Type'] = [md_df.loc[x, 'Type'] for x in dri_df.Sample_ID]
 
     if burden == 'low':
         md_df = md_df[md_df.Burden==burden].copy()
-        dri_df = dri_df[dri_df.Tumor_Sample_Barcode.isin(md_df.index.tolist())]
+        dri_df = dri_df[dri_df.Sample_ID.isin(md_df.index.tolist())]
     
     conditions = ['All', 'Primary-Naive', 'Primary-Treated', 'Advanced-Naive', 'Advanced-Treated']
     types = md_df.Type.value_counts()[md_df.Type.value_counts()>=10].index.tolist()
@@ -419,9 +419,9 @@ def get_drivers_type_state(dri_df, md_df, burden=None):
         drivers_df = dri_df[dri_df.Type==catype]
         sub_md = md_df[md_df.Type==catype]
 
-        zero_dri = [x for x in sub_md.index if x not in drivers_df.Tumor_Sample_Barcode.unique().tolist()]
-        one_dri = drivers_df.Tumor_Sample_Barcode.value_counts()[drivers_df.Tumor_Sample_Barcode.value_counts()==1].index.tolist()
-        two_dri = drivers_df.Tumor_Sample_Barcode.value_counts()[drivers_df.Tumor_Sample_Barcode.value_counts()>1].index.tolist()
+        zero_dri = [x for x in sub_md.index if x not in drivers_df.Sample_ID.unique().tolist()]
+        one_dri = drivers_df.Sample_ID.value_counts()[drivers_df.Sample_ID.value_counts()==1].index.tolist()
+        two_dri = drivers_df.Sample_ID.value_counts()[drivers_df.Sample_ID.value_counts()>1].index.tolist()
 
         zero_rel = []
         ones_rel = []
