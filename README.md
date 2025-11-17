@@ -5,11 +5,11 @@
 
 
 
-### v 0.1
+### v 0.2
 
 This repository includes
 
-* 5 Notebooks to reproduce Main Figures
+* 6 Notebooks to reproduce Main Figures
 * 10 Notebooks to reproduce Extended Data Figures
 * 1 Notebook to reproduce Supplementary Figures
 * 1 helper script with all the plotting functions
