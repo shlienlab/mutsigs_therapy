@@ -1,0 +1,612 @@
+Tumor_name_short	Tumor_name_full
+YST	Yolk Sac Tumor
+MFT	Myofibroblastic Tumor
+MFT	Myofibroblastic Tumor
+MFT	Myofibroblastic Tumor
+PGL	Paraganglioma
+PGL	Paraganglioma
+NBL	Neuroblastoma
+NBL	Neuroblastoma
+CRC	Colorectal Carcinoma
+OST	Osteosarcoma
+OST	Osteosarcoma
+OST	Osteosarcoma
+MN	Meningioma
+MN	Meningioma
+PTC	Papillary Carcinoma of Thyroid
+BALL	B-cell Lymphoblastic Leukemia
+ERMS	Embryonal Rhabdomyosarcoma
+ERMS	Embryonal Rhabdomyosarcoma
+ERMS	Embryonal Rhabdomyosarcoma
+ERMS	Embryonal Rhabdomyosarcoma
+HGG	High Grade Glioma
+NBL	Neuroblastoma
+NBL	Neuroblastoma
+MPNST	Malignant Peripheral Nerve Sheath Tumor
+US	Undifferentiated Sarcoma
+ARMS	Alveolar Rhabdomyosarcoma
+ARMS	Alveolar Rhabdomyosarcoma
+EWS	Ewing Sarcoma
+GS	Gliosarcoma
+US	Undifferentiated Sarcoma
+NBL	Neuroblastoma
+US	Undifferentiated Sarcoma
+PTC	Papillary Carcinoma of Thyroid
+BALL	B-cell Lymphoblastic Leukemia
+BALL	B-cell Lymphoblastic Leukemia
+BALL	B-cell Lymphoblastic Leukemia
+BALL	B-cell Lymphoblastic Leukemia
+BALL	B-cell Lymphoblastic Leukemia
+BALL	B-cell Lymphoblastic Leukemia
+GIST	Gastrointestinal Stromal Tumor
+HB	Hepatoblastoma
+HB	Hepatoblastoma
+HB	Hepatoblastoma
+ERMS	Embryonal Rhabdomyosarcoma
+NBL	Neuroblastoma
+SS	Synovial Sarcoma
+SS	Synovial Sarcoma
+EPD	Ependymoma
+RCC	Renal Cell Carcinoma
+HCC	Hepatocellular Carcinoma
+AL	Acute Leukemia
+LGG	Low Grade Glioma
+NBL	Neuroblastoma
+NBL	Neuroblastoma
+EPD	Ependymoma
+EPD	Ependymoma
+HGG	High Grade Glioma
+HGG	High Grade Glioma
+HGG	High Grade Glioma
+NE	Neuroepithelioma
+US	Undifferentiated Sarcoma
+BNHL	B Cell Lymphoma
+RCC	Renal Cell Carcinoma
+HGG	High Grade Glioma
+NBL	Neuroblastoma
+MBL	Medulloblastoma
+NBL	Neuroblastoma
+ATRT	Atypical Teratoid Rhabdoid Tumor
+US	Undifferentiated Sarcoma
+US	Undifferentiated Sarcoma
+HGG	High Grade Glioma
+WT	Nephroblastoma (Wilms Tumor)
+WT	Nephroblastoma (Wilms Tumor)
+WT	Nephroblastoma (Wilms Tumor)
+NBL	Neuroblastoma
+NBL	Neuroblastoma
+EPD	Ependymoma
+EWS	Ewing Sarcoma
+OST	Osteosarcoma
+TNHL	T-Cell Lymphoma
+ERMS	Embryonal Rhabdomyosarcoma
+SCST	Sertoli-Leydig Cell Tumor
+US	Undifferentiated Sarcoma
+US	Undifferentiated Sarcoma
+OST	Osteosarcoma
+LPD	T-cell Lymphoproliferative Disease 
+NBL	Neuroblastoma
+NBL	Neuroblastoma
+GN/NBL	Ganglioneuroblastoma
+NBL	Neuroblastoma
+NBL	Neuroblastoma
+NBL	Neuroblastoma
+ERMS	Embryonal Rhabdomyosarcoma
+ERMS	Embryonal Rhabdomyosarcoma
+MPAL	Mixed Phenotype Acute Leukemia
+ES	Epithelioid Sarcoma
+PGL	Paraganglioma
+PGL	Paraganglioma
+NBL	Neuroblastoma
+SS	Synovial Sarcoma
+US	Undifferentiated Sarcoma
+OST	Osteosarcoma
+AMKL	Acute Megakaryoblastic Leukaemia
+AMKL	Acute Megakaryoblastic Leukaemia
+EPD	Ependymoma
+EWS	Ewing Sarcoma
+NBL	Neuroblastoma
+NBL	Neuroblastoma
+HGG	High Grade Glioma
+PTC	Papillary Carcinoma of Thyroid
+MBL	Medulloblastoma
+AF	Aggressive Fibromatosis
+PTC	Papillary Carcinoma of Thyroid
+NBL	Neuroblastoma
+NBL	Neuroblastoma
+WT	Nephroblastoma (Wilms Tumor)
+WT	Nephroblastoma (Wilms Tumor)
+WT	Nephroblastoma (Wilms Tumor)
+BALL	B-cell Lymphoblastic Leukemia
+MFT	Myofibroblastic Tumor
+EWS	Ewing Sarcoma
+BALL	B-cell Lymphoblastic Leukemia
+ACC	Adrenal Cortical Carcinoma
+NBL	Neuroblastoma
+NBL	Neuroblastoma
+OST	Osteosarcoma
+BALL	B-cell Lymphoblastic Leukemia
+BALL	B-cell Lymphoblastic Leukemia
+OST	Osteosarcoma
+AML	Acute Monocytic Leukemia
+ARMS	Alveolar Rhabdomyosarcoma
+NBL	Neuroblastoma
+MRT	Malignant Rhabdoid Tumor
+MRT	Malignant Rhabdoid Tumor
+MRT	Malignant Rhabdoid Tumor
+MPN	Myeloproliferative Neoplasm
+MPN	Myeloproliferative Neoplasm
+MPN	Myeloproliferative Neoplasm
+CRC	Colorectal Carcinoma
+OST	Osteosarcoma
+BALL	B-cell Lymphoblastic Leukemia
+NBL	Neuroblastoma
+LB	Lipoblastomatosis
+NBL	Neuroblastoma
+HGG	High Grade Glioma
+NBL	Neuroblastoma
+BALL	B-cell Lymphoblastic Leukemia
+AML	Acute Monocytic Leukemia
+BALL	B-cell Lymphoblastic Leukemia
+BALL	B-cell Lymphoblastic Leukemia
+ES	Epithelioid Sarcoma
+OST	Osteosarcoma
+BALL	B-cell Lymphoblastic Leukemia
+OST	Osteosarcoma
+ERMS	Embryonal Rhabdomyosarcoma
+SS	Synovial Sarcoma
+BALL	B-cell Lymphoblastic Leukemia
+ERMS	Embryonal Rhabdomyosarcoma
+ERMS	Embryonal Rhabdomyosarcoma
+OST	Osteosarcoma
+BALL	B-cell Lymphoblastic Leukemia
+BALL	B-cell Lymphoblastic Leukemia
+NBL	Neuroblastoma
+NBL	Neuroblastoma
+NBL	Neuroblastoma
+LS	Liposarcoma
+ERMS	Embryonal Rhabdomyosarcoma
+OST	Osteosarcoma
+NBL	Neuroblastoma
+ARMS	Alveolar Rhabdomyosarcoma
+HGG	High Grade Glioma
+WT	Nephroblastoma (Wilms Tumor)
+WT	Nephroblastoma (Wilms Tumor)
+WT	Nephroblastoma (Wilms Tumor)
+HGG	High Grade Glioma
+MS	Myeloid Sarcoma
+MS	Myeloid Sarcoma
+PT	Phyllodes Tumor
+ERMS	Embryonal Rhabdomyosarcoma
+GIST	Gastrointestinal Stromal Tumor
+TNHL	T-Cell Lymphoma
+MRT	Malignant Rhabdoid Tumor
+NBL	Neuroblastoma
+AL	Acute Leukemia
+MAO	Mucinous Adenocarcinoma (Ovarian)
+MAO	Mucinous Adenocarcinoma (Ovarian)
+MM	Malignant Melanoma
+PNET	Primitive Neuroectodermal Tumor
+ARMS	Alveolar Rhabdomyosarcoma
+EMC	Epithelial-Myoepithelial Carcinoma
+ARMS	Alveolar Rhabdomyosarcoma
+MFT	Myofibroblastic Tumor
+TALL	T-cell Lymphoblastic Leukemia
+NBL	Neuroblastoma
+CD	Chordoma
+CD	Chordoma
+CD	Chordoma
+NBL	Neuroblastoma
+EWS	Ewing Sarcoma
+ERMS	Embryonal Rhabdomyosarcoma
+NBL	Neuroblastoma
+EWS	Ewing Sarcoma
+NBL	Neuroblastoma
+EPD	Ependymoma
+ERMS	Embryonal Rhabdomyosarcoma
+HGG	High Grade Glioma
+MBL	Medulloblastoma
+OST	Osteosarcoma
+DSRCT	Desmoplastic Small Round Cell Tumor
+DSRCT	Desmoplastic Small Round Cell Tumor
+HGG	High Grade Glioma
+HCC	Hepatocellular Carcinoma
+NBL	Neuroblastoma
+NBL	Neuroblastoma
+ARMS	Alveolar Rhabdomyosarcoma
+HGG	High Grade Glioma
+NBL	Neuroblastoma
+EWS	Ewing Sarcoma
+OST	Osteosarcoma
+GCT	Germ Cell Tumor
+EMS	Embryonal Sarcoma
+NBL	Neuroblastoma
+NBL	Neuroblastoma
+OST	Osteosarcoma
+NBL	Neuroblastoma
+NBL	Neuroblastoma
+NBL	Neuroblastoma
+WT	Nephroblastoma (Wilms Tumor)
+HGG	High Grade Glioma
+BALL	B-cell Lymphoblastic Leukemia
+BALL	B-cell Lymphoblastic Leukemia
+OF	Ossifying Fibroma
+AML	Acute Monocytic Leukemia
+AML	Acute Monocytic Leukemia
+JMML	Juvenile Myelomonocytic Leukemia
+MT	Mesenchymal Tumor
+EPD	Ependymoma
+ARMS	Alveolar Rhabdomyosarcoma
+NBL	Neuroblastoma
+RCC	Renal Cell Carcinoma
+DSRCT	Desmoplastic Small Round Cell Tumor
+HGG	High Grade Glioma
+HGG	High Grade Glioma
+NBL	Neuroblastoma
+DSRCT	Desmoplastic Small Round Cell Tumor
+MPN	Myeloproliferative Neoplasm
+WT	Nephroblastoma (Wilms Tumor)
+HGG	High Grade Glioma
+SS	Synovial Sarcoma
+ACC	Adrenal Cortical Carcinoma
+ACC	Adrenal Cortical Carcinoma
+MRT	Malignant Rhabdoid Tumor
+NBL	Neuroblastoma
+HGG	High Grade Glioma
+HGG	High Grade Glioma
+HGG	High Grade Glioma
+ES	Epithelioid Sarcoma
+US	Undifferentiated Sarcoma
+AM	Atypical Meningioma
+HGG	High Grade Glioma
+HB	Hepatoblastoma
+ATRT	Atypical Teratoid Rhabdoid Tumor
+OST	Osteosarcoma
+OST	Osteosarcoma
+AF	Aggressive Fibromatosis
+EWS	Ewing Sarcoma
+EWS	Ewing Sarcoma
+HGG	High Grade Glioma
+ARMS	Alveolar Rhabdomyosarcoma
+HB	Hepatoblastoma
+AML/DS	Myeloid Leukemia associated with Down Syndrome
+AML/DS	Myeloid Leukemia associated with Down Syndrome
+DMG	Diffuse Midline Glioma
+EWS	Ewing Sarcoma
+DMG	Diffuse Midline Glioma
+DMG	Diffuse Midline Glioma
+US	Undifferentiated Sarcoma
+CPC	Choroid Plexus Carcinoma
+WT	Nephroblastoma (Wilms Tumor)
+LGG	Low Grade Glioma
+DMG	Diffuse Midline Glioma
+MBL	Medulloblastoma
+OST	Osteosarcoma
+HGG	High Grade Glioma
+ATRT	Atypical Teratoid Rhabdoid Tumor
+DMG	Diffuse Midline Glioma
+DMG	Diffuse Midline Glioma
+NBL	Neuroblastoma
+Other	"Other, high grade undifferentiated malignancy"
+NBL	Neuroblastoma
+HGNET	High Grade Neuroepithelial Tumor
+OST	Osteosarcoma
+WT	Nephroblastoma (Wilms Tumor)
+HCC	Hepatocellular Carcinoma
+MBL	Medulloblastoma
+EWS	Ewing Sarcoma
+HANS	Hemangiosarcoma
+EWS	Ewing Sarcoma
+ASPS	Alveolar Soft Part Sarcoma
+GIST	Gastrointestinal Stromal Tumor
+DMG	Diffuse Midline Glioma
+SPINDLE	"Spindle Cell Tumor, unclear diagnosis"
+HGG	High Grade Glioma
+ES	Epithelioid Sarcoma
+EWS	Ewing Sarcoma
+HGG	High Grade Glioma
+AML	Acute Monocytic Leukemia
+ARMS	Alveolar Rhabdomyosarcoma
+DMG	Diffuse Midline Glioma
+EWS	Ewing Sarcoma
+DES	Desmoid Tumor
+ARMS	Alveolar Rhabdomyosarcoma
+MRT	Malignant Rhabdoid Tumor
+HGG	High Grade Glioma
+EWS	Ewing Sarcoma
+ARMS	Alveolar Rhabdomyosarcoma
+NBL	Neuroblastoma
+BALL	B-cell Lymphoblastic Leukemia
+SPINDLE	"Spindle Cell Tumor, unclear diagnosis"
+WT	Nephroblastoma (Wilms Tumor)
+MRT	Malignant Rhabdoid Tumor
+HGG	High Grade Glioma
+EWS	Ewing Sarcoma
+EWS	Ewing Sarcoma
+ARMS	Alveolar Rhabdomyosarcoma
+IFS	Infantile Fibrosarcoma
+NSCC	Non-Small Cell Carcinoma
+OST	Osteosarcoma
+MLN	Melanoma
+HGG	High Grade Glioma
+HGG	High Grade Glioma
+DMG	Diffuse Midline Glioma
+BALL	B-cell Lymphoblastic Leukemia
+BALL	B-cell Lymphoblastic Leukemia
+MN	Meningioma
+NBL	Neuroblastoma
+CPC	Choroid Plexus Carcinoma
+SS	Synovial Sarcoma
+ARMS	Alveolar Rhabdomyosarcoma
+EPD	Ependymoma
+MBL	Medulloblastoma
+HCC	Hepatocellular Carcinoma
+HGG	High Grade Glioma
+EWS	Ewing Sarcoma
+MPNST	Malignant Peripheral Nerve Sheath Tumor
+AML	Acute Monocytic Leukemia
+DMG	Diffuse Midline Glioma
+MBL	Medulloblastoma
+ATRT	Atypical Teratoid Rhabdoid Tumor
+BL	Burkitt Lymphoma
+EPD	Ependymoma
+HGG	High Grade Glioma
+ETMR	Embryonal Tumor with Multilayered Rosettes
+BALL	B-cell Lymphoblastic Leukemia
+BL	Burkitt Lymphoma
+ETMR	Embryonal Tumor with Multilayered Rosettes
+NBL	Neuroblastoma
+LGG	Low Grade Glioma
+AML	Acute Monocytic Leukemia
+EWS	Ewing Sarcoma
+EPD	Ependymoma
+NBL	Neuroblastoma
+GCT	Germ Cell Tumor
+EMBCNS	Embryonal CNS Tumor
+TALL	T-cell Lymphoblastic Leukemia
+ARMS	Alveolar Rhabdomyosarcoma
+CNBL	"CNS Embryonal Tumor, CNS Neuroblastoma"
+AML	Acute Monocytic Leukemia
+ACC	Adrenal Cortical Carcinoma
+HGG	High Grade Glioma
+LGG	Low Grade Glioma
+DSRCT	Desmoplastic Small Round Cell Tumor
+HGG	High Grade Glioma
+EWS	Ewing Sarcoma
+ERMS	Embryonal Rhabdomyosarcoma
+EPD	Ependymoma
+DMG	Diffuse Midline Glioma
+ERMS	Embryonal Rhabdomyosarcoma
+HCC	Hepatocellular Carcinoma
+HGG	High Grade Glioma
+LGG	Low Grade Glioma
+OST	Osteosarcoma
+AML	Acute Monocytic Leukemia
+OST	Osteosarcoma
+HGG	High Grade Glioma
+DMG	Diffuse Midline Glioma
+OST	Osteosarcoma
+ARMS	Alveolar Rhabdomyosarcoma
+ATRT	Atypical Teratoid Rhabdoid Tumor
+TALL	T-cell Lymphoblastic Leukemia
+AML	Acute Monocytic Leukemia
+GGL	Ganglioma
+OST	Osteosarcoma
+EMBCNS	Embryonal CNS Tumor
+EMBCNS	Embryonal CNS Tumor
+Other	"Other, large cell malignancy, lung"
+Other	"Other, large cell malignancy, lung"
+HTL	Hepatosplenic T-cell Lymphoma
+MRT	Malignant Rhabdoid Tumor
+BALL	B-cell Lymphoblastic Leukemia
+BALL	B-cell Lymphoblastic Leukemia
+HGG	High Grade Glioma
+NBL	Neuroblastoma
+ARMS	Alveolar Rhabdomyosarcoma
+ATRT	Atypical Teratoid Rhabdoid Tumor
+HGG	High Grade Glioma
+EWS	Ewing Sarcoma
+SPTL	Subcutaneous Panniculitis-like T-cell Lymphoma
+HOG	Hodgkin Lymphoma
+EWS	Ewing Sarcoma
+BALL	B-cell Lymphoblastic Leukemia
+NBL	Neuroblastoma
+BALL	B-cell Lymphoblastic Leukemia
+US	Undifferentiated Sarcoma
+ANS	Angiosarcoma
+ACC	Adrenal Cortical Carcinoma
+NBL	Neuroblastoma
+MPNST	Malignant Peripheral Nerve Sheath Tumor
+NBL	Neuroblastoma
+HCS	Histiocytic Sarcoma
+EPD	Ependymoma
+DMG	Diffuse Midline Glioma
+ERMS	Embryonal Rhabdomyosarcoma
+HGG	High Grade Glioma
+NBL	Neuroblastoma
+TALL	T-cell Lymphoblastic Leukemia
+ERMS	Embryonal Rhabdomyosarcoma
+HGG	High Grade Glioma
+MET	Myoepithelial Tumor
+EWS	Ewing Sarcoma
+MPNST	Malignant Peripheral Nerve Sheath Tumor
+WT	Nephroblastoma (Wilms Tumor)
+ERMS	Embryonal Rhabdomyosarcoma
+OST	Osteosarcoma
+EWS	Ewing Sarcoma
+AML	Acute Monocytic Leukemia
+HGG	High Grade Glioma
+BALL	B-cell Lymphoblastic Leukemia
+DMG	Diffuse Midline Glioma
+ARMS	Alveolar Rhabdomyosarcoma
+NBL	Neuroblastoma
+HOG	Hodgkin Lymphoma
+BALL	B-cell Lymphoblastic Leukemia
+AML	Acute Monocytic Leukemia
+HGG	High Grade Glioma
+NBL	Neuroblastoma
+EPD	Ependymoma
+MRT	Malignant Rhabdoid Tumor
+ATRT	Atypical Teratoid Rhabdoid Tumor
+HGG	High Grade Glioma
+AML	Acute Monocytic Leukemia
+DMG	Diffuse Midline Glioma
+TALL	T-cell Lymphoblastic Leukemia
+MRT	Malignant Rhabdoid Tumor
+MRT	Malignant Rhabdoid Tumor
+EPD	Ependymoma
+ERMS	Embryonal Rhabdomyosarcoma
+ACPP	
+HGG	High Grade Glioma
+AML	Acute Monocytic Leukemia
+WT	Nephroblastoma (Wilms Tumor)
+ASPS	Alveolar Soft Part Sarcoma
+RHAB	Rhabdoid Tumor of Small Cell Type
+MPNST	Malignant Peripheral Nerve Sheath Tumor
+DMG	Diffuse Midline Glioma
+NBL	Neuroblastoma
+OSBL	Osteoblastoma
+EWS	Ewing Sarcoma
+SPPT	Solid Pseudopapillary Neoplasm of Pancreas
+PBL	Pineoblastoma
+HGG	High Grade Glioma
+NBL	Neuroblastoma
+ATRT	Atypical Teratoid Rhabdoid Tumor
+ATRT	Atypical Teratoid Rhabdoid Tumor
+MPNST	Malignant Peripheral Nerve Sheath Tumor
+SPINDLE	"Spindle Cell Tumor, unclear diagnosis"
+HGG	High Grade Glioma
+NBL	Neuroblastoma
+PBL	Pineoblastoma
+OST	Osteosarcoma
+DMG	Diffuse Midline Glioma
+DMG	Diffuse Midline Glioma
+ETMR	Embryonal Tumor with Multilayered Rosettes
+ACC	Adrenal Cortical Carcinoma
+AML	Acute Monocytic Leukemia
+TALL	T-cell Lymphoblastic Leukemia
+GGL	Ganglioma
+NBL	Neuroblastoma
+TALL	T-cell Lymphoblastic Leukemia
+NBL	Neuroblastoma
+AML	Acute Monocytic Leukemia
+EPD	Ependymoma
+AML	Acute Monocytic Leukemia
+MRT	Malignant Rhabdoid Tumor
+DMG	Diffuse Midline Glioma
+EPD	Ependymoma
+TALL	T-cell Lymphoblastic Leukemia
+MBL	Medulloblastoma
+Other	"Other, carcinoma, gastric"
+HGG	High Grade Glioma
+OST	Osteosarcoma
+MBL	Medulloblastoma
+EWS	Ewing Sarcoma
+US	Undifferentiated Sarcoma
+HGG	High Grade Glioma
+NBL	Neuroblastoma
+BALL	B-cell Lymphoblastic Leukemia
+EPD	Ependymoma
+NBL	Neuroblastoma
+MBL	Medulloblastoma
+HGG	High Grade Glioma
+HCC	Hepatocellular Carcinoma
+MNET	Melanotic Neuroectodermal Tumor of Infancy
+MRT	Malignant Rhabdoid Tumor
+MNET	Melanotic Neuroectodermal Tumor of Infancy
+DMG	Diffuse Midline Glioma
+EWS	Ewing Sarcoma
+NBL	Neuroblastoma
+TALL	T-cell Lymphoblastic Leukemia
+OST	Osteosarcoma
+BALL	B-cell Lymphoblastic Leukemia
+EWS	Ewing Sarcoma
+MBL	Medulloblastoma
+MBL	Medulloblastoma
+BALL	B-cell Lymphoblastic Leukemia
+HGG	High Grade Glioma
+MBL	Medulloblastoma
+NBL	Neuroblastoma
+HGG	High Grade Glioma
+ARMS	Alveolar Rhabdomyosarcoma
+HGG	High Grade Glioma
+HGG	High Grade Glioma
+DMG	Diffuse Midline Glioma
+DMG	Diffuse Midline Glioma
+CPC	Choroid Plexus Carcinoma
+DMG	Diffuse Midline Glioma
+NBL	Neuroblastoma
+PNET	Primitive Neuroectodermal Tumor
+MBL	Medulloblastoma
+DMG	Diffuse Midline Glioma
+TALL	T-cell Lymphoblastic Leukemia
+ASPS	Alveolar Soft Part Sarcoma
+MET	Myoepithelial Tumor
+DMG	Diffuse Midline Glioma
+ALCL	Anaplastic Large Cell Lymphoma
+DMG	Diffuse Midline Glioma
+ARMS	Alveolar Rhabdomyosarcoma
+HGG	High Grade Glioma
+IFS	Infantile Fibrosarcoma
+US	Undifferentiated Sarcoma
+SCS	Spindle Cell Sarcoma
+ERMS	Embryonal Rhabdomyosarcoma
+OST	Osteosarcoma
+NBL	Neuroblastoma
+DSRCT	Desmoplastic Small Round Cell Tumor
+CCA	Clear Cell Adenocarcinoma
+NBL	Neuroblastoma
+NBL	Neuroblastoma
+NBL	Neuroblastoma
+EWS	Ewing Sarcoma
+NBL	Neuroblastoma
+WT	Nephroblastoma (Wilms Tumor)
+OST	Osteosarcoma
+HGG	High Grade Glioma
+NBL	Neuroblastoma
+SS	Synovial Sarcoma
+DSRCT	Desmoplastic Small Round Cell Tumor
+RBL	Retinoblastoma
+WT	Nephroblastoma (Wilms Tumor)
+HB	Hepatoblastoma
+NEO	Malignant Neoplasm
+OST	Osteosarcoma
+CHS	Mesenchymal Chondrosarcoma
+SAR	Sarcoma
+OST	Osteosarcoma
+ERMS	Embryonal Rhabdomyosarcoma
+ERMS	Embryonal Rhabdomyosarcoma
+ERMS	Embryonal Rhabdomyosarcoma
+SRCC	Signet Ring Cell Carcinoma
+ERMS	Embryonal Rhabdomyosarcoma
+OST	Osteosarcoma
+OST	Osteosarcoma
+US	Undifferentiated Sarcoma
+CHS	Mesenchymal Chondrosarcoma
+CHS	Mesenchymal Chondrosarcoma
+CHS	Mesenchymal Chondrosarcoma
+OST	Osteosarcoma
+OST	Osteosarcoma
+NBL	Neuroblastoma
+EWS	Ewing Sarcoma
+NBL	Neuroblastoma
+OST	Osteosarcoma
+OST	Osteosarcoma
+OST	Osteosarcoma
+US	Undifferentiated Sarcoma
+OST	Osteosarcoma
+NBL	Neuroblastoma
+NBL	Neuroblastoma
+ARMS	Alveolar Rhabdomyosarcoma
+OST	Osteosarcoma
+LMS	Leiomyosarcoma
+NBL	Neuroblastoma
+SS	Synovial Sarcoma
+NBL	Neuroblastoma
+NBL	Neuroblastoma
+NBL	Neuroblastoma
+NBL	Neuroblastoma
+NBL	Neuroblastoma
+OST	Osteosarcoma
+NBL	Neuroblastoma
+OST	Osteosarcoma

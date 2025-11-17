@@ -206,7 +206,7 @@ def sigs_melt(sigs_df):
 
 
 
-def get_drivers_table(drivers_df, md_df, sample_col, burden=None):
+def get_drivers_table(drivers_df, md_df, sample_col, percentage=True, burden=None):
     """
     Generates a summary table of the distribution of driver mutations across different sample groups.
 
@@ -262,9 +262,14 @@ def get_drivers_table(drivers_df, md_df, sample_col, burden=None):
     two_dri = drivers_df[sample_col].value_counts()[drivers_df[sample_col].value_counts()>1].index.tolist()
     allist = [len(zero_dri)/n_samples, len(one_dri)/n_samples, len(two_dri)/n_samples]
 
-    zd = md_df.loc[zero_dri].Thr_State.value_counts()/md_df.Thr_State.value_counts()
-    od = md_df.loc[one_dri].Thr_State.value_counts()/md_df.Thr_State.value_counts()
-    td = md_df.loc[two_dri].Thr_State.value_counts()/md_df.Thr_State.value_counts()
+    if percentage:
+        zd = md_df.loc[zero_dri].Thr_State.value_counts()/md_df.Thr_State.value_counts()
+        od = md_df.loc[one_dri].Thr_State.value_counts()/md_df.Thr_State.value_counts()
+        td = md_df.loc[two_dri].Thr_State.value_counts()/md_df.Thr_State.value_counts()
+    else:
+        zd = md_df.loc[zero_dri].Thr_State.value_counts()
+        od = md_df.loc[one_dri].Thr_State.value_counts()
+        td = md_df.loc[two_dri].Thr_State.value_counts()
 
     ddf = pd.concat([zd, od, td], axis=1)
     ddf.columns = ['Zero', 'One', 'Two+']
@@ -320,9 +325,9 @@ def get_drivers_mat(drivers, md_df, sample_col, burden=None):
     --------------
     result = get_drivers_mat(drivers, md_df, sample_col='sampleID', burden='low')
     """
-    low_samples = md_df[md_df.Burden=='low'].index.tolist()
+    '''low_samples = md_df[md_df.Burden=='low'].index.tolist()
     if burden == 'low':
-        drivers = drivers[drivers[sample_col].isin(low_samples)]
+        drivers = drivers[drivers[sample_col].isin(low_samples)]'''
     
     print(drivers.shape)
 

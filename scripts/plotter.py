@@ -434,6 +434,11 @@ def plotTMB_therapy_v2(inputDF, pvals, scale, color_dict, order=[], Yrange = "ad
     plt.tick_params(axis = 'both', which = 'both', length = 0)
     plt.hlines(yticks_loc,0,2*ngroups,colors = 'black',linestyles = "dashed",linewidth = 0.5,zorder = 1)
 
+
+    for i in range(1,ngroups,1):
+        x_line = i*2
+        plt.axvline(x_line, color='darkgray')
+
     bar_y = ymax-1.3
     for index, row in pvals.iterrows():
         x1 = 2 * (row['first']+1) + 1
@@ -463,7 +468,7 @@ def plotTMB_therapy_v2(inputDF, pvals, scale, color_dict, order=[], Yrange = "ad
         x_values = list(np.linspace(start = X_start, stop = X_end, num = counts[i]))
         plt.scatter(x_values,y_values,color = "darkgrey",s=1.5)
         plt.hlines(redbars[i], X_start, X_end, colors='darkred', zorder=2)
-        plt.text(X_start, redbars[i]+0.1, ("%.3f" % 10**redbars[i]), color='darkred', fontsize=10)
+        plt.text(X_start-0.15, redbars[i]+0.1, ("%.3f" % 10**redbars[i]), color='darkred', fontsize=12)
         
     plt.ylabel(yaxis, fontsize=14)
     plt.xlabel(xaxis, fontsize=14)
@@ -475,7 +480,7 @@ def plotTMB_therapy_v2(inputDF, pvals, scale, color_dict, order=[], Yrange = "ad
 
 ## Adapted from https://github.com/AlexandrovLab/SigProfilerPlotting
 def plotTMB_type(inputDF, pval_dict, scale, order=[], Yrange = "adapt", cutoff = 0, output = "TMB_plot.png",
-            redbar = "median", yaxis = "Somatic Mutations per Megabase",
+            redbar = "median", yaxis = "Somatic Mutations / Megabase",
             ascend = True, leftm = 1, rightm = 0.3, topm = 1.4, bottomm = 1):
     """
     This function generates a plot for Tumor Mutation Burden (TMB) based on input data. It visualizes the mutation burden
@@ -586,7 +591,7 @@ def plotTMB_type(inputDF, pval_dict, scale, order=[], Yrange = "adapt", cutoff =
     plt.hlines(yticks_loc,0,2*ngroups,colors = 'black',linestyles = "dashed",linewidth = 0.5,zorder = 1)
     for i in range(0,ngroups,2):
         greystart = [(i)*2,ymin]
-        rectangle = mpatches.Rectangle(greystart, 2, ymax-ymin, color = 'aliceblue',zorder = 0)
+        rectangle = mpatches.Rectangle(greystart, 2, ymax-ymin, color = 'lightsteelblue',zorder = 0)
         ax.add_patch(rectangle)
     for i in range(1,ngroups,2):
         greystart = [(i)*2,ymin]
@@ -601,13 +606,24 @@ def plotTMB_type(inputDF, pval_dict, scale, order=[], Yrange = "adapt", cutoff =
         plt.hlines(redbars[i], X_start, X_end, colors='red', zorder=2)
     for i in range(1,ngroups,2):
         x_line = i*2+2
-        plt.axvline(x_line, color='darkgray')
+        plt.axvline(x_line, color='black')
     plt.ylabel(yaxis)
     plt.tick_params(axis = 'both', which = 'both',length = 0)
     new_names = list(dict.fromkeys([x.split('::')[0] for x in names]))
 
+    tumor_dict = {'NBL': 'Neuroblastoma', 'NBL': 'Neuroblastoma',
+                'OST': 'Osteosarcoma', 'OST': 'Osteosarcoma',
+                'BALL': 'B-cell\nLeukemia', 'BALL': 'B-cell\nLeukemia',
+                'ERMS': 'Embryonal\nRhabdomyosarcoma', 'ERMS': 'Embryonal\nRhabdomyosarcoma',
+                'HGG': 'High-grade\nGlioma', 'HGG': 'High-grade\nGlioma',
+                'EWS': 'Ewing\nSarcoma', 'EWS': 'Ewing\nSarcoma',
+                'EPD': 'Ependymoma', 'EPD': 'Ependymoma',
+                'AML': 'Acute\nMonocytic\nLeukemia', 'AML': 'Acute\nMonocytic\nLeukemia',
+                'ARMS': 'Alveolar\nRhabdomyosarcoma', 'ARMS': 'Alveolar\nRhabdomyosarcoma'
+                }
+
     for i, j in enumerate(np.arange(2, ax.get_xlim()[1], step = 4)):
-        ax.text(j, 2.1, new_names[i], horizontalalignment='center')
+        ax.text(j, 2.1, tumor_dict[new_names[i]], horizontalalignment='left', rotation=35)
 
     for i, n in enumerate(new_names):
         x1 = i*4 + 1
@@ -623,7 +639,7 @@ def plotTMB_type(inputDF, pval_dict, scale, order=[], Yrange = "adapt", cutoff =
 
 ## Adapted from https://github.com/AlexandrovLab/SigProfilerPlotting
 def plotTMB_generic(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0,
-            redbar = "median", yaxis = "Somatic Mutations per Megabase",
+            redbar = "median", yaxis = "Somatic Mutations / Megabase",
             ascend = True, leftm = 1, rightm = 0.3, topm = 1.4, bottomm = 1):
     """
     Plots a graph of Tumor Mutational Burden (TMB) for a given dataset. The plot visualizes the distribution 
@@ -697,7 +713,8 @@ def plotTMB_generic(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0,
     result[::2] = list3
     result[1::2] = list4
     tick_labels = result
-    new_labels = [ ''.join(x) for x in zip(tick_labels[0::2], tick_labels[1::2]) ]
+    #new_labels = [ ''.join(x) for x in zip(tick_labels[0::2], tick_labels[1::2]) ]
+    new_labels = tick_labels[0::2]
     #new_labels = list3
     if Yrange == "adapt":
         ymax = math.ceil(df['log10BURDENpMB'].max())
@@ -719,21 +736,22 @@ def plotTMB_generic(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0,
         leftm = leftm + 0.09 * (len(names[0]) - 13)
         topm = topm + 0.080 * (len(names[0]) - 13)
     fig_width = leftm + rightm + 0.4 * ngroups
+    print(fig_width)
     fig_length = 6
-    fig, ax = plt.subplots(figsize=(fig_width, fig_length))
+    fig, ax = plt.subplots(figsize=(fig_width*1.2, fig_length*1.2))
     if cutoff < 0:
         print("ERROR: cutoff value is less than 0")
         return
     plt.xlim(0,2*ngroups)
     plt.ylim(ymin,ymax)
     yticks_loc = range(ymin,ymax+1,1)
-    plt.yticks(yticks_loc,list(map((lambda x: 10**x), list(yticks_loc)))) 
-    plt.xticks(np.arange(1, 2*ngroups+1, step = 2),new_labels) 
-    plt.tick_params(axis = 'both', which = 'both',length = 0)
-    plt.hlines(yticks_loc,0,2*ngroups,colors = 'black',linestyles = "dashed",linewidth = 0.5,zorder = 1)
+    plt.yticks(yticks_loc,list(map((lambda x: 10**x), list(yticks_loc))), fontsize=18)
+    plt.xticks(np.arange(1, 2*ngroups+1, step = 2), new_labels, fontsize=18)
+    plt.tick_params(axis = 'both', which = 'both', length = 0)
+    plt.hlines(yticks_loc,0,2*ngroups,colors = 'black', linestyles = "dashed", linewidth = 0.5, zorder = 1)
     for i in range(0,ngroups,2):
         greystart = [(i)*2,ymin]
-        rectangle = mpatches.Rectangle(greystart, 2, ymax-ymin, color = "lightgrey",zorder = 0)
+        rectangle = mpatches.Rectangle(greystart, 2, ymax-ymin, color = "lightgrey", zorder = 0)
         ax.add_patch(rectangle)
     for i in range(0,ngroups,1):
         X_start = i*2+0.2
@@ -742,11 +760,11 @@ def plotTMB_generic(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0,
         x_values = list(np.linspace(start = X_start, stop = X_end, num = counts[i]))
         plt.scatter(x_values,y_values,color = "black",s=1.5)
         plt.hlines(redbars[i], X_start, X_end, colors='red', zorder=2)
-        plt.text((leftm + 0.2 + i * 0.4) / fig_width , 0.85 / fig_length , "___",  horizontalalignment='center',transform=plt.gcf().transFigure)
-    plt.ylabel(yaxis)
+        #plt.text((leftm + 0.2 + i * 0.4) / fig_width , 0.85 / fig_length , "___",  horizontalalignment='center',transform=plt.gcf().transFigure)
+    plt.ylabel(yaxis, fontsize=18)
     axes2 = ax.twiny()
     plt.tick_params(axis = 'both', which = 'both',length = 0)
-    plt.xticks(np.arange(1, 2*ngroups+1, step = 2),names,rotation = -90,ha = 'right')
+    plt.xticks(np.arange(1, 2*ngroups+1, step = 2), names, rotation = -90, ha = 'right', fontsize=18)
     fig.subplots_adjust(top = ((ymax - ymin) * 0.7 + bottomm) / fig_length, bottom = bottomm / fig_length, left = leftm / fig_width, right=1 - rightm / fig_width)
 
 
@@ -2301,6 +2319,8 @@ def coefs_scatter(coefs, fname, positive_only=True, interactions='singles_only',
         linewidth=2
     )
 
+    import matplotlib.patheffects as pe
+
     # Add annotations for each circle
     for i, row in data.iterrows():
         if row["AUC"] > 0.8:
@@ -2308,21 +2328,28 @@ def coefs_scatter(coefs, fname, positive_only=True, interactions='singles_only',
                 f'{row["Coefficient"]:.2f}',  # Annotation text (formatted coefficient)
                 (row['Outcome'], row['Features']),  # Position (x, y)
                 ha='center',  # Horizontal alignment
-                fontsize=11,  # Font size for the annotation
-                color='black'  # Annotation text color
+                va='center',
+                fontsize=18,  # Font size for the annotation
+                color='black',  # Annotation text color
+                path_effects=[pe.withStroke(linewidth=0.5, foreground='white')]
+                #bbox=dict(boxstyle="round,pad=0.2", fc="black", ec="none", alpha=0.6)
             )
         else:
             ax.annotate(
             f'{row["Coefficient"]:.2f}',  # Annotation text (formatted coefficient)
             (row['Outcome'], row['Features']),  # Position (x, y)
             ha='center',  # Horizontal alignment
-            fontsize=11,  # Font size for the annotation
-            color='white'  # Annotation text color
+            va='center',
+            fontsize=18,  # Font size for the annotation
+            color='white',  # Annotation text color
+            path_effects=[pe.withStroke(linewidth=0.5, foreground='black')],
+            #bbox=dict(boxstyle="round,pad=0.2", fc="white", ec="none", alpha=0.6)
         )
 
     # Add color bar
     cbar = plt.colorbar(scatter)
-    cbar.set_label('AUROC Score', rotation=270, labelpad=15, fontsize=14)
+    cbar.set_label('AUROC Score', rotation=270, labelpad=20, fontsize=22)
+    cbar.ax.tick_params(labelsize=20)
 
     # Set new tick labels from min to max
     min_val, max_val = data['AUC'].min(), data['AUC'].max()
@@ -2332,12 +2359,8 @@ def coefs_scatter(coefs, fname, positive_only=True, interactions='singles_only',
 
     # Move x-axis labels to the top and rotate them vertically
     ax.tick_params(axis='x', which='both', bottom=False, top=True, labelbottom=False, labeltop=True)
-    plt.xticks(rotation=90, verticalalignment='center')
-
-    # Move x-axis labels to the top and rotate them vertically
-    ax.tick_params(axis='x', which='both', bottom=False, top=True, labelbottom=False, labeltop=True)
-    plt.xticks(rotation=90, verticalalignment='bottom', fontsize=18)
-    plt.yticks(fontsize=18)
+    plt.xticks(rotation=90, verticalalignment='bottom', fontsize=26)
+    plt.yticks(fontsize=26)
 
     # Add labels and title
     ax.set_xlabel('')
@@ -2381,6 +2404,7 @@ def coefs_scatter(coefs, fname, positive_only=True, interactions='singles_only',
         lab_name = label.get_text()
         if lab_name.startswith('SBS288') or lab_name.startswith('DBS78') or lab_name.startswith('ID83') or lab_name.startswith('SV32') or lab_name.startswith('CNV48'):
             label.set_color('darkgreen')
+            label.set_fontweight('bold')
         else:
             label.set_color('black')
 
