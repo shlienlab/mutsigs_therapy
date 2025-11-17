@@ -41,6 +41,8 @@ This repository includes
 - networkx==3.4.2
 - statsmodels==0.14.4
 - pydeseq2==0.5.1
+- ipykernel
+- jupyter
 ```
 
 
@@ -69,6 +71,11 @@ source /your_path/your_env_name/bin/activate
 3. Install requirements (from inside the root directory of the repository)
 ```sh
 pip install -r requirements.txt
+```
+
+4. Add the new environment to kernels list
+```sh
+python3 -m ipykernel install --name "your_env_name" --user
 ```
 
 Otherwise, skip the virtual environment steps, navigate to the root directory and type the following:
