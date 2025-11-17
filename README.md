@@ -40,6 +40,7 @@ This repository includes
 - patsy==1.0.1
 - networkx==3.4.2
 - statsmodels==0.14.4
+- pydeseq2==0.5.1
 ```
 
 
