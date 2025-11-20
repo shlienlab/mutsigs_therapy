@@ -1,4 +1,4 @@
-Sample_id	Patient_id	Cohort	State	Therapy	Sex	Type	Type_Full	Tumor_class	SBS	DBS	ID	Thr_State	SBS_Burden	Radiation
+Sample_id	Patient_id	Cohort	State	Therapy	Sex	Type	Type_Full	Tumor_class	SBS	DBS	ID	Thr_State	Burden	Radiation
 KiCS0002_321321	KiCS0002	KiCS	Non-Primary	Post-Therapy	Female	YST	Yolk Sac Tumor	Solid	15207	403	1117	Advanced-Treated	low	N
 KiCS0003_285201	KiCS0003	KiCS	Non-Primary	Post-Therapy	Female	MFT	Myofibroblastic Tumor	Solid	1596	7	175	Advanced-Treated	low	N
 KiCS0003_285202	KiCS0003	KiCS	Non-Primary	Post-Therapy	Female	MFT	Myofibroblastic Tumor	Solid	3670	20	396	Advanced-Treated	low	N
