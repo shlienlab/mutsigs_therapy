@@ -184,7 +184,7 @@ def get_votingClf_v1(mat_df, neg_samples, pos_samples, cv=False, extra_plots=Fal
 
 
     
-def feats_2df(features, colname):
+def SBS_feats_2df(features, colname):
     """
     Converts a list of feature tuples into a formatted pandas DataFrame.
 
@@ -221,7 +221,7 @@ def feats_2df(features, colname):
 
 
 
-def SV_feats_2df(features, colname):
+def SVCN_feats_2df(features, colname):
     """
     Converts a list of structural variant (SV) features into a formatted pandas DataFrame.
 
@@ -758,10 +758,12 @@ def get_SHAP_features(mat_df, class_df, pret_samples, var_class, n_iters):
                 pret_random = pret_samples
 
             model, features = shap_swarm_single(mat_df, pret_random, drug_samples)
-            if var_class == 'SV':
-                features_df = SV_feats_2df(features, f'{i}_{drug}')
+
+            if var_class == 'SVCN':
+                features_df = SVCN_feats_2df(features, f'{i}_{drug}')
             else:
-                features_df = feats_2df(features, f'{i}_{drug}')
+                features_df = SBS_feats_2df(features, f'{i}_{drug}')
+
             features_df_Q = pd.concat([features_df_Q, features_df], axis=1)
 
         features_df_Q[f'sum_{drug}'] = features_df_Q[[x for x in features_df_Q.columns if x.endswith(f'{drug}')]].sum(axis=1)

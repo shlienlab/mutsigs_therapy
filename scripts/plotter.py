@@ -2472,7 +2472,7 @@ def plot_coefs(coefs, title=None, leg=None, x_only=True):
     """
     # Plot the non-zero coefficients
     denom = 3 if len(coefs) > 7 else 2
-    fig, ax = plt.subplots(figsize=(10, len(coefs)/denom))
+    fig, ax = plt.subplots(figsize=(10, (len(coefs)/denom)*1.5))
     if x_only:
         coefs = coefs[coefs['Features'].str.contains(':')]
         colors = ['steelblue' if ':' in feature else 'thistle' for feature in coefs.Features]
@@ -2482,33 +2482,33 @@ def plot_coefs(coefs, title=None, leg=None, x_only=True):
     
 
     p1 = plt.barh(coefs.index, coefs.Coefficient, color=colors)
-    plt.xlabel('Logistic Regression Coefficients', fontsize=18)
+    plt.xlabel('Logistic Regression Coefficients', fontsize=26)
     plt.gca().invert_yaxis() # Invert y-axis for descending order
     if title:
-        plt.title(title, fontsize=20)
+        plt.title(title, fontsize=28)
 
     ax.set_yticks(range(len(coefs.Features)))
     new_labels = [x.replace('_', ' ') for x in coefs.Features.tolist()]
     new_labels = [x.replace(':', '::') for x in new_labels]
-    ax.set_yticklabels(new_labels, fontsize=14)
+    ax.set_yticklabels(new_labels, fontsize=18)
 
     for color, tick in zip(colors, ax.get_yticklabels()):
         tick.set_color(color) #set the color property
 
-    plt.xticks(fontsize=14)
+    plt.xticks(fontsize=18)
 
     xmin, xmax = ax.get_xlim()
 
     # vertical lines
     lcount = 0
     outc = coefs.Outcome.iloc[0]
-    ax.text(xmax, 0, f"{outc}", va='center', fontsize=14)
+    ax.text(xmax, 0, f"{outc}", va='center', fontsize=17)
     for out in coefs.Outcome:
         if out == outc:
             lcount += 1
         else:
             ax.hlines(y=lcount-0.5, xmin=xmin, xmax=xmax, colors=['tab:gray'], ls='--', lw=2)
-            ax.text(xmax, lcount, f"{out}", va='center', fontsize=14)
+            ax.text(xmax, lcount, f"{out}", va='center', fontsize=17)
             outc = out
             lcount += 1
 
@@ -2529,7 +2529,6 @@ def plot_coefs(coefs, title=None, leg=None, x_only=True):
         ], loc=leg)
 
     plt.tight_layout()
-    plt.show()
 
 
 
