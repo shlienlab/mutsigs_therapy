@@ -8,7 +8,6 @@ scipy==1.11.2
 matplotlib==3.7.3
 seaborn==0.13.2
 plotly==5.16.1
-pywaffle==1.1.0
 xgboost==1.7.6
 catboost==1.2.1
 UpSetPlot==0.9.0
