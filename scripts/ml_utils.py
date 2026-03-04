@@ -183,6 +183,116 @@ def get_votingClf_v1(mat_df, neg_samples, pos_samples, cv=False, extra_plots=Fal
     return report, VC_soft_score
 
 
+def get_votingClf_v2(df, cv=False, extra_plots=False, plot_title='', verbose=False):
+    """
+    Trains and evaluates a soft Voting Classifier composed of Logistic Regression, 
+    Random Forest, XGBoost, and CatBoost classifiers.
+
+    Parameters:
+    -----------
+    mat_df : pd.DataFrame
+        A dataframe containing feature values with samples as rows and features as columns.
+    neg_samples : list
+        A list of indices corresponding to negative class samples.
+    pos_samples : list
+        A list of indices corresponding to positive class samples.
+    cv : bool, optional (default=False)
+        If True, cross-validation scores will be computed.
+    extra_plots : bool, optional (default=False)
+        If True, generates additional plots including ROC, Precision-Recall Curve, and Confusion Matrix.
+    plot_title : str, optional (default='')
+        Title for the extra plots if `extra_plots=True`.
+    verbose : bool, optional (default=False)
+        If True, prints model performance metrics such as accuracy, AUC, and average precision.
+
+    Returns:
+    --------
+    report : pd.DataFrame
+        Classification report including precision, recall, f1-score, and support for each class.
+    VC_soft_score : pd.DataFrame
+        Dataframe containing cross-validation performance metrics (mean and standard deviation)
+        for recall, precision, and f1-score.
+
+    Notes:
+    ------
+    - The function extracts features from `mat_df` based on `neg_samples` and `pos_samples`.
+    - A Voting Classifier (`soft` voting) is trained with four base models:
+      1. Logistic Regression (Elastic Net regularization)
+      2. Random Forest Classifier
+      3. XGBoost Classifier
+      4. CatBoost Classifier
+    - Performance is evaluated using a holdout test set and 5-fold cross-validation.
+    - If `extra_plots=True`, the function visualizes:
+      - ROC Curve
+      - Precision-Recall Curve
+      - Confusion Matrix
+    """
+
+    X, y  = df.iloc[:,0:-1], df['platinum_sigs']
+    X_train, X_test, y_train, y_test = split_norm_Xy(X, y)
+    target_names = ['Sig -', 'Sig +']
+
+    estimator = []
+    estimator.append(('LogisticRegression', LogisticRegression(solver='saga', l1_ratio=0.5, random_state=42, penalty='elasticnet', max_iter = 1000)))
+    estimator.append(('RandomForest', RandomForestClassifier(n_estimators=100, random_state=42, min_samples_leaf=.1)))
+    estimator.append(('XGB', XGBClassifier(n_estimators=100, objective='binary:logistic', random_state=42)))
+    estimator.append(('CatBoost', CatBoostClassifier(logging_level='Silent', random_state=42) ))
+
+    VC_soft = VotingClassifier(estimators = estimator, voting ='soft')
+    VC_soft.fit(X_train, y_train)
+    y_pred = VC_soft.predict(X_test)
+    y_prob = VC_soft.predict_proba(X_test)
+
+    recall_score = cross_val_score(VC_soft, X_train, y_train, cv=5, scoring='recall')
+    VC_soft_cv_recall = recall_score.mean()
+    VC_soft_cv_stdev_recall = stdev(recall_score)
+
+    prec_score = cross_val_score(VC_soft, X_train, y_train, cv=5, scoring='precision')
+    VC_soft_cv_prec = prec_score.mean()
+    VC_soft_cv_stdev_prec = stdev(prec_score)
+
+    f1_score = cross_val_score(VC_soft, X_train, y_train, cv=5, scoring='f1')
+    VC_soft_cv_f1score = f1_score.mean()
+    VC_soft_cv_stdev_f1 = stdev(f1_score)
+
+    ndf = [(VC_soft_cv_recall, VC_soft_cv_stdev_recall, VC_soft_cv_prec, VC_soft_cv_stdev_prec, VC_soft_cv_f1score, VC_soft_cv_stdev_f1)]
+
+    VC_soft_score = pd.DataFrame(data = ndf, columns=
+                            ['Avg_CV_Recall', 'SD_CV_Recall', 'Avg_CV_Precision', 'SD_CV_Precision', 'Avg_CV_f1-score', 'SD_CV_f1-score'])
+
+    if verbose:
+        print(f"Accuracy: {accuracy_score(y_test, y_pred)}\n")
+        print(f"Auroc score: {roc_auc_score(y_test, y_pred)}\n")
+        print(f"Average precision score: {average_precision_score(y_test, y_pred)}\n")
+
+    if extra_plots:
+        fig, axes = plt.subplots(1,2, figsize=(12, 5))
+        plot_roc_curve(y_test, y_prob, title = 'ROC Plot', target_names=['Sig -', 'Sig +'], ax=axes[0])
+        _ = axes[0].set(
+            xlabel="False Positive Rate (1 - Specificity)",
+            ylabel="True Positive Rate (Sensitivity)",
+            title="ROC",
+            xlim=(-0.03, 1),
+            ylim=(0, 1.03),
+        )
+        plot_precision_recall_curve(y_test, y_prob, title = 'PR Curve', target_names=['Sig -', 'Sig +'], ax=axes[1])
+        _ = axes[1].set( xlim=(0, 1.03) )
+        
+        ax2 = fig.add_axes([.817,.16, .075,.275])
+        disp = ConfusionMatrixDisplay.from_estimator(VC_soft, X_test, y_test,
+                                                    display_labels=target_names,
+                                                    cmap=plt.cm.Blues,
+                                                    normalize=None,
+                                                    ax=ax2,
+                                                    colorbar=False
+        )
+        fig.suptitle(plot_title, fontsize=16)
+
+    report = pd.DataFrame(classification_report(y_test, y_pred, target_names=target_names, output_dict=True)).transpose()    
+    return report, VC_soft_score
+
+
+  
     
 def SBS_feats_2df(features, colname):
     """
@@ -671,6 +781,77 @@ def shap_swarm_single(mat_df, neg_samples, pos_samples):
     """
     X = pd.concat([mat_df.loc[neg_samples], mat_df.loc[pos_samples]], axis=0)
     y = ([0]*len(neg_samples)) + ([1]*len(pos_samples))
+
+    X.columns = [x.replace('[', '').replace(']', '').replace('<', '').replace('>', '') for x in X.columns]
+
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42)
+
+    y_train = np.array(y_train)
+    y_test = np.array(y_test)
+
+    d_train = xgboost.DMatrix(X_train, label=y_train)
+    d_test = xgboost.DMatrix(X_test, label=y_test)
+
+    # train final model on the full data set
+    params = {
+        "eta": 0.05,
+        "max_depth": 1,
+        "objective": "binary:logistic",
+        "subsample": 0.5,
+        "base_score": np.mean(y_train),
+        "eval_metric": "logloss",
+    }
+    evals_result = {}
+    model_ind = xgboost.train(params, d_train, 5000, evals=[(d_test, "test")], verbose_eval=0,
+                              early_stopping_rounds=20, evals_result=evals_result)
+
+    explainer = shap.TreeExplainer(model_ind)
+    shap_values = explainer(X)
+
+    features = list(zip(model_ind.feature_names, shap_values.abs.mean(0).values))
+    return model_ind, features
+
+
+def shap_swarm_single_v2(df):
+    """
+    Trains an XGBoost model and computes SHAP values for feature importance analysis.
+
+    Parameters:
+    -----------
+    mat_df : pd.DataFrame
+        A dataframe containing feature values, where rows represent samples and columns represent features.
+    neg_samples : list
+        A list of indices corresponding to negative class samples.
+    pos_samples : list
+        A list of indices corresponding to positive class samples.
+
+    Returns:
+    --------
+    model_ind : xgboost.Booster
+        The trained XGBoost model.
+    features : list of tuples
+        A list of feature importance scores, where each tuple contains:
+        - The feature name (str)
+        - The mean absolute SHAP value (float), indicating feature importance.
+
+    Notes:
+    ------
+    - The function extracts features from `mat_df` based on `neg_samples` and `pos_samples`.
+    - It replaces specific special characters (`[`, `]`, `<`, `>`) in column names.
+    - The dataset is split into 80% training and 20% testing sets.
+    - An XGBoost model is trained with:
+      - Learning rate (`eta`) of 0.05
+      - Maximum depth of 1
+      - Logistic regression objective (`binary:logistic`)
+      - 50% subsampling (`subsample=0.5`)
+      - Log loss as evaluation metric
+      - Early stopping after 20 rounds
+    - SHAP values are computed to analyze feature importance.
+    - The function returns the trained model and a ranked list of feature importance scores.
+    """
+
+    X, y  = df.iloc[:,0:-1], df['platinum_sigs']
+
     X.columns = [x.replace('[', '').replace(']', '').replace('<', '').replace('>', '') for x in X.columns]
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42)
