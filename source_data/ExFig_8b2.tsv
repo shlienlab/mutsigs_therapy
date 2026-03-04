@@ -1,0 +1,15 @@
+	Alkylating agent, Other	Anthracyclines	Antimetabolite	Antitumor antibiotic	Camptothecin analogs	Chromomycins	Hydrazines and Triazines	Monoclonal antibody	Mustard gas derivative	Platinums	Podophyllotoxins	Targeted therapy	Taxanes	Vinca alkaloids
+Alkylating agent, Other	100.0	50.0	0.0	0.0	50.0	0.0	50.0	0.0	50.0	0.0	50.0	0.0	0.0	100.0
+Anthracyclines	1.0	100.0	29.0	1.0	3.0	0.0	2.0	5.0	82.0	36.0	9.0	6.0	64.0	13.0
+Antimetabolite	0.0	18.0	100.0	0.0	30.0	0.0	1.0	26.0	34.0	64.0	3.0	3.0	33.0	8.0
+Antitumor antibiotic	0.0	50.0	0.0	100.0	0.0	0.0	0.0	0.0	50.0	100.0	100.0	0.0	0.0	50.0
+Camptothecin analogs	1.0	4.0	85.0	0.0	100.0	0.0	0.0	65.0	4.0	65.0	3.0	0.0	3.0	3.0
+Chromomycins	0.0	0.0	0.0	0.0	0.0	100.0	0.0	0.0	100.0	0.0	0.0	0.0	0.0	100.0
+Hydrazines and Triazines	5.0	11.0	5.0	0.0	0.0	0.0	100.0	11.0	11.0	11.0	0.0	5.0	16.0	11.0
+Monoclonal antibody	0.0	9.0	74.0	0.0	65.0	0.0	3.0	100.0	9.0	54.0	4.0	0.0	4.0	10.0
+Mustard gas derivative	1.0	69.0	48.0	1.0	2.0	1.0	1.0	4.0	100.0	31.0	6.0	9.0	69.0	17.0
+Platinums	0.0	19.0	57.0	1.0	20.0	0.0	1.0	17.0	19.0	100.0	11.0	1.0	36.0	9.0
+Podophyllotoxins	3.0	37.0	17.0	7.0	7.0	0.0	0.0	10.0	30.0	83.0	100.0	3.0	10.0	33.0
+Targeted therapy	0.0	18.0	15.0	0.0	0.0	0.0	3.0	0.0	31.0	8.0	3.0	100.0	31.0	3.0
+Taxanes	0.0	45.0	39.0	0.0	1.0	0.0	2.0	2.0	58.0	47.0	2.0	7.0	100.0	4.0
+Vinca alkaloids	6.0	46.0	43.0	3.0	6.0	3.0	6.0	20.0	69.0	54.0	29.0	3.0	20.0	100.0
