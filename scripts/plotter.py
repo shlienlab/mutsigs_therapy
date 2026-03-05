@@ -775,47 +775,10 @@ def prepend(list, str):
     list = [str.format(i) for i in list] 
     return(list)
 
-
 ## Adapted from https://github.com/AlexandrovLab/SigProfilerPlotting
-def plotTMB_SBS(inputDF, kzm611_sbs_rel, scale, order=[], Yrange = "adapt", cutoff = 0,
+def plotTMB_SBS_v3(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0, output = "TMB_plot.png",
             redbar = "median", yaxis = "Somatic Mutations per Megabase",
             ascend = True, leftm = 1, rightm = 0.3, topm = 1.4, bottomm = 1):
-    """
-    Plots a graph of Tumor Mutational Burden (TMB) and the SBS (Single Base Substitution) relative frequencies 
-    for a given dataset. The plot displays the distribution of somatic mutations per megabase across different 
-    mutation types, with an optional red bar representing either the mean or median mutational burden for each 
-    mutation type. Additionally, it overlays a bar plot showing the relative frequencies of different mutation 
-    types from the SBS dataset.
-
-    Parameters:
-    - inputDF (DataFrame): A pandas DataFrame containing mutation type ('Types') and corresponding mutation burden ('Mut_burden').
-    - kzm611_sbs_rel (DataFrame): A pandas DataFrame containing the SBS relative frequencies.
-    - scale (int, str): The scaling factor for mutational burden. Can be a numeric value or one of the strings:
-      "genome" (2897.310462) or "exome" (55).
-    - order (list, optional): A list specifying the order of mutation types to display in the plot.
-    - Yrange (str, list, optional): Defines the y-axis range. Options are "adapt", "cancer", or a list with two power of 10 values.
-    - cutoff (int, optional): A threshold below which mutation burden values will be excluded from the plot. Default is 0.
-    - redbar (str, optional): Determines whether the red bar represents the "mean" or "median" value for each mutation type.
-    - yaxis (str, optional): Label for the y-axis. Default is "Somatic Mutations per Megabase".
-    - ascend (bool, optional): If True, the mutation types are ordered in ascending order of mutational burden. Default is True.
-    - leftm (float, optional): Left margin for the plot. Default is 1.
-    - rightm (float, optional): Right margin for the plot. Default is 0.3.
-    - topm (float, optional): Top margin for the plot. Default is 1.4.
-    - bottomm (float, optional): Bottom margin for the plot. Default is 1.
-
-    Returns:
-    - None
-
-    Notes:
-    - If `scale` is a string, it must be either "genome" or "exome", which correspond to predefined scaling values.
-    - If `Yrange` is a list, it should contain two values representing the lower and upper limits for the y-axis range.
-    - The function saves the plot as an image in the format defined by the `output` parameter, defaulting to "TMB_plot.png".
-    - The second axis (`ax2`) visualizes the mutational burden, while the first axis (`ax1`) shows the SBS relative frequencies.
-    - The function also overlays annotations and horizontal lines for visual clarity on the SBS plot.
-
-    Example usage:
-    plotTMB_SBS(inputDF, kzm611_sbs_rel, scale="genome", redbar="median", cutoff=0, Yrange="adapt")
-    """
     if type(scale) == int:
         scale = scale
     elif scale == "genome":
@@ -881,69 +844,57 @@ def plotTMB_SBS(inputDF, kzm611_sbs_rel, scale, order=[], Yrange = "adapt", cuto
         leftm = leftm + 0.09 * (len(names[0]) - 13)
         topm = topm + 0.080 * (len(names[0]) - 13)
     fig_width = leftm + rightm + 0.4 * ngroups
-    fig_length = 6
-    fig, (ax0, ax2) = plt.subplots(2,1, figsize=(fig_width, fig_length), gridspec_kw={'height_ratios': [1, 2]}, facecolor="#f4f0eb")
+    #fig_length = topm + bottomm + (ymax - ymin) * 0.7
+    #print("{} -- {}".format(fig_width, fig_length))
+    #fig_width = 4
+    fig_length = 4
+    fig, ax2 = plt.subplots(figsize=(fig_width, fig_length))
 
-    ax1 = kzm611_sbs_rel.plot(kind="bar", stacked=True, width=0.95, color=[A_col, B_col], ax=ax0)
-    ax1.set_xlabel('')
-    ax1.set_yticks([])
-    ax1.set_ylabel('')
-    ax1.spines['right'].set_visible(False)
-    ax1.spines['top'].set_visible(False)
-    ax1.spines['left'].set_visible(False)
-    ax1.spines['bottom'].set_visible(False)
-    ax1.tick_params(axis="x", bottom=False, top=True, labelbottom=False, labeltop=True)
-    # Rotate and align top ticklabels
-    plt.setp([tick.label2 for tick in ax1.xaxis.get_major_ticks()], rotation=90,
-            ha="left", va="center",rotation_mode="anchor")
-    ax1.legend(loc='upper right', bbox_to_anchor=(1,2.7), ncol=15, fontsize=12, facecolor="#f4f0eb")
+    line_y = 1.3
+    ann_y = 4.75
+    trans = ax2.get_xaxis_transform()
 
-    ax1.set_facecolor('#f4f0eb')
+    ax2.text(2, ann_y, 'Clock-like', fontsize=12, rotation=90)
+    ax2.plot([0.4, 3.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    ax2.text(6, ann_y, 'APOBEC', fontsize=12, rotation=90)
+    ax2.plot([4.4, 7.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    ax2.text(10, ann_y, 'UV', fontsize=12, rotation=90)
+    ax2.plot([8.4, 11.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    ax2.text(13.5, ann_y, 'POLE', fontsize=12, rotation=90)
+    ax2.plot([12.4, 15.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    ax2.text(16.6, ann_y, 'POLE/MMRD', fontsize=12, rotation=90)
+    ax2.plot([16.4, 17.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    ax2.text(18.6, ann_y, 'POLD1/MMRD', fontsize=12, rotation=90)
+    ax2.plot([18.4, 19.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    ax2.text(20.8, ann_y, 'Temo', fontsize=12, rotation=90)
+    ax2.plot([20.4, 21.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    ax2.text(22.6, ann_y, '5-FU', fontsize=12, rotation=90)
+    ax2.plot([22.4, 23.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    ax2.text(25.5, ann_y, 'Platinum', fontsize=12, rotation=90)
+    ax2.plot([24.4, 27.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    ax2.text(28.6, ann_y, 'Thiopurine', fontsize=12, rotation=90)
+    ax2.plot([28.4, 29.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    ax2.text(33, ann_y, 'Novel\nTherapy', fontsize=12, rotation=90)
+    ax2.plot([30.4, 37.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    ax2.text(38.6, ann_y, 'AID', fontsize=12, rotation=90)
+    ax2.plot([38.4, 39.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    ax2.text(41.6, ann_y, 'MMRD/MSI', fontsize=12, rotation=90)
+    ax2.plot([40.4, 43.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    ax2.text(44.5, ann_y, 'ROS', fontsize=12, rotation=90)
+    ax2.plot([44.4, 45.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    ax2.text(50, ann_y, 'Unknown', fontsize=12, rotation=90)
+    ax2.plot([46.4, 55.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    ax2.text(60, ann_y, 'Novel', fontsize=12, rotation=90)
+    ax2.plot([56.4, 65.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    ax2.text(73, ann_y, 'Artifacts', fontsize=12, rotation=90)
+    ax2.plot([66.4, 79.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
 
-    ann_y = 1.9
-    ax1.text(0.4, ann_y, 'Clock-like', fontsize=12, rotation=90)
-    ax1.text(2.4, ann_y, 'APOBEC', fontsize=12, rotation=90)
-    ax1.text(4.4, ann_y, 'UV', fontsize=12, rotation=90)
-    ax1.text(6.4, ann_y, 'POLE', fontsize=12, rotation=90)
-    ax1.text(7.8, ann_y, 'POLE/MMRD', fontsize=12, rotation=90)
-    ax1.text(8.8, ann_y, 'POLD1/MMRD', fontsize=12, rotation=90)
-    ax1.text(9.8, ann_y, 'Temo', fontsize=12, rotation=90)
-    ax1.text(10.8, ann_y, '5-FU', fontsize=12, rotation=90)
-    ax1.text(12.4, ann_y, 'Platinum', fontsize=12, rotation=90)
-    ax1.text(13.8, ann_y, 'Thiopurine', fontsize=12, rotation=90)
-    ax1.text(16.4, ann_y, 'Novel\nTherapy', fontsize=12, rotation=90)
-    ax1.text(19.8, ann_y, 'AID', fontsize=12, rotation=90)
-    ax1.text(21.2, ann_y, 'MMRD/MSI', fontsize=12, rotation=90)
-    ax1.text(22.8, ann_y, 'ROS', fontsize=12, rotation=90)
-    ax1.text(26, ann_y, 'Unknown', fontsize=12, rotation=90)
-    ax1.text(31, ann_y, 'Novel', fontsize=12, rotation=90)
-    ax1.text(37, ann_y, 'Artifacts', fontsize=12, rotation=90)
+    ax2.plot([20, 38],[1,1], color="red", linewidth = 2, transform=trans, clip_on=False)
+    ax2.plot([20, 38],[1.7,1.7], color="red", linewidth = 2, transform=trans, clip_on=False)
+    ax2.plot([20, 20],[1,1.7], color="red", linewidth = 2, transform=trans, clip_on=False)
+    ax2.plot([38, 38],[1,1.7], color="red", linewidth = 2, transform=trans, clip_on=False)
 
-    line_y = 1.7
-    trans = ax1.get_xaxis_transform()
-    ax1.plot([-.5,1.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax1.plot([1.6, 3.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax1.plot([3.6, 5.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax1.plot([5.6, 7.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax1.plot([7.6, 8.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax1.plot([8.6, 9.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax1.plot([9.6, 10.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax1.plot([10.6, 11.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax1.plot([11.6, 13.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax1.plot([13.6, 14.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax1.plot([14.6, 19.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax1.plot([19.6, 20.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax1.plot([20.6, 22.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax1.plot([22.6, 23.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax1.plot([23.6, 28.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax1.plot([28.6, 32.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax1.plot([32.6, 39.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-
-    ax1.plot([9.6, 19.4],[1,1], color="red", transform=trans, clip_on=False)
-    ax1.plot([9.6, 19.4],[2.5,2.5], color="red", transform=trans, clip_on=False)
-    ax1.plot([9.6, 9.6],[1,2.5], color="red", transform=trans, clip_on=False)
-    ax1.plot([19.4, 19.4],[1,2.5], color="red", transform=trans, clip_on=False)
-    ax1.text(12.4, 2.7, 'Therapy Signatures', color="red", fontsize=12)
+    ax2.text(24, 4.2, 'Therapy Signatures', color="red", fontsize=14)
 
     ax2.set_xlim(0,2*ngroups)
     ax2.set_ylim(ymin,ymax)
@@ -952,30 +903,31 @@ def plotTMB_SBS(inputDF, kzm611_sbs_rel, scale, order=[], Yrange = "adapt", cuto
     ax2.set_xticks(np.arange(1, 2*ngroups+1, step = 2), new_labels) 
     ax2.tick_params(axis = 'both', which = 'both',length = 0)
     ax2.hlines(yticks_loc,0,2*ngroups,colors = 'black',linestyles = "dashed",linewidth = 0.5,zorder = 1)
-
-    for i in range(0,ngroups):
-        if ((i+1) % 2) == 0:
-            rectangle = mpatches.Rectangle([(i)*2, ymin], 2, ymax-ymin, color="#f4f0eb", zorder = 0)
-            ax2.add_patch(rectangle)
-        else:
-            rectangle = mpatches.Rectangle([(i)*2, ymin], 2, ymax-ymin, color='lightgray', zorder = 0)
-            ax2.add_patch(rectangle)
-            
+    for i in range(0,ngroups,2):
+        greystart = [(i)*2,ymin]
+        rectangle = mpatches.Rectangle(greystart, 2, ymax-ymin, color = "lightgrey",zorder = 0)
+        ax2.add_patch(rectangle)
     for i in range(0,ngroups,1):
         X_start = i*2+0.2
         X_end = i*2+2-0.2
+        #rg = 1.8
         y_values = groups.get_group(names[i])["log10BURDENpMB"].sort_values(ascending = True).values.tolist()
         x_values = list(np.linspace(start = X_start, stop = X_end, num = counts[i]))
         ax2.scatter(x_values,y_values,color = "black",s=1.5)
         ax2.hlines(redbars[i], X_start, X_end, colors='red', zorder=2)
         ax2.text((leftm + 0.2 + i * 0.4) / fig_width , 0.85 / fig_length , "___",  horizontalalignment='center',transform=plt.gcf().transFigure)
     ax2.set_ylabel(yaxis)
+
+    axes2 = ax2.twiny()
+    plt.tick_params(axis = 'both', which = 'both',length = 0)
+    plt.xticks(np.arange(1, 2*ngroups+1, step = 2),names,rotation = 90,ha = 'right')
+
     fig.subplots_adjust(top = ((ymax - ymin) * 0.7 + bottomm) / fig_length, bottom = bottomm / fig_length, left = leftm / fig_width, right=1 - rightm / fig_width)
 
 
 
 ## Adapted from https://github.com/AlexandrovLab/SigProfilerPlotting
-def plotTMB_DBS(inputDF, kzm611_sbs_rel, scale, order=[], Yrange = "adapt", cutoff = 0,
+def plotTMB_DBS_v3(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0,
             redbar = "median", yaxis = "Somatic Mutations per Megabase",
             ascend = True, leftm = 1, rightm = 0.3, topm = 1.4, bottomm = 1):
     """
@@ -1045,41 +997,26 @@ def plotTMB_DBS(inputDF, kzm611_sbs_rel, scale, order=[], Yrange = "adapt", cuto
         leftm = leftm + 0.09 * (len(names[0]) - 13)
         topm = topm + 0.080 * (len(names[0]) - 13)
     fig_width = leftm + rightm + 0.4 * ngroups
-    fig_length = 6
-    fig, (ax0, ax2) = plt.subplots(2,1, figsize=(fig_width, fig_length), gridspec_kw={'height_ratios': [1, 2]}, facecolor="#f4f0eb")
-    
-    ax1 = kzm611_sbs_rel.plot(kind="bar", stacked=True, width=0.95, color=[A_col, B_col], ax=ax0)
-    ax1.set_xlabel('')
-    ax1.set_yticks([])
-    ax1.set_ylabel('')
-    ax1.spines['right'].set_visible(False)
-    ax1.spines['top'].set_visible(False)
-    ax1.spines['left'].set_visible(False)
-    ax1.spines['bottom'].set_visible(False)
-    ax1.tick_params(axis="x", bottom=False, top=True, labelbottom=False, labeltop=True)
-    # Rotate and align top ticklabels
-    plt.setp([tick.label2 for tick in ax1.xaxis.get_major_ticks()], rotation=90,
-            ha="left", va="center",rotation_mode="anchor")
-    ax1.legend(loc='upper right', bbox_to_anchor=(1,3.25), ncol=15, fontsize=12, facecolor="#f4f0eb")
+    fig_length = 4
+    fig, ax2 = plt.subplots(figsize=(fig_width, fig_length))
 
-    ann_y = 2.15
-    ax1.text(0, ann_y, 'UV', fontsize=12, rotation=90)
-    ax1.text(1, ann_y, 'Tobacco, etc.', fontsize=12, rotation=90)
-    ax1.text(2, ann_y, 'Platinum', fontsize=12, rotation=90)
-    ax1.text(3.5, ann_y, 'MMRD', fontsize=12, rotation=90)
-    ax1.text(6, ann_y, 'Novel', fontsize=12, rotation=90)
-    ax1.text(9, ann_y, 'Unknown', fontsize=12, rotation=90)
+    ann_y = 2.6
+    ax2.text(1, ann_y, 'UV', fontsize=12, rotation=90)
+    ax2.text(3, ann_y, 'Tobacco, etc.', fontsize=12, rotation=90)
+    ax2.text(4.5, ann_y, 'Platinum', fontsize=12, rotation=90)
+    ax2.text(7.5, ann_y, 'MMRD', fontsize=12, rotation=90)
+    ax2.text(12.5, ann_y, 'Novel', fontsize=12, rotation=90)
+    ax2.text(19.5, ann_y, 'Unknown', fontsize=12, rotation=90)
 
-    line_y = 1.9
-    trans = ax1.get_xaxis_transform()
-    ax1.plot([-.5, .4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax1.plot([.6, 1.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax1.plot([1.6, 2.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax1.plot([2.6, 4.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax1.plot([4.6, 7.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax1.plot([7.6, 11.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    line_y = 1.35
+    trans = ax2.get_xaxis_transform()
+    ax2.plot([0.4, 1.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    ax2.plot([2.4, 3.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    ax2.plot([4.4, 5.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    ax2.plot([6.4, 9.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    ax2.plot([10.4, 15.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    ax2.plot([16.4, 23.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
 
-    ax1.set_facecolor("#f4f0eb")
 
     if cutoff < 0:
         print("ERROR: cutoff value is less than 0")
@@ -1094,7 +1031,7 @@ def plotTMB_DBS(inputDF, kzm611_sbs_rel, scale, order=[], Yrange = "adapt", cuto
     ax2.hlines(yticks_loc,0,2*ngroups,colors = 'black',linestyles = "dashed",linewidth = 0.5,zorder = 1)
     for i in range(0,ngroups):
         if ((i+1) % 2) == 0:
-            rectangle = mpatches.Rectangle([(i)*2, ymin], 2, ymax-ymin, color="#f4f0eb", zorder = 0)
+            rectangle = mpatches.Rectangle([(i)*2, ymin], 2, ymax-ymin, color="white", zorder = 0)
             ax2.add_patch(rectangle)
         else:
             rectangle = mpatches.Rectangle([(i)*2, ymin], 2, ymax-ymin, color='lightgray', zorder = 0)
@@ -1108,13 +1045,17 @@ def plotTMB_DBS(inputDF, kzm611_sbs_rel, scale, order=[], Yrange = "adapt", cuto
         ax2.hlines(redbars[i], X_start, X_end, colors='red', zorder=2)
         ax2.text((leftm + 0.2 + i * 0.4) / fig_width , 0.85 / fig_length , "___",  horizontalalignment='center',transform=plt.gcf().transFigure)
     ax2.set_ylabel(yaxis)
+
+    axes2 = ax2.twiny()
+    plt.tick_params(axis = 'both', which = 'both',length = 0)
+    plt.xticks(np.arange(1, 2*ngroups+1, step = 2),names,rotation = 90,ha = 'right')
+
     fig.subplots_adjust(top = ((ymax - ymin) * 0.7 + bottomm) / fig_length, bottom = bottomm / fig_length, left = leftm / fig_width, right=1 - rightm / fig_width)
 
 
 
-
 ## Adapted from https://github.com/AlexandrovLab/SigProfilerPlotting
-def plotTMB_ID(inputDF, kzm611_sigs_rel, scale, order=[], Yrange = "adapt", cutoff = 0,
+def plotTMB_ID_v3(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0,
             redbar = "median", yaxis = "Somatic Mutations per Megabase",
             ascend = True, leftm = 1, rightm = 0.3, topm = 1.4, bottomm = 1):
     """
@@ -1184,41 +1125,25 @@ def plotTMB_ID(inputDF, kzm611_sigs_rel, scale, order=[], Yrange = "adapt", cuto
         leftm = leftm + 0.09 * (len(names[0]) - 13)
         topm = topm + 0.080 * (len(names[0]) - 13)
     fig_width = leftm + rightm + 0.4 * ngroups
-    fig_length = 6
-    fig, (ax0, ax2) = plt.subplots(2,1, figsize=(fig_width, fig_length), gridspec_kw={'height_ratios': [1, 2]}, facecolor="#f4f0eb")
-    
-    ax1 = kzm611_sigs_rel.plot(kind="bar", stacked=True, width=0.95, color=[A_col, B_col], ax=ax0)
-    ax1.set_xlabel('')
-    ax1.set_yticks([])
-    ax1.set_ylabel('')
-    ax1.spines['right'].set_visible(False)
-    ax1.spines['top'].set_visible(False)
-    ax1.spines['left'].set_visible(False)
-    ax1.spines['bottom'].set_visible(False)
-    ax1.tick_params(axis="x", bottom=False, top=True, labelbottom=False, labeltop=True)
-    # Rotate and align top ticklabels
-    plt.setp([tick.label2 for tick in ax1.xaxis.get_major_ticks()], rotation=90,
-            ha="left", va="center",rotation_mode="anchor")
-    ax1.legend(loc='upper right', bbox_to_anchor=(1,2.75), ncol=15, fontsize=12, facecolor="#f4f0eb")
+    fig_length = 4
+    fig, ax2 = plt.subplots(figsize=(fig_width, fig_length))
 
-    ann_y = 1.85
-    ax1.text(0.4, ann_y, 'MMRD/MSI', fontsize=12, rotation=90)
-    ax1.text(2, ann_y, 'Tobacco', fontsize=12, rotation=90)
-    ax1.text(3, ann_y, 'Radiation', fontsize=12, rotation=90)
-    ax1.text(4, ann_y, 'Top2A', fontsize=12, rotation=90)
-    ax1.text(8, ann_y, 'Novel', fontsize=12, rotation=90)
-    ax1.text(14, ann_y, 'Unknown', fontsize=12, rotation=90)
+    ann_y = 4.35
+    ax2.text(2.1, ann_y, 'MMRD/MSI', fontsize=12, rotation=90)
+    ax2.text(4.8, ann_y, 'Tobacco', fontsize=12, rotation=90)
+    ax2.text(6.8, ann_y, 'Radiation', fontsize=12, rotation=90)
+    ax2.text(8.8, ann_y, 'Top2A', fontsize=12, rotation=90)
+    ax2.text(18, ann_y, 'Novel', fontsize=12, rotation=90)
+    ax2.text(30, ann_y, 'Unknown', fontsize=12, rotation=90)
 
-    line_y = 1.65
-    trans = ax1.get_xaxis_transform()
-    ax1.plot([-.5,1.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax1.plot([1.6, 2.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax1.plot([2.6, 3.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax1.plot([3.6, 4.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax1.plot([4.6, 12.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax1.plot([12.6, 16.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-
-    ax1.set_facecolor("#f4f0eb")
+    line_y = 1.23
+    trans = ax2.get_xaxis_transform()
+    ax2.plot([0.4, 3.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    ax2.plot([4.4, 5.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    ax2.plot([6.4, 7.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    ax2.plot([8.4, 9.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    ax2.plot([10.4, 25.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    ax2.plot([26.4, 33.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
 
     if cutoff < 0:
         print("ERROR: cutoff value is less than 0")
@@ -1233,7 +1158,7 @@ def plotTMB_ID(inputDF, kzm611_sigs_rel, scale, order=[], Yrange = "adapt", cuto
 
     for i in range(0,ngroups):
         if ((i+1) % 2) == 0:
-            rectangle = mpatches.Rectangle([(i)*2, ymin], 2, ymax-ymin, color="#f4f0eb", zorder = 0)
+            rectangle = mpatches.Rectangle([(i)*2, ymin], 2, ymax-ymin, color="white", zorder = 0)
             ax2.add_patch(rectangle)
         else:
             rectangle = mpatches.Rectangle([(i)*2, ymin], 2, ymax-ymin, color='lightgray', zorder = 0)
@@ -1247,13 +1172,16 @@ def plotTMB_ID(inputDF, kzm611_sigs_rel, scale, order=[], Yrange = "adapt", cuto
         ax2.hlines(redbars[i], X_start, X_end, colors='red', zorder=2)
         ax2.text((leftm + 0.2 + i * 0.4) / fig_width , 0.85 / fig_length , "___",  horizontalalignment='center',transform=plt.gcf().transFigure)
     ax2.set_ylabel(yaxis)
+
+    axes2 = ax2.twiny()
+    plt.tick_params(axis = 'both', which = 'both',length = 0)
+    plt.xticks(np.arange(1, 2*ngroups+1, step = 2),names,rotation = 90,ha = 'right')
+
     fig.subplots_adjust(top = ((ymax - ymin) * 0.7 + bottomm) / fig_length, bottom = bottomm / fig_length, left = leftm / fig_width, right=1 - rightm / fig_width)
 
 
-
-
 ## Adapted from https://github.com/AlexandrovLab/SigProfilerPlotting
-def plotTMB_CN(inputDF, kzm611_sigs_rel, scale, order=[], Yrange = "adapt", cutoff = 0,
+def plotTMB_CN_v3(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0,
             redbar = "median", yaxis = "Somatic Mutations per Megabase",
             ascend = True, leftm = 1, rightm = 0.3, topm = 1.4, bottomm = 1):
     """
@@ -1323,42 +1251,27 @@ def plotTMB_CN(inputDF, kzm611_sigs_rel, scale, order=[], Yrange = "adapt", cuto
         leftm = leftm + 0.09 * (len(names[0]) - 13)
         topm = topm + 0.080 * (len(names[0]) - 13)
     fig_width = leftm + rightm + 0.4 * ngroups
-    fig_length = 6
-    fig, (ax0, ax2) = plt.subplots(2,1, figsize=(fig_width, fig_length), gridspec_kw={'height_ratios': [1, 2]})
+    fig_length = 4
+    fig, ax2 = plt.subplots(figsize=(fig_width, fig_length))
 
-    
-    ax1 = kzm611_sigs_rel.plot(kind="bar", stacked=True, width=0.95, color=[A_col, B_col], ax=ax0)
-    ax1.set_xlabel('')
-    ax1.set_yticks([])
-    ax1.set_ylabel('')
-    ax1.spines['right'].set_visible(False)
-    ax1.spines['top'].set_visible(False)
-    ax1.spines['left'].set_visible(False)
-    ax1.spines['bottom'].set_visible(False)
-    ax1.tick_params(axis="x", bottom=False, top=True, labelbottom=False, labeltop=True)
-    # Rotate and align top ticklabels
-    plt.setp([tick.label2 for tick in ax1.xaxis.get_major_ticks()], rotation=90,
-            ha="left", va="center",rotation_mode="anchor")
-    ax1.get_legend().remove()
+    ann_y = 2
+    ax2.text(0.9, ann_y, 'Tetraploidy', fontsize=12, rotation=90)
+    ax2.text(2.7, ann_y, 'Octoploidy', fontsize=12, rotation=90)
+    ax2.text(6.7, ann_y, 'Chromothripsis', fontsize=12, rotation=90)
+    ax2.text(10.6, ann_y, 'LOH', fontsize=12, rotation=90)
+    ax2.text(12.6, ann_y, 'dMMR', fontsize=12, rotation=90)
+    ax2.text(20, ann_y, 'Novel', fontsize=12, rotation=90)
+    ax2.text(26.7, ann_y, 'Unknown', fontsize=12, rotation=90)
 
-    ann_y = 1.85
-    ax1.text(-0.25, ann_y, 'Tetraploidy', fontsize=12, rotation=90)
-    ax1.text(0.75, ann_y, 'Octoploidy', fontsize=12, rotation=90)
-    ax1.text(2.75, ann_y, 'Chromothripsis', fontsize=12, rotation=90)
-    ax1.text(4.75, ann_y, 'LOH', fontsize=12, rotation=90)
-    ax1.text(5.75, ann_y, 'dMMR', fontsize=12, rotation=90)
-    ax1.text(8.75, ann_y, 'Novel', fontsize=12, rotation=90)
-    ax1.text(12.75, ann_y, 'Unknown', fontsize=12, rotation=90)
-
-    line_y = 1.65
-    trans = ax1.get_xaxis_transform()
-    ax1.plot([-.5, .4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax1.plot([.6, 1.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax1.plot([1.6, 4.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax1.plot([4.6, 5.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax1.plot([5.6, 6.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax1.plot([6.6, 12.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax1.plot([12.6, 13.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    line_y = 1.16
+    trans = ax2.get_xaxis_transform()
+    ax2.plot([0.4, 1.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    ax2.plot([2.4, 3.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    ax2.plot([4.4, 9.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    ax2.plot([10.4, 11.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    ax2.plot([12.4, 13.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    ax2.plot([14.4, 25.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    ax2.plot([26.4, 27.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
 
     if cutoff < 0:
         print("ERROR: cutoff value is less than 0")
@@ -1389,13 +1302,17 @@ def plotTMB_CN(inputDF, kzm611_sigs_rel, scale, order=[], Yrange = "adapt", cuto
         ax2.hlines(redbars[i], X_start, X_end, colors='red', zorder=2)
         ax2.text((leftm + 0.2 + i * 0.4) / fig_width , 0.85 / fig_length , "___",  horizontalalignment='center',transform=plt.gcf().transFigure)
     ax2.set_ylabel(yaxis)
+
+    axes2 = ax2.twiny()
+    plt.tick_params(axis = 'both', which = 'both',length = 0)
+    plt.xticks(np.arange(1, 2*ngroups+1, step = 2),names,rotation = 90,ha = 'right')
+
     fig.subplots_adjust(top = ((ymax - ymin) * 0.7 + bottomm) / fig_length, bottom = bottomm / fig_length, left = leftm / fig_width, right=1 - rightm / fig_width)
 
 
 
-
 ## Adapted from https://github.com/AlexandrovLab/SigProfilerPlotting
-def plotTMB_SV(inputDF, kzm611_sigs_rel, scale, order=[], Yrange = "adapt", cutoff = 0,
+def plotTMB_SV_v3(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0,
             redbar = "median", yaxis = "Somatic Mutations per Megabase",
             ascend = True, leftm = 1, rightm = 0.3, topm = 1.4, bottomm = 1):
     """
@@ -1465,34 +1382,17 @@ def plotTMB_SV(inputDF, kzm611_sigs_rel, scale, order=[], Yrange = "adapt", cuto
         leftm = leftm + 0.09 * (len(names[0]) - 13)
         topm = topm + 0.080 * (len(names[0]) - 13)
     fig_width = leftm + rightm + 0.4 * ngroups
-    fig_length = 6
-    fig, (ax0, ax2) = plt.subplots(2,1, figsize=(fig_width, fig_length), gridspec_kw={'height_ratios': [1, 2]})
+    fig_length = 4
+    fig, ax2 = plt.subplots(figsize=(fig_width, fig_length))
 
-    
-    ax1 = kzm611_sigs_rel.plot(kind="bar", stacked=True, width=0.95, color=[A_col, B_col], ax=ax0)
-    ax1.set_xlabel('')
-    ax1.set_yticks([])
-    ax1.set_ylabel('')
-    ax1.spines['right'].set_visible(False)
-    ax1.spines['top'].set_visible(False)
-    ax1.spines['left'].set_visible(False)
-    ax1.spines['bottom'].set_visible(False)
-    ax1.tick_params(axis="x", bottom=False, top=True, labelbottom=False, labeltop=True)
-    # Rotate and align top ticklabels
-    plt.setp([tick.label2 for tick in ax1.xaxis.get_major_ticks()], rotation=90,
-            ha="left", va="center",rotation_mode="anchor")
-    ax1.get_legend().remove()
+    ann_y = 1.13
+    ax2.text(8, ann_y, 'Unknown', fontsize=12, rotation=90)
+    ax2.text(18.5, ann_y, 'Novel', fontsize=12, rotation=90)
 
-    ann_y = 1.85
-    ax1.text(-0.25, ann_y, 'HRD', fontsize=12, rotation=90)
-    ax1.text(2.75, ann_y, 'Novel', fontsize=12, rotation=90)
-    ax1.text(8.5, ann_y, 'Unknow', fontsize=12, rotation=90)
-
-    line_y = 1.65
-    trans = ax1.get_xaxis_transform()
-    ax1.plot([-.5, .4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax1.plot([.6, 5.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax1.plot([5.6, 11.4],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    line_y = 1.2
+    trans = ax2.get_xaxis_transform()
+    ax2.plot([.4, 15.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
+    ax2.plot([16.4, 21.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
 
     if cutoff < 0:
         print("ERROR: cutoff value is less than 0")
@@ -1523,8 +1423,12 @@ def plotTMB_SV(inputDF, kzm611_sigs_rel, scale, order=[], Yrange = "adapt", cuto
         ax2.hlines(redbars[i], X_start, X_end, colors='red', zorder=2)
         ax2.text((leftm + 0.2 + i * 0.4) / fig_width , 0.85 / fig_length , "___",  horizontalalignment='center',transform=plt.gcf().transFigure)
     ax2.set_ylabel(yaxis)
-    fig.subplots_adjust(top = ((ymax - ymin) * 0.7 + bottomm) / fig_length, bottom = bottomm / fig_length, left = leftm / fig_width, right=1 - rightm / fig_width)
 
+    axes2 = ax2.twiny()
+    plt.tick_params(axis = 'both', which = 'both',length = 0)
+    plt.xticks(np.arange(1, 2*ngroups+1, step = 2),names,rotation = 90,ha = 'right')
+
+    fig.subplots_adjust(top = ((ymax - ymin) * 0.7 + bottomm) / fig_length, bottom = bottomm / fig_length, left = leftm / fig_width, right=1 - rightm / fig_width)
 
 
 
