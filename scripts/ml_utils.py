@@ -269,16 +269,13 @@ def get_votingClf_v2(df, cv=False, extra_plots=False, plot_title='', verbose=Fal
         fig, axes = plt.subplots(1,2, figsize=(12, 5))
         plot_roc_curve(y_test, y_prob, title = 'ROC Plot', target_names=['Sig -', 'Sig +'], ax=axes[0])
         _ = axes[0].set(
-            xlabel="False Positive Rate (1 - Specificity)",
-            ylabel="True Positive Rate (Sensitivity)",
-            title="ROC",
             xlim=(-0.03, 1),
-            ylim=(0, 1.03),
+            ylim=(0, 1.03)
         )
         plot_precision_recall_curve(y_test, y_prob, title = 'PR Curve', target_names=['Sig -', 'Sig +'], ax=axes[1])
-        _ = axes[1].set( xlim=(0, 1.03) )
+        _ = axes[1].set( xlim=(0, 1.03))
         
-        ax2 = fig.add_axes([.817,.16, .075,.275])
+        ax2 = fig.add_axes([.808,.3, .075,.275])
         disp = ConfusionMatrixDisplay.from_estimator(VC_soft, X_test, y_test,
                                                     display_labels=target_names,
                                                     cmap=plt.cm.Blues,
@@ -286,7 +283,12 @@ def get_votingClf_v2(df, cv=False, extra_plots=False, plot_title='', verbose=Fal
                                                     ax=ax2,
                                                     colorbar=False
         )
-        fig.suptitle(plot_title, fontsize=16)
+        for text in disp.text_.ravel():
+            text.set_fontsize(16)
+        ax2.xaxis.label.set_size(14)
+        ax2.yaxis.label.set_size(14)
+        ax2.tick_params(axis='both', labelsize=14)
+        fig.suptitle(plot_title, fontsize=24)
 
     report = pd.DataFrame(classification_report(y_test, y_pred, target_names=target_names, output_dict=True)).transpose()    
     return report, VC_soft_score
@@ -581,6 +583,8 @@ def plot_roc_curve(y_true, y_probas, title='ROC Curves',
 
     if ax is None:
         fig, ax = plt.subplots(1, 1, figsize=figsize)
+    
+    ax.set_title("ROC", fontsize=title_fontsize)
 
     if 'each_class' in curves:
         for i in range(len(classes)):
@@ -604,11 +608,11 @@ def plot_roc_curve(y_true, y_probas, title='ROC Curves',
     ax.plot([0, 1], [0, 1], color = 'k', linestyle = '--', lw=2)
     ax.set_xlim([0.0, 1.0])
     ax.set_ylim([0.0, 1.05])
-    ax.set_xlabel('False Positive Rate', fontsize="large")
-    ax.set_ylabel('True Positive Rate', fontsize="large")
+    ax.set_xlabel('False Positive Rate (1 - Specificity)', fontsize="xx-large")
+    ax.set_ylabel('True Positive Rate (Sensitivity)', fontsize="xx-large")
     #ax.tick_params(labelsize="large")
-    ax.legend(loc='lower right', fontsize="large", frameon=False)
-    ax.set_title(title, fontsize=26)
+    ax.legend(loc='lower right', fontsize="x-large", frameon=False)
+
     return ax
 
 
@@ -734,10 +738,10 @@ def plot_precision_recall_curve(y_true, y_probas,
 
     ax.set_xlim([0.0, 1.0])
     ax.set_ylim([0.0, 1.05])
-    ax.set_xlabel('Recall', fontsize="x-large")
-    ax.set_ylabel('Precision', fontsize="x-large")
+    ax.set_xlabel('Recall', fontsize="xx-large")
+    ax.set_ylabel('Precision', fontsize="xx-large")
     ax.tick_params(labelsize="large")
-    ax.legend(loc='best', fontsize="large", frameon=False)
+    ax.legend(loc='best', fontsize="x-large", frameon=False)
     return ax
 
 
@@ -812,7 +816,7 @@ def shap_swarm_single(mat_df, neg_samples, pos_samples):
     return model_ind, features
 
 
-def shap_swarm_single_v2(df):
+def shap_swarm_single_v2(df, label_col='platinum_sigs'):
     """
     Trains an XGBoost model and computes SHAP values for feature importance analysis.
 
@@ -850,7 +854,7 @@ def shap_swarm_single_v2(df):
     - The function returns the trained model and a ranked list of feature importance scores.
     """
 
-    X, y  = df.iloc[:,0:-1], df['platinum_sigs']
+    X, y  = df.iloc[:,0:-1], df[label_col]
 
     X.columns = [x.replace('[', '').replace(']', '').replace('<', '').replace('>', '') for x in X.columns]
 
