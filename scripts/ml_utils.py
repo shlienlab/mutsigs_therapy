@@ -290,8 +290,12 @@ def get_votingClf_v2(df, cv=False, extra_plots=False, plot_title='', verbose=Fal
         ax2.tick_params(axis='both', labelsize=14)
         fig.suptitle(plot_title, fontsize=24)
 
-    report = pd.DataFrame(classification_report(y_test, y_pred, target_names=target_names, output_dict=True)).transpose()    
-    return report, VC_soft_score
+    report = pd.DataFrame(classification_report(y_test, y_pred, target_names=target_names, output_dict=True)).transpose()
+
+    roc_df = get_roc_df(y_test, y_prob, target_names=['Sig -', 'Sig +'], curves=('micro', 'macro', 'each_class'))
+    pr_df = get_pr_df(y_test, y_prob, target_names=['Sig -', 'Sig +'], curves=('micro', 'each_class'))
+
+    return report, VC_soft_score, roc_df, pr_df
 
 
   
@@ -584,7 +588,7 @@ def plot_roc_curve(y_true, y_probas, title='ROC Curves',
     if ax is None:
         fig, ax = plt.subplots(1, 1, figsize=figsize)
     
-    ax.set_title("ROC", fontsize=title_fontsize)
+    ax.set_title("ROC Curve", fontsize=title_fontsize)
 
     if 'each_class' in curves:
         for i in range(len(classes)):
@@ -616,6 +620,50 @@ def plot_roc_curve(y_true, y_probas, title='ROC Curves',
     return ax
 
 
+def get_roc_df(y_true, y_probas, target_names=None, curves=('micro', 'macro', 'each_class')):
+    y_true = np.array(y_true)
+    y_probas = np.array(y_probas)
+    classes = np.unique(y_true)
+
+    fpr, tpr, roc_auc = {}, {}, {}
+
+    # Per-class curves
+    for i in range(len(classes)):
+        fpr[i], tpr[i], _ = roc_curve(y_true, y_probas[:, i], pos_label=classes[i])
+        roc_auc[i] = auc(fpr[i], tpr[i])
+
+    # Micro-average
+    y_true_bin = label_binarize(y_true, classes=classes)
+    if len(classes) == 2:
+        y_true_bin = np.hstack((1 - y_true_bin, y_true_bin))
+    fpr['micro'], tpr['micro'], _ = roc_curve(y_true_bin.ravel(), y_probas.ravel())
+    roc_auc['micro'] = auc(fpr['micro'], tpr['micro'])
+
+    # Macro-average
+    all_fpr = np.unique(np.concatenate([fpr[i] for i in range(len(classes))]))
+    mean_tpr = np.zeros_like(all_fpr)
+    for i in range(len(classes)):
+        mean_tpr += interp(all_fpr, fpr[i], tpr[i])
+    mean_tpr /= len(classes)
+    fpr['macro'], tpr['macro'] = all_fpr, mean_tpr
+    roc_auc['macro'] = auc(fpr['macro'], tpr['macro'])
+
+    # Build long-format df
+    rows = []
+
+    if 'each_class' in curves:
+        for i in range(len(classes)):
+            name = target_names[i] if target_names else str(classes[i])
+            for fp, tp in zip(fpr[i], tpr[i]):
+                rows.append({'curve': name, 'fpr': fp, 'tpr': tp, 'auc': roc_auc[i]})
+
+    for avg in ['micro', 'macro']:
+        if avg in curves:
+            for fp, tp in zip(fpr[avg], tpr[avg]):
+                rows.append({'curve': avg, 'fpr': fp, 'tpr': tp, 'auc': roc_auc[avg]})
+
+    df = pd.DataFrame(rows)
+    return df
 
 ## Credit: adapted from Reiichiro Nakano. (2018). reiinakano/scikit-plot: 0.3.7. Zenodo. http://doi.org/10.5281/zenodo.293191
 def plot_precision_recall_curve(y_true, y_probas,
@@ -743,6 +791,55 @@ def plot_precision_recall_curve(y_true, y_probas,
     ax.tick_params(labelsize="large")
     ax.legend(loc='best', fontsize="x-large", frameon=False)
     return ax
+
+
+def get_pr_df(y_true, y_probas, target_names=None, curves=('micro', 'each_class')):
+    chance_ap = sum(y_true) / len(y_true)
+    y_true = np.array(y_true)
+    y_probas = np.array(y_probas)
+    classes = np.unique(y_true)
+
+    precision, recall, average_precision = {}, {}, {}
+
+    # Per-class curves
+    for i in range(len(classes)):
+        precision[i], recall[i], _ = precision_recall_curve(
+            y_true, y_probas[:, i], pos_label=classes[i])
+
+    # Binarize for AP scoring and micro-average
+    y_true_bin = label_binarize(y_true, classes=classes)
+    if len(classes) == 2:
+        y_true_bin = np.hstack((1 - y_true_bin, y_true_bin))
+
+    for i in range(len(classes)):
+        average_precision[i] = average_precision_score(y_true_bin[:, i], y_probas[:, i])
+
+    # Micro-average
+    precision['micro'], recall['micro'], _ = precision_recall_curve(
+        y_true_bin.ravel(), y_probas.ravel())
+    average_precision['micro'] = average_precision_score(y_true_bin, y_probas, average='micro')
+
+    # Build long-format df
+    rows = []
+
+    if 'each_class' in curves:
+        for i in range(len(classes)):
+            name = target_names[i] if target_names else str(classes[i])
+            for r, p in zip(recall[i], precision[i]):
+                rows.append({'curve': name, 'recall': r, 'precision': p,
+                             'average_precision': average_precision[i]})
+
+    if 'micro' in curves:
+        for r, p in zip(recall['micro'], precision['micro']):
+            rows.append({'curve': 'micro', 'recall': r, 'precision': p,
+                         'average_precision': average_precision['micro']})
+
+    # Append chance as a single summary row
+    rows.append({'curve': 'chance', 'recall': None, 'precision': None,
+                 'average_precision': chance_ap})
+
+    df = pd.DataFrame(rows)
+    return df
 
 
 

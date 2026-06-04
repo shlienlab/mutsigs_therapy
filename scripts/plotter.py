@@ -763,7 +763,7 @@ def plotTMB_generic(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0,
     plt.ylabel(yaxis, fontsize=18)
     axes2 = ax.twiny()
     plt.tick_params(axis = 'both', which = 'both',length = 0)
-    plt.xticks(np.arange(1, 2*ngroups+1, step = 2), names, rotation = -90, ha = 'right', fontsize=18)
+    plt.xticks(np.arange(1, 2*ngroups+1, step = 2), names, rotation = 90, ha = 'right', fontsize=18)
     fig.subplots_adjust(top = ((ymax - ymin) * 0.7 + bottomm) / fig_length, bottom = bottomm / fig_length, left = leftm / fig_width, right=1 - rightm / fig_width)
 
 
@@ -849,57 +849,59 @@ def plotTMB_SBS_v3(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0, outpu
     fig_length = 4
     fig, ax2 = plt.subplots(figsize=(fig_width, fig_length))
 
-    line_y = 1.3
-    ann_y = 4.75
+    line_y = 1.405
+    ann_y = 5.2
     trans = ax2.get_xaxis_transform()
 
-    ax2.text(2, ann_y, 'Clock-like', fontsize=12, rotation=90)
+    etio_label_fs = 16
+
+    ax2.text(2, ann_y, 'Clock-like', fontsize=etio_label_fs, rotation=90)
     ax2.plot([0.4, 3.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax2.text(6, ann_y, 'APOBEC', fontsize=12, rotation=90)
+    ax2.text(6, ann_y, 'APOBEC', fontsize=etio_label_fs, rotation=90)
     ax2.plot([4.4, 7.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax2.text(10, ann_y, 'UV', fontsize=12, rotation=90)
+    ax2.text(10, ann_y, 'UV', fontsize=etio_label_fs, rotation=90)
     ax2.plot([8.4, 11.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax2.text(13.5, ann_y, 'POLE', fontsize=12, rotation=90)
+    ax2.text(13.5, ann_y, 'POLE', fontsize=etio_label_fs, rotation=90)
     ax2.plot([12.4, 15.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax2.text(16.6, ann_y, 'POLE/MMRD', fontsize=12, rotation=90)
+    ax2.text(16.6, ann_y, 'POLE/MMRD', fontsize=etio_label_fs, rotation=90)
     ax2.plot([16.4, 17.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax2.text(18.6, ann_y, 'POLD1/MMRD', fontsize=12, rotation=90)
+    ax2.text(18.6, ann_y, 'POLD1/MMRD', fontsize=etio_label_fs, rotation=90)
     ax2.plot([18.4, 19.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax2.text(20.8, ann_y, 'Temo', fontsize=12, rotation=90)
+    ax2.text(20.8, ann_y, 'Temozolomide', fontsize=etio_label_fs, rotation=90)
     ax2.plot([20.4, 21.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax2.text(22.6, ann_y, '5-FU', fontsize=12, rotation=90)
+    ax2.text(22.6, ann_y, '5-FU', fontsize=etio_label_fs, rotation=90)
     ax2.plot([22.4, 23.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax2.text(25.5, ann_y, 'Platinum', fontsize=12, rotation=90)
+    ax2.text(25.5, ann_y, 'Platinum', fontsize=etio_label_fs, rotation=90)
     ax2.plot([24.4, 27.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax2.text(28.6, ann_y, 'Thiopurine', fontsize=12, rotation=90)
+    ax2.text(28.6, ann_y, 'Thiopurine', fontsize=etio_label_fs, rotation=90)
     ax2.plot([28.4, 29.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax2.text(33, ann_y, 'Novel\nTherapy', fontsize=12, rotation=90)
+    ax2.text(33, ann_y, 'Novel\nTherapy', fontsize=etio_label_fs, rotation=90)
     ax2.plot([30.4, 37.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax2.text(38.6, ann_y, 'AID', fontsize=12, rotation=90)
+    ax2.text(38.6, ann_y, 'AID', fontsize=etio_label_fs, rotation=90)
     ax2.plot([38.4, 39.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax2.text(41.6, ann_y, 'MMRD/MSI', fontsize=12, rotation=90)
+    ax2.text(41.6, ann_y, 'MMRD/MSI', fontsize=etio_label_fs, rotation=90)
     ax2.plot([40.4, 43.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax2.text(44.5, ann_y, 'ROS', fontsize=12, rotation=90)
+    ax2.text(44.5, ann_y, 'ROS', fontsize=etio_label_fs, rotation=90)
     ax2.plot([44.4, 45.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax2.text(50, ann_y, 'Unknown', fontsize=12, rotation=90)
+    ax2.text(50, ann_y, 'Unknown', fontsize=etio_label_fs, rotation=90)
     ax2.plot([46.4, 55.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax2.text(60, ann_y, 'Novel', fontsize=12, rotation=90)
+    ax2.text(60, ann_y, 'Novel', fontsize=etio_label_fs, rotation=90)
     ax2.plot([56.4, 65.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
-    ax2.text(73, ann_y, 'Artifacts', fontsize=12, rotation=90)
+    ax2.text(73, ann_y, 'Artifacts', fontsize=etio_label_fs, rotation=90)
     ax2.plot([66.4, 79.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
 
     ax2.plot([20, 38],[1,1], color="red", linewidth = 2, transform=trans, clip_on=False)
-    ax2.plot([20, 38],[1.7,1.7], color="red", linewidth = 2, transform=trans, clip_on=False)
-    ax2.plot([20, 20],[1,1.7], color="red", linewidth = 2, transform=trans, clip_on=False)
-    ax2.plot([38, 38],[1,1.7], color="red", linewidth = 2, transform=trans, clip_on=False)
+    ax2.plot([20, 38],[1.85,1.85], color="red", linewidth = 2, transform=trans, clip_on=False)
+    ax2.plot([20, 20],[1,1.85], color="red", linewidth = 2, transform=trans, clip_on=False)
+    ax2.plot([38, 38],[1,1.85], color="red", linewidth = 2, transform=trans, clip_on=False)
 
-    ax2.text(24, 4.2, 'Therapy Signatures', color="red", fontsize=14)
+    ax2.text(24, 4.7, 'Therapy Signatures', color="red", fontsize=etio_label_fs)
 
     ax2.set_xlim(0,2*ngroups)
     ax2.set_ylim(ymin,ymax)
     yticks_loc = range(ymin,ymax+1,1)
     ax2.set_yticks(yticks_loc,list(map((lambda x: 10**x), list(yticks_loc))))
-    ax2.set_xticks(np.arange(1, 2*ngroups+1, step = 2), list1) 
+    ax2.set_xticks(np.arange(1, 2*ngroups+1, step = 2), list1, fontsize=16)
     ax2.tick_params(axis = 'both', which = 'both',length = 0)
     ax2.hlines(yticks_loc,0,2*ngroups,colors = 'black',linestyles = "dashed",linewidth = 0.5,zorder = 1)
     for i in range(0,ngroups,2):
@@ -919,7 +921,7 @@ def plotTMB_SBS_v3(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0, outpu
 
     axes2 = ax2.twiny()
     plt.tick_params(axis = 'both', which = 'both',length = 0)
-    plt.xticks(np.arange(1, 2*ngroups+1, step = 2),names,rotation = 90,ha = 'right')
+    plt.xticks(np.arange(1, 2*ngroups+1, step = 2),names,rotation = 90,ha = 'right', fontsize=16)
 
     fig.subplots_adjust(top = ((ymax - ymin) * 0.7 + bottomm) / fig_length, bottom = bottomm / fig_length, left = leftm / fig_width, right=1 - rightm / fig_width)
 
@@ -999,15 +1001,16 @@ def plotTMB_DBS_v3(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0,
     fig_length = 4
     fig, ax2 = plt.subplots(figsize=(fig_width, fig_length))
 
-    ann_y = 2.6
-    ax2.text(1, ann_y, 'UV', fontsize=12, rotation=90)
-    ax2.text(3, ann_y, 'Tobacco, etc.', fontsize=12, rotation=90)
-    ax2.text(4.5, ann_y, 'Platinum', fontsize=12, rotation=90)
-    ax2.text(7.5, ann_y, 'MMRD', fontsize=12, rotation=90)
-    ax2.text(12.5, ann_y, 'Novel', fontsize=12, rotation=90)
-    ax2.text(19.5, ann_y, 'Unknown', fontsize=12, rotation=90)
+    etio_label_fs = 16
+    ann_y = 3.1
+    ax2.text(1, ann_y, 'UV', fontsize=etio_label_fs, rotation=90)
+    ax2.text(3, ann_y, 'Tobacco, etc.', fontsize=etio_label_fs, rotation=90)
+    ax2.text(4.5, ann_y, 'Platinum', fontsize=etio_label_fs, rotation=90)
+    ax2.text(7.5, ann_y, 'MMRD', fontsize=etio_label_fs, rotation=90)
+    ax2.text(12.5, ann_y, 'Novel', fontsize=etio_label_fs, rotation=90)
+    ax2.text(19.5, ann_y, 'Unknown', fontsize=etio_label_fs, rotation=90)
 
-    line_y = 1.35
+    line_y = 1.475
     trans = ax2.get_xaxis_transform()
     ax2.plot([0.4, 1.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
     ax2.plot([2.4, 3.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
@@ -1026,7 +1029,7 @@ def plotTMB_DBS_v3(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0,
     yticks_loc = range(ymin,ymax+1,1)
     ax2.set_yticks(yticks_loc,list(map((lambda x: 10**x), list(yticks_loc))))
     #ax2.set_xticks(np.arange(1, 2*ngroups+1, step = 2), new_labels)
-    ax2.set_xticks(np.arange(1, 2*ngroups+1, step = 2), list1)
+    ax2.set_xticks(np.arange(1, 2*ngroups+1, step = 2), list1, fontsize=16)
     ax2.tick_params(axis = 'both', which = 'both',length = 0)
     ax2.hlines(yticks_loc,0,2*ngroups,colors = 'black',linestyles = "dashed",linewidth = 0.5,zorder = 1)
     for i in range(0,ngroups):
@@ -1048,7 +1051,7 @@ def plotTMB_DBS_v3(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0,
 
     axes2 = ax2.twiny()
     plt.tick_params(axis = 'both', which = 'both',length = 0)
-    plt.xticks(np.arange(1, 2*ngroups+1, step = 2),names,rotation = 90,ha = 'right')
+    plt.xticks(np.arange(1, 2*ngroups+1, step = 2),names,rotation = 90,ha = 'right', fontsize=16)
 
     fig.subplots_adjust(top = ((ymax - ymin) * 0.7 + bottomm) / fig_length, bottom = bottomm / fig_length, left = leftm / fig_width, right=1 - rightm / fig_width)
 
@@ -1128,15 +1131,16 @@ def plotTMB_ID_v3(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0,
     fig_length = 4
     fig, ax2 = plt.subplots(figsize=(fig_width, fig_length))
 
-    ann_y = 4.35
-    ax2.text(2.1, ann_y, 'MMRD/MSI', fontsize=12, rotation=90)
-    ax2.text(4.8, ann_y, 'Tobacco', fontsize=12, rotation=90)
-    ax2.text(6.8, ann_y, 'Radiation', fontsize=12, rotation=90)
-    ax2.text(8.8, ann_y, 'Top2A', fontsize=12, rotation=90)
-    ax2.text(18, ann_y, 'Novel', fontsize=12, rotation=90)
-    ax2.text(30, ann_y, 'Unknown', fontsize=12, rotation=90)
+    etio_label_fs = 16
+    ann_y = 4.67
+    ax2.text(2.1, ann_y, 'MMRD/MSI', fontsize=etio_label_fs, rotation=90)
+    ax2.text(4.8, ann_y, 'Tobacco', fontsize=etio_label_fs, rotation=90)
+    ax2.text(6.8, ann_y, 'Radiation', fontsize=etio_label_fs, rotation=90)
+    ax2.text(8.8, ann_y, 'Top2A', fontsize=etio_label_fs, rotation=90)
+    ax2.text(18, ann_y, 'Novel', fontsize=etio_label_fs, rotation=90)
+    ax2.text(30, ann_y, 'Unknown', fontsize=etio_label_fs, rotation=90)
 
-    line_y = 1.23
+    line_y = 1.3
     trans = ax2.get_xaxis_transform()
     ax2.plot([0.4, 3.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
     ax2.plot([4.4, 5.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
@@ -1152,7 +1156,7 @@ def plotTMB_ID_v3(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0,
     ax2.set_ylim(ymin,ymax)
     yticks_loc = range(ymin,ymax+1,1)
     ax2.set_yticks(yticks_loc,list(map((lambda x: 10**x), list(yticks_loc))))
-    ax2.set_xticks(np.arange(1, 2*ngroups+1, step = 2), list1) 
+    ax2.set_xticks(np.arange(1, 2*ngroups+1, step = 2), list1, fontsize=16)
     ax2.tick_params(axis = 'both', which = 'both',length = 0)
     ax2.hlines(yticks_loc,0,2*ngroups,colors = 'black',linestyles = "dashed",linewidth = 0.5,zorder = 1)
 
@@ -1175,7 +1179,7 @@ def plotTMB_ID_v3(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0,
 
     axes2 = ax2.twiny()
     plt.tick_params(axis = 'both', which = 'both',length = 0)
-    plt.xticks(np.arange(1, 2*ngroups+1, step = 2),names,rotation = 90,ha = 'right')
+    plt.xticks(np.arange(1, 2*ngroups+1, step = 2),names,rotation = 90,ha = 'right', fontsize=16)
 
     fig.subplots_adjust(top = ((ymax - ymin) * 0.7 + bottomm) / fig_length, bottom = bottomm / fig_length, left = leftm / fig_width, right=1 - rightm / fig_width)
 
@@ -1254,16 +1258,17 @@ def plotTMB_CN_v3(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0,
     fig_length = 4
     fig, ax2 = plt.subplots(figsize=(fig_width, fig_length))
 
-    ann_y = 2
-    ax2.text(0.9, ann_y, 'Tetraploidy', fontsize=12, rotation=90)
-    ax2.text(2.7, ann_y, 'Octoploidy', fontsize=12, rotation=90)
-    ax2.text(6.7, ann_y, 'Chromothripsis', fontsize=12, rotation=90)
-    ax2.text(10.6, ann_y, 'LOH', fontsize=12, rotation=90)
-    ax2.text(12.6, ann_y, 'dMMR', fontsize=12, rotation=90)
-    ax2.text(20, ann_y, 'Novel', fontsize=12, rotation=90)
-    ax2.text(26.7, ann_y, 'Unknown', fontsize=12, rotation=90)
+    etio_label_fs = 16
+    ann_y = 2.3
+    ax2.text(0.9, ann_y, 'Tetraploidy', fontsize=etio_label_fs, rotation=90)
+    ax2.text(2.7, ann_y, 'Octoploidy', fontsize=etio_label_fs, rotation=90)
+    ax2.text(6.7, ann_y, 'Chromothripsis', fontsize=etio_label_fs, rotation=90)
+    ax2.text(10.6, ann_y, 'LOH', fontsize=etio_label_fs, rotation=90)
+    ax2.text(12.6, ann_y, 'dMMR', fontsize=etio_label_fs, rotation=90)
+    ax2.text(20, ann_y, 'Novel', fontsize=etio_label_fs, rotation=90)
+    ax2.text(26.7, ann_y, 'Unknown', fontsize=etio_label_fs, rotation=90)
 
-    line_y = 1.16
+    line_y = 1.223
     trans = ax2.get_xaxis_transform()
     ax2.plot([0.4, 1.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
     ax2.plot([2.4, 3.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
@@ -1281,7 +1286,7 @@ def plotTMB_CN_v3(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0,
     ax2.set_ylim(ymin,ymax)
     yticks_loc = range(ymin,ymax+1,1)
     ax2.set_yticks(yticks_loc,list(map((lambda x: 10**x), list(yticks_loc))))
-    ax2.set_xticks(np.arange(1, 2*ngroups+1, step = 2), list1) 
+    ax2.set_xticks(np.arange(1, 2*ngroups+1, step = 2), list1, fontsize=etio_label_fs)
     ax2.tick_params(axis = 'both', which = 'both',length = 0)
     ax2.hlines(yticks_loc,0,2*ngroups,colors = 'black',linestyles = "dashed",linewidth = 0.5,zorder = 1)
 
@@ -1305,7 +1310,7 @@ def plotTMB_CN_v3(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0,
 
     axes2 = ax2.twiny()
     plt.tick_params(axis = 'both', which = 'both',length = 0)
-    plt.xticks(np.arange(1, 2*ngroups+1, step = 2),names,rotation = 90,ha = 'right')
+    plt.xticks(np.arange(1, 2*ngroups+1, step = 2),names,rotation = 90,ha = 'right', fontsize=etio_label_fs)
 
     fig.subplots_adjust(top = ((ymax - ymin) * 0.7 + bottomm) / fig_length, bottom = bottomm / fig_length, left = leftm / fig_width, right=1 - rightm / fig_width)
 
@@ -1385,11 +1390,12 @@ def plotTMB_SV_v3(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0,
     fig_length = 4
     fig, ax2 = plt.subplots(figsize=(fig_width, fig_length))
 
-    ann_y = 1.13
-    ax2.text(8, ann_y, 'Unknown', fontsize=12, rotation=90)
-    ax2.text(18.5, ann_y, 'Novel', fontsize=12, rotation=90)
+    etio_label_fs = 16
+    ann_y = 1.3
+    ax2.text(8, ann_y, 'Unknown', fontsize=etio_label_fs, rotation=90)
+    ax2.text(18.5, ann_y, 'Novel', fontsize=etio_label_fs, rotation=90)
 
-    line_y = 1.2
+    line_y = 1.27
     trans = ax2.get_xaxis_transform()
     ax2.plot([.4, 15.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
     ax2.plot([16.4, 21.8],[line_y,line_y], color="k", transform=trans, clip_on=False)
@@ -1402,7 +1408,7 @@ def plotTMB_SV_v3(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0,
     ax2.set_ylim(ymin,ymax)
     yticks_loc = range(ymin,ymax+1,1)
     ax2.set_yticks(yticks_loc,list(map((lambda x: 10**x), list(yticks_loc))))
-    ax2.set_xticks(np.arange(1, 2*ngroups+1, step = 2), list1) 
+    ax2.set_xticks(np.arange(1, 2*ngroups+1, step = 2), list1, fontsize=etio_label_fs) 
     ax2.tick_params(axis = 'both', which = 'both',length = 0)
     ax2.hlines(yticks_loc,0,2*ngroups,colors = 'black',linestyles = "dashed",linewidth = 0.5,zorder = 1)
 
@@ -1426,7 +1432,7 @@ def plotTMB_SV_v3(inputDF, scale, order=[], Yrange = "adapt", cutoff = 0,
 
     axes2 = ax2.twiny()
     plt.tick_params(axis = 'both', which = 'both',length = 0)
-    plt.xticks(np.arange(1, 2*ngroups+1, step = 2),names,rotation = 90,ha = 'right')
+    plt.xticks(np.arange(1, 2*ngroups+1, step = 2),names,rotation = 90,ha = 'right', fontsize=etio_label_fs)
 
     fig.subplots_adjust(top = ((ymax - ymin) * 0.7 + bottomm) / fig_length, bottom = bottomm / fig_length, left = leftm / fig_width, right=1 - rightm / fig_width)
 
@@ -1480,6 +1486,568 @@ def get_diff_dict(mat_df, labels):
 
 
 
+## Adapted from https://github.com/AlexandrovLab/SigProfilerPlotting
+def plot_SBS96(sample1, name1, ymax1, percentage=False):
+    """
+    Plots the mutation profiles for two samples with differences in mutation counts displayed side by side.
+
+    This function generates a bar plot displaying the mutation profiles of two samples (`sample1` and `sample2`). 
+    It visualizes the mutation counts of different mutation types (e.g., 'C>A', 'C>G', etc.) for each sample, 
+    along with labeled axes and color-coded mutation types. The function uses a specified maximum y-value (`ymax`) 
+    for the y-axis to control the plot’s scale.
+
+    Parameters:
+    - sample1 (dict): A dictionary where the keys are mutation types, and the values are dictionaries with sequences as keys 
+      and their corresponding mutation counts as values for the first sample.
+    - sample2 (dict): A dictionary similar to `sample1` for the second sample to be compared.
+    - name1 (str): The label/name to display for the first sample.
+    - name2 (str): The label/name to display for the second sample.
+    - ymax (float): The maximum value for the y-axis to set the scale for the plot.
+
+    Returns:
+    - None: This function generates and displays a plot with mutation profiles for the two samples.
+
+    Example:
+    plot_profile_diff(sample1, sample2, 'Sample A', 'Sample B', ymax=100)
+    """
+    plt.rcParams['axes.linewidth'] = 2
+    plot1 = plt.figure(figsize=(43.93,12))
+    plt.rc('axes', edgecolor='lightgray')
+    panel1 = plot1.add_axes([0.04, 0.491, 0.95, 0.4])
+    xlabels = []
+    x = 0.4
+    colors = [[3/256,189/256,239/256], [1/256,1/256,1/256],[228/256,41/256,38/256], [203/256,202/256,202/256], [162/256,207/256,99/256], [236/256,199/256,197/256]]
+    i = 0
+
+    for key in sample1:
+        for seq in sample1[key]:
+            xlabels.append(seq[0]+seq[2]+seq[6])
+            panel1.bar(x, sample1[key][seq],width=0.4,color=colors[i],align='center', zorder=1000)
+            x += 1
+        i += 1
+        
+    x = .043
+    y3 = .9
+    y = ymax1 #*1.25
+    y2 = y+2
+    for i in range(0, 6, 1):
+        panel1.add_patch(plt.Rectangle((x,y3), .15, .05, facecolor=colors[i], clip_on=False, transform=plt.gcf().transFigure)) 
+        x += .159
+
+    yText = y3 + .06
+    panel1.text(.1, yText, 'C>A', fontsize=55, fontweight='normal', fontname='Arial', transform=plt.gcf().transFigure)
+    panel1.text(.255, yText, 'C>G', fontsize=55, fontweight='normal', fontname='Arial', transform=plt.gcf().transFigure)
+    panel1.text(.415, yText, 'C>T', fontsize=55, fontweight='normal', fontname='Arial', transform=plt.gcf().transFigure)
+    panel1.text(.575, yText, 'T>A', fontsize=55, fontweight='normal', fontname='Arial', transform=plt.gcf().transFigure)
+    panel1.text(.735, yText, 'T>C', fontsize=55, fontweight='normal', fontname='Arial', transform=plt.gcf().transFigure)
+    panel1.text(.89, yText, 'T>G', fontsize=55, fontweight='normal', fontname='Arial', transform=plt.gcf().transFigure)
+
+    panel1.text(0.5, 0.825, name1, fontsize=60, weight="normal", color="black", fontname="Arial", horizontalalignment='center', transform=plt.gcf().transFigure)
+
+    '''ytick_offest = y/4 #int(y/4)
+    ylabs = [0, ytick_offest, ytick_offest*2, ytick_offest*3, ytick_offest*4]
+    ylabels = [f"{round(x*100, 1)}%" for x in [0, ytick_offest, ytick_offest*2, ytick_offest*3, ytick_offest*4]]'''
+
+    ytick_offset = y / 4
+    ylabs = [ytick_offset * i for i in range(5)]
+    if percentage:
+        ylabels = [f"{round(v * 100, 1)}%" for v in ylabs]
+        ylabel_text = "Percentage of SBS"
+    else:
+        ylabels = [str(int(round(v))) for v in ylabs]
+        ylabel_text = "Number of SBS"
+
+    panel1.set_ylabel(ylabel_text, fontsize=40, fontname='Arial', weight='normal')
+
+    labs = np.arange(0.375,96.375,1)
+
+    panel1.set_xlim([0, 96])
+    panel1.set_ylim([0, y])
+    panel1.set_yticks(ylabs)
+    count = 0
+    m = 0
+
+    for i in range (0, 96, 1):
+        panel1.text(i/101 + .0415, .41, xlabels[i][0], fontsize=40, color='gray', rotation='vertical', verticalalignment='center', fontname='Arial', transform=plt.gcf().transFigure)
+        panel1.text(i/101 + .0415, .44, xlabels[i][1], fontsize=40, color=colors[m], rotation='vertical', verticalalignment='center', fontname='Arial', fontweight='normal',transform=plt.gcf().transFigure)
+        panel1.text(i/101 + .0415, .47, xlabels[i][2], fontsize=40, color='gray', rotation='vertical', verticalalignment='center', fontname='Arial', transform=plt.gcf().transFigure)
+        count += 1
+        if count == 16:
+            count = 0
+            m += 1
+
+    panel1.set_yticklabels(ylabels, fontsize=40)
+    panel1.yaxis.grid(True)
+    panel1.grid(which='major', axis='y', color=[0.93,0.93,0.93], zorder=1)
+
+
+    panel1.tick_params(axis='both',which='both',\
+                    bottom=False, labelbottom=False,\
+                    left=True, labelleft=True,\
+                    right=True, labelright=False,\
+                    top=False, labeltop=False,\
+                    direction='in', length=25, colors='lightgray', width=2)
+
+
+    [i.set_color("black") for i in panel1.get_yticklabels()]
+    #plt.show()
+
+
+def plot_SBS288(data_series, name1, ymax1, percentage=False):
+    """
+    data_series : pd.Series indexed by SBS288 mutation types (TSB:trinucleotide, e.g. "T:A[C>A]T")
+    name1       : sample name string
+    ymax1       : y-axis maximum (in counts or proportion)
+    percentage  : if True, format y-axis as percentages
+    """
+
+    plt.rcParams['axes.linewidth'] = 2
+    fig = plt.figure(figsize=(43.93, 12))
+    plt.rc('axes', edgecolor='lightgray')
+    panel1 = fig.add_axes([0.04, 0.15, 0.7, 0.65])
+    panel2 = fig.add_axes([0.77, 0.15, 0.21, 0.65])
+
+    colors = [
+        [3/256, 189/256, 239/256],
+        [1/256, 1/256, 1/256],
+        [228/256, 41/256, 38/256],
+        [203/256, 202/256, 202/256],
+        [162/256, 207/256, 99/256],
+        [236/256, 199/256, 197/256],
+    ]
+    mut_types = ['C>A', 'C>G', 'C>T', 'T>A', 'T>C', 'T>G']
+    tsb_labels = ['T', 'U', 'N']  # Transcribed, Untranscribed, Non-transcribed
+    tsb_colors = [
+        [1/256, 70/256, 102/256],
+        [228/256, 41/256, 38/256],
+        'green',
+    ]
+
+    # --- Panel 1: main bar plot ---
+    xlabels = []
+    bar_colors = []
+    values = []
+    x = 0.4
+
+    for i, mut in enumerate(mut_types):
+        # filter to this mutation type, for T and U strands only
+        subset = data_series[data_series.index.str.contains(f'[TU]:{mut[0]}\\[{mut}\\]', regex=True)]
+        for idx in subset.index:
+            tri = idx.split(':')[1]  # e.g. "A[C>A]T"
+            xlabels.append(tri[0] + tri[2] + tri[6])
+            bar_colors.append(colors[i])
+            values.append(subset[idx])
+
+    total_count = sum(values)
+    if percentage and total_count > 0:
+        plot_values = [v / total_count * 100 for v in values]
+    else:
+        plot_values = values
+
+    x_pos = np.arange(0.4, len(plot_values) + 0.4, 1)
+    panel1.bar(x_pos, plot_values, width=0.4, color=bar_colors, align='center', zorder=1000)
+
+    # Color patches and group labels
+    y3 = 0.87
+    x_start = 0.043
+    plot_width = 0.465  # panel1 spans ~0.04 to 0.74 of figure
+    group_size = len(plot_values) // 6
+
+    for i, mut in enumerate(mut_types):
+        block_width = plot_width / 6
+        panel1.add_patch(plt.Rectangle(
+            (x_start, y3), block_width - 0.002, 0.05,
+            facecolor=colors[i], clip_on=False, transform=fig.transFigure))
+        panel1.text(
+            x_start + block_width / 2, y3 + 0.06, mut,
+            fontsize=40, fontweight='normal', fontname='Arial',
+            transform=fig.transFigure, ha='center')
+        x_start += block_width
+
+    # Sample name
+    panel1.text(0.05, 0.82, name1, fontsize=50, weight='normal',
+        color='black', fontname='Arial', transform=fig.transFigure)
+
+    # Y-axis
+    y = ymax1 if not percentage else ymax1
+    ytick_offset = y / 4
+    ylabs = [ytick_offset * i for i in range(5)]
+    if percentage:
+        ylabels = [f"{round(v * 100, 1)}%" for v in ylabs]
+        ylabel_text = "Percentage of Single Base Substitutions"
+    else:
+        ylabels = [str(int(round(v))) for v in ylabs]
+        ylabel_text = "Number of Single Base Substitutions"
+
+    panel1.set_xlim([0, len(plot_values)])
+    panel1.set_ylim([0, y])
+    panel1.set_yticks(ylabs)
+    panel1.set_yticklabels(ylabels, fontsize=25)
+    panel1.set_ylabel(ylabel_text, fontsize=35, fontname='Arial', weight='normal')
+    panel1.set_xlabel('')
+
+    # X-axis trinucleotide labels
+    for i in range(len(xlabels)):
+        panel1.text(i/len(xlabels)/0.735 + 0.048, 0.10, xlabels[i][0],
+            fontsize=20, color='gray', rotation='vertical',
+            verticalalignment='center', fontname='Arial',
+            transform=fig.transFigure)
+        panel1.text(i/len(xlabels)/0.735 + 0.048, 0.122, xlabels[i][1],
+            fontsize=20, color=bar_colors[i], rotation='vertical',
+            verticalalignment='center', fontname='Arial',
+            transform=fig.transFigure)
+        panel1.text(i/len(xlabels)/0.735 + 0.048, 0.147, xlabels[i][2],
+            fontsize=20, color='gray', rotation='vertical',
+            verticalalignment='center', fontname='Arial',
+            transform=fig.transFigure)
+
+    panel1.yaxis.grid(True)
+    panel1.grid(which='major', axis='y', color=[0.93, 0.93, 0.93], zorder=1)
+
+    panel1.tick_params(axis='both', which='both',
+        bottom=False, labelbottom=False,
+        left=True, labelleft=True,
+        right=True, labelright=False,
+        top=False, labeltop=False,
+        direction='in', length=25, colors='lightgray', width=2)
+
+    [i.set_color('black') for i in panel1.get_yticklabels()]
+
+    # --- Panel 2: TSB bar plot ---
+    tsb_data = {}
+    for tsb in tsb_labels:
+        tsb_data[tsb] = {}
+        for mut in mut_types:
+            pattern = f'{tsb}:{mut[0]}\\[{mut}\\]'
+            subset = data_series[data_series.index.str.contains(pattern, regex=True)]
+            tsb_data[tsb][mut] = subset.sum()
+        tsb_data[tsb]['All'] = sum(tsb_data[tsb].values())
+
+    row_labels = mut_types + ['All']
+    y2max = max(
+        max(tsb_data['T'][m] for m in row_labels),
+        max(tsb_data['U'][m] for m in row_labels),
+        max(tsb_data['N'][m] for m in row_labels),
+    )
+    if percentage and total_count > 0:
+        scale = 100 / total_count
+    else:
+        scale = 1
+
+    yp2 = 28
+    for mut in ['All'] + mut_types:
+        for j, tsb in enumerate(tsb_labels):
+            val = tsb_data[tsb][mut] * scale
+            panel2.barh(yp2 - j, val, color=tsb_colors[j],
+                label=["Genic-transcribed", "Genic-untranscribed", "Intergenic"][j])
+        yp2 -= 4
+
+    y2 = int(y2max * scale * 1.1)
+    if y2 <= 4:
+        y2 += 4
+    while y2 % 4 != 0:
+        y2 += 1
+    xtick_offset = y2 / 4
+    xlabs2 = [xtick_offset * i for i in range(5)]
+    if percentage:
+        xlabels2 = [f"{round(v, 1)}%" for v in xlabs2]
+    else:
+        xlabels2 = [str(int(round(v))) for v in xlabs2]
+
+    panel2.spines['right'].set_visible(False)
+    panel2.spines['top'].set_visible(False)
+    panel2.set_yticks([3, 7, 11, 15, 19, 23, 27])
+    panel2.set_yticklabels(['T>G', 'T>C', 'T>A', 'C>T', 'C>G', 'C>A', 'All'],
+        fontsize=25, fontname='Arial', weight='bold')
+    panel2.set_xticks(xlabs2)
+    panel2.set_xticklabels(xlabels2, fontsize=20)
+    handles, labels = panel2.get_legend_handles_labels()
+    panel2.legend(handles[:3], labels[:3], loc='best', prop={'size': 20})
+
+    plt.tight_layout()
+
+
+
+def plot_DBS78(data_series, name1, ymax1, percentage=False):
+    """
+    data_series : pd.Series indexed by DBS78 mutation types (e.g. "AC>CA")
+    name1       : sample name string
+    ymax1       : y-axis maximum (in counts or proportion)
+    """
+
+    dinucs = [
+        "TT>GG","TT>CG","TT>AG","TT>GC","TT>CC","TT>AC","TT>GA","TT>CA","TT>AA",
+        "AC>CA","AC>CG","AC>CT","AC>GA","AC>GG","AC>GT","AC>TA","AC>TG","AC>TT",
+        "CT>AA","CT>AC","CT>AG","CT>GA","CT>GC","CT>GG","CT>TG","CT>TC","CT>TA",
+        "AT>CA","AT>CC","AT>CG","AT>GA","AT>GC","AT>TA",
+        "TG>GT","TG>CT","TG>AT","TG>GC","TG>CC","TG>AC","TG>GA","TG>CA","TG>AA",
+        "CC>AA","CC>AG","CC>AT","CC>GA","CC>GG","CC>GT","CC>TA","CC>TG","CC>TT",
+        "CG>AT","CG>GC","CG>GT","CG>TC","CG>TA","CG>TT",
+        "TC>GT","TC>CT","TC>AT","TC>GG","TC>CG","TC>AG","TC>GA","TC>CA","TC>AA",
+        "GC>AA","GC>AG","GC>AT","GC>CA","GC>CG","GC>TA",
+        "TA>GT","TA>CT","TA>AT","TA>GG","TA>CG","TA>GC",
+    ]
+
+    colors = [
+        [3/256, 189/256, 239/256],   # TT
+        [3/256, 102/256, 204/256],   # AC
+        [162/256, 207/256, 99/256],  # CT
+        [1/256, 102/256, 1/256],     # AT
+        [255/256, 153/256, 153/256], # TG
+        [228/256, 41/256, 38/256],   # CC
+        [255/256, 178/256, 102/256], # CG
+        [255/256, 128/256, 1/256],   # TC
+        [204/256, 153/256, 255/256], # GC
+        [76/256, 1/256, 153/256],    # TA
+    ]
+
+    # Reindex to canonical order
+    data_series = data_series.reindex(dinucs)
+    xlabels = [dn.split(">")[1] for dn in dinucs]
+    maingroups = [dn.split(">")[0] for dn in dinucs]
+    group_names = list(dict.fromkeys(maingroups))  # preserve order, unique
+    color_map = {g: colors[i] for i, g in enumerate(group_names)}
+    bar_colors = [color_map[g] for g in maingroups]
+
+    plt.rcParams['axes.linewidth'] = 2
+    fig = plt.figure(figsize=(43.93, 12))
+    plt.rc('axes', edgecolor='lightgray')
+    panel1 = fig.add_axes([0.04, 0.491, 0.95, 0.4])
+
+    # Bars
+    x_pos = np.arange(0.4, 78.4, 1)
+    panel1.bar(x_pos, data_series.values, width=0.4, color=bar_colors, align='center', zorder=1000)
+
+    '''# Colour patches and group labels across top
+    x = 0.043
+    y3 = 0.9
+    for i, grp in enumerate(group_names):
+        panel1.add_patch(plt.Rectangle((x, y3), 0.088, 0.05,
+            facecolor=colors[i], clip_on=False, transform=fig.transFigure))
+        panel1.text(x + 0.005, y3 + 0.06, grp, fontsize=30, fontweight='normal',
+            fontname='Arial', transform=fig.transFigure)
+        x += 0.093'''
+    # Colour patches and group labels across top
+    y3 = 0.9
+    group_sizes = [maingroups.count(g) for g in group_names]
+    total = len(dinucs)
+    x_start = 0.043
+    plot_width = 0.953  # matches the axes width [0.04 + 0.95 ≈ right edge]
+
+    for i, (grp, size) in enumerate(zip(group_names, group_sizes)):
+        block_width = (size / total) * plot_width
+        panel1.add_patch(plt.Rectangle((x_start, y3), block_width - 0.002, 0.05,
+            facecolor=colors[i], clip_on=False, transform=fig.transFigure))
+        panel1.text(x_start + block_width / 2, y3 + 0.06, f"{grp}>NN",
+            fontsize=50, fontweight='normal', fontname='Arial',
+            transform=fig.transFigure, ha='center')
+        x_start += block_width
+
+    # Sample name
+    panel1.text(0.5, 0.825, name1, fontsize=60, weight='normal', horizontalalignment='center',
+        color='black', fontname='Arial', transform=fig.transFigure)
+
+    # Axes
+    y = ymax1
+    ytick_offset = y / 4
+    ylabs = [ytick_offset * i for i in range(5)]
+    if percentage:
+        ylabels = [f"{round(v * 100, 1)}%" for v in ylabs]
+        ylabel_text = "Percentage of DBS"
+    else:
+        ylabels = [str(int(round(v))) for v in ylabs]
+        ylabel_text = "Number of DBS"
+
+
+    panel1.set_xlim([0, 78])
+    panel1.set_ylim([0, y])
+    panel1.set_xticks(x_pos)
+    panel1.set_xticklabels(xlabels, rotation='vertical', fontsize=50,
+        color='grey', fontname='Arial', verticalalignment='top', fontweight='normal')
+    panel1.set_yticks(ylabs)
+    panel1.set_yticklabels(ylabels, fontsize=45)
+
+    panel1.set_xlabel('')
+    panel1.set_ylabel(ylabel_text, fontsize=40, fontname='Arial', weight='normal')
+
+
+    panel1.yaxis.grid(True)
+    panel1.grid(which='major', axis='y', color=[0.93, 0.93, 0.93], zorder=1)
+
+    panel1.tick_params(axis='both', which='both',
+        bottom=False, labelbottom=True,
+        left=True, labelleft=True,
+        right=True, labelright=False,
+        top=False, labeltop=False,
+        direction='in', length=25, colors='lightgray', width=2)
+
+    [i.set_color('black') for i in panel1.get_yticklabels()]
+    [i.set_color('grey') for i in panel1.get_xticklabels()]
+
+    plt.tight_layout()
+
+
+def plot_DBS78_multi(data_df, percentage=False):
+    """
+    data_df     : pd.DataFrame with DBS78 mutation types as index, samples as columns (5 columns)
+    ymax1       : y-axis maximum (shared across all panels, in counts or proportion)
+    percentage  : if True, format y-axis as percentages
+    """
+
+    dinucs = [
+        "TT>GG","TT>CG","TT>AG","TT>GC","TT>CC","TT>AC","TT>GA","TT>CA","TT>AA",
+        "AC>CA","AC>CG","AC>CT","AC>GA","AC>GG","AC>GT","AC>TA","AC>TG","AC>TT",
+        "CT>AA","CT>AC","CT>AG","CT>GA","CT>GC","CT>GG","CT>TG","CT>TC","CT>TA",
+        "AT>CA","AT>CC","AT>CG","AT>GA","AT>GC","AT>TA",
+        "TG>GT","TG>CT","TG>AT","TG>GC","TG>CC","TG>AC","TG>GA","TG>CA","TG>AA",
+        "CC>AA","CC>AG","CC>AT","CC>GA","CC>GG","CC>GT","CC>TA","CC>TG","CC>TT",
+        "CG>AT","CG>GC","CG>GT","CG>TC","CG>TA","CG>TT",
+        "TC>GT","TC>CT","TC>AT","TC>GG","TC>CG","TC>AG","TC>GA","TC>CA","TC>AA",
+        "GC>AA","GC>AG","GC>AT","GC>CA","GC>CG","GC>TA",
+        "TA>GT","TA>CT","TA>AT","TA>GG","TA>CG","TA>GC",
+    ]
+
+    colors = [
+        [3/256, 189/256, 239/256],   # TT
+        [3/256, 102/256, 204/256],   # AC
+        [162/256, 207/256, 99/256],  # CT
+        [1/256, 102/256, 1/256],     # AT
+        [255/256, 153/256, 153/256], # TG
+        [228/256, 41/256, 38/256],   # CC
+        [255/256, 178/256, 102/256], # CG
+        [255/256, 128/256, 1/256],   # TC
+        [204/256, 153/256, 255/256], # GC
+        [76/256, 1/256, 153/256],    # TA
+    ]
+
+    data_df = data_df.reindex(dinucs)
+    xlabels = [dn.split(">")[1] for dn in dinucs]
+    maingroups = [dn.split(">")[0] for dn in dinucs]
+    group_names = list(dict.fromkeys(maingroups))
+    color_map = {g: colors[i] for i, g in enumerate(group_names)}
+    bar_colors = [color_map[g] for g in maingroups]
+    group_sizes = [maingroups.count(g) for g in group_names]
+    total = len(dinucs)
+
+    samples = list(data_df.columns)
+    n = len(samples)  # should be 5
+
+    plt.rcParams['axes.linewidth'] = 2
+    plt.rc('axes', edgecolor='lightgray')
+
+    # Layout parameters
+    fig_height = 12 * n
+    fig = plt.figure(figsize=(43.93, fig_height))
+
+    panel_height = 0.12      # height of each axes in figure fraction
+    panel_bottom_start = 0.88  # bottom of the topmost panel (in figure fraction)
+    panel_gap = 0.055         # gap between panels (accounts for xlabels + spacing)
+    panel_left = 0.04
+    panel_width = 0.95
+
+    x_pos = np.arange(0.4, 78.4, 1)
+    '''y = ymax1
+    ytick_offset = y / 4
+    ylabs = [ytick_offset * i for i in range(5)]
+
+    if percentage:
+        ylabels = [f"{round(v * 100, 1)}%" for v in ylabs]
+        ylabel_text = "Percentage of DBS"
+    else:
+        ylabels = [str(int(round(v))) for v in ylabs]
+        ylabel_text = "Number of DBS"'''
+
+    panels = []
+    for idx, sample in enumerate(samples):
+        bottom = panel_bottom_start - idx * (panel_height + panel_gap)
+        panel = fig.add_axes([panel_left, bottom, panel_width, panel_height])
+        panels.append((panel, sample, bottom))
+
+    for idx, (panel, sample, bottom) in enumerate(panels):
+        is_top    = idx == 0
+        is_bottom = idx == n - 1
+
+        # Per-sample ymax
+        y = data_df[sample].max()
+        if percentage:
+            y = (y * 1.25)  # leave headroom
+        else:
+            y = int(round(y * 1.25))
+            while y % 4 != 0:  # ensure clean tick division
+                y += 1
+
+        ytick_offset = y / 4
+        ylabs = [ytick_offset * i for i in range(5)]
+        if percentage:
+            ylabels = [f"{round(v * 100, 1)}%" for v in ylabs]
+        else:
+            ylabels = [str(int(round(v))) for v in ylabs]
+
+        # Bars
+        panel.bar(x_pos, data_df[sample].values, width=0.4,
+                  color=bar_colors, align='center', zorder=1000)
+
+        # Sample name — top right corner
+        panel.text(0.98, bottom + panel_height - 0.005, sample,
+                   fontsize=40, weight='normal', color='black', fontname='Arial',
+                   transform=fig.transFigure, va='top', ha='right')
+
+        # Top: colour blocks + group labels (top panel only)
+        if is_top:
+            x_start = panel_left
+            plot_width = panel_width
+            for i, (grp, size) in enumerate(zip(group_names, group_sizes)):
+                block_width = (size / total) * plot_width
+                panel.add_patch(plt.Rectangle(
+                    (x_start, bottom + panel_height + 0.005),
+                    block_width - 0.002, 0.025,
+                    facecolor=colors[i], clip_on=False, transform=fig.transFigure))
+                panel.text(
+                    x_start + block_width / 2,
+                    bottom + panel_height + 0.033,
+                    f"{grp}>NN",
+                    fontsize=30, fontweight='normal', fontname='Arial',
+                    transform=fig.transFigure, ha='center')
+                x_start += block_width
+
+        # Bottom x-tick labels (bottom panel only)
+        panel.set_xticks(x_pos)
+        if is_bottom:
+            panel.set_xticklabels(xlabels, rotation='vertical', fontsize=35,
+                color='grey', fontname='Arial', verticalalignment='top', fontweight='normal')
+        else:
+            panel.set_xticklabels([])
+
+        # Y-axis
+        panel.set_xlim([0, 78])
+        panel.set_ylim([0, y])
+        panel.set_yticks(ylabs)
+        panel.set_yticklabels(ylabels, fontsize=25)
+        panel.set_xlabel('')
+        panel.set_ylabel('')
+
+        panel.yaxis.grid(True)
+        panel.grid(which='major', axis='y', color=[0.93, 0.93, 0.93], zorder=1)
+
+        panel.tick_params(axis='both', which='both',
+            bottom=is_bottom, labelbottom=is_bottom,
+            left=True, labelleft=True,
+            right=True, labelright=False,
+            top=False, labeltop=False,
+            direction='in', length=25, colors='lightgray', width=2)
+
+        [i.set_color('black') for i in panel.get_yticklabels()]
+        if is_bottom:
+            [i.set_color('grey') for i in panel.get_xticklabels()]
+
+    # Tighten spacing
+    panel_height = 0.14
+    panel_bottom_start = 0.84
+    panel_gap = 0.01          # tight gap between panels
+    # Shared y-axis label (centred across all panels)
+    fig.text(0.005, 0.5, 'ylabel_text', fontsize=40, fontname='Arial',
+             weight='normal', va='center', rotation='vertical')
+
 
 ## Adapted from https://github.com/AlexandrovLab/SigProfilerPlotting
 def plot_profile_diff(sample1, sample2, name1, name2, ymax1, ymax2):
@@ -1530,14 +2098,14 @@ def plot_profile_diff(sample1, sample2, name1, name2, ymax1, ymax2):
         x += .159
 
     yText = y3 + .06
-    panel1.text(.1, yText, 'C>A', fontsize=55, fontweight='bold', fontname='Arial', transform=plt.gcf().transFigure)
-    panel1.text(.255, yText, 'C>G', fontsize=55, fontweight='bold', fontname='Arial', transform=plt.gcf().transFigure)
-    panel1.text(.415, yText, 'C>T', fontsize=55, fontweight='bold', fontname='Arial', transform=plt.gcf().transFigure)
-    panel1.text(.575, yText, 'T>A', fontsize=55, fontweight='bold', fontname='Arial', transform=plt.gcf().transFigure)
-    panel1.text(.735, yText, 'T>C', fontsize=55, fontweight='bold', fontname='Arial', transform=plt.gcf().transFigure)
-    panel1.text(.89, yText, 'T>G', fontsize=55, fontweight='bold', fontname='Arial', transform=plt.gcf().transFigure)
+    panel1.text(.1, yText, 'C>A', fontsize=55, fontweight='normal', fontname='Arial', transform=plt.gcf().transFigure)
+    panel1.text(.255, yText, 'C>G', fontsize=55, fontweight='normal', fontname='Arial', transform=plt.gcf().transFigure)
+    panel1.text(.415, yText, 'C>T', fontsize=55, fontweight='normal', fontname='Arial', transform=plt.gcf().transFigure)
+    panel1.text(.575, yText, 'T>A', fontsize=55, fontweight='normal', fontname='Arial', transform=plt.gcf().transFigure)
+    panel1.text(.735, yText, 'T>C', fontsize=55, fontweight='normal', fontname='Arial', transform=plt.gcf().transFigure)
+    panel1.text(.89, yText, 'T>G', fontsize=55, fontweight='normal', fontname='Arial', transform=plt.gcf().transFigure)
 
-    panel1.text(0.05, 0.8, name1, fontsize=60, weight="bold", color="black", fontname="Arial", transform=plt.gcf().transFigure)
+    panel1.text(0.05, 0.8, name1, fontsize=60, weight="normal", color="black", fontname="Arial", transform=plt.gcf().transFigure)
 
     ytick_offest = y/4 #int(y/4)
     ylabs = [0, ytick_offest, ytick_offest*2, ytick_offest*3, ytick_offest*4]
@@ -1552,9 +2120,9 @@ def plot_profile_diff(sample1, sample2, name1, name2, ymax1, ymax2):
     m = 0
 
     for i in range (0, 96, 1):
-        panel1.text(i/101 + .0415, .42, xlabels[i][0], fontsize=30, color='gray', rotation='vertical', verticalalignment='center', fontname='Courier New', transform=plt.gcf().transFigure)
-        panel1.text(i/101 + .0415, .444, xlabels[i][1], fontsize=30, color=colors[m], rotation='vertical', verticalalignment='center', fontname='Courier New', fontweight='bold',transform=plt.gcf().transFigure)
-        panel1.text(i/101 + .0415, .471, xlabels[i][2], fontsize=30, color='gray', rotation='vertical', verticalalignment='center', fontname='Courier New', transform=plt.gcf().transFigure)
+        panel1.text(i/101 + .0415, .42, xlabels[i][0], fontsize=30, color='gray', rotation='vertical', verticalalignment='center', fontname='Arial', transform=plt.gcf().transFigure)
+        panel1.text(i/101 + .0415, .444, xlabels[i][1], fontsize=30, color=colors[m], rotation='vertical', verticalalignment='center', fontname='Arial', fontweight='normal',transform=plt.gcf().transFigure)
+        panel1.text(i/101 + .0415, .471, xlabels[i][2], fontsize=30, color='gray', rotation='vertical', verticalalignment='center', fontname='Arial', transform=plt.gcf().transFigure)
         count += 1
         if count == 16:
             count = 0
@@ -1604,7 +2172,7 @@ def plot_profile_diff(sample1, sample2, name1, name2, ymax1, ymax2):
     panel2.set_ylabel('')
     plt.gca().invert_yaxis()
 
-    panel2.text(0.05, 0.1, name2, fontsize=60, weight="bold", color="black", fontname="Arial", transform=plt.gcf().transFigure)
+    panel2.text(0.05, 0.1, name2, fontsize=60, weight="normal", color="black", fontname="Arial", transform=plt.gcf().transFigure)
 
     panel2.tick_params(axis='both',which='both',\
                     bottom=False, labelbottom=False,\
@@ -1700,14 +2268,14 @@ def plot_3samples_SBS96(sample1, sample2, sample3, name1, name2, name3, ymax):
         x += .159
 
     yText = y3 + .06
-    panel1.text(.1, yText, 'C>A', fontsize=55, fontweight='bold', fontname='Arial', transform=plt.gcf().transFigure)
-    panel1.text(.255, yText, 'C>G', fontsize=55, fontweight='bold', fontname='Arial', transform=plt.gcf().transFigure)
-    panel1.text(.415, yText, 'C>T', fontsize=55, fontweight='bold', fontname='Arial', transform=plt.gcf().transFigure)
-    panel1.text(.575, yText, 'T>A', fontsize=55, fontweight='bold', fontname='Arial', transform=plt.gcf().transFigure)
-    panel1.text(.735, yText, 'T>C', fontsize=55, fontweight='bold', fontname='Arial', transform=plt.gcf().transFigure)
-    panel1.text(.89, yText, 'T>G', fontsize=55, fontweight='bold', fontname='Arial', transform=plt.gcf().transFigure)
+    panel1.text(.1, yText, 'C>A', fontsize=55, fontweight='normal', fontname='Arial', transform=plt.gcf().transFigure)
+    panel1.text(.255, yText, 'C>G', fontsize=55, fontweight='normal', fontname='Arial', transform=plt.gcf().transFigure)
+    panel1.text(.415, yText, 'C>T', fontsize=55, fontweight='normal', fontname='Arial', transform=plt.gcf().transFigure)
+    panel1.text(.575, yText, 'T>A', fontsize=55, fontweight='normal', fontname='Arial', transform=plt.gcf().transFigure)
+    panel1.text(.735, yText, 'T>C', fontsize=55, fontweight='normal', fontname='Arial', transform=plt.gcf().transFigure)
+    panel1.text(.89, yText, 'T>G', fontsize=55, fontweight='normal', fontname='Arial', transform=plt.gcf().transFigure)
 
-    panel1.text(0.05, 0.85, name1, fontsize=60, weight="bold", color="black", fontname="Arial", transform=plt.gcf().transFigure)
+    panel1.text(0.05, 0.85, name1, fontsize=60, weight="normal", color="black", fontname="Arial", transform=plt.gcf().transFigure)
 
     ytick_offest = y/4 #int(y/4)
     ylabs = [0, ytick_offest, ytick_offest*2, ytick_offest*3, ytick_offest*4]
@@ -1766,7 +2334,7 @@ def plot_3samples_SBS96(sample1, sample2, sample3, name1, name2, name3, ymax):
     panel2.set_xlabel('')
     panel2.set_ylabel('')
     
-    panel2.text(0.05, 0.56, name2, fontsize=60, weight="bold", color="black", fontname="Arial", transform=plt.gcf().transFigure)
+    panel2.text(0.05, 0.56, name2, fontsize=60, weight="normal", color="black", fontname="Arial", transform=plt.gcf().transFigure)
 
     panel2.tick_params(axis='both',which='both',\
                     bottom=False, labelbottom=False,\
@@ -1804,7 +2372,7 @@ def plot_3samples_SBS96(sample1, sample2, sample3, name1, name2, name3, ymax):
     panel3.set_xlabel('')
     panel3.set_ylabel('')
     
-    panel3.text(0.05, 0.27, name3, fontsize=60, weight="bold", color="black", fontname="Arial", transform=plt.gcf().transFigure)
+    panel3.text(0.05, 0.27, name3, fontsize=60, weight="normal", color="black", fontname="Arial", transform=plt.gcf().transFigure)
 
     panel3.tick_params(axis='both',which='both',\
                     bottom=False, labelbottom=False,\
@@ -1817,7 +2385,7 @@ def plot_3samples_SBS96(sample1, sample2, sample3, name1, name2, name3, ymax):
 
     for i in range (0, 96, 1):
         panel3.text(i/101 + .0415, 0, xlabels[i][0], fontsize=40, color='gray', rotation='vertical', verticalalignment='center', fontname='Courier New', transform=plt.gcf().transFigure)
-        panel3.text(i/101 + .0415, .02, xlabels[i][1], fontsize=40, color=colors[m], rotation='vertical', verticalalignment='center', fontname='Courier New', fontweight='bold',transform=plt.gcf().transFigure)
+        panel3.text(i/101 + .0415, .02, xlabels[i][1], fontsize=40, color=colors[m], rotation='vertical', verticalalignment='center', fontname='Courier New', fontweight='normal',transform=plt.gcf().transFigure)
         panel3.text(i/101 + .0415, .04, xlabels[i][2], fontsize=40, color='gray', rotation='vertical', verticalalignment='center', fontname='Courier New', transform=plt.gcf().transFigure)
         count += 1
         if count == 16:
@@ -2122,7 +2690,7 @@ def plot_profile_SBS96(sample1, ymax, sample_name, outname):
 
     [i.set_color("black") for i in plt.gca().get_yticklabels()]
 
-    plt.savefig(os.path.join(fig_out, outname+'.SBS96.pdf'), bbox_inches="tight")
+    #plt.savefig(os.path.join(fig_out, outname+'.SBS96.pdf'), bbox_inches="tight")
     return plot1
 
 
@@ -2209,6 +2777,23 @@ def coefs_scatter(coefs, fname, positive_only=True, interactions='singles_only',
     else:
         colors = data['Coefficient'].apply(lambda x: 'blue' if x > 0 else 'red')
 
+    from matplotlib.colors import LinearSegmentedColormap
+    import matplotlib.cm as cm
+    import numpy as np
+
+    cmap = cm.coolwarm
+    # Sample from 0.15 to 0.85 instead of 0 to 1, avoiding the saturated extremes
+    colors = cmap(np.linspace(0.2, 0.8, 256))
+    colors[:, :3] *= 0.75  # keep the muted effect
+    muted_coolwarm = LinearSegmentedColormap.from_list("muted_coolwarm", colors)
+
+    '''cmap = cm.BrBG
+    # Sample from 0.15 to 0.85 instead of 0 to 1, avoiding the saturated extremes
+    colors = cmap(np.linspace(0.2, 0.8, 256))
+    colors[:, :3] *= 0.75  # keep the muted effect
+    muted_coolwarm = LinearSegmentedColormap.from_list("muted_coolwarm", colors)'''
+
+
     # Plotting
     fig, ax = plt.subplots(figsize=(24, fig_h))
     scatter = ax.scatter(
@@ -2216,7 +2801,7 @@ def coefs_scatter(coefs, fname, positive_only=True, interactions='singles_only',
         y=data['Features'],
         s=data['Coefficient'].abs() * 1000,  # Scale the coefficient for circle size
         c=data['AUC'],
-        cmap='gist_gray',  # Color map based on AUC
+        cmap=muted_coolwarm,  # Color map based on AUC: gist_gray
         #alpha=0.7,  # Transparency
         zorder=2,
         #edgecolor=colors,  # Color edge based on coefficient sign
@@ -2227,13 +2812,22 @@ def coefs_scatter(coefs, fname, positive_only=True, interactions='singles_only',
 
     # Add annotations for each circle
     for i, row in data.iterrows():
+        ax.annotate(
+            f'{row["Coefficient"]:.1f}',  # Annotation text (formatted coefficient)
+            (row['Outcome'], row['Features']),  # Position (x, y)
+            ha='center',  # Horizontal alignment
+            va='center',
+            fontsize=32,  # Font size for the annotation
+            color='black'
+        )
+    '''for i, row in data.iterrows():
         if row["AUC"] > 0.8:
             ax.annotate(
                 f'{row["Coefficient"]:.2f}',  # Annotation text (formatted coefficient)
                 (row['Outcome'], row['Features']),  # Position (x, y)
                 ha='center',  # Horizontal alignment
                 va='center',
-                fontsize=18,  # Font size for the annotation
+                fontsize=26,  # Font size for the annotation
                 color='black',  # Annotation text color
                 path_effects=[pe.withStroke(linewidth=0.5, foreground='white')]
                 #bbox=dict(boxstyle="round,pad=0.2", fc="black", ec="none", alpha=0.6)
@@ -2244,11 +2838,11 @@ def coefs_scatter(coefs, fname, positive_only=True, interactions='singles_only',
             (row['Outcome'], row['Features']),  # Position (x, y)
             ha='center',  # Horizontal alignment
             va='center',
-            fontsize=18,  # Font size for the annotation
+            fontsize=26,  # Font size for the annotation
             color='white',  # Annotation text color
             path_effects=[pe.withStroke(linewidth=0.5, foreground='black')],
             #bbox=dict(boxstyle="round,pad=0.2", fc="white", ec="none", alpha=0.6)
-        )
+        )'''
 
     if cbars: # Add color bar
         cbar = plt.colorbar(scatter, pad=0.01)
@@ -2297,6 +2891,17 @@ def coefs_scatter(coefs, fname, positive_only=True, interactions='singles_only',
                 alpha=0.95
             )
             ax.add_patch(rect)
+        '''else:
+            rect = patches.Rectangle(
+                (-0.5, i - 0.5),  # (x, y) position
+                #len(data['Outcome']) - 1 + 1,  # width
+                data.Outcome.nunique(),
+                1,  # height
+                linewidth=1,
+                facecolor='lightgray',
+                alpha=0.95
+            )
+            ax.add_patch(rect)'''
 
 
     #axes[0].add_patch(patches.Rectangle((-0.5,9.5),xlen,1,linewidth=1,facecolor="lightgray", alpha=0.95))
@@ -2315,8 +2920,10 @@ def coefs_scatter(coefs, fname, positive_only=True, interactions='singles_only',
     print(f"info:\n{len(data['Outcome'])}   :   {data.Outcome.nunique() - 0.5}   :   {len(data)}")
 
     plt.tight_layout()
-    #plt.savefig(fname, bbox_inches="tight")
-    plt.savefig(fname, format='svg', bbox_inches='tight', transparent=True)
+    if fname.endswith('.pdf'):
+        plt.savefig(fname, bbox_inches="tight")
+    if fname.endswith('.svg'):
+        plt.savefig(fname, format='svg', bbox_inches='tight', transparent=True)
 
 
 
@@ -2397,25 +3004,25 @@ def plot_coefs(coefs, title=None, leg=None, x_only=True):
     ax.set_yticks(range(len(coefs.Features)))
     new_labels = [x.replace('_', ' ') for x in coefs.Features.tolist()]
     new_labels = [x.replace(':', '::') for x in new_labels]
-    ax.set_yticklabels(new_labels, fontsize=18)
+    ax.set_yticklabels(new_labels, fontsize=22)
 
     for color, tick in zip(colors, ax.get_yticklabels()):
         tick.set_color(color) #set the color property
 
-    plt.xticks(fontsize=18)
+    plt.xticks(fontsize=22)
 
     xmin, xmax = ax.get_xlim()
 
     # vertical lines
     lcount = 0
     outc = coefs.Outcome.iloc[0]
-    ax.text(xmax, 0, f"{outc}", va='center', fontsize=17)
+    ax.text(xmax, 0, f"{outc}", va='center', fontsize=24)
     for out in coefs.Outcome:
         if out == outc:
             lcount += 1
         else:
             ax.hlines(y=lcount-0.5, xmin=xmin, xmax=xmax, colors=['tab:gray'], ls='--', lw=2)
-            ax.text(xmax, lcount, f"{out}", va='center', fontsize=17)
+            ax.text(xmax, lcount, f"{out}", va='center', fontsize=24)
             outc = out
             lcount += 1
 
@@ -2527,10 +3134,10 @@ def plot_bipartite_subs(df):
         nx.draw_networkx_nodes(G, pos, node_color=node_colors, node_size=1000, ax=ax)
         nx.draw_networkx_edges(G, pos, edgelist=[(u, v) for u, v, _ in edges],
                                 width=[w for _, _, w in edges], edge_color='gray', ax=ax)
-        nx.draw_networkx_labels(G, pos, font_size=14, font_color='black', ax=ax)
+        nx.draw_networkx_labels(G, pos, font_size=20, font_color='black', ax=ax)
 
         # Set title
-        ax.set_title(f"{central_node} Interactions", fontsize=20)
+        ax.set_title(f"{central_node} Interactions", fontsize=24)
 
         ax.axis("off")  # Hide axes
 
@@ -2546,6 +3153,7 @@ def plot_bipartite_subs(df):
 
     # Adjust layout
     plt.tight_layout()
+    plt.show()
 
 
 def plot_driver_nx(df2, figout):

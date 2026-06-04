@@ -1,0 +1,23 @@
+SBS31 2%	SBS35 2%	SBS288L5 2%	SBS31 5%	SBS35 5%	SBS288L5 5%	id
+True	False	False	False	False	False	A[T>C]A
+True	True	True	False	True	True	C[C>A]T
+True	False	False	False	False	False	C[C>T]A
+True	True	False	True	True	False	C[C>T]C
+True	True	False	True	False	False	C[C>T]T
+True	True	True	False	True	True	C[T>A]A
+True	True	True	False	False	False	C[T>A]C
+True	True	True	False	True	True	C[T>A]T
+True	True	True	False	True	False	G[C>A]C
+True	False	False	False	False	False	T[C>T]C
+False	True	True	False	False	False	A[C>A]C
+False	True	False	False	False	False	A[C>A]T
+False	True	True	False	False	False	C[C>A]A
+False	True	True	False	False	False	C[C>A]C
+False	True	True	False	True	True	C[T>A]G
+False	True	False	False	False	False	G[C>A]T
+False	True	True	False	False	False	G[C>G]C
+False	True	False	False	False	False	T[C>A]C
+False	True	False	False	False	False	T[C>G]T
+False	False	True	False	False	False	C[T>C]T
+False	False	True	False	False	False	G[C>T]A
+False	False	True	False	False	False	G[T>C]C

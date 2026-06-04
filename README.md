@@ -1,24 +1,24 @@
 
-## Unique patterns of mutations in childhood cancer highlight chemotherapy’s disease-defining role at relapse
+## Prior Therapy Defines Mutation Profiles in Childhood Cancer at Relapse
 
-#### Scripts and Notebooks to reproduce figures in the above paper.
+#### Scripts and Notebooks to reproduce figures in the paper above.
 
 
-
-### v 0.2
+---
+### v 1.0
 
 This repository includes
 
-* 6 Notebooks to reproduce Main Figures
+* 5 Notebooks to reproduce Main Figures
 * 10 Notebooks to reproduce Extended Data Figures
-* 1 Notebook to reproduce Supplementary Figures
+* 1 Notebook to reproduce Supplementary Notes 2.1-9 & Supplementary Figures 1-8
 * 1 helper script with all the plotting functions
 * 2 helper scripts with 10s of analysis functions
 * 1 script to run the logistic regression model
-* 1 source data directory containing all the data needed to reproduce the figures (some sensitive data will be added after manuscript decision)
+* 1 source data directory containing all the data needed to reproduce all the figures in the manuscript
 
 
-
+---
 ### Dependencies
 
 ```
@@ -45,18 +45,18 @@ This repository includes
 - jupyter
 ```
 
-
+---
 ### Download
 
-To install, you can directly download zipped folder from menu above or run this command:
+To install, you can directly download the zipped folder from menu above or run this command:
  
     git clone https://github.com/shlienlab/mutsigs_therapy
 
 
-
+---
 ### Installation
 
-#### We recommended installing the required packages into a python virtual environment.
+#### We recommend installing the required packages into a python virtual environment.
 
 1. Create the virtual environment in the specified path of your choice
 ```sh
@@ -83,22 +83,25 @@ Otherwise, skip the virtual environment steps, navigate to the root directory an
 pip install -r requirements.txt
 ```
 
-
+---
 ### Usage
 
 After installation, you can open and run the Jupyter notebooks in any compatible (e.g., VS Code).
 If you created a virtual environment, make sure to select it as your kernel.
 
-> Some source files might be missing due to GitHub's file size limit. These will be uploaded somewhere else soon. 
+---
+### Source files
 
+All the data needed to reproduce figures are located in the `source_data/` directory
+The code to produce each panel (in every main, extended data, and supplementary figure) is self-contained and automatically loads the necessary source data.
+
+---
 ### Citation
 
-When using this library, please cite
+When using this library, please cite:
+> Layeghifard M., ..., and Shlien A., "Prior Therapy Defines Mutation Profiles in Childhood Cancer at Relapse" (under review).
 
-> Layeghifard M., ..., and Shlien A., "Unique patterns of mutations in childhood cancer highlight chemotherapy’s disease-defining role at relapse" (under review).
-
-
-
+---
 ### Contributions
 
 This library is still a work in progress.

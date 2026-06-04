@@ -689,17 +689,17 @@ def get_sig_counts(sigs_df, kzm611_md, sig_id):
     """
     sigs_subd = sigs_df[[x for x in sigs_df.columns if x.startswith(sig_id)]].copy()
     if sig_id == 'SBS':
-        sig_counts = pd.concat([sigs_subd.loc[kzm611_md[kzm611_md.sbs_hue=='Low'].index.tolist()].astype(bool).sum(axis=0),
-                                sigs_subd.loc[kzm611_md[kzm611_md.sbs_hue=='High'].index.tolist()].astype(bool).sum(axis=0)], axis=1)
+        sig_counts = pd.concat([sigs_subd.loc[kzm611_md[kzm611_md.sbs_burden=='Low'].index.tolist()].astype(bool).sum(axis=0),
+                                sigs_subd.loc[kzm611_md[kzm611_md.sbs_burden=='High'].index.tolist()].astype(bool).sum(axis=0)], axis=1)
         sig_counts.columns = ['Low', 'High']
     elif sig_id == 'DBS':
-        sig_counts = pd.concat([sigs_subd.loc[kzm611_md[kzm611_md.dbs_hue=='Low'].index.tolist()].astype(bool).sum(axis=0),
-                                sigs_subd.loc[kzm611_md[kzm611_md.sbs_hue=='High'].index.tolist()].astype(bool).sum(axis=0)], axis=1)
+        sig_counts = pd.concat([sigs_subd.loc[kzm611_md[kzm611_md.dbs_burden=='Low'].index.tolist()].astype(bool).sum(axis=0),
+                                sigs_subd.loc[kzm611_md[kzm611_md.sbs_burden=='High'].index.tolist()].astype(bool).sum(axis=0)], axis=1)
         sig_counts.columns = ['Low', 'High']
     elif sig_id == 'ID':
-        sig_counts = pd.concat([sigs_subd.loc[kzm611_md[kzm611_md.id_hue=='Low'].index.tolist()].astype(bool).sum(axis=0),
-                                sigs_subd.loc[kzm611_md[kzm611_md.id_hue=='Mid'].index.tolist()].astype(bool).sum(axis=0),
-                                sigs_subd.loc[kzm611_md[kzm611_md.id_hue=='High'].index.tolist()].astype(bool).sum(axis=0)], axis=1)
+        sig_counts = pd.concat([sigs_subd.loc[kzm611_md[kzm611_md.id_burden=='Low'].index.tolist()].astype(bool).sum(axis=0),
+                                sigs_subd.loc[kzm611_md[kzm611_md.id_burden=='Mid'].index.tolist()].astype(bool).sum(axis=0),
+                                sigs_subd.loc[kzm611_md[kzm611_md.id_burden=='High'].index.tolist()].astype(bool).sum(axis=0)], axis=1)
         sig_counts.columns = ['Low', 'Mid', 'High']
     else:
         print('One of SBS, DBS or ID sigs must be selected!')
