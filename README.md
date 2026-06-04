@@ -92,7 +92,7 @@ If you created a virtual environment, make sure to select it as your kernel.
 ---
 ### Source files
 
-All the data needed to reproduce figures are located in the `source_data/` directory
+All the data needed to reproduce figures are located in the `source_data/` directory.<br>
 The code to produce each panel (in every main, extended data, and supplementary figure) is self-contained and automatically loads the necessary source data.
 
 ---
