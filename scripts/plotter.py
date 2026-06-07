@@ -3362,15 +3362,17 @@ def plot_sig_counts(sig_counts, outname):
     h = sig_counts.shape[0]/4    
     mycmap = cmaps[0:1] + cmaps[2:3] if cols < 3 else cmaps
 
-    fig, axes = plt.subplots(1,cols, figsize=(w, h), constrained_layout=True)
+    fig, axes = plt.subplots(1,cols, figsize=(w*2, h), constrained_layout=True)
 
     for ax_i in range(len(axes)):
-        ax = sns.heatmap(sig_counts.iloc[:,ax_i:ax_i+1], annot=True, fmt="d", cmap=mycmap[ax_i], cbar=False, ax=axes[ax_i])
+        ax = sns.heatmap(sig_counts.iloc[:,ax_i:ax_i+1], annot=True, fmt="d", cmap=mycmap[ax_i], cbar=False, ax=axes[ax_i], annot_kws={"fontsize":18})
         if ax_i == 0:
-            ax.set_yticklabels(sig_counts.index.tolist(), rotation=0, ha='right')
+            ax.set_yticklabels(sig_counts.index.tolist(), rotation=0, ha='right', fontsize=18)
         else:
             ax.axes.get_yaxis().set_ticks([])
         ax.axes.get_xaxis().set_ticks([])
 
-    #plt.savefig(outname, bbox_inches="tight")
-    plt.savefig(outname, format='svg', bbox_inches='tight', transparent=True)
+    if outname.endswith('.pdf'):
+        plt.savefig(outname, bbox_inches="tight")
+    else:
+        plt.savefig(outname, format='svg', bbox_inches='tight', transparent=True)
